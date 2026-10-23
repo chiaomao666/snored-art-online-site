@@ -50,6 +50,6 @@ node validate.cjs
 
 在 repository 的 Settings → Pages，選擇 **Deploy from a branch**，分支 **main**，目錄 **/(root)**。本 repository 含 `.nojekyll`，不需要建置框架。後續提交 main 分支後會由 GitHub Pages 發布。
 
-版面分類與入口設計參考 [RF 攻略網站](https://xiaiyu0028.github.io/RF_site/)，內容與實作另行製作。
+
 
 網站檔案統一放在根目錄，便於直接從 GitHub 的 Upload files 更新；不需安裝套件或額外建置。
