@@ -4,9 +4,11 @@
 
 網站網址：https://chiaomao666.github.io/snored-art-online-site/
 
-純靜態網站，無登入、無帳號資料存取、無後端。使用相對路徑，可直接由 GitHub Pages 的 `main` 分支根目錄發布。
+純靜態網站，無登入、無帳號資料存取、無後端。使用相對路徑，由 GitHub Actions 驗證並發布到 GitHub Pages。
 
 ## 收錄內容
+
+- 五種武器的 30 招攻擊與 15 招增益技能：角色等級、前置技能 Lv3、Lv1～Lv10 倍率／冷卻／目標與附加效果，並比較增益熟練前後差異。
 
 - 22 件獨特類任務道具：19 件收集掉落物與 3 件劇情／狀態道具。
 - 40 層魔王、121 件第 1～40 層頭目裝備；41～75 層另外保留舊檔定義備註。
@@ -48,7 +50,7 @@ node validate.cjs
 
 ## GitHub Pages
 
-在 repository 的 Settings → Pages，選擇 **Deploy from a branch**，分支 **main**，目錄 **/(root)**。本 repository 含 `.nojekyll`，不需要建置框架。後續提交 main 分支後會由 GitHub Pages 發布。
+在 repository 的 Settings → Pages，將 Source 設為 **GitHub Actions**。`.github/workflows/deploy.yml` 會在 main 分支更新時自動檢查 JavaScript、重建瀏覽器資料、執行資料驗證，然後把通過檢查的 `_site/` 發布到 GitHub Pages。也可在 Actions → Validate and deploy guide → Run workflow 手動重新發布。Pull request 只檢查，不部署。
 
 
 

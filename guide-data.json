@@ -33,7 +33,7 @@
         "收集 開花石人草的陪珠 ×1"
       ],
       "kind": "drop",
-      "expectedKills": 1.0
+      "expectedKills": 1
     },
     {
       "id": "story-swapped",
@@ -70,7 +70,7 @@
         "前往 污兒巴士"
       ],
       "kind": "drop",
-      "expectedKills": 4.0
+      "expectedKills": 4
     },
     {
       "id": "story-enh-guard",
@@ -171,7 +171,7 @@
         "攻略第 5 層頭目"
       ],
       "kind": "drop",
-      "expectedKills": 5.0
+      "expectedKills": 5
     },
     {
       "id": "story-flag",
@@ -210,7 +210,7 @@
         "前往 卡路里恩"
       ],
       "kind": "drop",
-      "expectedKills": 4.0
+      "expectedKills": 4
     },
     {
       "id": "story-key2",
@@ -257,7 +257,7 @@
         "攻略第 5 層頭目"
       ],
       "kind": "drop",
-      "expectedKills": 5.0
+      "expectedKills": 5
     },
     {
       "id": "story-piece",
@@ -296,7 +296,7 @@
         "前往 死他奇恩"
       ],
       "kind": "drop",
-      "expectedKills": 4.0
+      "expectedKills": 4
     },
     {
       "id": "story-feed",
@@ -337,7 +337,7 @@
         "前往 撥錄普塔"
       ],
       "kind": "drop",
-      "expectedKills": 4.0
+      "expectedKills": 4
     },
     {
       "id": "story-plank",
@@ -375,7 +375,7 @@
         "攻略第 13 層頭目"
       ],
       "kind": "drop",
-      "expectedKills": 10.0
+      "expectedKills": 10
     },
     {
       "id": "story-ore",
@@ -413,7 +413,7 @@
         "前往 第15層 主接區"
       ],
       "kind": "drop",
-      "expectedKills": 125.0
+      "expectedKills": 125
     },
     {
       "id": "story-fur",
@@ -492,7 +492,7 @@
         "收集 火焰糊的尾毛 ×5"
       ],
       "kind": "drop",
-      "expectedKills": 125.0
+      "expectedKills": 125
     },
     {
       "id": "story-seal",
@@ -530,7 +530,7 @@
         "攻略第 21 層頭目"
       ],
       "kind": "drop",
-      "expectedKills": 12.0
+      "expectedKills": 12
     },
     {
       "id": "story-yui-pixie",
@@ -608,7 +608,7 @@
         "前往 第23層 墓園"
       ],
       "kind": "drop",
-      "expectedKills": 5.0
+      "expectedKills": 5
     },
     {
       "id": "story-heartwood",
@@ -652,7 +652,7 @@
         "收集 年輪芯 ×4"
       ],
       "kind": "drop",
-      "expectedKills": 100.0
+      "expectedKills": 100
     },
     {
       "id": "story-old-scale",
@@ -694,7 +694,7 @@
         "收集 老龍的鱗片 ×5"
       ],
       "kind": "drop",
-      "expectedKills": 125.0
+      "expectedKills": 125
     },
     {
       "id": "story-singing",
@@ -732,7 +732,7 @@
         "攻略第 32 層頭目"
       ],
       "kind": "drop",
-      "expectedKills": 10.0
+      "expectedKills": 10
     },
     {
       "id": "story-gear",
@@ -822,7 +822,7 @@
         "收集 歌聲的回音石 ×5"
       ],
       "kind": "drop",
-      "expectedKills": 125.0
+      "expectedKills": 125
     }
   ],
   "bosses": [
@@ -16094,5 +16094,3429 @@
       "file": "main-Bril-Iat.fixed.js",
       "sha256": "dd090e17d3a613c54b52dc5d4c19a1b0513fc11eb9630dc94f086e7cd5747474"
     }
-  ]
+  ],
+  "weaponSkills": {
+    "source": "main-CqsPH2Ju.js",
+    "rules": {
+      "maxLevel": 10,
+      "previousLevel": 3,
+      "attackSlots": [
+        1,
+        10,
+        25
+      ],
+      "buffSlots": [
+        10,
+        30
+      ],
+      "growth": {
+        "sword": {
+          "dmg": 0.07,
+          "cd": 0
+        },
+        "rapier": {
+          "dmg": 0.03,
+          "cd": -0.03
+        },
+        "katana": {
+          "dmg": 0.04,
+          "cd": -0.01,
+          "extraTargetAt": [
+            10
+          ]
+        },
+        "axe": {
+          "dmg": 0.05,
+          "cd": -0.01
+        },
+        "mace": {
+          "dmg": 0.05,
+          "cd": -0.01
+        }
+      },
+      "xpToNext": [
+        250,
+        388,
+        601,
+        931,
+        1443,
+        2237,
+        3467,
+        5374,
+        8329
+      ]
+    },
+    "attacks": [
+      {
+        "id": "slant",
+        "style": "sword",
+        "name": {
+          "zh": "鞋斬",
+          "en": "Slanty",
+          "ja": "ナナメ斬り"
+        },
+        "desc": {
+          "zh": "單發斜向斬擊。",
+          "en": "A single diagonal slash.",
+          "ja": "単発の斜め斬り。"
+        },
+        "reqLevel": 1,
+        "targets": 1,
+        "hits": 1,
+        "multiplier": 1.6,
+        "cooldownMs": 6000,
+        "previousId": null,
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.08,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.23,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.37,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.52,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 2.66,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 2.81,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 2.95,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.1,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.24,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.39,
+            "cooldownMs": 6000,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "vertical",
+        "style": "sword",
+        "name": {
+          "zh": "吹直斬",
+          "en": "Vertickle",
+          "ja": "バーチ狂ル"
+        },
+        "desc": {
+          "zh": "由上往下的單發斬擊。",
+          "en": "A single downward slash.",
+          "ja": "上から下への単発の斬り下ろし。"
+        },
+        "reqLevel": 5,
+        "targets": 1,
+        "critBonus": 0.3,
+        "hits": 1,
+        "multiplier": 2,
+        "cooldownMs": 8000,
+        "previousId": "slant",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.48,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.65,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.83,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 3,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.17,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.35,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.52,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.7,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.87,
+            "cooldownMs": 8000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 4.04,
+            "cooldownMs": 8000,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "sonic-leap",
+        "style": "sword",
+        "name": {
+          "zh": "音速衝雞",
+          "en": "Sonic Sleep",
+          "ja": "ソニック・スリープ"
+        },
+        "desc": {
+          "zh": "高速衝刺拉近距離，順勢斬下。",
+          "en": "Dash in at high speed and slash on arrival.",
+          "ja": "高速で踏み込み、勢いのまま斬り下ろす。"
+        },
+        "reqLevel": 12,
+        "targets": 1,
+        "critBonus": 0.3,
+        "hits": 1,
+        "multiplier": 2.6,
+        "cooldownMs": 11000,
+        "previousId": "vertical",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 3.08,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 3.3,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 3.51,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 3.73,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.94,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 4.16,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 4.37,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 4.59,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 4.8,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 5.02,
+            "cooldownMs": 11000,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "horizontal-square",
+        "style": "sword",
+        "name": {
+          "zh": "水瓶四方斬",
+          "en": "Horizontal Squirrel",
+          "ja": "ホリズン樽・スクエア栗"
+        },
+        "desc": {
+          "zh": "畫出正方形的四連擊。",
+          "en": "Four slashes tracing a square.",
+          "ja": "正方形を描く四連撃。"
+        },
+        "reqLevel": 22,
+        "targets": 1,
+        "hits": 4,
+        "multiplier": 0.85,
+        "cooldownMs": 14000,
+        "previousId": "sonic-leap",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 4,
+            "multiplier": 1.3,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 4,
+            "multiplier": 1.39,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 4,
+            "multiplier": 1.49,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 4,
+            "multiplier": 1.58,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 4,
+            "multiplier": 1.67,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 4,
+            "multiplier": 1.76,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 4,
+            "multiplier": 1.85,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 4,
+            "multiplier": 1.94,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 4,
+            "multiplier": 2.03,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 4,
+            "multiplier": 2.12,
+            "cooldownMs": 14000,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "vertical-square",
+        "style": "sword",
+        "name": {
+          "zh": "吹直四方斬",
+          "en": "Vertickle Squirrel",
+          "ja": "バーチ狂ル・スクエア栗"
+        },
+        "desc": {
+          "zh": "垂直方向的四連擊。",
+          "en": "Four vertical slashes.",
+          "ja": "縦方向の四連撃。"
+        },
+        "reqLevel": 32,
+        "targets": 1,
+        "hits": 4,
+        "multiplier": 1.45,
+        "cooldownMs": 19000,
+        "previousId": "horizontal-square",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 4,
+            "multiplier": 1.98,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 4,
+            "multiplier": 2.11,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 4,
+            "multiplier": 2.25,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 4,
+            "multiplier": 2.39,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 4,
+            "multiplier": 2.53,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 4,
+            "multiplier": 2.67,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 4,
+            "multiplier": 2.81,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 4,
+            "multiplier": 2.94,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 4,
+            "multiplier": 3.08,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 4,
+            "multiplier": 3.22,
+            "cooldownMs": 19000,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "vorpal-strike",
+        "style": "sword",
+        "name": {
+          "zh": "智命突刺",
+          "en": "Burpal Strike",
+          "ja": "ヴォーパル・スト雷ク"
+        },
+        "desc": {
+          "zh": "射程極長的重突刺。",
+          "en": "A long-range heavy thrust.",
+          "ja": "射程がとても長い重い突き。"
+        },
+        "reqLevel": 45,
+        "targets": 1,
+        "critBonus": 0.3,
+        "recovery": 1.5,
+        "hits": 1,
+        "multiplier": 5.4,
+        "cooldownMs": 18000,
+        "previousId": "vertical-square",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 5.88,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 6.29,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 6.7,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 7.11,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 7.53,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 7.94,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 8.35,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 8.76,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 9.17,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 9.58,
+            "cooldownMs": 18000,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "linear",
+        "style": "rapier",
+        "name": {
+          "zh": "線性攻雞",
+          "en": "Line-ear",
+          "ja": "リニア〜ル"
+        },
+        "desc": {
+          "zh": "最基本的直線突刺，快到看不見。",
+          "en": "A basic thrust, too fast to see.",
+          "ja": "いちばん基本のまっすぐな突き。速すぎて見えない。"
+        },
+        "reqLevel": 1,
+        "targets": 1,
+        "hits": 1,
+        "multiplier": 1.3,
+        "cooldownMs": 4000,
+        "previousId": null,
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 1.96,
+            "cooldownMs": 4000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.02,
+            "cooldownMs": 3900,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.08,
+            "cooldownMs": 3800,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.14,
+            "cooldownMs": 3600,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 2.2,
+            "cooldownMs": 3500,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 2.25,
+            "cooldownMs": 3400,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 2.31,
+            "cooldownMs": 3300,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 2.37,
+            "cooldownMs": 3200,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 2.43,
+            "cooldownMs": 3000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 2.49,
+            "cooldownMs": 2900,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "oblique",
+        "style": "rapier",
+        "name": {
+          "zh": "斜線刺雞",
+          "en": "Oh-bleak",
+          "ja": "オブリー苦"
+        },
+        "desc": {
+          "zh": "斜向的二連刺。",
+          "en": "Two diagonal thrusts.",
+          "ja": "斜めの二連突き。"
+        },
+        "reqLevel": 5,
+        "targets": 1,
+        "bleed": {
+          "pct": 0.3,
+          "ms": 5000
+        },
+        "hits": 2,
+        "multiplier": 0.85,
+        "cooldownMs": 5000,
+        "previousId": "linear",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 2,
+            "multiplier": 1.41,
+            "cooldownMs": 5000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 2,
+            "multiplier": 1.45,
+            "cooldownMs": 4900,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 2,
+            "multiplier": 1.49,
+            "cooldownMs": 4700,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 2,
+            "multiplier": 1.53,
+            "cooldownMs": 4600,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 2,
+            "multiplier": 1.58,
+            "cooldownMs": 4400,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 2,
+            "multiplier": 1.62,
+            "cooldownMs": 4300,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 2,
+            "multiplier": 1.66,
+            "cooldownMs": 4100,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 2,
+            "multiplier": 1.7,
+            "cooldownMs": 4000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 2,
+            "multiplier": 1.74,
+            "cooldownMs": 3800,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 2,
+            "multiplier": 1.79,
+            "cooldownMs": 3700,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "shooting-star",
+        "style": "rapier",
+        "name": {
+          "zh": "留星",
+          "en": "Shooting Starfish",
+          "ja": "シューティング・ヒトデ"
+        },
+        "desc": {
+          "zh": "像流星一樣衝出去的突刺。",
+          "en": "Lunge like a falling star. Or a starfish.",
+          "ja": "流れ星のように飛び出す突き。あるいはヒトデのように。"
+        },
+        "reqLevel": 12,
+        "targets": 1,
+        "hits": 1,
+        "multiplier": 2,
+        "cooldownMs": 7000,
+        "previousId": "oblique",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.66,
+            "cooldownMs": 7000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.74,
+            "cooldownMs": 6800,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.82,
+            "cooldownMs": 6600,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.9,
+            "cooldownMs": 6400,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 2.98,
+            "cooldownMs": 6200,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.06,
+            "cooldownMs": 6000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.14,
+            "cooldownMs": 5700,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.22,
+            "cooldownMs": 5500,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.3,
+            "cooldownMs": 5300,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.38,
+            "cooldownMs": 5100,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "star-splash",
+        "style": "rapier",
+        "name": {
+          "zh": "星屑肥賤",
+          "en": "Star Splosh",
+          "ja": "スター・スプラッ汁"
+        },
+        "desc": {
+          "zh": "五連突刺。",
+          "en": "Five rapid thrusts.",
+          "ja": "五連突き。"
+        },
+        "reqLevel": 22,
+        "targets": 1,
+        "bleed": {
+          "pct": 0.35,
+          "ms": 6000
+        },
+        "hits": 5,
+        "multiplier": 0.6,
+        "cooldownMs": 9000,
+        "previousId": "shooting-star",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 5,
+            "multiplier": 1.14,
+            "cooldownMs": 9000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 5,
+            "multiplier": 1.17,
+            "cooldownMs": 8700,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 5,
+            "multiplier": 1.2,
+            "cooldownMs": 8500,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 5,
+            "multiplier": 1.24,
+            "cooldownMs": 8200,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 5,
+            "multiplier": 1.27,
+            "cooldownMs": 7900,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 5,
+            "multiplier": 1.31,
+            "cooldownMs": 7700,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 5,
+            "multiplier": 1.34,
+            "cooldownMs": 7400,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 5,
+            "multiplier": 1.38,
+            "cooldownMs": 7100,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 5,
+            "multiplier": 1.41,
+            "cooldownMs": 6800,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 5,
+            "multiplier": 1.44,
+            "cooldownMs": 6600,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "flashing-penetrator",
+        "style": "rapier",
+        "name": {
+          "zh": "閃光穿次",
+          "en": "Flashy Penne-trator",
+          "ja": "フラッシング・ペンネトレイター"
+        },
+        "desc": {
+          "zh": "帶著音爆的高速衝刺突刺。",
+          "en": "A sonic-boom lunge.",
+          "ja": "衝撃波をまとった高速の突進突き。"
+        },
+        "reqLevel": 32,
+        "targets": 1,
+        "recovery": 1.1,
+        "hits": 1,
+        "multiplier": 5,
+        "cooldownMs": 12000,
+        "previousId": "star-splash",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 5.48,
+            "cooldownMs": 12000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 5.64,
+            "cooldownMs": 11600,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 5.81,
+            "cooldownMs": 11300,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 5.97,
+            "cooldownMs": 10900,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 6.14,
+            "cooldownMs": 10600,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 6.3,
+            "cooldownMs": 10200,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 6.47,
+            "cooldownMs": 9800,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 6.63,
+            "cooldownMs": 9500,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 6.8,
+            "cooldownMs": 9100,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 6.96,
+            "cooldownMs": 8800,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "crucifixion",
+        "style": "rapier",
+        "name": {
+          "zh": "十字吃",
+          "en": "Cruci-fishin'",
+          "ja": "クルシ・フィッシュ"
+        },
+        "desc": {
+          "zh": "畫出十字的六連刺。",
+          "en": "Six thrusts tracing a cross.",
+          "ja": "十字を描く六連突き。"
+        },
+        "reqLevel": 45,
+        "targets": 1,
+        "bleed": {
+          "pct": 0.4,
+          "ms": 8000
+        },
+        "hits": 6,
+        "multiplier": 0.7,
+        "cooldownMs": 12000,
+        "previousId": "flashing-penetrator",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 6,
+            "multiplier": 1.27,
+            "cooldownMs": 12000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 6,
+            "multiplier": 1.31,
+            "cooldownMs": 11600,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 6,
+            "multiplier": 1.35,
+            "cooldownMs": 11300,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 6,
+            "multiplier": 1.39,
+            "cooldownMs": 10900,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 6,
+            "multiplier": 1.42,
+            "cooldownMs": 10600,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 6,
+            "multiplier": 1.46,
+            "cooldownMs": 10200,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 6,
+            "multiplier": 1.5,
+            "cooldownMs": 9800,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 6,
+            "multiplier": 1.54,
+            "cooldownMs": 9500,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 6,
+            "multiplier": 1.58,
+            "cooldownMs": 9100,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 6,
+            "multiplier": 1.61,
+            "cooldownMs": 8800,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "tsujikaze",
+        "style": "katana",
+        "name": {
+          "zh": "豬風",
+          "en": "Too-Breezy",
+          "ja": "辻ブリーズ"
+        },
+        "desc": {
+          "zh": "拔刀一閃，斬向眼前的敵人。",
+          "en": "A quick-draw slash at the foe in front.",
+          "ja": "抜き打ちの一閃で目の前の敵を斬る。"
+        },
+        "reqLevel": 1,
+        "targets": 2,
+        "splash": 0.3,
+        "armorBreak": {
+          "pct": 0.15,
+          "ms": 6000
+        },
+        "hits": 1,
+        "multiplier": 1.75,
+        "cooldownMs": 6500,
+        "previousId": null,
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.14,
+            "cooldownMs": 6500,
+            "targets": 2
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.23,
+            "cooldownMs": 6400,
+            "targets": 2
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.31,
+            "cooldownMs": 6400,
+            "targets": 2
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.4,
+            "cooldownMs": 6300,
+            "targets": 2
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 2.48,
+            "cooldownMs": 6200,
+            "targets": 2
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 2.57,
+            "cooldownMs": 6200,
+            "targets": 2
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 2.65,
+            "cooldownMs": 6100,
+            "targets": 2
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 2.74,
+            "cooldownMs": 6000,
+            "targets": 2
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 2.82,
+            "cooldownMs": 6000,
+            "targets": 2
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 2.91,
+            "cooldownMs": 5900,
+            "targets": 2
+          }
+        ]
+      },
+      {
+        "id": "ukifune",
+        "style": "katana",
+        "name": {
+          "zh": "浮粥",
+          "en": "Ooky-Fun",
+          "ja": "浮きフネ"
+        },
+        "desc": {
+          "zh": "把敵人挑到空中的上撈斬，刀風掃到旁邊一隻。",
+          "en": "An upward slash that launches a foe and nicks the one beside it.",
+          "ja": "敵を宙に打ち上げる斬り上げ。刀風が隣の一体もかすめる。"
+        },
+        "reqLevel": 5,
+        "targets": 2,
+        "splash": 0.4,
+        "hits": 1,
+        "multiplier": 2.25,
+        "cooldownMs": 9000,
+        "previousId": "tsujikaze",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.64,
+            "cooldownMs": 9000,
+            "targets": 2
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.75,
+            "cooldownMs": 8900,
+            "targets": 2
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.85,
+            "cooldownMs": 8800,
+            "targets": 2
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.96,
+            "cooldownMs": 8700,
+            "targets": 2
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.06,
+            "cooldownMs": 8600,
+            "targets": 2
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.17,
+            "cooldownMs": 8600,
+            "targets": 2
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.27,
+            "cooldownMs": 8500,
+            "targets": 2
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.38,
+            "cooldownMs": 8400,
+            "targets": 2
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.48,
+            "cooldownMs": 8300,
+            "targets": 2
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.59,
+            "cooldownMs": 8200,
+            "targets": 2
+          }
+        ]
+      },
+      {
+        "id": "hiougi",
+        "style": "katana",
+        "name": {
+          "zh": "肥扇",
+          "en": "Hi-Ogi-Bear",
+          "ja": "扇子ベア"
+        },
+        "desc": {
+          "zh": "扇形展開的二連斬，掃到身邊三隻。",
+          "en": "Two slashes fanning outward, hitting three.",
+          "ja": "扇形に広がる二連斬り。周りの三体を払う。"
+        },
+        "reqLevel": 12,
+        "targets": 3,
+        "splash": 0.6,
+        "hits": 2,
+        "multiplier": 1,
+        "cooldownMs": 12000,
+        "previousId": "ukifune",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 2,
+            "multiplier": 1.38,
+            "cooldownMs": 12000,
+            "targets": 3
+          },
+          {
+            "level": 2,
+            "hits": 2,
+            "multiplier": 1.44,
+            "cooldownMs": 11900,
+            "targets": 3
+          },
+          {
+            "level": 3,
+            "hits": 2,
+            "multiplier": 1.49,
+            "cooldownMs": 11800,
+            "targets": 3
+          },
+          {
+            "level": 4,
+            "hits": 2,
+            "multiplier": 1.55,
+            "cooldownMs": 11600,
+            "targets": 3
+          },
+          {
+            "level": 5,
+            "hits": 2,
+            "multiplier": 1.6,
+            "cooldownMs": 11500,
+            "targets": 3
+          },
+          {
+            "level": 6,
+            "hits": 2,
+            "multiplier": 1.66,
+            "cooldownMs": 11400,
+            "targets": 3
+          },
+          {
+            "level": 7,
+            "hits": 2,
+            "multiplier": 1.71,
+            "cooldownMs": 11300,
+            "targets": 3
+          },
+          {
+            "level": 8,
+            "hits": 2,
+            "multiplier": 1.77,
+            "cooldownMs": 11200,
+            "targets": 3
+          },
+          {
+            "level": 9,
+            "hits": 2,
+            "multiplier": 1.82,
+            "cooldownMs": 11000,
+            "targets": 3
+          },
+          {
+            "level": 10,
+            "hits": 2,
+            "multiplier": 1.88,
+            "cooldownMs": 10900,
+            "targets": 4
+          }
+        ]
+      },
+      {
+        "id": "tsumujiguruma",
+        "style": "katana",
+        "name": {
+          "zh": "選車",
+          "en": "Spin Car-ma",
+          "ja": "千車ぐるま"
+        },
+        "desc": {
+          "zh": "原地迴轉一圈，砍中周圍所有敵人。",
+          "en": "Spin once, hitting everything around you.",
+          "ja": "その場で一回転して、周りの敵をすべて斬る。"
+        },
+        "reqLevel": 22,
+        "targets": 6,
+        "recovery": 1.4,
+        "hits": 1,
+        "multiplier": 2.4,
+        "cooldownMs": 15000,
+        "previousId": "hiougi",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.88,
+            "cooldownMs": 15000,
+            "targets": 6
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 3,
+            "cooldownMs": 14900,
+            "targets": 6
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 3.11,
+            "cooldownMs": 14700,
+            "targets": 6
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 3.23,
+            "cooldownMs": 14600,
+            "targets": 6
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.34,
+            "cooldownMs": 14400,
+            "targets": 6
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.46,
+            "cooldownMs": 14300,
+            "targets": 6
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.57,
+            "cooldownMs": 14100,
+            "targets": 6
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.69,
+            "cooldownMs": 13900,
+            "targets": 6
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.8,
+            "cooldownMs": 13800,
+            "targets": 6
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.92,
+            "cooldownMs": 13700,
+            "targets": 6
+          }
+        ]
+      },
+      {
+        "id": "gengetsu",
+        "style": "katana",
+        "name": {
+          "zh": "換月",
+          "en": "Gen-guess-u",
+          "ja": "減月"
+        },
+        "desc": {
+          "zh": "軌跡難以預測的三連斬。",
+          "en": "Three unpredictable slashes.",
+          "ja": "軌道の読めない三連斬り。"
+        },
+        "reqLevel": 32,
+        "targets": 2,
+        "splash": 0.3,
+        "armorBreak": {
+          "pct": 0.25,
+          "ms": 10000
+        },
+        "hits": 3,
+        "multiplier": 1.7,
+        "cooldownMs": 19000,
+        "previousId": "tsumujiguruma",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 3,
+            "multiplier": 2.16,
+            "cooldownMs": 19000,
+            "targets": 2
+          },
+          {
+            "level": 2,
+            "hits": 3,
+            "multiplier": 2.25,
+            "cooldownMs": 18800,
+            "targets": 2
+          },
+          {
+            "level": 3,
+            "hits": 3,
+            "multiplier": 2.33,
+            "cooldownMs": 18600,
+            "targets": 2
+          },
+          {
+            "level": 4,
+            "hits": 3,
+            "multiplier": 2.42,
+            "cooldownMs": 18400,
+            "targets": 2
+          },
+          {
+            "level": 5,
+            "hits": 3,
+            "multiplier": 2.51,
+            "cooldownMs": 18200,
+            "targets": 2
+          },
+          {
+            "level": 6,
+            "hits": 3,
+            "multiplier": 2.59,
+            "cooldownMs": 18100,
+            "targets": 2
+          },
+          {
+            "level": 7,
+            "hits": 3,
+            "multiplier": 2.68,
+            "cooldownMs": 17900,
+            "targets": 2
+          },
+          {
+            "level": 8,
+            "hits": 3,
+            "multiplier": 2.77,
+            "cooldownMs": 17700,
+            "targets": 2
+          },
+          {
+            "level": 9,
+            "hits": 3,
+            "multiplier": 2.85,
+            "cooldownMs": 17500,
+            "targets": 2
+          },
+          {
+            "level": 10,
+            "hits": 3,
+            "multiplier": 2.94,
+            "cooldownMs": 17300,
+            "targets": 2
+          }
+        ]
+      },
+      {
+        "id": "sange",
+        "style": "katana",
+        "name": {
+          "zh": "散花生",
+          "en": "Peanut Scatter",
+          "ja": "落花生"
+        },
+        "desc": {
+          "zh": "花瓣般散開的二連重斬，掃到身邊三隻。",
+          "en": "Two heavy slashes scattering like petals, hitting three.",
+          "ja": "花びらのように散る二連の重い斬撃。周りの三体を払う。"
+        },
+        "reqLevel": 45,
+        "targets": 3,
+        "splash": 0.6,
+        "recovery": 1.3,
+        "hits": 2,
+        "multiplier": 1.8,
+        "cooldownMs": 19000,
+        "previousId": "gengetsu",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 2,
+            "multiplier": 2.26,
+            "cooldownMs": 19000,
+            "targets": 3
+          },
+          {
+            "level": 2,
+            "hits": 2,
+            "multiplier": 2.35,
+            "cooldownMs": 18800,
+            "targets": 3
+          },
+          {
+            "level": 3,
+            "hits": 2,
+            "multiplier": 2.44,
+            "cooldownMs": 18600,
+            "targets": 3
+          },
+          {
+            "level": 4,
+            "hits": 2,
+            "multiplier": 2.53,
+            "cooldownMs": 18400,
+            "targets": 3
+          },
+          {
+            "level": 5,
+            "hits": 2,
+            "multiplier": 2.62,
+            "cooldownMs": 18200,
+            "targets": 3
+          },
+          {
+            "level": 6,
+            "hits": 2,
+            "multiplier": 2.71,
+            "cooldownMs": 18100,
+            "targets": 3
+          },
+          {
+            "level": 7,
+            "hits": 2,
+            "multiplier": 2.8,
+            "cooldownMs": 17900,
+            "targets": 3
+          },
+          {
+            "level": 8,
+            "hits": 2,
+            "multiplier": 2.89,
+            "cooldownMs": 17700,
+            "targets": 3
+          },
+          {
+            "level": 9,
+            "hits": 2,
+            "multiplier": 2.98,
+            "cooldownMs": 17500,
+            "targets": 3
+          },
+          {
+            "level": 10,
+            "hits": 2,
+            "multiplier": 3.07,
+            "cooldownMs": 17300,
+            "targets": 4
+          }
+        ]
+      },
+      {
+        "id": "whirlwind",
+        "style": "axe",
+        "name": {
+          "zh": "選風",
+          "en": "Whirled Wind",
+          "ja": "ワールド・ウィンド"
+        },
+        "desc": {
+          "zh": "掄圓了斧頭砍向眼前的敵人，順勢掃到旁邊的。",
+          "en": "Whirl the axe into a foe, clipping those beside it.",
+          "ja": "斧を振り回して目の前の敵を斬り、勢いで隣も払う。"
+        },
+        "reqLevel": 1,
+        "targets": 3,
+        "splash": 0.4,
+        "hits": 1,
+        "multiplier": 2.1,
+        "cooldownMs": 7000,
+        "previousId": null,
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.4,
+            "cooldownMs": 7000,
+            "targets": 3
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.52,
+            "cooldownMs": 6900,
+            "targets": 3
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.64,
+            "cooldownMs": 6900,
+            "targets": 3
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.76,
+            "cooldownMs": 6800,
+            "targets": 3
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 2.88,
+            "cooldownMs": 6700,
+            "targets": 3
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3,
+            "cooldownMs": 6700,
+            "targets": 3
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.12,
+            "cooldownMs": 6600,
+            "targets": 3
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.24,
+            "cooldownMs": 6500,
+            "targets": 3
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.36,
+            "cooldownMs": 6400,
+            "targets": 3
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.48,
+            "cooldownMs": 6400,
+            "targets": 3
+          }
+        ]
+      },
+      {
+        "id": "lumber",
+        "style": "axe",
+        "name": {
+          "zh": "罰木斬",
+          "en": "Lumber Jacked",
+          "ja": "木こりジャック"
+        },
+        "desc": {
+          "zh": "像砍樹一樣的橫劈。",
+          "en": "Chop sideways like felling a tree.",
+          "ja": "木を切り倒すように横に叩き割る。"
+        },
+        "reqLevel": 5,
+        "targets": 2,
+        "splash": 0.35,
+        "weaken": {
+          "pct": 0.2,
+          "ms": 8000
+        },
+        "hits": 1,
+        "multiplier": 2.85,
+        "cooldownMs": 10000,
+        "previousId": "whirlwind",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 3.15,
+            "cooldownMs": 10000,
+            "targets": 2
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 3.31,
+            "cooldownMs": 9900,
+            "targets": 2
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 3.47,
+            "cooldownMs": 9800,
+            "targets": 2
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 3.62,
+            "cooldownMs": 9700,
+            "targets": 2
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.78,
+            "cooldownMs": 9600,
+            "targets": 2
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.94,
+            "cooldownMs": 9500,
+            "targets": 2
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 4.1,
+            "cooldownMs": 9400,
+            "targets": 2
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 4.25,
+            "cooldownMs": 9300,
+            "targets": 2
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 4.41,
+            "cooldownMs": 9200,
+            "targets": 2
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 4.57,
+            "cooldownMs": 9100,
+            "targets": 2
+          }
+        ]
+      },
+      {
+        "id": "grand-destruct",
+        "style": "axe",
+        "name": {
+          "zh": "光地破壞",
+          "en": "Grand Destruct-o",
+          "ja": "グランド・デストラクト王"
+        },
+        "desc": {
+          "zh": "砸向地面，衝擊波掃過四周。",
+          "en": "Smash the ground and send out a shockwave.",
+          "ja": "地面に叩きつけ、衝撃波を周りに飛ばす。"
+        },
+        "reqLevel": 12,
+        "targets": 6,
+        "recovery": 1.7,
+        "hits": 1,
+        "multiplier": 2.05,
+        "cooldownMs": 13000,
+        "previousId": "lumber",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.53,
+            "cooldownMs": 13000,
+            "targets": 6
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.66,
+            "cooldownMs": 12900,
+            "targets": 6
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.78,
+            "cooldownMs": 12700,
+            "targets": 6
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.91,
+            "cooldownMs": 12600,
+            "targets": 6
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.04,
+            "cooldownMs": 12500,
+            "targets": 6
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.16,
+            "cooldownMs": 12400,
+            "targets": 6
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.29,
+            "cooldownMs": 12200,
+            "targets": 6
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.42,
+            "cooldownMs": 12100,
+            "targets": 6
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.54,
+            "cooldownMs": 12000,
+            "targets": 6
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.67,
+            "cooldownMs": 11800,
+            "targets": 6
+          }
+        ]
+      },
+      {
+        "id": "rampage",
+        "style": "axe",
+        "name": {
+          "zh": "饅荒爆走",
+          "en": "Ramp Age",
+          "ja": "ランページ・エイジ"
+        },
+        "desc": {
+          "zh": "橫衝直撞的二連劈，掃到身邊三隻。",
+          "en": "Two reckless cleaves, hitting three.",
+          "ja": "むやみに突っ込む二連の叩き割り。周りの三体を払う。"
+        },
+        "reqLevel": 22,
+        "targets": 3,
+        "splash": 0.6,
+        "hits": 2,
+        "multiplier": 1.35,
+        "cooldownMs": 14000,
+        "previousId": "grand-destruct",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 2,
+            "multiplier": 1.65,
+            "cooldownMs": 14000,
+            "targets": 3
+          },
+          {
+            "level": 2,
+            "hits": 2,
+            "multiplier": 1.73,
+            "cooldownMs": 13900,
+            "targets": 3
+          },
+          {
+            "level": 3,
+            "hits": 2,
+            "multiplier": 1.81,
+            "cooldownMs": 13700,
+            "targets": 3
+          },
+          {
+            "level": 4,
+            "hits": 2,
+            "multiplier": 1.9,
+            "cooldownMs": 13600,
+            "targets": 3
+          },
+          {
+            "level": 5,
+            "hits": 2,
+            "multiplier": 1.98,
+            "cooldownMs": 13400,
+            "targets": 3
+          },
+          {
+            "level": 6,
+            "hits": 2,
+            "multiplier": 2.06,
+            "cooldownMs": 13300,
+            "targets": 3
+          },
+          {
+            "level": 7,
+            "hits": 2,
+            "multiplier": 2.14,
+            "cooldownMs": 13200,
+            "targets": 3
+          },
+          {
+            "level": 8,
+            "hits": 2,
+            "multiplier": 2.23,
+            "cooldownMs": 13000,
+            "targets": 3
+          },
+          {
+            "level": 9,
+            "hits": 2,
+            "multiplier": 2.31,
+            "cooldownMs": 12900,
+            "targets": 3
+          },
+          {
+            "level": 10,
+            "hits": 2,
+            "multiplier": 2.39,
+            "cooldownMs": 12700,
+            "targets": 3
+          }
+        ]
+      },
+      {
+        "id": "dynamic-smash",
+        "style": "axe",
+        "name": {
+          "zh": "恐龍粉碎",
+          "en": "Dino-mic Smash",
+          "ja": "ダイナマイ恐竜スマッシュ"
+        },
+        "desc": {
+          "zh": "全身力量的一記重劈，連周圍一起砸碎。",
+          "en": "One full-body smash that crushes everything nearby.",
+          "ja": "全身の力をこめた一撃で、周りごと叩きつぶす。"
+        },
+        "reqLevel": 32,
+        "targets": 6,
+        "recovery": 2,
+        "hits": 1,
+        "multiplier": 5,
+        "cooldownMs": 22000,
+        "previousId": "rampage",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 5.48,
+            "cooldownMs": 22000,
+            "targets": 6
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 5.75,
+            "cooldownMs": 21800,
+            "targets": 6
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 6.03,
+            "cooldownMs": 21600,
+            "targets": 6
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 6.3,
+            "cooldownMs": 21300,
+            "targets": 6
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 6.58,
+            "cooldownMs": 21100,
+            "targets": 6
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 6.85,
+            "cooldownMs": 20900,
+            "targets": 6
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 7.12,
+            "cooldownMs": 20700,
+            "targets": 6
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 7.4,
+            "cooldownMs": 20500,
+            "targets": 6
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 7.67,
+            "cooldownMs": 20200,
+            "targets": 6
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 7.95,
+            "cooldownMs": 20000,
+            "targets": 6
+          }
+        ]
+      },
+      {
+        "id": "earthquake",
+        "style": "axe",
+        "name": {
+          "zh": "地真",
+          "en": "Earth Quack",
+          "ja": "地震カモ"
+        },
+        "desc": {
+          "zh": "連續砸地三次。",
+          "en": "Pound the ground three times.",
+          "ja": "地面を三回続けて叩く。"
+        },
+        "reqLevel": 45,
+        "targets": 6,
+        "weaken": {
+          "pct": 0.15,
+          "ms": 10000
+        },
+        "recovery": 1.5,
+        "hits": 3,
+        "multiplier": 1.25,
+        "cooldownMs": 20000,
+        "previousId": "dynamic-smash",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 3,
+            "multiplier": 1.64,
+            "cooldownMs": 20000,
+            "targets": 6
+          },
+          {
+            "level": 2,
+            "hits": 3,
+            "multiplier": 1.72,
+            "cooldownMs": 19800,
+            "targets": 6
+          },
+          {
+            "level": 3,
+            "hits": 3,
+            "multiplier": 1.8,
+            "cooldownMs": 19600,
+            "targets": 6
+          },
+          {
+            "level": 4,
+            "hits": 3,
+            "multiplier": 1.88,
+            "cooldownMs": 19400,
+            "targets": 6
+          },
+          {
+            "level": 5,
+            "hits": 3,
+            "multiplier": 1.96,
+            "cooldownMs": 19200,
+            "targets": 6
+          },
+          {
+            "level": 6,
+            "hits": 3,
+            "multiplier": 2.04,
+            "cooldownMs": 19000,
+            "targets": 6
+          },
+          {
+            "level": 7,
+            "hits": 3,
+            "multiplier": 2.13,
+            "cooldownMs": 18800,
+            "targets": 6
+          },
+          {
+            "level": 8,
+            "hits": 3,
+            "multiplier": 2.21,
+            "cooldownMs": 18600,
+            "targets": 6
+          },
+          {
+            "level": 9,
+            "hits": 3,
+            "multiplier": 2.29,
+            "cooldownMs": 18400,
+            "targets": 6
+          },
+          {
+            "level": 10,
+            "hits": 3,
+            "multiplier": 2.37,
+            "cooldownMs": 18200,
+            "targets": 6
+          }
+        ]
+      },
+      {
+        "id": "knock",
+        "style": "mace",
+        "name": {
+          "zh": "敲敲",
+          "en": "Knock-Knock",
+          "ja": "コンコン"
+        },
+        "desc": {
+          "zh": "敲一下讓敵人只盯著你。",
+          "en": "One knock, and it only has eyes for you.",
+          "ja": "軽く叩いて、敵の目を自分だけに向けさせる。"
+        },
+        "reqLevel": 1,
+        "targets": 1,
+        "taunt": true,
+        "hits": 1,
+        "multiplier": 2.1,
+        "cooldownMs": 7000,
+        "previousId": null,
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.46,
+            "cooldownMs": 7000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.58,
+            "cooldownMs": 6900,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.71,
+            "cooldownMs": 6900,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.83,
+            "cooldownMs": 6800,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 2.95,
+            "cooldownMs": 6700,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.08,
+            "cooldownMs": 6700,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.2,
+            "cooldownMs": 6600,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.32,
+            "cooldownMs": 6500,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.44,
+            "cooldownMs": 6400,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.57,
+            "cooldownMs": 6400,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "iron-wall",
+        "style": "mace",
+        "name": {
+          "zh": "鐵壁錘",
+          "en": "Iron Wall-op",
+          "ja": "鉄壁ハンマー"
+        },
+        "desc": {
+          "zh": "舉起武器擋在身前再敲下去。",
+          "en": "Brace behind your weapon, then swing.",
+          "ja": "武器を前に構えて受けてから叩き込む。"
+        },
+        "reqLevel": 5,
+        "targets": 1,
+        "guard": {
+          "pct": 0.3,
+          "ms": 6000
+        },
+        "hits": 1,
+        "multiplier": 2.65,
+        "cooldownMs": 12000,
+        "previousId": "knock",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 3.01,
+            "cooldownMs": 12000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 3.16,
+            "cooldownMs": 11900,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 3.31,
+            "cooldownMs": 11800,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 3.46,
+            "cooldownMs": 11600,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.61,
+            "cooldownMs": 11500,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 3.76,
+            "cooldownMs": 11400,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 3.91,
+            "cooldownMs": 11300,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 4.06,
+            "cooldownMs": 11200,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 4.21,
+            "cooldownMs": 11000,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 4.36,
+            "cooldownMs": 10900,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "ground-pound",
+        "style": "mace",
+        "name": {
+          "zh": "地鳴錘",
+          "en": "Ground Pound-cake",
+          "ja": "地鳴りハンマーケーキ"
+        },
+        "desc": {
+          "zh": "砸向地面，震到身邊三隻，最前面那隻只盯著你。",
+          "en": "Pound the ground, shaking three. The closest only glares at you.",
+          "ja": "地面を叩いて周りの三体を揺らす。いちばん手前の一体はこっちしか見なくなる。"
+        },
+        "reqLevel": 12,
+        "targets": 3,
+        "taunt": true,
+        "hits": 1,
+        "multiplier": 1.9,
+        "cooldownMs": 12000,
+        "previousId": "iron-wall",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 2.26,
+            "cooldownMs": 12000,
+            "targets": 3
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 2.37,
+            "cooldownMs": 11900,
+            "targets": 3
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 2.49,
+            "cooldownMs": 11800,
+            "targets": 3
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 2.6,
+            "cooldownMs": 11600,
+            "targets": 3
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 2.71,
+            "cooldownMs": 11500,
+            "targets": 3
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 2.83,
+            "cooldownMs": 11400,
+            "targets": 3
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 2.94,
+            "cooldownMs": 11300,
+            "targets": 3
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 3.05,
+            "cooldownMs": 11200,
+            "targets": 3
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 3.16,
+            "cooldownMs": 11000,
+            "targets": 3
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 3.28,
+            "cooldownMs": 10900,
+            "targets": 3
+          }
+        ]
+      },
+      {
+        "id": "hammer-time",
+        "style": "mace",
+        "name": {
+          "zh": "連鎚",
+          "en": "Hammer Time",
+          "ja": "ハンマータイム"
+        },
+        "desc": {
+          "zh": "連續敲三下。",
+          "en": "Three hammer blows in a row.",
+          "ja": "三回続けて叩く。"
+        },
+        "reqLevel": 22,
+        "targets": 1,
+        "hits": 3,
+        "multiplier": 1.3,
+        "cooldownMs": 14000,
+        "previousId": "ground-pound",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 3,
+            "multiplier": 1.68,
+            "cooldownMs": 14000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 3,
+            "multiplier": 1.77,
+            "cooldownMs": 13900,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 3,
+            "multiplier": 1.85,
+            "cooldownMs": 13700,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 3,
+            "multiplier": 1.94,
+            "cooldownMs": 13600,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 3,
+            "multiplier": 2.02,
+            "cooldownMs": 13400,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 3,
+            "multiplier": 2.11,
+            "cooldownMs": 13300,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 3,
+            "multiplier": 2.19,
+            "cooldownMs": 13200,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 3,
+            "multiplier": 2.27,
+            "cooldownMs": 13000,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 3,
+            "multiplier": 2.36,
+            "cooldownMs": 12900,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 3,
+            "multiplier": 2.44,
+            "cooldownMs": 12700,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "meteor-hammer",
+        "style": "mace",
+        "name": {
+          "zh": "隕石錘",
+          "en": "Meteor Hammer-head",
+          "ja": "隕石ハンマーヘッド"
+        },
+        "desc": {
+          "zh": "像隕石一樣砸下的重擊，敵人被砸得沒力氣。",
+          "en": "A meteor-like smash that leaves the foe drained.",
+          "ja": "隕石のように落ちる重い一撃。叩かれた敵は力が抜ける。"
+        },
+        "reqLevel": 32,
+        "targets": 1,
+        "recovery": 1.6,
+        "weaken": {
+          "pct": 0.25,
+          "ms": 8000
+        },
+        "hits": 1,
+        "multiplier": 6.4,
+        "cooldownMs": 20000,
+        "previousId": "hammer-time",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 6.88,
+            "cooldownMs": 20000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 7.22,
+            "cooldownMs": 19800,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 7.57,
+            "cooldownMs": 19600,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 7.91,
+            "cooldownMs": 19400,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 8.26,
+            "cooldownMs": 19200,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 8.6,
+            "cooldownMs": 19000,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 8.94,
+            "cooldownMs": 18800,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 9.29,
+            "cooldownMs": 18600,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 9.63,
+            "cooldownMs": 18400,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 9.98,
+            "cooldownMs": 18200,
+            "targets": 1
+          }
+        ]
+      },
+      {
+        "id": "hold-fort",
+        "style": "mace",
+        "name": {
+          "zh": "堅守",
+          "en": "Hold the Fort-une",
+          "ja": "堅守フォーチュン"
+        },
+        "desc": {
+          "zh": "站穩腳步敲下去，讓敵人只盯著你。",
+          "en": "Plant your feet and swing. It only glares at you.",
+          "ja": "足を踏ん張って叩き込み、敵の目を自分だけに向けさせる。"
+        },
+        "reqLevel": 45,
+        "targets": 1,
+        "taunt": true,
+        "guard": {
+          "pct": 0.4,
+          "ms": 8000
+        },
+        "hits": 1,
+        "multiplier": 2.9,
+        "cooldownMs": 18000,
+        "previousId": "meteor-hammer",
+        "levels": [
+          {
+            "level": 1,
+            "hits": 1,
+            "multiplier": 3.26,
+            "cooldownMs": 18000,
+            "targets": 1
+          },
+          {
+            "level": 2,
+            "hits": 1,
+            "multiplier": 3.42,
+            "cooldownMs": 17800,
+            "targets": 1
+          },
+          {
+            "level": 3,
+            "hits": 1,
+            "multiplier": 3.59,
+            "cooldownMs": 17600,
+            "targets": 1
+          },
+          {
+            "level": 4,
+            "hits": 1,
+            "multiplier": 3.75,
+            "cooldownMs": 17500,
+            "targets": 1
+          },
+          {
+            "level": 5,
+            "hits": 1,
+            "multiplier": 3.91,
+            "cooldownMs": 17300,
+            "targets": 1
+          },
+          {
+            "level": 6,
+            "hits": 1,
+            "multiplier": 4.07,
+            "cooldownMs": 17100,
+            "targets": 1
+          },
+          {
+            "level": 7,
+            "hits": 1,
+            "multiplier": 4.24,
+            "cooldownMs": 16900,
+            "targets": 1
+          },
+          {
+            "level": 8,
+            "hits": 1,
+            "multiplier": 4.4,
+            "cooldownMs": 16700,
+            "targets": 1
+          },
+          {
+            "level": 9,
+            "hits": 1,
+            "multiplier": 4.56,
+            "cooldownMs": 16600,
+            "targets": 1
+          },
+          {
+            "level": 10,
+            "hits": 1,
+            "multiplier": 4.73,
+            "cooldownMs": 16400,
+            "targets": 1
+          }
+        ]
+      }
+    ],
+    "buffs": [
+      {
+        "id": "war-cry",
+        "style": "sword",
+        "party": true,
+        "name": {
+          "zh": "鬼叫",
+          "en": "War Cry-baby",
+          "ja": "雄叫びベイビー"
+        },
+        "desc": {
+          "zh": "大聲鬼叫，讓身邊的夥伴都燃起鬥志。",
+          "en": "A roar that fires up everyone nearby.",
+          "ja": "大声で叫んで、周りの仲間の闘志を燃え上がらせる。"
+        },
+        "reqLevel": 10,
+        "ms": 15000,
+        "cooldownMs": 45000,
+        "effect": {
+          "atk": 0.12
+        },
+        "base": {
+          "effect": {
+            "atk": 0.12
+          },
+          "ms": 15000,
+          "cooldownMs": 45000
+        },
+        "mastered": {
+          "effect": {
+            "atk": 0.12
+          },
+          "ms": 20000,
+          "cooldownMs": 36000
+        }
+      },
+      {
+        "id": "focus",
+        "style": "sword",
+        "party": false,
+        "name": {
+          "zh": "瞪神",
+          "en": "Focus-pocus",
+          "ja": "にらみ神"
+        },
+        "desc": {
+          "zh": "瞪大眼睛盯著，接下來的每一刀都專挑要害。",
+          "en": "Hold your breath. Every cut goes for the weak spot.",
+          "ja": "目を見開いてにらみ、次の一太刀からはすべて急所を狙う。"
+        },
+        "reqLevel": 15,
+        "ms": 8000,
+        "cooldownMs": 40000,
+        "effect": {
+          "crit": 0.15,
+          "critDmg": 0.4
+        },
+        "base": {
+          "effect": {
+            "crit": 0.15,
+            "critDmg": 0.4
+          },
+          "ms": 8000,
+          "cooldownMs": 40000
+        },
+        "mastered": {
+          "effect": {
+            "crit": 0.2,
+            "critDmg": 0.52
+          },
+          "ms": 8000,
+          "cooldownMs": 32000
+        }
+      },
+      {
+        "id": "rally",
+        "style": "sword",
+        "party": true,
+        "name": {
+          "zh": "揪團",
+          "en": "Rally-ho",
+          "ja": "集合ほー"
+        },
+        "desc": {
+          "zh": "揪大家站穩陣腳，攻守都更紮實。",
+          "en": "Rally your friends. Everyone hits harder and holds firmer.",
+          "ja": "みんなを集めて足場を固め、攻めも守りもしっかりする。"
+        },
+        "reqLevel": 32,
+        "ms": 15000,
+        "cooldownMs": 50000,
+        "effect": {
+          "atk": 0.06,
+          "taken": 0.06
+        },
+        "base": {
+          "effect": {
+            "atk": 0.06,
+            "taken": 0.06
+          },
+          "ms": 15000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "atk": 0.06,
+            "taken": 0.06
+          },
+          "ms": 20000,
+          "cooldownMs": 40000
+        }
+      },
+      {
+        "id": "gale-song",
+        "style": "rapier",
+        "party": true,
+        "name": {
+          "zh": "疾風之哥",
+          "en": "Gale Song-bird",
+          "ja": "疾風のアニキの歌"
+        },
+        "desc": {
+          "zh": "哥唱起輕快的歌，讓大家的動作都變快。",
+          "en": "A brisk rhythm that speeds everyone up.",
+          "ja": "アニキが軽快な歌を歌い、みんなの動きが速くなる。"
+        },
+        "reqLevel": 10,
+        "ms": 15000,
+        "cooldownMs": 50000,
+        "effect": {
+          "speed": 0.12
+        },
+        "base": {
+          "effect": {
+            "speed": 0.12
+          },
+          "ms": 15000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "speed": 0.12
+          },
+          "ms": 20000,
+          "cooldownMs": 40000
+        }
+      },
+      {
+        "id": "flurry",
+        "style": "rapier",
+        "party": false,
+        "name": {
+          "zh": "疾刺",
+          "en": "Flurry-ous",
+          "ja": "疾突"
+        },
+        "desc": {
+          "zh": "一口氣加快出手的速度。",
+          "en": "Speed up your thrusts all at once.",
+          "ja": "一気に手数を速める。"
+        },
+        "reqLevel": 15,
+        "ms": 8000,
+        "cooldownMs": 40000,
+        "effect": {
+          "speed": 0.3
+        },
+        "base": {
+          "effect": {
+            "speed": 0.3
+          },
+          "ms": 8000,
+          "cooldownMs": 40000
+        },
+        "mastered": {
+          "effect": {
+            "speed": 0.39
+          },
+          "ms": 8000,
+          "cooldownMs": 32000
+        }
+      },
+      {
+        "id": "insight",
+        "style": "rapier",
+        "party": true,
+        "name": {
+          "zh": "看破紅塵",
+          "en": "Insight-seeing",
+          "ja": "悟りの境地"
+        },
+        "desc": {
+          "zh": "看破紅塵，也看破敵人的破綻，大家都打得更準更狠。",
+          "en": "Point out the gaps. Everyone strikes truer and harder.",
+          "ja": "世の中も敵のすきも悟り、みんなの攻撃が正確で鋭くなる。"
+        },
+        "reqLevel": 32,
+        "ms": 15000,
+        "cooldownMs": 50000,
+        "effect": {
+          "crit": 0.06,
+          "critDmg": 0.15
+        },
+        "base": {
+          "effect": {
+            "crit": 0.06,
+            "critDmg": 0.15
+          },
+          "ms": 15000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "crit": 0.06,
+            "critDmg": 0.15
+          },
+          "ms": 20000,
+          "cooldownMs": 40000
+        }
+      },
+      {
+        "id": "cheer",
+        "style": "katana",
+        "party": true,
+        "name": {
+          "zh": "打鼓舞",
+          "en": "Cheer-ios",
+          "ja": "太鼓踊り"
+        },
+        "desc": {
+          "zh": "邊打鼓邊跳舞替夥伴打氣，大家都更容易打中要害。",
+          "en": "Cheer your friends on. Everyone finds weak spots more often.",
+          "ja": "太鼓を叩いて踊りながら仲間を盛り上げ、みんな急所に当てやすくなる。"
+        },
+        "reqLevel": 10,
+        "ms": 15000,
+        "cooldownMs": 45000,
+        "effect": {
+          "crit": 0.08
+        },
+        "base": {
+          "effect": {
+            "crit": 0.08
+          },
+          "ms": 15000,
+          "cooldownMs": 45000
+        },
+        "mastered": {
+          "effect": {
+            "crit": 0.08
+          },
+          "ms": 20000,
+          "cooldownMs": 36000
+        }
+      },
+      {
+        "id": "iai",
+        "style": "katana",
+        "party": false,
+        "name": {
+          "zh": "蓄刀待發",
+          "en": "Iai-yai-yai",
+          "ja": "居合イヤイヤ"
+        },
+        "desc": {
+          "zh": "收刀蓄勢待發，接下來的斬擊特別重。",
+          "en": "Sheathe and gather. The next cuts land heavy.",
+          "ja": "刀を納めて機をうかがう。次の斬撃がとくに重い。"
+        },
+        "reqLevel": 15,
+        "ms": 6000,
+        "cooldownMs": 35000,
+        "effect": {
+          "atk": 0.3
+        },
+        "base": {
+          "effect": {
+            "atk": 0.3
+          },
+          "ms": 6000,
+          "cooldownMs": 35000
+        },
+        "mastered": {
+          "effect": {
+            "atk": 0.39
+          },
+          "ms": 6000,
+          "cooldownMs": 28000
+        }
+      },
+      {
+        "id": "kiai",
+        "style": "katana",
+        "party": true,
+        "name": {
+          "zh": "起鬨",
+          "en": "Ki-eye",
+          "ja": "気合いダー"
+        },
+        "desc": {
+          "zh": "大家一起起鬨，打中要害時更痛。",
+          "en": "A sharp shout. Everyone's critical hits cut deeper.",
+          "ja": "みんなで気合いを入れ、急所に当たったときがもっと痛い。"
+        },
+        "reqLevel": 32,
+        "ms": 15000,
+        "cooldownMs": 50000,
+        "effect": {
+          "critDmg": 0.25
+        },
+        "base": {
+          "effect": {
+            "critDmg": 0.25
+          },
+          "ms": 15000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "critDmg": 0.25
+          },
+          "ms": 20000,
+          "cooldownMs": 40000
+        }
+      },
+      {
+        "id": "daunt",
+        "style": "axe",
+        "party": true,
+        "name": {
+          "zh": "嚇嚇叫",
+          "en": "Daunt-ing",
+          "ja": "びびらせ屋"
+        },
+        "desc": {
+          "zh": "揮斧把敵人嚇得嚇嚇叫，夥伴受到的傷害降低。",
+          "en": "A swing that shakes the enemy. Your friends take less damage.",
+          "ja": "斧を振って敵をびびらせ、仲間の受けるダメージが減る。"
+        },
+        "reqLevel": 10,
+        "ms": 12000,
+        "cooldownMs": 45000,
+        "effect": {
+          "taken": 0.1
+        },
+        "base": {
+          "effect": {
+            "taken": 0.1
+          },
+          "ms": 12000,
+          "cooldownMs": 45000
+        },
+        "mastered": {
+          "effect": {
+            "taken": 0.1
+          },
+          "ms": 16000,
+          "cooldownMs": 36000
+        }
+      },
+      {
+        "id": "berserk",
+        "style": "axe",
+        "party": false,
+        "name": {
+          "zh": "亂砍一通",
+          "en": "Berserk-er-ker",
+          "ja": "めった斬り"
+        },
+        "desc": {
+          "zh": "不顧防守地亂砍一通。",
+          "en": "Swing wildly with no thought for defense.",
+          "ja": "守りなんか考えずにめった斬り。"
+        },
+        "reqLevel": 15,
+        "ms": 10000,
+        "cooldownMs": 50000,
+        "effect": {
+          "atk": 0.4,
+          "def": -0.2
+        },
+        "base": {
+          "effect": {
+            "atk": 0.4,
+            "def": -0.2
+          },
+          "ms": 10000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "atk": 0.52,
+            "def": -0.2
+          },
+          "ms": 10000,
+          "cooldownMs": 40000
+        }
+      },
+      {
+        "id": "warpath",
+        "style": "axe",
+        "party": true,
+        "name": {
+          "zh": "血脈噴張",
+          "en": "War-path-etic",
+          "ja": "血湧き肉踊り"
+        },
+        "desc": {
+          "zh": "血脈噴張，大家下手更重。",
+          "en": "The war spirit rises. Everyone hits harder.",
+          "ja": "血が湧き立ち、みんなの一撃が重くなる。"
+        },
+        "reqLevel": 32,
+        "ms": 15000,
+        "cooldownMs": 50000,
+        "effect": {
+          "atk": 0.08,
+          "crit": 0.04
+        },
+        "base": {
+          "effect": {
+            "atk": 0.08,
+            "crit": 0.04
+          },
+          "ms": 15000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "atk": 0.08,
+            "crit": 0.04
+          },
+          "ms": 20000,
+          "cooldownMs": 40000
+        }
+      },
+      {
+        "id": "guard-oath",
+        "style": "mace",
+        "party": true,
+        "name": {
+          "zh": "發誓不跑",
+          "en": "Oath of Guard-ian",
+          "ja": "逃げない誓い"
+        },
+        "desc": {
+          "zh": "發誓不會丟下大家跑掉，夥伴受到的傷害降低。",
+          "en": "Swear to protect. Your friends take less damage.",
+          "ja": "みんなを置いて逃げないと誓い、仲間の受けるダメージが減る。"
+        },
+        "reqLevel": 10,
+        "ms": 12000,
+        "cooldownMs": 50000,
+        "effect": {
+          "taken": 0.12
+        },
+        "base": {
+          "effect": {
+            "taken": 0.12
+          },
+          "ms": 12000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "taken": 0.12
+          },
+          "ms": 16000,
+          "cooldownMs": 40000
+        }
+      },
+      {
+        "id": "stone-skin",
+        "style": "mace",
+        "party": false,
+        "name": {
+          "zh": "臉皮厚",
+          "en": "Stone Skin-ny",
+          "ja": "面の皮"
+        },
+        "desc": {
+          "zh": "全身繃緊，皮厚得像石頭，敲下去也更重。",
+          "en": "Tense up until you're hard as stone. Your swings land heavier too.",
+          "ja": "全身に力を入れて石のように皮を厚くする。叩く力も重くなる。"
+        },
+        "reqLevel": 15,
+        "ms": 8000,
+        "cooldownMs": 40000,
+        "effect": {
+          "def": 0.3,
+          "taken": 0.15,
+          "atk": 0.15
+        },
+        "base": {
+          "effect": {
+            "def": 0.3,
+            "taken": 0.15,
+            "atk": 0.15
+          },
+          "ms": 8000,
+          "cooldownMs": 40000
+        },
+        "mastered": {
+          "effect": {
+            "def": 0.39,
+            "taken": 0.2,
+            "atk": 0.2
+          },
+          "ms": 8000,
+          "cooldownMs": 32000
+        }
+      },
+      {
+        "id": "bulwark",
+        "style": "mace",
+        "party": true,
+        "name": {
+          "zh": "鐵壁之陣痛",
+          "en": "Bul-walk",
+          "ja": "鉄壁の陣痛"
+        },
+        "desc": {
+          "zh": "擺出陣形擺到腳痠，大家的防禦都提高。",
+          "en": "Form up. Everyone's defense goes up.",
+          "ja": "足がつるまで陣形を組み、みんなの防御が上がる。"
+        },
+        "reqLevel": 32,
+        "ms": 15000,
+        "cooldownMs": 50000,
+        "effect": {
+          "def": 0.2
+        },
+        "base": {
+          "effect": {
+            "def": 0.2
+          },
+          "ms": 15000,
+          "cooldownMs": 50000
+        },
+        "mastered": {
+          "effect": {
+            "def": 0.2
+          },
+          "ms": 20000,
+          "cooldownMs": 40000
+        }
+      }
+    ]
+  }
 }
