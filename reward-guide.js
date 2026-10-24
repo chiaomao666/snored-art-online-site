@@ -1,0 +1,11 @@
+(function(root){
+ 'use strict';
+ const key='sao-guide-reward-level';
+ function parse(value){if(value==null||String(value).trim()==='')return null;const n=Number(value);return Number.isInteger(n)&&n>=1&&n<=120?n:null}
+ function comparison(monsterLevel,playerLevel){if(!Number.isInteger(monsterLevel))return {gap:null,text:'等級隱藏',kind:'unknown'};if(parse(playerLevel)==null)return {gap:null,text:'—',kind:'unknown'};const gap=monsterLevel-Number(playerLevel);return {gap,text:gap>0?`高你 ${gap} 級`:gap<0?`低你 ${-gap} 級`:'同等級',kind:gap>0?'higher':gap<0?'lower':'same'}}
+ function badge(monsterLevel,playerLevel){const c=comparison(monsterLevel,playerLevel);return `<span class="reward-gap ${c.kind}">${c.text}</span>`}
+ function load(params){const q=params?.get('playerLevel');if(q!==null&&q!==undefined)return parse(q);try{return parse(localStorage.getItem(key))}catch{return null}}
+ function panel(level){return `<section class="panel reward-level-panel" aria-label="經驗與等級差"><div><h2>經驗會受等級差影響</h2><p>下方列的是<strong>基礎經驗</strong>，不代表每次實得。輸入角色等級可比較怪物與你的等級差；低等怪可能有經驗衰減，實得請以遊戲戰鬥紀錄為準。</p></div><label class="field">你的角色等級（選填）<input id="reward-player-level" aria-label="查詢角色等級" aria-describedby="reward-level-status" type="number" min="1" max="120" step="1" value="${parse(level)??''}" placeholder="例如 50"><span id="reward-level-status" class="section-note" role="status" aria-live="polite">${parse(level)==null?'填入後，兩個頁面會共用此等級。':`目前以角色 Lv${parse(level)} 比較。`}</span></label><details><summary>為什麼沒有直接換算實得經驗？</summary><p>檔案包含等級衰減與經驗上限的相關參數，但完整發放、套用順序和取整規則由伺服器處理，目前無法可靠換算。隊伍分配、離線及活動等規則也可能影響實得；怪物資料與排序均以基礎經驗為準。</p></details></section>`}
+ function bind(callback){const input=document.getElementById('reward-player-level'),status=document.getElementById('reward-level-status');input.addEventListener('input',()=>{const n=parse(input.value),invalid=input.value!==''&&n===null;input.setAttribute('aria-invalid',String(invalid));status.textContent=invalid?'請輸入 1–120 的整數等級。':n===null?'填入後，兩個頁面會共用此等級。':`目前以角色 Lv${n} 比較。`;if(!invalid)try{if(n===null)localStorage.removeItem(key);else localStorage.setItem(key,String(n))}catch{}callback(n)});}
+ const api={parse,comparison,badge,load,panel,bind};root.RewardGuide=api;if(typeof module==='object')module.exports=api;
+})(typeof globalThis==='object'?globalThis:this);
