@@ -19,6 +19,7 @@ module.exports=function(items){
  let result=B.calculate([weapon,shield,ring],state);assert.equal(result.stats.agi,69);close(result.stats.critDamage,2);assert.equal(result.stats.def,425);close(result.multiplier,.9);
  state.unique.sword=true;state.slots.offhand.id=weapon.id;result=B.calculate([weapon,shield,ring],state);assert.equal(result.stats.atk,485);close(result.stats.crit,.21);close(result.multiplier,1.05);
  state.unique.sword=false;result=B.calculate([weapon,shield,ring],state);assert.equal(result.state.slots.offhand.id,'');
+ for(const [quality,normal,smith]of [['一般',4,7],['精良',6,9],['稀有',8,11],['專名',10,13]]){const m={...weapon,weaponType:'mace',quality};assert.equal(B.maxPlus(m),normal);assert.equal(B.maxPlus(m,true),smith);assert.equal(B.maxPlus({...m,weaponType:'sword'},true),normal);}
  const katana={...weapon,id:'test-katana',weaponType:'katana'},axe={...weapon,id:'test-axe',weaponType:'axe'},mace={...weapon,id:'test-mace',weaponType:'mace'};
  assert(B.offhandAllowed(shield,katana,{}));assert(!B.offhandAllowed(shield,katana,{katana:true}));assert(!B.offhandAllowed(shield,axe,{}));
  state=B.empty();state.slots.weapon.id=mace.id;state.slots.offhand.id=shield.id;state.unique.mace=true;result=B.calculate([mace,shield],state);close(result.multiplier,1);assert.equal(result.stats.atk,446);close(result.stats.block,.08);
