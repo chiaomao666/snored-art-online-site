@@ -29,5 +29,14 @@ module.exports=function(items){
  story.storyChapter='lake';close(B.calculate(items,story).stats.regen,60*6500/11255*1.05);
  const legacy={version:1,level:40,perks:{atk:2,hp:2,regen:2},slots:{weapon:{id:weapon.id,enh:{},smith:false}}};const migrated=B.normalize(legacy,[weapon]);assert.equal(migrated.slots.weapon.id,weapon.id);assert.equal(migrated.storyChapter,'none');assert.deepEqual(migrated.perks,{atk:0,hp:0,regen:0});
  const roundTrip=B.normalize(JSON.parse(JSON.stringify(story)),items);assert.equal(roundTrip.storyChapter,'lake');assert.deepEqual(roundTrip.perks,{atk:.02,hp:.05,regen:.05});
- return {formulaFixtures:15,equipmentDirections:cases,storyChapters:45,storyBoundaries:7};
+ const rareMace={...mace,quality:'稀有'},rareShield={...shield,quality:'稀有'},smithItems=[rareMace,rareShield,weapon];
+ const automatic=B.empty();automatic.unique.mace=true;
+ automatic.slots.weapon={id:rareMace.id,enh:{quick:11},smith:false,preset:'quick'};
+ automatic.slots.offhand={id:rareShield.id,enh:{hard:11},smith:false,preset:'hard'};
+ const enabled=B.calculate(smithItems,automatic);assert.equal(enabled.gear.weapon.plus,11);assert.equal(enabled.gear.weapon.speed,155);assert.equal(enabled.gear.offhand.plus,11);assert.equal(enabled.gear.offhand.bonus.def,133);assert(enabled.state.slots.weapon.smith);assert(enabled.state.slots.offhand.smith);
+ const shared=B.normalize(JSON.parse(JSON.stringify(enabled.state)),smithItems);assert.equal(B.calculate(smithItems,shared).gear.weapon.speed,155);
+ shared.unique.mace=false;const disabled=B.calculate(smithItems,shared);assert.equal(disabled.gear.weapon.plus,8);assert.equal(disabled.gear.weapon.speed,132);assert.equal(disabled.gear.offhand.plus,8);assert(!disabled.state.slots.weapon.smith);assert(!disabled.state.slots.offhand.smith);
+ shared.unique.mace=true;shared.slots.weapon={id:weapon.id,enh:{quick:10},smith:true};const nonMace=B.calculate(smithItems,shared);assert(!nonMace.state.slots.weapon.smith);assert.equal(nonMace.gear.weapon.speed,140);assert(nonMace.state.slots.offhand.smith);
+ const oldSmith={...automatic,version:2,unique:{},slots:{weapon:{id:rareMace.id,enh:{quick:11},smith:true}}};const smithMigration=B.normalize(oldSmith,smithItems);assert.equal(smithMigration.version,3);assert(smithMigration.unique.mace);assert.equal(B.calculate(smithItems,smithMigration).gear.weapon.plus,11);
+ return {formulaFixtures:15,equipmentDirections:cases,storyChapters:45,storyBoundaries:7,automaticSmithChecks:5};
 };

@@ -30,17 +30,18 @@
   }
   return {...item,bonus,plus:valid.reduce((sum,k)=>sum+integer(enh[k],0,0,13),0),...(count('quick')?{speed:Math.round((item.speed??100)+4*count('quick'))}:{})};
  }
- function empty(){return {version:2,level:40,storyChapter:'none',slots:Object.fromEntries(slots.map(s=>[s,{id:'',enh:{},smith:false,preset:'balanced'}])),unique:{},perks:{atk:0,hp:0,regen:0},params:{...defaults},hitRate:.95}}
+ function empty(){return {version:3,level:40,storyChapter:'none',slots:Object.fromEntries(slots.map(s=>[s,{id:'',enh:{},smith:false,preset:'balanced'}])),unique:{},perks:{atk:0,hp:0,regen:0},params:{...defaults},hitRate:.95}}
  function offhandAllowed(item,main,unique={}){if(!item||!main)return false;if(main.weaponType==='axe'||main.weaponType==='katana'&&unique.katana)return false;return item.shield||main.weaponType==='sword'&&unique.sword&&item.weaponType==='sword'}
  function normalize(input,items){
   const s=empty(),map=new Map(items.map(x=>[x.id,x]));input=input&&typeof input==='object'?input:{};
   s.level=integer(input.level,40,1,120);s.hitRate=number(input.hitRate,.95,0,.95);
   for(const style of ['sword','rapier','katana','axe','mace'])s.unique[style]=input.unique?.[style]===true;
+  if((input.version??1)<3&&Object.values(input.slots||{}).some(g=>g?.smith===true&&smithEligible(map.get(g.id))))s.unique.mace=true;
   s.storyChapter=storyChapters.some(c=>c.id===input.storyChapter)?input.storyChapter:'none';s.perks=storyPerks(s.storyChapter);
   for(const k of Object.keys(defaults))s.params[k]=number(input.params?.[k],defaults[k],0,2);
   for(const slot of slots){const g=input.slots?.[slot],item=map.get(g?.id);if(!item)continue;
    if(slot==='weapon'&&!item.weaponType||slot==='offhand'&&!(item.shield||item.weaponType==='sword')||!['weapon','offhand'].includes(slot)&&item.slot!==(slot==='ring2'?'accessory':slot))continue;
-   const smith=g.smith===true&&smithEligible(item),enh={},allowed=dirs(item);let left=maxPlus(item,smith);
+   const smith=s.unique.mace&&smithEligible(item),enh={},allowed=dirs(item);let left=maxPlus(item,smith);
    for(const k of allowed){enh[k]=integer(g.enh?.[k],0,0,left);left-=enh[k]}
    s.slots[slot]={id:item.id,enh,smith,preset:['balanced','custom',...allowed].includes(g.preset)?g.preset:'balanced'};
   }
