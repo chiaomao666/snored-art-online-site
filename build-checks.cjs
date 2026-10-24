@@ -1,6 +1,10 @@
 const assert=require('node:assert/strict'),B=require('./build-engine.js');
 module.exports=function(items){
  const close=(a,b)=>assert(Math.abs(a-b)<1e-10,`${a} != ${b}`);
+ assert.equal(B.storyChapters.length,45);assert.deepEqual(B.storyChapters.map(c=>c.number),Array.from({length:45},(_,i)=>i));
+ assert.deepEqual(B.storyPerks('none'),{atk:0,hp:0,regen:0});assert.deepEqual(B.storyPerks('ch2'),{atk:0,hp:0,regen:0});
+ assert.deepEqual(B.storyPerks('ch3'),{atk:.02,hp:0,regen:0});assert.deepEqual(B.storyPerks('s21'),{atk:.02,hp:0,regen:0});
+ assert.deepEqual(B.storyPerks('yui'),{atk:.02,hp:.05,regen:0});assert.deepEqual(B.storyPerks('lake'),{atk:.02,hp:.05,regen:.05});assert.deepEqual(B.storyPerks('s40'),{atk:.02,hp:.05,regen:.05});
  assert.deepEqual(B.baseStats(40),{maxHp:6500,atk:325,def:375,agi:49,crit:.05,critDmg:0,evade:0,block:0});
  const weapon={id:'test-sword',name:'測試劍',slot:'weapon',weaponType:'sword',speed:100,reqLevel:40,quality:'專名',bonus:{atk:100,crit:.1}};
  const shield={id:'test-shield',name:'測試盾',slot:'offhand',shield:true,slow:.1,reqLevel:1,quality:'專名',bonus:{def:50}};
@@ -20,5 +24,9 @@ module.exports=function(items){
  state=B.empty();state.slots.weapon.id=mace.id;state.slots.offhand.id=shield.id;state.unique.mace=true;result=B.calculate([mace,shield],state);close(result.multiplier,1);assert.equal(result.stats.atk,446);close(result.stats.block,.08);
  state=B.empty();state.level=1;state.slots.weapon.id=weapon.id;state.slots.weapon.enh={sharp:999,quick:999,acc:-10};result=B.calculate([weapon],state);assert.equal(result.gear.weapon.plus,10);assert.equal(result.warnings.length,1);
  let cases=0;for(const item of items){for(const direction of B.dirs(item)){const out=B.enhance(item,{enh:{[direction]:B.maxPlus(item)}});assert(Object.values(out.bonus).every(Number.isFinite));assert(out.speed==null||out.speed>0);cases++}}
- return {formulaFixtures:15,equipmentDirections:cases};
+ const story=B.empty();story.storyChapter='yui';story.perks={atk:2,hp:2,regen:2};const storyStats=B.calculate(items,story);assert.equal(storyStats.stats.atk,332);assert.equal(storyStats.stats.maxHp,6825);close(storyStats.stats.regen,60*6500/11255);
+ story.storyChapter='lake';close(B.calculate(items,story).stats.regen,60*6500/11255*1.05);
+ const legacy={version:1,level:40,perks:{atk:2,hp:2,regen:2},slots:{weapon:{id:weapon.id,enh:{},smith:false}}};const migrated=B.normalize(legacy,[weapon]);assert.equal(migrated.slots.weapon.id,weapon.id);assert.equal(migrated.storyChapter,'none');assert.deepEqual(migrated.perks,{atk:0,hp:0,regen:0});
+ const roundTrip=B.normalize(JSON.parse(JSON.stringify(story)),items);assert.equal(roundTrip.storyChapter,'lake');assert.deepEqual(roundTrip.perks,{atk:.02,hp:.05,regen:.05});
+ return {formulaFixtures:15,equipmentDirections:cases,storyChapters:45,storyBoundaries:7};
 };

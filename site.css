@@ -96,3 +96,13 @@
 @media(max-width:1200px){.build-layout{grid-template-columns:minmax(0,1fr) 310px}.build-slot-grid{grid-template-columns:1fr}.build-setting-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:860px){.build-layout{grid-template-columns:1fr}.build-overview{position:static;max-height:none;grid-row:1}.build-summary-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.build-slot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.build-slot-grid{grid-template-columns:1fr}.build-setting-grid{grid-template-columns:1fr}.build-summary-grid{grid-template-columns:1fr 1fr}.build-toolbar>.button{flex:1 1 auto;font-size:15px}.build-toolbar>.field{width:100%}.build-toolbar>.field input{width:140px}.build-overview{padding:20px}}
+
+/* Main-story progress replaces manual story bonus fields. */
+.build-toolbar>.build-story-select{width:auto;flex:1 1 320px;max-width:480px}
+.build-story-select select{display:block;font-size:16px;min-height:53px;margin-top:6px}
+.build-story-panel{margin-bottom:22px;padding:20px 22px}
+.build-story-panel h2{font-size:20px;margin:0 0 7px}
+.build-story-panel .section-note{margin:6px 0;font-size:14px}
+.build-story-current{font-size:16px;color:var(--blue);font-weight:600;margin:15px 0 10px}
+#build-story-effects>.section-note{margin-top:12px}
+@media(max-width:560px){.build-toolbar>.build-story-select{flex-basis:100%;max-width:none}.build-story-select select{width:100%}.build-story-panel{padding:18px}}
