@@ -79,3 +79,7 @@ node validate.cjs
 - 裝備性能仍依攻略快照與匠魂效果 +25% 計算，包含實際的逐方向匠魂強化次數；未收錄的新裝備不推測數值。
 - 測試：`node account-worker-checks.mjs`、`node validate.cjs`。
 - Worker 由 Cloudflare 編輯器部署；查詢功能不需要資料庫或任何持久化憑證。
+
+### 背包篩選與裝備明細
+
+`account-inventory.js` 提供背包種類、部位、武器類型、品質、強化篩選與排序，每頁 12 筆。`account-model.js` 合併堆疊背包與未裝備的獨立 gear，保留同名裝備的不同強化。Cloudflare Worker v3 回傳完整 owned gear 的安全欄位，含 tries、smithTries、hist。剩餘次數明確標為裝備紀錄，不推測尚未啟用的匠魂額外機會；逐次歷史不保證包含舊版全部紀錄。強化指數指裝備的 +N，沒有另創評分。

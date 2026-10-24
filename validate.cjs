@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-for(const file of ['account-data.js','account-model.js','account-ui.js'])new (require('node:vm').Script)(fs.readFileSync(path.join(__dirname,file),'utf8'));
+for(const file of ['account-data.js','account-model.js','account-inventory.js','account-ui.js'])new (require('node:vm').Script)(fs.readFileSync(path.join(__dirname,file),'utf8'));
 const accountLabels={window:{}};require('node:vm').runInNewContext(fs.readFileSync(path.join(__dirname,'account-data.js'),'utf8'),accountLabels);assert.equal(Object.keys(accountLabels.window.AccountGuideData.items).length,1060);assert(accountLabels.window.AccountGuideData.items['potion-1']);assert(accountLabels.window.AccountGuideData.areas['f1-town'].name);
 const accountChecks=require('./account-checks.cjs')();
 const workerChecks=JSON.parse(require('node:child_process').execFileSync(process.execPath,[path.join(__dirname,'account-worker-checks.mjs')],{encoding:'utf8'}));assert.equal(workerChecks.status,'passed');

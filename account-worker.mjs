@@ -10,8 +10,7 @@ const strings=(x,max=1000)=>Array.isArray(x)?x.slice(0,max).filter(v=>typeof v==
 export function projectPlayer(p){
  if(!p||typeof p.name!=='string')throw publicError('遊戲未回傳有效的角色資料。',502);
  const equipment=Object.fromEntries(Object.entries(p.equipment||{}).filter(([k,v])=>['weapon','offhand','head','armor','feet','neck','accessory','accessory2','ring2'].includes(k)&&typeof v==='string').map(([k,v])=>[k,text(v)]));
- const refs=new Set([...Object.values(equipment),...Object.keys(p.inventory||{})]);
- const gear=Object.fromEntries(Object.entries(p.gear||{}).filter(([id])=>refs.has('g:'+id)).slice(0,2000).map(([id,g])=>[id,{base:text(g.base),plus:integer(g.plus,100),enh:numericMap(g.enh,12),smith:numericMap(g.smith,12),tries:integer(g.tries,100)}]));
+ const gear=Object.fromEntries(Object.entries(p.gear||{}).filter(([,g])=>g&&typeof g.base==='string').slice(0,2000).map(([id,g])=>[id,{base:text(g.base),plus:integer(g.plus,100),enh:numericMap(g.enh,12),smith:numericMap(g.smith,12),tries:Number.isFinite(g.tries)?integer(g.tries,100):null,smithTries:!!g.smithTries,hist:typeof g.hist==='string'?g.hist.replace(/[^ox]/g,'').slice(-100):null}]));
  return {name:text(p.name),level:integer(p.level,10000),hp:integer(p.hp),exp:integer(p.exp),col:integer(p.col),areaId:text(p.areaId),dead:!!p.dead,equipment,gear,inventory:numericMap(p.inventory),learnedSkills:strings(p.learnedSkills),skillSlots:strings(p.skillSlots,20),buffSlots:strings(p.buffSlots,20),skillXp:numericMap(p.skillXp),clearedFloors:Array.isArray(p.clearedFloors)?p.clearedFloors.slice(0,200).filter(v=>Number.isInteger(v)):[],questsDone:strings(p.questsDone),unlocks:{dualWield:!!p.unlocks?.dualWield,unique:strings(p.unlocks?.unique,10)},story:p.story?{ch:text(p.story.ch),step:integer(p.story.step,1000),n:integer(p.story.n)}:null};
 }
 async function limitedBody(request){
@@ -44,7 +43,7 @@ export async function handle(request,fetcher=fetch){
  const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store, private','Pragma':'no-cache','Vary':'Origin','X-Content-Type-Options':'nosniff'};
  if(origin===ALLOWED_ORIGIN)headers['Access-Control-Allow-Origin']=origin;
  const reply=(value,status=200)=>new Response(JSON.stringify(value),{status,headers});
- if(url.pathname==='/health'&&request.method==='GET')return reply({ok:true,service:'sao-account-query',version:2});
+ if(url.pathname==='/health'&&request.method==='GET')return reply({ok:true,service:'sao-account-query',version:3});
  if(origin!==ALLOWED_ORIGIN)return reply({error:'此查詢服務僅供攻略站使用。'},403);
  if(url.pathname!=='/query'||url.search)return reply({error:'找不到此功能。'},404);
  if(request.method==='OPTIONS'){headers['Access-Control-Allow-Methods']='POST, OPTIONS';headers['Access-Control-Allow-Headers']='Content-Type';headers['Access-Control-Max-Age']='600';return new Response(null,{status:204,headers})}
