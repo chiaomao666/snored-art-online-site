@@ -4,7 +4,7 @@
 
 網站網址：https://chiaomao666.github.io/snored-art-online-site/
 
-純靜態網站，無登入、無帳號資料存取、無後端。使用相對路徑，由 GitHub Actions 驗證並發布到 GitHub Pages。
+攻略前端由 GitHub Actions 驗證並發布到 GitHub Pages。帳號查詢另由 Cloudflare Worker 提供，使用遊戲帳密登入會中斷原遊戲連線。
 
 ## 收錄內容
 
@@ -65,3 +65,17 @@ node validate.cjs
 ## 經驗與等級差
 
 兩份 main 均含 lowExpGrace=5、lowExpBase=0.75、expCapOver=12、expCapRate=0.1 等預設參數及可調範圍，只有定義與設定驗證，沒有完整發放公式。不能只憑名稱推定指數衰減、經驗上限的基準、套用順序或取整規則。網站保留怪物基礎經驗並提供角色等級差比較；不把推測數字標為實得經驗。
+
+## 帳號查詢
+
+`account-ui.js` 與 `account-model.js` 是查詢畫面及顯示計算，`account-worker.mjs` 是 Cloudflare Worker 後端（不包含在 Pages 公開資產中）。
+
+- 唯一查詢入口為 POST `/query`；固定連到遊戲 `/api/link`、`/api/me`、`/api/ws`，不接受自訂目標或遊戲命令。
+- 不帶角色名稱註冊、不變更密碼、不重生；已死亡帳號只列角色紀錄。
+- 登入後只讀取第一份 init 快照，成功、失敗或逾時都關閉 WebSocket；不自動重連。
+- 帳密與憑證不寫入儲存或程式日誌；憑證不回傳前端。回應禁止快取。前端只在目前分頁記憶體保留角色結果。
+- 回傳白名單角色欄位，不回傳聊天、信箱、好友、戰鬥紀錄、帳號名稱或登入憑證。
+- CORS 僅允許 `https://chiaomao666.github.io`；Worker 有每個執行個體的基本頻率限制，不應視為全域限流。大量使用時應搭配 Cloudflare 全域限流。
+- 裝備性能仍依攻略快照與匠魂效果 +25% 計算，包含實際的逐方向匠魂強化次數；未收錄的新裝備不推測數值。
+- 測試：`node account-worker-checks.mjs`、`node validate.cjs`。
+- Worker 由 Cloudflare 編輯器部署；查詢功能不需要資料庫或任何持久化憑證。

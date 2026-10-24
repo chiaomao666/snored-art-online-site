@@ -1,4 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+for(const file of ['account-model.js','account-ui.js'])new (require('node:vm').Script)(fs.readFileSync(path.join(__dirname,file),'utf8'));
+const accountChecks=require('./account-checks.cjs')();
+const workerChecks=JSON.parse(require('node:child_process').execFileSync(process.execPath,[path.join(__dirname,'account-worker-checks.mjs')],{encoding:'utf8'}));assert.equal(workerChecks.status,'passed');
 const root=__dirname,D=JSON.parse(fs.readFileSync(path.join(root,'guide-data.json'),'utf8'));
 const E=require('./speed-engine.js'),P=require('./drop-engine.js');
 const buildChecks=require('./build-checks.cjs')(D.equipment);
@@ -22,4 +25,4 @@ assert.equal(W.attacks.find(s=>s.id==='slant').levels[0].multiplier,2.08);assert
 assert.equal(D.areas.length,196);assert.equal(D.secretAreas.length,40);assert.equal(D.bossAreas.length,40);assert.deepEqual(D.secretAreas.map(a=>a.floor).sort((a,b)=>a-b),Array.from({length:40},(_,i)=>i+1));const floorAreas=[...D.areas,...D.secretAreas,...D.bossAreas];assert.equal(new Set(floorAreas.flatMap(a=>a.monsters.map(m=>m.id))).size,583);for(const a of floorAreas){for(const m of a.monsters){assert(Number.isInteger(m.exp)&&m.exp>0);assert(Number.isInteger(m.col)&&m.col>=0);}if(a.secret){assert.equal(a.monsters.length,2);assert(a.pack[1]<=a.maxEnemies);assert(a.monsters.every(m=>m.dropHighlights.length>0&&m.dropHighlights.every(d=>d.chance>=0&&d.chance<=1)));}}assert.equal(D.secretAreas.find(a=>a.floor===1).monsters[0].exp,165);assert.equal(D.secretAreas.find(a=>a.floor===1).monsters[0].col,21);assert.equal(D.secretAreas.find(a=>a.floor===1).maxEnemies,1);assert(D.bossAreas.every(a=>a.maxEnemies==null&&a.pack==null));
 const browser=fs.readFileSync(path.join(root,'data.js'),'utf8');assert.equal(browser,'window.SAO_GUIDE = '+JSON.stringify(D)+';\n');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');for(const ref of [...html.matchAll(/(?:src|href)="([^"#?:]+\.(?:js|css|svg))"/g)].map(x=>x[1]))assert(fs.existsSync(path.join(root,ref)),`Missing ${ref}`);
-assert(fs.existsSync(path.join(root,'.nojekyll')));console.log(JSON.stringify({status:'passed',materials:22,bosses:40,equipment:466,attackSpeedThresholds:count,probabilityChecks:7,weaponSkills:45,skillLevels:300,secretAreas:40,monsterRewards:583,monsterChecks,rewardChecks,buildChecks}));
+assert(fs.existsSync(path.join(root,'.nojekyll')));console.log(JSON.stringify({status:'passed',materials:22,bosses:40,equipment:466,attackSpeedThresholds:count,probabilityChecks:7,weaponSkills:45,skillLevels:300,secretAreas:40,monsterRewards:583,monsterChecks,rewardChecks,buildChecks,accountChecks}));
