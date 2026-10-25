@@ -16,6 +16,7 @@ module.exports=function(){
   [370,50,58,156],[689,51,58,388],
   [1404,59,57,1404],[1404,59,58,1404],
   [774,61,57,774],[774,61,58,774],
+  [390,7,58,4],[450,8,58,5],[582,10,58,6],[4038,50,58,1704],
  ];
  for(const [base,monster,player,expected] of fixtures)assert.equal(R.estimate(base,monster,player).value,expected);
  assert.equal(R.estimate(100,53,58).multiplier,1);
@@ -27,7 +28,7 @@ module.exports=function(){
  for(const [base,monster,player]of [[-1,44,58],[NaN,44,58],[Infinity,44,58],[100,null,58],[100,0,58],[100,44,null],[100,44,121]])assert.equal(R.estimate(base,monster,player),null);
  assert.equal(R.estimate(100,1,120).extended,true);
  assert.match(R.valueHtml(100,1,120),/公式延伸推估/);
- assert.match(R.valueHtml(100,44,58,true),/頭目僅供公式參考/);
+ assert.match(R.valueHtml(100,44,58,true),/單人頭目推估/);
  assert.match(R.valueHtml(100,null,58),/等級未知/);
  assert.match(R.valueHtml(100,44,null),/先填角色等級/);
  assert.equal(R.formatMultiplier(.75),'75%');
@@ -35,5 +36,13 @@ module.exports=function(){
  assert.match(R.formatMultiplier(1e-20),/小於/);
  assert.equal(R.sortValue({exp:99999,level:1,levelHidden:true},58),-1);
  assert.equal(R.sortValue({exp:0,level:44},58),0);
- return {levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,invalidFormulaInputs:7,estimateDisplayChecks:8};
+ assert.equal(R.estimate(1000,37,58).floorApplied,false);
+ assert.equal(R.estimate(1000,37,58).steps,16);
+ assert(R.estimate(1000,37,58).multiplier>.01);
+ assert.equal(R.estimate(1000,36,58).floorApplied,true);
+ assert.equal(R.estimate(1000,36,58).multiplier,.01);
+ assert.equal(R.estimate(100,1,120).value,1);
+ assert.match(R.valueHtml(390,7,58,true),/最低倍率 1%/);
+ assert.equal(R.estimate(20,7,58).value,0,'The 1% multiplier floor does not establish a separate minimum of one XP');
+ return {levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8};
 };
