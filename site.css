@@ -159,7 +159,7 @@ html[data-theme="light"] .account-stat-gain{color:#087b51}
 
 /* Single-player XP estimate. */
 .reward-formula{grid-column:1/-1;border:1px solid var(--line);background:var(--panel2);border-radius:10px;padding:16px 18px}
-.reward-formula>b{display:block;font-size:15px;color:var(--blue);margin-bottom:8px}
+.reward-level-panel details.reward-formula,.reward-level-panel details.reward-auto-rules{border:1px solid var(--line);padding:16px 18px}.reward-level-panel details.reward-formula>summary,.reward-level-panel details.reward-auto-rules>summary{font-size:17px;font-weight:650}.reward-formula[open]>summary{margin-bottom:14px}
 .reward-formula code{display:block;font-family:inherit;font-size:18px;font-weight:650;color:var(--text);line-height:1.8}
 .reward-formula p{margin-top:8px}
 .reward-formula code{white-space:normal;overflow-wrap:anywhere}.reward-formula code+code{margin-top:16px}.reward-formula-definitions{padding-left:22px;margin:16px 0;color:var(--muted);font-size:15px;line-height:1.9}.reward-formula-definitions li+li{margin-top:8px}.reward-formula-example{border-top:1px solid var(--line);margin-top:18px;padding-top:16px}.reward-formula-example>b{font-size:17px;color:var(--blue)}.reward-formula-example code{font-size:16px;margin-top:10px}

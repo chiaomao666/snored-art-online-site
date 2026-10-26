@@ -70,8 +70,7 @@
   const o=options(settings)||options(),parsed=parse(level),exampleLevel=parsed??58,f=factors(o,40,exampleLevel);
   const example=estimate(1000,40,exampleLevel,o),cash=estimateCol(1000,40,exampleLevel,o);
   const share=`［1 ＋ 5% ×（${o.participants} − 1）］÷ ${o.participants}`;
-  return `<b>每隻怪物的完整獎勵公式（推估）</b>
-   <code>個人經驗 ＝ 四捨五入｛<br>基礎經驗 × 較大值［1%，75% ^ 較大值（0，你的等級 − 怪物等級 − 5）］<br>×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數<br>× 低等隊員折減 × 額外經驗折減｝</code>
+  return `<code>個人經驗 ＝ 四捨五入｛<br>基礎經驗 × 較大值［1%，75% ^ 較大值（0，你的等級 − 怪物等級 − 5）］<br>×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數<br>× 低等隊員折減 × 額外經驗折減｝</code>
    <code>個人摳 ＝ 四捨五入｛<br>基礎摳 ×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數 × 低等隊員折減｝</code>
    <ul class="reward-formula-definitions"><li>分配人數包含自己；單人填 1。人數加成與平均分配已直接寫進上面兩條公式。</li><li>「較大值」是取括號中較大的數；「^」是次方，例如 75% ^ 3 ＝ 75% × 75% × 75%。比怪物高 5 級以內不扣經驗，超過後每多 1 級再乘 75%，等級差部分最低保留 1%。</li><li><strong>低等隊員折減 ＝ 當分配人數 ≥ 2 且（怪物等級 − 你的等級）＞ 10 時為 50%，其餘為 100%。</strong>逐隻怪物判斷；單人不套用。等級差 10 的判斷邊界尚未驗證，目前先按「超過 10 級」推估。</li><li><strong>額外經驗折減 ＝ 你的等級 ≥ 63 時為 10%，Lv62 以下為 100%。</strong>單人、組隊都自動判斷；只影響經驗，不影響摳。</li><li><strong>所有項目乘完才四捨五入，不能先將倍率或單人經驗取整。</strong>等級差的 1% 下限先套用，後續組隊與折減仍可能讓最終倍率低於 1%。</li></ul>
    <div class="reward-formula-example"><b>代入範例：你 Lv${exampleLevel}、${o.participants} 人分配</b><p>${parsed===null?'尚未填角色等級，暫以 Lv58 示範。':''}假設怪物 Lv40，基礎經驗 1,000、基礎摳 1,000（只示範算法，不是特定怪物的數值）。兩種折減依角色與這隻怪物的等級自動判斷。</p>
@@ -88,9 +87,9 @@
     <label class="field">實際分配人數（含自己）<select id="reward-participants" aria-describedby="reward-party-help">${Array.from({length:6},(_,i)=>i+1).map(n=>`<option value="${n}" ${n===o.participants?'selected':''}>${n===1?'1 人（單人）':n+' 人'}${[3,4].includes(n)?' · 倍率待驗證':''}</option>`).join('')}</select></label>
    </div>
    <p id="reward-party-help" class="reward-wide">填本次實際參與獎勵分配的人數，包含自己；不直接使用隊伍總人數、同區人數或畫面中的攻擊人數。未參戰的隊員不要直接算入。</p>
-   <div class="reward-auto-rules"><b>折減依等級自動判斷</b><p>低等隊員：組隊時，逐隻比較「怪物等級 − 你的等級」，超過 10 級才讓該隻的經驗與摳 ×50%；單人不套用。這個 10 級邊界暫按推估，待實測確認。</p><p>額外經驗：角色 Lv63 以上自動 ×10%；Lv62 以下不套用，摳不受影響。</p></div>
+   <details class="reward-auto-rules"><summary>折減依等級自動判斷</summary><p>低等隊員：組隊時，逐隻比較「怪物等級 − 你的等級」，超過 10 級才讓該隻的經驗與摳 ×50%；單人不套用。這個 10 級邊界暫按推估，待實測確認。</p><p>額外經驗：角色 Lv63 以上自動 ×10%；Lv62 以下不套用，摳不受影響。</p></details>
    <p id="reward-level-status" class="reward-wide section-note" role="status" aria-live="polite"></p>
-   <div id="reward-formula" class="reward-formula">${formulaHtml(parsed,o)}</div>
+   <details class="reward-formula"><summary>每隻怪物的完整獎勵公式（推估）</summary><div id="reward-formula">${formulaHtml(parsed,o)}</div></details>
    <details><summary>人數倍率表與實測範圍</summary><div class="table-wrap"><table><thead><tr><th>分配人數（含自己）</th><th>每人倍率</th><th>驗證狀態</th></tr></thead><tbody>${Array.from({length:6},(_,i)=>i+1).map(n=>`<tr><td>${n} 人</td><td>${formatMultiplier(factors({participants:n}).share)}</td><td>${n===1?'單人基準':[2,5,6].includes(n)?'已有實測吻合':'公式推估，待確認'}</td></tr>`).join('')}</tbody></table></div>
     <p>依 2026.10.26 的單人與組隊紀錄核對。2、5、6 人分配已有對照；3、4 人仍需確認，不能把「有人稱三人、數值卻符合四人」的紀錄直接視為驗證。組隊實測以頭目為主，其他怪物套用同一公式屬延伸推估。</p>
     <p>單人等級差規則已對照 Lv57–58、Lv7–61 的怪物與頭目。依玩家確認，額外經驗折減目前按 Lv63 以上套用；低等隊員折減按玩家與每隻怪物的等級差推估，超過 10 級的邊界待驗證。過去兩人隊伍的低等樣本不再作為這個新判斷條件的驗證。離線、活動及其他特殊獎勵仍可能影響實得；等級隱藏或未填角色等級時，不推測組隊低等折減。不另假設最少獲得 1 點。</p></details></section>`;
