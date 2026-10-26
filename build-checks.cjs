@@ -45,9 +45,9 @@ module.exports=function(items){
  assert.equal(photo.activeBuffs.find(b=>b.id==='flurry').effect.speed,.39);
  fixture.unique.rapier=false;assert.equal(B.calculate(items,fixture).activeBuffs.find(b=>b.id==='flurry').effect.speed,.3);fixture.unique.rapier=true;
  fixture.slots.armor.enh={hard:3,thick:4,light:0};fixture.slots.offhand.smithEnh={hard:0,thick:3,light:0};photo=B.calculate(items,fixture);
- assert.equal(photo.stats.maxHp,19900);assert.equal(photo.stats.def,1659);assert.equal(photo.stats.agi,180);close(photo.stats.block,.231);assert.equal(photo.stats.regenBase.toFixed(1),'51.2');
- assert.equal(photo.gear.offhand.bonus.def,181);assert.equal(photo.gear.offhand.bonus.maxHp,2711);
+ assert.equal(photo.stats.maxHp,20215);assert.equal(photo.stats.def,1664);assert.equal(photo.stats.agi,180);close(photo.stats.block,.231);assert.equal(photo.stats.regenBase.toFixed(1),'51.2');
+ assert.equal(photo.gear.offhand.bonus.def,186);assert.equal(photo.gear.offhand.bonus.maxHp,3011);
  const unknownBuff={...fixture,buffs:['not-a-buff','focus','flurry','war-cry']};assert.deepEqual(B.normalize(unknownBuff,items).buffs,['war-cry','flurry']);
- const imported=JSON.parse(JSON.stringify(fixture));imported.slots.offhand.smithEnh.thick=100;assert.equal(B.normalize(imported,items).slots.offhand.smithEnh.thick,8);
- return {rapierPhotoComparison:12,activeBuffCases:4,partialSmithCases:3,formulaFixtures:15,equipmentDirections:cases,storyChapters:45,storyBoundaries:7,automaticSmithChecks:5};
+ const imported=JSON.parse(JSON.stringify(fixture));imported.slots.offhand.smithEnh.thick=100;assert(!('smithEnh' in B.normalize(imported,items).slots.offhand));assert.deepEqual(B.calculate(items,imported).stats,photo.stats);assert.deepEqual(B.enhance(items.find(x=>x.id===fixture.slots.offhand.id),imported.slots.offhand),photo.gear.offhand);
+ return {rapierBuffChecks:12,activeBuffCases:4,removedSmithOverrideChecks:3,formulaFixtures:15,equipmentDirections:cases,storyChapters:45,storyBoundaries:7,automaticSmithChecks:5};
 };

@@ -38,7 +38,7 @@ module.exports=function(items){
  photo.buffs=['war-cry','flurry','insight'];photo.slots.offhand.smithEnh={hard:0,thick:3,light:0};photo.slots.armor.enh={hard:3,thick:4,light:0};
  const extended=roundtrip(photo);assert(extended.startsWith('2.'));assert(extended.length<90);
  for(const b of B.buffDefinitions)roundtrip({...photo,buffs:[b.id]});
- for(const hard of [0,1])for(const thick of [0,3,8]){photo.slots.offhand.smithEnh={hard,thick,light:0};roundtrip(photo)}
+ const oldExtended=B.decodeShare('2.Qy0f_wCIAQgQvQOBQLoDADd_Q0CCAQA3ygIANGwAOGwAODEAAjAAQFk',items);assert(!('smithEnh' in oldExtended.slots.offhand));assert.deepEqual(oldExtended.buffs,photo.buffs);assert.deepEqual(oldExtended.slots.armor.enh,photo.slots.armor.enh);assert.equal(B.encodeShare(oldExtended,items),extended);roundtrip(oldExtended);
  const broken=extended.slice(0,-2)+(extended.at(-2)==='A'?'B':'A')+extended.at(-1);assert.throws(()=>B.decodeShare(broken,items));
- return {roundtripCases:cases,extendedStateRoundtrips:22,legacyCompatibility:1,corruptInputChecks:9,stableCatalogOrder:1,futureItemEscape:1,exampleCodeLength:example.length,legacyPayloadLength:legacy.length};
+ return {roundtripCases:cases,extendedStateRoundtrips:17,legacyCompatibility:2,corruptInputChecks:9,stableCatalogOrder:1,futureItemEscape:1,exampleCodeLength:example.length,legacyPayloadLength:legacy.length};
 };

@@ -18,7 +18,7 @@
  function baseStats(level){level=integer(level,40,1,120);let scale=1+.007857*Math.pow(level-1,1.5),defScale=hp(level)/((90+22*(level-1))*scale);return {maxHp:Math.round(hp(level)),atk:Math.round((10+2.6*(level-1))*scale),def:Math.round((4+1.3*(level-1))*scale*defScale),agi:10+level-1,crit:.05,critDmg:0,evade:0,block:0}}
  function enhance(item,gear={},smithEffect=.25){
   const bonus={...item.bonus},level=item.reqLevel||1,enh=gear.enh||{},valid=dirs(item);
-  const count=k=>{if(!valid.includes(k))return 0;const n=integer(enh[k],0,0,13),smith=gear.smith&&smithEligible(item)?gear.smithEnh?integer(gear.smithEnh[k],0,0,n):n:0;return n+smith*number(smithEffect,.25,0,2)};
+  const count=k=>{if(!valid.includes(k))return 0;const n=integer(enh[k],0,0,13),smith=gear.smith&&smithEligible(item)?n:0;return n+smith*number(smithEffect,.25,0,2)};
   const scale=(base,n)=>Math.max(Math.round(n),Math.round((base||0)*.12*n));
   const agiStep=Math.max(2,Math.round(2+level*.08)),hpStep=Math.max(10,Math.round(baseStats(level).maxHp*.03));
   for(const k of valid){const n=count(k);if(!n)continue;
@@ -45,7 +45,7 @@
    if(slot==='weapon'&&!item.weaponType||slot==='offhand'&&!(item.shield||item.weaponType==='sword')||!['weapon','offhand'].includes(slot)&&item.slot!==(slot==='ring2'?'accessory':slot))continue;
    const smith=s.unique.mace&&smithEligible(item),enh={},allowed=dirs(item);let left=maxPlus(item,smith);
    for(const k of allowed){enh[k]=integer(g.enh?.[k],0,0,left);left-=enh[k]}
-   s.slots[slot]={id:item.id,enh,smith,...(smith&&g.smithEnh&&typeof g.smithEnh==='object'?{smithEnh:Object.fromEntries(allowed.map(k=>[k,integer(g.smithEnh[k],0,0,enh[k])]))}:{}),preset:['balanced','custom',...allowed].includes(g.preset)?g.preset:'balanced'};
+   s.slots[slot]={id:item.id,enh,smith,preset:['balanced','custom',...allowed].includes(g.preset)?g.preset:'balanced'};
   }
   if(s.slots.offhand.id&&!offhandAllowed(map.get(s.slots.offhand.id),map.get(s.slots.weapon.id),s.unique))s.slots.offhand={id:'',enh:{},smith:false,preset:'balanced'};
   const style=map.get(s.slots.weapon.id)?.weaponType;
@@ -106,8 +106,8 @@
   for(const [i,k]of shareParams.entries())if(changed&(1<<i)){
    const buffer=new ArrayBuffer(8),view=new DataView(buffer);view.setFloat64(0,k==='hitRate'?s.hitRate:s.params[k],true);for(const b of new Uint8Array(buffer))byte(b);
   }
-  const historyMask=slots.reduce((n,k,i)=>n|(s.slots[k].smithEnh?1<<i:0),0),extended=s.buffs.length||historyMask;
-  if(extended){const buffs=buffDefinitions.reduce((n,b,i)=>n|(s.buffs.includes(b.id)?1<<i:0),0);byte(buffs);byte(buffs>>8);byte(historyMask);for(const [i,slot]of slots.entries())if(historyMask&(1<<i)){const g=s.slots[slot],ds=dirs(map.get(g.id)),packed=ds.reduce((n,k,j)=>n|((g.smithEnh[k]||0)<<(j*4)),0);byte(packed);byte(packed>>8)}}
+  const extended=s.buffs.length;
+  if(extended){const buffs=buffDefinitions.reduce((n,b,i)=>n|(s.buffs.includes(b.id)?1<<i:0),0);byte(buffs);byte(buffs>>8);byte(0);/* Reserved legacy history mask; new links use automatic smith bonuses. */}
   const crc=shareChecksum(bytes);byte(crc);byte(crc>>8);return (extended?'2.':'1.')+shareBase64(bytes);
  }
  function decodeShare(value,items){
@@ -140,7 +140,7 @@
    if(!Number.isFinite(n)||n<0||n>(k==='hitRate'?.95:2))throw Error('無效的配裝參數');
    if(k==='hitRate')s.hitRate=n;else s.params[k]=n;
   }
-  if(format===2){const mask=byte()|(byte()<<8),history=byte();if(mask>=(1<<buffDefinitions.length))throw Error('無效的增益設定');s.buffs=buffDefinitions.filter((b,i)=>mask&(1<<i)).map(b=>b.id);for(const [i,slot]of slots.entries())if(history&(1<<i)){const g=s.slots[slot],item=map.get(g.id);if(!item||!s.unique.mace||!smithEligible(item))throw Error('無效的匠魂紀錄');const packed=byte()|(byte()<<8);if(packed>4095)throw Error('無效的匠魂次數');g.smithEnh=Object.fromEntries(dirs(item).map((k,j)=>{const n=(packed>>(j*4))&15;if(n>(g.enh[k]||0))throw Error('匠魂次數超過強化次數');return [k,n]}))}}
+  if(format===2){const mask=byte()|(byte()<<8),history=byte();if(mask>=(1<<buffDefinitions.length))throw Error('無效的增益設定');s.buffs=buffDefinitions.filter((b,i)=>mask&(1<<i)).map(b=>b.id);for(const [i,slot]of slots.entries())if(history&(1<<i)){const g=s.slots[slot],item=map.get(g.id);if(!item||!s.unique.mace||!smithEligible(item))throw Error('無效的匠魂紀錄');const packed=byte()|(byte()<<8);if(packed>4095)throw Error('無效的匠魂次數');/* Consume legacy history bytes without restoring the removed override. */for(const [j,k]of dirs(item).entries())if(((packed>>(j*4))&15)>(g.enh[k]||0))throw Error('匠魂次數超過強化次數')}}
   if(pos!==end)throw Error('配裝連結包含多餘資料');return normalize(s,items);
  }
  const api={buffDefinitions,encodeShare,decodeShare,storyChapters,storyPerks,slots,names,directionsInfo,defaults,dirs,smithEligible,maxPlus,baseStats,enhance,empty,normalize,calculate,offhandAllowed};root.BuildGuide=api;if(typeof module==='object')module.exports=api;

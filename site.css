@@ -211,4 +211,3 @@ html[data-theme="light"] .account-stat-gain{color:#087b51}
 .build-buff-option{display:flex;align-items:flex-start;gap:9px;padding:12px;border:1px solid var(--line);border-radius:9px;font-size:16px;cursor:pointer;background:var(--panel2)}
 .build-buff-option input{margin-top:4px;width:17px;height:17px;flex-shrink:0}.build-buff-option small{display:block;color:var(--muted);font-size:14px;margin-top:4px}.build-buff-option.unavailable{opacity:.5;cursor:default}
 .build-buff-active{border-top:1px solid var(--line);padding-top:10px;font-size:16px;line-height:1.8}.build-buff-active p{margin:7px 0}.build-buff-active b{color:var(--blue)}
-.build-smith-history{margin:14px 0;border-top:1px solid var(--line);padding-top:12px}.build-smith-history summary{cursor:pointer;color:var(--blue);font-size:15px;line-height:1.7}
