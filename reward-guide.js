@@ -65,6 +65,19 @@
   for(const name of ['lowLevelPenalty','expReduction'])if(params?.has(name))saved[name]=params.get(name)==='1';
   return options(saved)||options();
  }
+ function formulaHtml(level,settings){
+  const o=options(settings)||options(),f=factors(o),parsed=parse(level),exampleLevel=parsed??58;
+  const example=estimate(1000,40,exampleLevel,o),cash=estimateCol(1000,o);
+  const share=`［1 ＋ 5% ×（${o.participants} − 1）］÷ ${o.participants}`;
+  return `<b>每隻怪物的完整獎勵公式（推估）</b>
+   <code>個人經驗 ＝ 四捨五入｛<br>基礎經驗 × 較大值［1%，75% ^ 較大值（0，你的等級 − 怪物等級 − 5）］<br>×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數<br>× 低等隊員折減 × 額外經驗折減｝</code>
+   <code>個人摳 ＝ 四捨五入｛<br>基礎摳 ×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數 × 低等隊員折減｝</code>
+   <ul class="reward-formula-definitions"><li>分配人數包含自己；單人填 1。人數加成與平均分配已直接寫進上面兩條公式。</li><li>「較大值」是取括號中較大的數；「^」是次方，例如 75% ^ 3 ＝ 75% × 75% × 75%。比怪物高 5 級以內不扣經驗，超過後每多 1 級再乘 75%，等級差部分最低保留 1%。</li><li>低等隊員折減：有勾選為 50%，沒勾選為 100%；單人固定 100%。額外經驗折減：有勾選為 10%，沒勾選為 100%，不影響摳。</li><li><strong>所有項目乘完才四捨五入，不能先將倍率或單人經驗取整。</strong>等級差的 1% 下限先套用，後續組隊與折減仍可能讓最終倍率低於 1%。</li></ul>
+   <div class="reward-formula-example"><b>代入範例：你 Lv${exampleLevel}、${o.participants} 人分配</b><p>${parsed===null?'尚未填角色等級，暫以 Lv58 示範。':''}假設怪物 Lv40，基礎經驗 1,000、基礎摳 1,000（只示範算法，不是特定怪物的數值）。折減選項依你目前勾選的條件套用。</p>
+    <code>經驗 ＝ 四捨五入｛1,000 × 較大值［1%，75% ^ 較大值（0，${exampleLevel} − 40 − 5）］ × ${share} × ${f.low===1?'100%':'50%'} × ${f.extra===1?'100%':'10%'}｝＝ ${example.value.toLocaleString('zh-TW')}</code>
+    <code>摳 ＝ 四捨五入｛1,000 × ${share} × ${f.low===1?'100%':'50%'}｝＝ ${cash.toLocaleString('zh-TW')}</code>
+   </div>`;
+ }
  function panel(level,settings){
   const parsed=parse(level),o=options(settings)||options();
   return `<section class="panel reward-level-panel" aria-label="經驗與組隊獎勵試算">
@@ -79,8 +92,7 @@
     <label><input id="reward-exp-reduction" type="checkbox" ${o.expReduction?'checked':''}>額外經驗折減：經驗 ×10%，摳不變<small>Lv63 的單人／組隊紀錄符合此折減；是否一律從 Lv63 觸發尚待確認，僅在你的實得也符合時勾選。</small></label>
    </fieldset>
    <p id="reward-level-status" class="reward-wide section-note" role="status" aria-live="polite"></p>
-   <div class="reward-formula"><b>每位玩家的獎勵推估</b><code>人數倍率 ＝［1 ＋ 5% ×（人數 − 1）］÷ 人數</code><p>個人經驗 ＝ 基礎經驗 × 等級差倍率 × 人數倍率 × 已勾選的個人折減。<br>個人摳 ＝ 基礎摳 × 人數倍率 × 低等隊員折減（有勾選才套用）。<strong>全部乘完後才四捨五入</strong>；不使用表格顯示時已截短的百分比計算。</p>
-    <p>等級差倍率：比怪物高 5 級以內為 100%；超過後每多 1 級再乘 75%，<strong>最低 1%</strong>。這是等級差倍率下限；套用組隊與額外折減後，最終倍率可能低於 1%。</p></div>
+   <div id="reward-formula" class="reward-formula">${formulaHtml(parsed,o)}</div>
    <details><summary>人數倍率表與實測範圍</summary><div class="table-wrap"><table><thead><tr><th>分配人數（含自己）</th><th>每人倍率</th><th>驗證狀態</th></tr></thead><tbody>${Array.from({length:6},(_,i)=>i+1).map(n=>`<tr><td>${n} 人</td><td>${formatMultiplier(factors({participants:n}).share)}</td><td>${n===1?'單人基準':[2,5,6].includes(n)?'已有實測吻合':'公式推估，待確認'}</td></tr>`).join('')}</tbody></table></div>
     <p>依 2026.10.26 的單人與組隊紀錄核對。2、5、6 人分配已有對照；3、4 人仍需確認，不能把「有人稱三人、數值卻符合四人」的紀錄直接視為驗證。組隊實測以頭目為主，其他怪物套用同一公式屬延伸推估。</p>
     <p>單人等級差規則已對照 Lv57–58、Lv7–61 的怪物與頭目。高等額外折減的觸發門檻、低等隊員的邊界、離線、活動及其他特殊獎勵仍可能影響實得。等級隱藏的怪物不換算經驗；不另假設最少獲得 1 點。</p></details></section>`;
@@ -95,6 +107,7 @@
    input.setAttribute('aria-invalid',String(invalid));
    const f=factors(current);
    status.textContent=invalid?'請輸入 1–120 的整數等級。':(n===null?'填入等級後可計算經驗；摳可先依人數換算。':'目前以角色 Lv'+n+' 計算。')+' 分配人數 '+current.participants+' 人，每人人數倍率 '+formatMultiplier(f.share)+(f.verifiedParticipants?'。':'（此人數待驗證）。')+(current.lowLevelPenalty?' 已套用低等折減 50%。':'')+(current.expReduction?' 已套用額外經驗 ×10%。':'');
+   document.getElementById('reward-formula').innerHTML=formulaHtml(n,current);
    if(notify){
     if(!invalid)try{if(n===null)localStorage.removeItem(key);else localStorage.setItem(key,String(n))}catch{}
     try{localStorage.setItem(key+'-party',JSON.stringify(current))}catch{}
@@ -105,6 +118,6 @@
   for(const control of [participants,low,extra])control.addEventListener('change',()=>update(true));
   update(false);
  }
- const api={rules,parse,comparison,badge,options,factors,estimate,estimateCol,colHtml,formatMultiplier,multiplierHtml,valueHtml,sortValue,areaScore,rankAreas,load,loadOptions,panel,bind};
+ const api={rules,parse,comparison,badge,options,factors,estimate,estimateCol,colHtml,formatMultiplier,multiplierHtml,valueHtml,sortValue,areaScore,rankAreas,load,loadOptions,formulaHtml,panel,bind};
  root.RewardGuide=api;if(typeof module==='object')module.exports=api;
 })(typeof globalThis==='object'?globalThis:this);

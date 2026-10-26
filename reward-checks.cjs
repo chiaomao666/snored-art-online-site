@@ -98,6 +98,14 @@ module.exports=function(){
  assert.equal(R.estimateCol(Infinity),null);
  assert.match(R.valueHtml(100,44,58,true,{participants:3}),/人數待驗證/);
  assert.match(R.panel(58,{participants:2}),/含自己/);
+ const fullFormula=R.formulaHtml(48,{participants:6});
+ assert.match(fullFormula,/75% \^ 較大值（0，你的等級 − 怪物等級 − 5）/);
+ assert.match(fullFormula,/［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數/);
+ assert.match(fullFormula,/你 Lv48、6 人分配/);
+ assert.match(fullFormula,/｝＝ 88</);assert.match(fullFormula,/｝＝ 208</);
+ assert.match(R.formulaHtml(null),/尚未填角色等級，暫以 Lv58 示範/);
+ assert.match(R.formulaHtml(48,{participants:6,lowLevelPenalty:true,expReduction:true}),/｝＝ 4</);
+ assert.match(R.formulaHtml(48,{participants:6,lowLevelPenalty:true,expReduction:true}),/｝＝ 104</);
  assert.equal(R.areaScore(regions[0],'estimatedExp',56,{participants:6}),113);
  assert.equal(R.areaScore(regions[1],'estimatedCol',56,{participants:2}),34.4);
  return {observedPartyFixtures:partyFixtures.length,partyBoundaries:21,levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8,floorSortChecks:11};
