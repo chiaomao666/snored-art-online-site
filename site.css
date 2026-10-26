@@ -172,3 +172,17 @@ html[data-theme="light"] .account-stat-gain{color:#087b51}
 .floor-multiplier,.floor-estimate{text-align:right;min-width:125px}.floor-estimate{min-width:170px}
 .monster-stat-grid .reward-estimate strong{font-size:21px}
 @media(max-width:650px){.reward-formula{padding:14px}.reward-formula code{font-size:17px}}
+
+/* Shared solo and party reward calculator. */
+.reward-level-panel{grid-template-columns:1fr}
+.reward-panel-intro,.reward-wide{grid-column:1/-1}
+.reward-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:680px}
+.reward-controls select{margin-top:7px;font-size:17px;width:100%}
+.reward-adjustments{grid-column:1/-1;border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.reward-adjustments legend{font-size:16px;color:var(--text);padding:0 6px}
+.reward-adjustments label{font-size:16px;line-height:1.8;cursor:pointer}
+.reward-adjustments input{width:18px;height:18px;margin:0 7px 0 0;vertical-align:middle}
+.reward-adjustments small{display:block;font-size:14px;color:var(--muted);line-height:1.8;margin-top:7px}
+.reward-col-estimate strong{color:var(--gold);font-size:19px}
+.floor-reward-table{min-width:1120px}
+@media(max-width:650px){.reward-controls,.reward-adjustments{grid-template-columns:1fr}.reward-controls{max-width:none}}

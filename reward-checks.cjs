@@ -42,7 +42,7 @@ module.exports=function(){
  assert.equal(R.estimate(1000,36,58).floorApplied,true);
  assert.equal(R.estimate(1000,36,58).multiplier,.01);
  assert.equal(R.estimate(100,1,120).value,1);
- assert.match(R.valueHtml(390,7,58,true),/最低倍率 1%/);
+ assert.match(R.valueHtml(390,7,58,true),/等級差最低 1%/);
  assert.equal(R.estimate(20,7,58).value,0,'The 1% multiplier floor does not establish a separate minimum of one XP');
  const regions=[{id:'a37',floor:37,maxEnemies:4,monsters:[{id:'m1',level:49,exp:590,col:90,spawnWeight:3},{id:'m2',level:50,exp:1144,col:73,spawnWeight:2}]},{id:'a38',floor:38,maxEnemies:4,monsters:[{id:'m3',level:50,exp:1144,col:73,spawnWeight:3},{id:'m4',level:51,exp:379,col:56,spawnWeight:2}]}];
  const original=JSON.stringify(regions);
@@ -57,5 +57,48 @@ module.exports=function(){
  assert.equal(R.areaScore({monsters:[{exp:99999,levelHidden:true,level:1}]},'estimatedExp',56),null);
  assert.equal(R.areaScore(regions[0],'estimatedExp',null),null);
  assert.equal(R.areaScore({monsters:[{exp:10,level:1},{exp:20,level:1}]},'exp',56),null,'Missing multi-monster weights must not silently become equal weights');
- return {levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8,floorSortChecks:11};
+ // Anonymous observed per-kill rewards: participants, level, extra reduction and low-level cases.
+ const partyFixtures=[
+  [1086,1230,17,58,2,false,false,6,646],
+  [1086,1230,17,22,2,true,false,285,323],
+  [1158,1320,18,58,2,false,false,6,693],
+  [1158,1320,18,22,2,true,false,304,347],
+  [1314,1440,20,58,2,false,false,7,756],
+  [1314,1440,20,22,2,true,false,345,378],
+  [4644,3810,56,58,5,false,false,1115,914],
+  [4644,3810,56,62,5,false,false,836,914],
+  [4644,3810,56,63,5,false,true,63,914],
+  [4644,3810,56,58,6,false,false,968,794],
+  [4644,3810,56,62,6,false,false,726,794],
+  [4644,3810,56,63,6,false,true,54,794],
+  [4644,3810,56,63,1,false,true,261,3810],
+  [1404,86,59,63,1,false,true,140,86],
+  [774,110,61,63,1,false,true,77,110]
+ ];
+ for(const [base,cash,monster,player,n,low,extra,xp,col] of partyFixtures){
+  const o={participants:n,lowLevelPenalty:low,expReduction:extra};
+  assert.equal(R.estimate(base,monster,player,o).value,xp);
+  assert.equal(R.estimateCol(cash,o),col);
+ }
+ assert.equal(R.estimate(4644,56,62,{participants:3}).value,1277);
+ assert.equal(R.estimateCol(3810,{participants:3}),1397);
+ assert.equal(R.estimate(4644,56,62,{participants:4}).value,1001);
+ assert.equal(R.estimateCol(3810,{participants:4}),1095);
+ assert.equal(R.factors({participants:3}).verifiedParticipants,false);
+ assert.equal(R.factors({participants:4}).verifiedParticipants,false);
+ for(const n of [0,7,1.5,NaN]){assert.equal(R.estimate(100,1,1,{participants:n}),null);assert.equal(R.estimateCol(100,{participants:n}),null)}
+ assert.equal(R.estimateCol(100,{participants:1,lowLevelPenalty:true}),100,'Solo cannot receive the party low-level penalty');
+ assert.equal(R.estimateCol(100,{expReduction:true}),100,'Extra XP reduction must not affect cash');
+ assert.equal(R.estimate(4644,56,63).value,2612,'Do not assume the unverified Lv63 threshold automatically');
+ assert.equal(R.estimate(1000,37,58,{participants:6}).value,2,'Multiply all factors before rounding, not rounded solo XP');
+ assert.equal(R.estimateCol(3810,{participants:6}),794,'Use exact fraction, not displayed percentage');
+ assert.equal(R.estimateCol(100,{participants:2,lowLevelPenalty:true}),26);
+ assert.equal(R.estimateCol(100,{participants:2}),53);
+ assert.equal(R.estimateCol(-1),null);
+ assert.equal(R.estimateCol(Infinity),null);
+ assert.match(R.valueHtml(100,44,58,true,{participants:3}),/人數待驗證/);
+ assert.match(R.panel(58,{participants:2}),/含自己/);
+ assert.equal(R.areaScore(regions[0],'estimatedExp',56,{participants:6}),113);
+ assert.equal(R.areaScore(regions[1],'estimatedCol',56,{participants:2}),34.4);
+ return {observedPartyFixtures:partyFixtures.length,partyBoundaries:21,levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8,floorSortChecks:11};
 };
