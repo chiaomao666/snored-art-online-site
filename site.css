@@ -186,3 +186,22 @@ html[data-theme="light"] .account-stat-gain{color:#087b51}
 .reward-col-estimate strong{color:var(--gold);font-size:19px}
 .floor-reward-table{min-width:1120px}
 @media(max-width:650px){.reward-controls,.reward-adjustments{grid-template-columns:1fr}.reward-controls{max-width:none}}
+
+.monster-boss-skills{border-top:1px solid var(--line);padding-top:20px;margin-top:20px}
+.monster-boss-skills h3{font-size:19px;margin:0 0 12px}
+.monster-boss-skills>.tag-row{gap:8px}
+.boss-pressure{font-size:15px;line-height:1.9;padding:12px 14px;background:var(--panel2);border-radius:9px}
+.boss-phase-details,.boss-move-details{border:1px solid var(--line);border-radius:10px;margin-top:12px;padding:14px}
+.boss-phase-details summary,.boss-move-details summary{cursor:pointer;font-size:16px;font-weight:600;color:var(--blue);line-height:1.7}
+.boss-phase-list{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px}
+.boss-phase-list li{background:var(--panel2);padding:14px;border-radius:8px;border-left:3px solid var(--blue)}
+.boss-phase-title{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;font-size:16px}
+.boss-phase-title span{color:var(--gold);font-size:15px}
+.boss-move-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px}
+.boss-move{border:1px solid var(--line);border-radius:8px;padding:15px;background:var(--panel2)}
+.boss-move h4{font-size:17px;color:var(--gold);margin:0 0 9px}
+.boss-move p{font-size:15px;line-height:1.9;margin:9px 0 0;color:var(--muted)}
+.boss-move .boss-move-effect{color:var(--text)}
+.boss-move dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 0;font-size:15px}
+.boss-move dt{color:var(--muted)}.boss-move dd{margin:5px 0 0;color:var(--text)}
+@media(max-width:500px){.boss-move-grid{grid-template-columns:1fr}}

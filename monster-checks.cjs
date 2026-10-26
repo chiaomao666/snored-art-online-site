@@ -18,8 +18,29 @@ module.exports=function(D){
  const fixtures=[['f5-a',94,83,9,41,14],['f5-j',145,111,10,55,17],['f5-b',101,181,8,59,19],['f5-boss',4536,264,22,720,900],['f5-s',538,358,30,265,30]];
  for(const [id,hp,atk,def,exp,col]of fixtures){const m=map.get(id);assert.deepEqual([m.stats.maxHp,m.stats.atk,m.stats.def,m.exp,m.col],[hp,atk,def,exp,col]);}
  assert.equal(all.filter(m=>m.floor===5).length,15);
- assert.deepEqual(map.get('f5-boss').knownSkills,['爆裂新星','隕石墜','呼朋引伴']);
- assert.equal(all.filter(m=>m.knownSkills).length,1);
+ assert.deepEqual(new Set(map.get('f5-boss').knownSkills),new Set(['爆裂新星','隕石墜','呼朋引伴']));
+ assert.equal(all.filter(m=>m.knownSkills).length,40);
+ for(const m of all.filter(m=>m.kind==='boss')){
+  const b=m.bossGuide;assert(b);assert.equal(b.phases[0].below,1);assert(b.phases.length>=2);
+  assert(['enrage','stack','regen','summon'].includes(b.pressure));
+  for(const [i,p] of b.phases.entries()){
+   assert(p.below>0&&p.below<=1);if(i)assert(p.below<b.phases[i-1].below);
+   assert(p.skills.length>0);assert.equal(new Set(p.skills).size,p.skills.length);
+   for(const id of p.skills){const skill=M.bossSkills[id];assert(skill);assert.equal(id,skill.id);assert(m.knownSkills.includes(skill.name));assert(skill.windupMs>=0);assert(skill.cooldownMs>0)}
+  }
+ }
+ const boss5=map.get('f5-boss').bossGuide;
+ assert.deepEqual(boss5.phases[0].skills,['b-meteor','b-nova']);
+ assert.equal(boss5.phases[1].below,.4);assert(boss5.phases[1].skills.includes('b-summon'));
+ assert.equal(M.bossSkills['b-nova'].all,true);assert.equal(M.bossSkills['b-nova'].windupMs,2600);assert.equal(M.bossSkills['b-meteor'].cooldownMs,26000);
+ assert.deepEqual(map.get('f1-boss').bossGuide.phases[1].skills,['if-talwar']);
+ assert.deepEqual(map.get('f1-boss').bossGuide.releaseVariant.phases[1].skills,['if-spin','if-fan']);
+ const boss40=map.get('f40-boss').bossGuide;
+ assert.deepEqual(boss40.phases.map(p=>p.below),[1,.75,.5,.25,.1]);
+ assert(boss40.phases[1].skills.includes('b-share-f40'));assert(boss40.phases[1].skills.includes('b-rampage-f40'));
+ assert(!boss40.phases[2].skills.includes('b-smash'),'Full phase lists must preserve removed moves');
+ assert.equal(M.bossSkills['b-share-f40'].name,'末日壓頂');assert.equal(M.bossSkills['b-rampage-f40'].name,'魔王亂舞');
+ assert.equal(all.filter(m=>m.kind!=='boss'&&m.bossGuide).length,0);
  for(const x of D.materials.filter(x=>x.kind==='drop'))assert(map.has(x.monsterId));
  const story=all.filter(m=>m.kind==='story');assert.equal(story.length,6);assert.equal(all.filter(m=>m.kind!=='story').length,583);
  const locations=new Map([...areas,...M.storyAreas].map(a=>[a.id,a]));for(const m of all){for(const id of m.areaIds){assert(locations.has(id));assert.equal(locations.get(id).floor,m.floor);}if(m.story){assert(m.story.chapterNumber>=0);assert(m.story.steps.length);assert(m.story.prerequisites.length);}}
@@ -28,7 +49,7 @@ module.exports=function(D){
  assert(map.get('f22-reaper').levelHidden);assert.equal(map.get('f22-reaper').floor,1);assert.equal(map.get('f22-reaper').exp,0);assert.equal(map.get('f28-wolf').story.chapterNumber,31);assert(map.get('f28-wolf').story.condition.includes('Lv38'));assert.equal(map.get('f20-mantis').story.chapterNumber,22);
  const rates=all.flatMap(m=>[...m.drops,...M.dropTables[m.dropTable]].map(d=>d.chance));
  assert(Math.abs(Math.min(...rates)-.0000264)<1e-15);
- return {monsters:all.length,dropEntries:dropCount,pools,items:Object.keys(items).length};
+ return {bossSkillGuides:40,bossSkillDefinitions:Object.keys(M.bossSkills).length,monsters:all.length,dropEntries:dropCount,pools,items:Object.keys(items).length};
 };
 
 
