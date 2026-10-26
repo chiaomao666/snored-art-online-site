@@ -41,7 +41,7 @@ module.exports=function(){
  assert(R.estimate(1000,37,58).multiplier>.01);
  assert.equal(R.estimate(1000,36,58).floorApplied,true);
  assert.equal(R.estimate(1000,36,58).multiplier,.01);
- assert.equal(R.estimate(100,1,120).value,1);
+ assert.equal(R.estimate(100,1,120).value,0,'Lv63+ extra XP reduction follows the 1% level multiplier floor');
  assert.match(R.valueHtml(390,7,58,true),/等級差最低 1%/);
  assert.equal(R.estimate(20,7,58).value,0,'The 1% multiplier floor does not establish a separate minimum of one XP');
  const regions=[{id:'a37',floor:37,maxEnemies:4,monsters:[{id:'m1',level:49,exp:590,col:90,spawnWeight:3},{id:'m2',level:50,exp:1144,col:73,spawnWeight:2}]},{id:'a38',floor:38,maxEnemies:4,monsters:[{id:'m3',level:50,exp:1144,col:73,spawnWeight:3},{id:'m4',level:51,exp:379,col:56,spawnWeight:2}]}];
@@ -57,14 +57,12 @@ module.exports=function(){
  assert.equal(R.areaScore({monsters:[{exp:99999,levelHidden:true,level:1}]},'estimatedExp',56),null);
  assert.equal(R.areaScore(regions[0],'estimatedExp',null),null);
  assert.equal(R.areaScore({monsters:[{exp:10,level:1},{exp:20,level:1}]},'exp',56),null,'Missing multi-monster weights must not silently become equal weights');
- // Anonymous observed per-kill rewards: participants, level, extra reduction and low-level cases.
+ // Anonymous observed per-kill rewards. The former three Lv22 teammate cases
+ // do not validate the revised monster-relative low-level rule and are excluded.
  const partyFixtures=[
   [1086,1230,17,58,2,false,false,6,646],
-  [1086,1230,17,22,2,true,false,285,323],
   [1158,1320,18,58,2,false,false,6,693],
-  [1158,1320,18,22,2,true,false,304,347],
   [1314,1440,20,58,2,false,false,7,756],
-  [1314,1440,20,22,2,true,false,345,378],
   [4644,3810,56,58,5,false,false,1115,914],
   [4644,3810,56,62,5,false,false,836,914],
   [4644,3810,56,63,5,false,true,63,914],
@@ -76,24 +74,24 @@ module.exports=function(){
   [774,110,61,63,1,false,true,77,110]
  ];
  for(const [base,cash,monster,player,n,low,extra,xp,col] of partyFixtures){
-  const o={participants:n,lowLevelPenalty:low,expReduction:extra};
+  const o={participants:n};
   assert.equal(R.estimate(base,monster,player,o).value,xp);
-  assert.equal(R.estimateCol(cash,o),col);
+  assert.equal(R.estimateCol(cash,monster,player,o),col);
  }
  assert.equal(R.estimate(4644,56,62,{participants:3}).value,1277);
- assert.equal(R.estimateCol(3810,{participants:3}),1397);
+ assert.equal(R.estimateCol(3810,56,62,{participants:3}),1397);
  assert.equal(R.estimate(4644,56,62,{participants:4}).value,1001);
- assert.equal(R.estimateCol(3810,{participants:4}),1095);
+ assert.equal(R.estimateCol(3810,56,62,{participants:4}),1095);
  assert.equal(R.factors({participants:3}).verifiedParticipants,false);
  assert.equal(R.factors({participants:4}).verifiedParticipants,false);
- for(const n of [0,7,1.5,NaN]){assert.equal(R.estimate(100,1,1,{participants:n}),null);assert.equal(R.estimateCol(100,{participants:n}),null)}
- assert.equal(R.estimateCol(100,{participants:1,lowLevelPenalty:true}),100,'Solo cannot receive the party low-level penalty');
- assert.equal(R.estimateCol(100,{expReduction:true}),100,'Extra XP reduction must not affect cash');
- assert.equal(R.estimate(4644,56,63).value,2612,'Do not assume the unverified Lv63 threshold automatically');
+ for(const n of [0,7,1.5,NaN]){assert.equal(R.estimate(100,1,1,{participants:n}),null);assert.equal(R.estimateCol(100,1,1,{participants:n}),null)}
+ assert.equal(R.estimateCol(100,50,1,{participants:1,lowLevelPenalty:true}),100,'Solo cannot receive the party low-level penalty');
+ assert.equal(R.estimateCol(100,61,63,{expReduction:false}),100,'Automatic extra XP reduction must not affect cash');
+ assert.equal(R.estimate(4644,56,63).value,261,'Lv63 threshold is automatic even without legacy settings');
  assert.equal(R.estimate(1000,37,58,{participants:6}).value,2,'Multiply all factors before rounding, not rounded solo XP');
- assert.equal(R.estimateCol(3810,{participants:6}),794,'Use exact fraction, not displayed percentage');
- assert.equal(R.estimateCol(100,{participants:2,lowLevelPenalty:true}),26);
- assert.equal(R.estimateCol(100,{participants:2}),53);
+ assert.equal(R.estimateCol(3810,56,58,{participants:6}),794,'Use exact fraction, not displayed percentage');
+ assert.equal(R.estimateCol(100,51,40,{participants:2}),26);
+ assert.equal(R.estimateCol(100,50,40,{participants:2}),53);
  assert.equal(R.estimateCol(-1),null);
  assert.equal(R.estimateCol(Infinity),null);
  assert.match(R.valueHtml(100,44,58,true,{participants:3}),/人數待驗證/);
@@ -104,9 +102,32 @@ module.exports=function(){
  assert.match(fullFormula,/你 Lv48、6 人分配/);
  assert.match(fullFormula,/｝＝ 88</);assert.match(fullFormula,/｝＝ 208</);
  assert.match(R.formulaHtml(null),/尚未填角色等級，暫以 Lv58 示範/);
- assert.match(R.formulaHtml(48,{participants:6,lowLevelPenalty:true,expReduction:true}),/｝＝ 4</);
- assert.match(R.formulaHtml(48,{participants:6,lowLevelPenalty:true,expReduction:true}),/｝＝ 104</);
+ assert.equal(R.formulaHtml(48,{participants:6,lowLevelPenalty:true,expReduction:true}),fullFormula,'Legacy checkboxes cannot change formulas');
+ assert.match(R.formulaHtml(63,{participants:6}),/× 100% × 10%/);
+ assert.match(R.formulaHtml(29,{participants:6}),/× 50% × 100%/);
+ assert.match(R.formulaHtml(30,{participants:6}),/× 100% × 100%/);
+ for(const level of [62,63,64]){
+  const xp=R.estimate(1000,level,level,{expReduction:level<63});
+  assert.equal(xp.value,level>=63?100:1000);assert.equal(xp.expReduction,level>=63);
+  assert.equal(R.estimateCol(1000,level,level),1000);
+ }
+ for(const n of [1,2,3,4,5,6])for(const gap of [-1,0,9,10,11]){
+  const o={participants:n},f=R.factors(o,40+gap,40),expected=n>1&&gap>10?.5:1;
+  assert.equal(f.low,expected);assert.equal(f.lowLevelPenalty,expected===.5);
+  assert.equal(R.estimate(1000,40+gap,40,o).value,Math.round(1000*f.share*expected));
+  assert.equal(R.estimateCol(1000,40+gap,40,o),Math.round(1000*f.share*expected));
+ }
+ const mixed={monsters:[{level:50,exp:1000,col:1000,spawnWeight:3},{level:51,exp:1000,col:1000,spawnWeight:2}]};
+ assert.equal(R.areaScore(mixed,'estimatedExp',40,{participants:2}),420.2);
+ assert.equal(R.areaScore(mixed,'estimatedCol',40,{participants:2}),420.2);
+ assert.equal(R.estimate(1086,17,22,{participants:2,lowLevelPenalty:true}).value,570,'An older manual flag must not halve unrelated low-level monsters');
+ assert.equal(R.estimateCol(1000,51,null,{participants:2}),null);
+ assert.equal(R.estimateCol(1000,null,40,{participants:2}),null);
+ assert.equal(R.estimateCol(1000,null,null,{participants:1}),1000);
+ assert.equal(R.areaScore({monsters:[{level:51,levelHidden:true,col:1000}]},'estimatedCol',40,{participants:2}),null);
+ assert.deepEqual(R.loadOptions(new URLSearchParams('participants=2&lowLevelPenalty=1&expReduction=1')),{participants:2});
+ assert.doesNotMatch(R.panel(63,{participants:2}),/type="checkbox"|有勾選|符合時才勾選/);
  assert.equal(R.areaScore(regions[0],'estimatedExp',56,{participants:6}),113);
  assert.equal(R.areaScore(regions[1],'estimatedCol',56,{participants:2}),34.4);
- return {observedPartyFixtures:partyFixtures.length,partyBoundaries:21,levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8,floorSortChecks:11};
+ return {automaticLowLevelBoundaryCases:30,automaticLv63Cases:3,mixedMonsterAreaChecks:2,legacyFlagsIgnored:3,unknownLevels:4,observedPartyFixtures:partyFixtures.length,partyBoundaries:21,levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8,floorSortChecks:11};
 };
