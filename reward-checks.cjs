@@ -44,5 +44,16 @@ module.exports=function(){
  assert.equal(R.estimate(100,1,120).value,1);
  assert.match(R.valueHtml(390,7,58,true),/最低倍率 1%/);
  assert.equal(R.estimate(20,7,58).value,0,'The 1% multiplier floor does not establish a separate minimum of one XP');
- return {levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8};
+ const regions=[{id:'a37',floor:37,maxEnemies:4,monsters:[{id:'m1',level:49,exp:590,col:90},{id:'m2',level:50,exp:1144,col:73}]},{id:'a38',floor:38,maxEnemies:4,monsters:[{id:'m3',level:50,exp:1144,col:73},{id:'m4',level:51,exp:379,col:56}]}];
+ const original=JSON.stringify(regions);
+ assert.deepEqual(R.rankAreas(regions,'exp',56).map(a=>a.monsters[0].exp),[1144,1144,590,379]);
+ assert.deepEqual(R.rankAreas(regions,'estimatedExp',56).map(a=>R.sortValue(a.monsters[0],56)),[858,858,379,332]);
+ assert.deepEqual(R.rankAreas(regions,'col',56).map(a=>a.monsters[0].col),[90,73,73,56]);
+ assert.deepEqual(R.rankAreas(regions,'floor',56).map(a=>a.monsters.length),[2,2]);
+ const grouped=R.rankAreas(regions,'exp',56,true);assert.equal(grouped.length,2);assert.deepEqual(grouped[0].monsters.map(m=>m.exp),[1144,590]);
+ assert.equal(JSON.stringify(regions),original,'Sorting must not mutate shared region or monster definitions');
+ const unknown=[...regions,{id:'hidden',floor:1,monsters:[{id:'hidden',exp:99999,col:1,levelHidden:true,level:1}]}];
+ assert.equal(R.rankAreas(unknown,'estimatedExp',56).at(-1).id,'hidden');
+ assert.equal(R.rankAreas(regions,'estimatedExp',null).length,4);
+ return {levelBoundaries:13,comparisons:5,queryLevels:2,observedXpFixtures:fixtures.length,formulaBoundaryChecks:6,minimumMultiplierChecks:8,invalidFormulaInputs:7,estimateDisplayChecks:8,floorSortChecks:8};
 };

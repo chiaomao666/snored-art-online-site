@@ -32,6 +32,14 @@
   return '<span class="reward-estimate"><strong>'+result.value.toLocaleString('zh-TW')+'</strong><small>'+note+'</small></span>';
  }
  function sortValue(monster,playerLevel){return estimate(monster.exp,monster.levelHidden?null:monster.level,playerLevel)?.value??-1}
+ function rankAreas(areas,key,playerLevel,grouped=false){
+  const metric=['exp','estimatedExp','col'].includes(key);
+  const value=m=>key==='estimatedExp'?sortValue(m,playerLevel):Number.isFinite(m[key])?m[key]:-1;
+  if(metric&&!grouped)return areas.flatMap(a=>a.monsters.map(m=>({...a,monsters:[m]}))).sort((a,b)=>value(b.monsters[0])-value(a.monsters[0])||a.floor-b.floor);
+  const rows=areas.map(a=>metric?{...a,monsters:[...a.monsters].sort((x,y)=>value(y)-value(x))}:a);
+  const highest=a=>Math.max(-1,...a.monsters.map(value));
+  return rows.sort(key==='population'?(a,b)=>(b.maxEnemies??-1)-(a.maxEnemies??-1)||a.floor-b.floor:metric?(a,b)=>highest(b)-highest(a)||a.floor-b.floor:(a,b)=>a.floor-b.floor);
+ }
  function load(params){const q=params?.get('playerLevel');if(q!==null&&q!==undefined)return parse(q);try{return parse(localStorage.getItem(key))}catch{return null}}
  function panel(level){
   const parsed=parse(level);
@@ -54,6 +62,6 @@
    callback(n);
   });
  }
- const api={rules,parse,comparison,badge,estimate,formatMultiplier,multiplierHtml,valueHtml,sortValue,load,panel,bind};
+ const api={rules,parse,comparison,badge,estimate,formatMultiplier,multiplierHtml,valueHtml,sortValue,rankAreas,load,panel,bind};
  root.RewardGuide=api;if(typeof module==='object')module.exports=api;
 })(typeof globalThis==='object'?globalThis:this);
