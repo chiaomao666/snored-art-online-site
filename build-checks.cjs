@@ -38,5 +38,16 @@ module.exports=function(items){
  shared.unique.mace=false;const disabled=B.calculate(smithItems,shared);assert.equal(disabled.gear.weapon.plus,8);assert.equal(disabled.gear.weapon.speed,132);assert.equal(disabled.gear.offhand.plus,8);assert(!disabled.state.slots.weapon.smith);assert(!disabled.state.slots.offhand.smith);
  shared.unique.mace=true;shared.slots.weapon={id:weapon.id,enh:{quick:10},smith:true};const nonMace=B.calculate(smithItems,shared);assert(!nonMace.state.slots.weapon.smith);assert.equal(nonMace.gear.weapon.speed,140);assert(nonMace.state.slots.offhand.smith);
  const oldSmith={...automatic,version:2,unique:{},slots:{weapon:{id:rareMace.id,enh:{quick:11},smith:true}}};const smithMigration=B.normalize(oldSmith,smithItems);assert.equal(smithMigration.version,3);assert(smithMigration.unique.mace);assert.equal(B.calculate(smithItems,smithMigration).gear.weapon.plus,11);
- return {formulaFixtures:15,equipmentDirections:cases,storyChapters:45,storyBoundaries:7,automaticSmithChecks:5};
+ const fixture=B.decodeShare('1.Qy0f_wCIAQgQvQOBQLoDADd_UkCCAQA3ygIANGwAOGwAOHPd',items);
+ assert(fixture.unique.rapier);assert.equal(B.calculate(items,fixture).stats.crit,.643);
+ fixture.buffs=['war-cry','flurry','insight'];let photo=B.calculate(items,fixture);
+ assert.equal(photo.stats.atk,1656);close(photo.stats.crit,.703);close(photo.stats.critDamage,3.43);assert.equal(photo.stats.attackSpeed,498);
+ assert.equal(photo.activeBuffs.find(b=>b.id==='flurry').effect.speed,.39);
+ fixture.unique.rapier=false;assert.equal(B.calculate(items,fixture).activeBuffs.find(b=>b.id==='flurry').effect.speed,.3);fixture.unique.rapier=true;
+ fixture.slots.armor.enh={hard:3,thick:4,light:0};fixture.slots.offhand.smithEnh={hard:0,thick:3,light:0};photo=B.calculate(items,fixture);
+ assert.equal(photo.stats.maxHp,19900);assert.equal(photo.stats.def,1659);assert.equal(photo.stats.agi,180);close(photo.stats.block,.231);assert.equal(photo.stats.regenBase.toFixed(1),'51.2');
+ assert.equal(photo.gear.offhand.bonus.def,181);assert.equal(photo.gear.offhand.bonus.maxHp,2711);
+ const unknownBuff={...fixture,buffs:['not-a-buff','focus','flurry','war-cry']};assert.deepEqual(B.normalize(unknownBuff,items).buffs,['war-cry','flurry']);
+ const imported=JSON.parse(JSON.stringify(fixture));imported.slots.offhand.smithEnh.thick=100;assert.equal(B.normalize(imported,items).slots.offhand.smithEnh.thick,8);
+ return {rapierPhotoComparison:12,activeBuffCases:4,partialSmithCases:3,formulaFixtures:15,equipmentDirections:cases,storyChapters:45,storyBoundaries:7,automaticSmithChecks:5};
 };

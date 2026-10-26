@@ -205,3 +205,10 @@ html[data-theme="light"] .account-stat-gain{color:#087b51}
 .boss-move dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 0;font-size:15px}
 .boss-move dt{color:var(--muted)}.boss-move dd{margin:5px 0 0;color:var(--text)}
 @media(max-width:500px){.boss-move-grid{grid-template-columns:1fr}}
+
+.build-buff-panel{margin:20px 0;padding:22px}.build-buff-panel h2{font-size:21px;margin:0 0 10px}
+.build-buff-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:16px 0}
+.build-buff-option{display:flex;align-items:flex-start;gap:9px;padding:12px;border:1px solid var(--line);border-radius:9px;font-size:16px;cursor:pointer;background:var(--panel2)}
+.build-buff-option input{margin-top:4px;width:17px;height:17px;flex-shrink:0}.build-buff-option small{display:block;color:var(--muted);font-size:14px;margin-top:4px}.build-buff-option.unavailable{opacity:.5;cursor:default}
+.build-buff-active{border-top:1px solid var(--line);padding-top:10px;font-size:16px;line-height:1.8}.build-buff-active p{margin:7px 0}.build-buff-active b{color:var(--blue)}
+.build-smith-history{margin:14px 0;border-top:1px solid var(--line);padding-top:12px}.build-smith-history summary{cursor:pointer;color:var(--blue);font-size:15px;line-height:1.7}

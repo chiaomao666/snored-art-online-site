@@ -34,5 +34,11 @@ module.exports=function(items){
  assert.throws(()=>B.decodeShare(futureCode,items));
  for(const bad of ['', '2.AAAAAA','1.A','1.***',example.slice(0,-3),example+'A','1.'+'A'.repeat(4097),'{}invalid'])assert.throws(()=>B.decodeShare(bad,items));
  const flipped=example.slice(0,-2)+(example.at(-2)==='A'?'B':'A')+example.at(-1);assert.throws(()=>B.decodeShare(flipped,items));
- return {roundtripCases:cases,legacyCompatibility:1,corruptInputChecks:9,stableCatalogOrder:1,futureItemEscape:1,exampleCodeLength:example.length,legacyPayloadLength:legacy.length};
+ const photo=B.decodeShare('1.Qy0f_wCIAQgQvQOBQLoDADd_UkCCAQA3ygIANGwAOGwAOHPd',items);
+ photo.buffs=['war-cry','flurry','insight'];photo.slots.offhand.smithEnh={hard:0,thick:3,light:0};photo.slots.armor.enh={hard:3,thick:4,light:0};
+ const extended=roundtrip(photo);assert(extended.startsWith('2.'));assert(extended.length<90);
+ for(const b of B.buffDefinitions)roundtrip({...photo,buffs:[b.id]});
+ for(const hard of [0,1])for(const thick of [0,3,8]){photo.slots.offhand.smithEnh={hard,thick,light:0};roundtrip(photo)}
+ const broken=extended.slice(0,-2)+(extended.at(-2)==='A'?'B':'A')+extended.at(-1);assert.throws(()=>B.decodeShare(broken,items));
+ return {roundtripCases:cases,extendedStateRoundtrips:22,legacyCompatibility:1,corruptInputChecks:9,stableCatalogOrder:1,futureItemEscape:1,exampleCodeLength:example.length,legacyPayloadLength:legacy.length};
 };
