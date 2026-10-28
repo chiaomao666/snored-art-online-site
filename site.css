@@ -177,7 +177,7 @@ html[data-theme="light"] .account-stat-gain{color:#087b51}
 /* Shared solo and party reward calculator. */
 .reward-level-panel{grid-template-columns:1fr}
 .reward-panel-intro,.reward-wide{grid-column:1/-1}
-.reward-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:680px}
+.reward-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1100px}
 .reward-controls select{margin-top:7px;font-size:17px;width:100%}
 .reward-col-estimate strong{color:var(--gold);font-size:19px}
 .floor-reward-table{min-width:1120px}
