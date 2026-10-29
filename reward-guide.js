@@ -5,7 +5,7 @@
  function parse(value){if(value==null||String(value).trim()==='')return null;const n=Number(value);return Number.isInteger(n)&&n>=1&&n<=120?n:null}
  function parseProgress(value){if(value==null||String(value).trim()==='')return null;const n=Number(value);return Number.isInteger(n)&&n>=0&&n<=40?n:null}
  function progressLabel(value){const n=parseProgress(value);return n===null?'尚未選擇攻略進度':n===0?'第1層（尚未通關）':n===40?'第40層已通關':`第${n+1}層（已通關第${n}層）`}
- function penaltyLevel(value){const n=parseProgress(value);return n===null?null:rules.progressLevelBase+Math.floor(n*rules.progressLevelGrowth)}
+ function penaltyLevel(value){const n=parseProgress(value);return n===null?null:rules.progressLevelBase+Math.round(n*rules.progressLevelGrowth)}
  function comparison(monsterLevel,playerLevel){
   if(!Number.isInteger(monsterLevel))return {gap:null,text:'等級隱藏',kind:'unknown'};
   if(parse(playerLevel)==null)return {gap:null,text:'—',kind:'unknown'};
@@ -48,7 +48,7 @@
  function valueHtml(baseExp,monsterLevel,playerLevel,boss=false,settings){
   const result=estimate(baseExp,monsterLevel,playerLevel,settings);
   if(!result)return '<span class="reward-estimate unavailable">—<small>'+(parse(playerLevel)===null?'先填角色等級':!Number.isInteger(monsterLevel)?'等級未知，無法計算':options(settings)?.highestClearedFloor===null?'先選最高攻略進度':'等級未知，無法計算')+'</small></span>';
-  const note=(result.participants>1?result.participants+' 人分配推估'+(result.verifiedParticipants?'':' · 人數待驗證'):boss?'單人頭目推估':result.extended?'公式延伸推估':'單人公式推估')+(result.floorApplied?' · 等級差最低 1%':'')+(result.lowLevelPenalty?' · 低於此怪超過 10 級，×50%（邊界推估）':'')+(result.expReduction?' · 攻略進度折減 ×10%（推估）':'');
+  const note=(result.participants>1?result.participants+' 人分配推估'+(result.verifiedParticipants?'':' · 人數待驗證'):boss?'單人頭目推估':result.extended?'公式延伸推估':'單人公式推估')+(result.floorApplied?' · 等級差最低 1%':'')+(result.lowLevelPenalty?' · 低於此怪超過 10 級，×50%（邊界推估）':'')+(result.expReduction?' · 攻略進度折減 ×10%':'');
   return '<span class="reward-estimate"><strong>'+result.value.toLocaleString('zh-TW')+'</strong><small>'+note+'</small></span>';
  }
  function sortValue(monster,playerLevel,settings){return estimate(monster.exp,monster.levelHidden?null:monster.level,playerLevel,settings)?.value??-1}
@@ -78,8 +78,8 @@
   const share=`［1 ＋ 5% ×（${o.participants} − 1）］÷ ${o.participants}`;
   return `<code>個人經驗 ＝ 四捨五入｛<br>基礎經驗 × 較大值［1%，75% ^ 較大值（0，你的等級 − 怪物等級 − 5）］<br>×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數<br>× 低等隊員折減 × 額外經驗折減｝</code>
    <code>個人摳 ＝ 四捨五入｛<br>基礎摳 ×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數 × 低等隊員折減｝</code>
-   <ul class="reward-formula-definitions"><li>分配人數包含自己；單人填 1。人數加成與平均分配已直接寫進上面兩條公式。</li><li>「較大值」是取括號中較大的數；「^」是次方，例如 75% ^ 3 ＝ 75% × 75% × 75%。比怪物高 5 級以內不扣經驗，超過後每多 1 級再乘 75%，等級差部分最低保留 1%。</li><li><strong>低等隊員折減 ＝ 當分配人數 ≥ 2 且（怪物等級 − 你的等級）＞ 10 時為 50%，其餘為 100%。</strong>此組隊條件仍待驗證；單人不套用。</li><li><strong>額外經驗折減（推估）：起始折減等級 ＝ 13 ＋ 無條件捨去（最高已通關樓層 × 1.25）；你的等級 ≥ 起始折減等級時為 10%，其餘為 100%。</strong>只影響經驗，不影響摳。下拉選單的「第1層（尚未通關）」對應尚未通關任何樓層；「第2層（已通關第1層）」對應已通關 1 層。這是依實測整理的候選公式，尚未取得伺服器判定程式；不是固定 Lv63，也不是直接以角色等級減樓層。</li></ul>
-   <div class="reward-formula-example"><b>代入範例：你 Lv${exampleLevel}、${o.participants} 人分配</b><p>${parsed===null?'尚未填角色等級，暫以 Lv58 示範。':''}假設怪物 Lv40，基礎經驗 1,000、基礎摳 1,000（只示範算法，不是特定怪物的數值）。${o.highestClearedFloor===null?'請先選最高攻略進度，再顯示完整代入結果。':`最高攻略進度：${progressLabel(o.highestClearedFloor)}；起始折減等級 ＝ 13 ＋ 無條件捨去（${o.highestClearedFloor} × 1.25）＝ ${f.threshold}（推估）。`}</p>${example?`
+   <ul class="reward-formula-definitions"><li>分配人數包含自己；單人填 1。人數加成與平均分配已直接寫進上面兩條公式。</li><li>「較大值」是取括號中較大的數；「^」是次方，例如 75% ^ 3 ＝ 75% × 75% × 75%。比怪物高 5 級以內不扣經驗，超過後每多 1 級再乘 75%，等級差部分最低保留 1%。</li><li><strong>低等隊員折減 ＝ 當分配人數 ≥ 2 且（怪物等級 − 你的等級）＞ 10 時為 50%，其餘為 100%。</strong>此組隊條件仍待驗證；單人不套用。</li><li><strong>額外經驗折減：起始折減等級 ＝ 13 ＋ 四捨五入（最高已通關樓層 × 1.25）；你的等級 ≥ 起始折減等級時為 10%，其餘為 100%。</strong>只影響經驗，不影響摳。下拉選單的「第1層（尚未通關）」對應尚未通關任何樓層；「第2層（已通關第1層）」對應已通關 1 層。採用實測核對的攻略進度規則：已通關 0、2、3、4、40 層，分別從 Lv13、16、17、18、63 開始額外折減。</li></ul>
+   <div class="reward-formula-example"><b>代入範例：你 Lv${exampleLevel}、${o.participants} 人分配</b><p>${parsed===null?'尚未填角色等級，暫以 Lv58 示範。':''}假設怪物 Lv40，基礎經驗 1,000、基礎摳 1,000（只示範算法，不是特定怪物的數值）。${o.highestClearedFloor===null?'請先選最高攻略進度，再顯示完整代入結果。':`最高攻略進度：${progressLabel(o.highestClearedFloor)}；起始折減等級 ＝ 13 ＋ 四捨五入（${o.highestClearedFloor} × 1.25）＝ ${f.threshold}。`}</p>${example?`
     <code>經驗 ＝ 四捨五入｛1,000 × 較大值［1%，75% ^ 較大值（0，${exampleLevel} − 40 − 5）］ × ${share} × ${f.low===1?'100%':'50%'} × ${f.extra===1?'100%':'10%'}｝＝ ${example.value.toLocaleString('zh-TW')}</code>
     <code>摳 ＝ 四捨五入｛1,000 × ${share} × ${f.low===1?'100%':'50%'}｝＝ ${cash.toLocaleString('zh-TW')}</code>`:''}
    </div>`;
@@ -99,7 +99,7 @@
    <details class="reward-formula"><summary>每隻怪物的完整獎勵公式（推估）</summary><div id="reward-formula">${formulaHtml(parsed,o)}</div></details>
    <details><summary>人數倍率表與實測範圍</summary><div class="table-wrap"><table><thead><tr><th>分配人數（含自己）</th><th>每人倍率</th><th>驗證狀態</th></tr></thead><tbody>${Array.from({length:6},(_,i)=>i+1).map(n=>`<tr><td>${n} 人</td><td>${formatMultiplier(factors({participants:n}).share)}</td><td>${n===1?'單人基準':[2,5,6].includes(n)?'已有實測吻合':'公式推估，待確認'}</td></tr>`).join('')}</tbody></table></div>
     <p>依 2026.10.26 的單人與組隊紀錄核對。2、5、6 人分配已有對照；3、4 人仍需確認，不能把「有人稱三人、數值卻符合四人」的紀錄直接視為驗證。組隊實測以頭目為主，其他怪物套用同一公式屬延伸推估。</p>
-    <p>攻略進度的額外經驗折減採候選公式；尚未通關任何樓層的 Lv12／13 交界已有實測，其他進度依既有對照延伸推估，尚非伺服器確認規則。組隊低等折減的條件仍待驗證。離線、活動及其他特殊獎勵仍可能影響實得；不另假設最少獲得 1 點。</p></details></section>`;
+    <p>攻略進度的額外經驗折減採上列公式，已核對通關 0、2、3、4、40 層的等級交界；其餘樓層依同一公式計算。組隊低等折減的條件仍待驗證。離線、活動及其他特殊獎勵仍可能影響實得；不另假設最少獲得 1 點。</p></details></section>`;
  }
  function bind(callback,settings){
   let current=options(settings)||options();
@@ -109,7 +109,7 @@
    current=options({participants:Number(participants.value),highestClearedFloor:progress.value})||options();
    input.setAttribute('aria-invalid',String(invalid));
    const f=factors(current,null,n);
-   status.textContent=invalid?'請輸入 1–120 的整數等級。':(n===null?'填入角色等級後可計算個人經驗。':'目前以角色 Lv'+n+' 計算。')+' 分配人數 '+current.participants+' 人，每人人數倍率 '+formatMultiplier(f.share)+'。'+(current.highestClearedFloor===null?' 請先選最高攻略進度，才能推估個人經驗；基礎獎勵仍可查看。':` ${progressLabel(current.highestClearedFloor)}：Lv${f.threshold} 起額外經驗 ×10%（攻略進度公式推估）`+(n===null?'。':f.expReduction?'；目前套用 ×10%，摳不變。':'；目前不套用額外經驗折減。'));
+   status.textContent=invalid?'請輸入 1–120 的整數等級。':(n===null?'填入角色等級後可計算個人經驗。':'目前以角色 Lv'+n+' 計算。')+' 分配人數 '+current.participants+' 人，每人人數倍率 '+formatMultiplier(f.share)+'。'+(current.highestClearedFloor===null?' 請先選最高攻略進度，才能推估個人經驗；基礎獎勵仍可查看。':` ${progressLabel(current.highestClearedFloor)}：Lv${f.threshold} 起額外經驗 ×10%（依最高已通關樓層）`+(n===null?'。':f.expReduction?'；目前套用 ×10%，摳不變。':'；目前不套用額外經驗折減。'));
    document.getElementById('reward-formula').innerHTML=formulaHtml(n,current);
    if(notify){
     if(!invalid)try{if(n===null)localStorage.removeItem(key);else localStorage.setItem(key,String(n))}catch{}

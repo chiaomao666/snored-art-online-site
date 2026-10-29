@@ -26,7 +26,7 @@ module.exports=function(){
   [390,7,58,4],[450,8,58,5],[582,10,58,6],[4038,50,58,1704]
  ];
  for(const [base,mob,level,xp]of fixtures)assert.equal(R.estimate(base,mob,level,cleared40).value,xp);
- const thresholds=[[0,13],[1,14],[11,26],[14,30],[24,43],[39,61],[40,63]];
+ const thresholds=[[0,13],[1,14],[2,16],[3,17],[4,18],[11,27],[14,31],[24,43],[39,62],[40,63]];
  for(const [cleared,threshold]of thresholds){
   assert.equal(R.penaltyLevel(cleared),threshold);
   for(const level of [threshold-1,threshold,threshold+1]){
@@ -41,7 +41,18 @@ module.exports=function(){
   assert.equal(R.estimate(base,mob,13,zero).value,after);
  }
  assert.equal(R.estimate(47,4,13,zero).value,1,'Do not round the ordinary 14.871 XP before multiplying by 10%');
- for(const [base,mob,level,cleared,xp]of [[442,23,26,11,44],[442,23,26,14,442],[442,23,27,14,442],[299,23,25,14,299],[221,22,26,14,221],[27,4,27,14,0],[52,5,27,14,1],[1404,59,63,40,140],[774,61,63,40,77]])assert.equal(R.estimate(base,mob,level,{highestClearedFloor:cleared}).value,xp);
+ // The old Lv26/frontline12 sample did not record actual clearedFloors and
+ // is excluded from verified progress fixtures; do not force it into C=11.
+ for(const [base,mob,level,cleared,xp]of [[442,23,26,14,442],[442,23,27,14,442],[299,23,25,14,299],[221,22,26,14,221],[27,4,27,14,0],[52,5,27,14,1],[1404,59,63,40,140],[774,61,63,40,77]])assert.equal(R.estimate(base,mob,level,{highestClearedFloor:cleared}).value,xp);
+ // Anonymous observations across the newly measured progression boundaries.
+ const newProgressFixtures=[
+  [55,6,15,2,17],[55,6,16,2,1],[75,7,15,2,32],[75,7,16,2,2],
+  [223,13,16,3,223],[223,13,17,3,22],[140,15,16,3,140],[140,15,17,3,14],
+  [99,9,17,4,42],[99,9,18,4,3],[97,10,17,4,55],[97,10,18,4,4]
+ ];
+ for(const [base,mob,level,cleared,xp]of newProgressFixtures)assert.equal(R.estimate(base,mob,level,{highestClearedFloor:cleared}).value,xp);
+ assert.equal(R.estimate(1404,59,62,{highestClearedFloor:0}).extra,.1,'Extra XP reduction can apply below Lv63');
+ assert.equal(R.estimate(1404,59,62,cleared40).extra,1,'Same character level depends on actual progression');
  for(const [base,mob,level]of [[-1,44,58],[NaN,44,58],[Infinity,44,58],[100,null,58],[100,0,58],[100,44,null],[100,44,121]])assert.equal(R.estimate(base,mob,level,cleared40),null);
  assert.equal(R.estimate(100,53,58,cleared40).multiplier,1);
  assert.equal(R.estimate(100,52,58,cleared40).multiplier,.75);
@@ -75,8 +86,8 @@ module.exports=function(){
  assert.equal(R.areaScore({monsters:[{exp:10},{exp:20}]},'exp',56),null);
  assert.equal(JSON.stringify(regions),snapshot);
  const formula=R.formulaHtml(63,{...cleared40,participants:6});
- assert.match(formula,/13 ＋ 無條件捨去（最高已通關樓層 × 1.25）/);
- assert.match(formula,/候選公式/);assert.match(formula,/× 100% × 10%/);
+ assert.match(formula,/13 ＋ 四捨五入（最高已通關樓層 × 1.25）/);
+ assert.doesNotMatch(formula,/無條件捨去|固定 Lv63|候選公式/);assert.match(formula,/× 100% × 10%/);
  assert.match(formula,/75% \^ 較大值（0，你的等級 − 怪物等級 − 5）/);
  assert.match(R.formulaHtml(26),/請先選最高攻略進度/);
  assert.doesNotMatch(R.formulaHtml(26),/｝＝ 0/,'Missing progress must not produce false zero XP');
