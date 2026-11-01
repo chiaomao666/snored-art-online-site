@@ -75,7 +75,7 @@
 .build-smith{display:flex;align-items:center;gap:7px;font-size:14px;margin:14px 0;cursor:pointer}.build-smith input{flex-shrink:0}
 .build-gear-tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 10px}.build-gear-tags .tag{font-size:14px;padding:3px 7px}
 .build-gear-stats{display:flex;flex-wrap:wrap;gap:5px 13px;font-size:14px;color:var(--muted);padding-top:3px}
-.build-gear-stats b{font-weight:600;color:var(--text)}.build-gear-stats .negative b{color:var(--red)}
+.build-gear-stats b{font-weight:600;color:var(--text)}.build-gear-stats .build-gear-stat{display:inline-block}.build-gear-stats .build-stat-base.negative{color:var(--red)}.build-gear-stats .build-stat-enhancement{color:var(--green)}
 .build-empty-slot{font-size:14px;color:var(--muted);margin:14px 0 2px}
 .build-overview{position:sticky;top:96px;max-height:calc(100vh - 115px);overflow:auto;min-width:0;padding:22px}
 .build-overview-heading{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:16px}
