@@ -209,3 +209,9 @@ html[data-theme="light"] .account-stat-gain{color:#087b51}
 .build-buff-active{border-top:1px solid var(--line);padding-top:10px;font-size:16px;line-height:1.8}.build-buff-active p{margin:7px 0}.build-buff-active b{color:var(--blue)}
 
 .reward-col-estimate small{display:block;color:var(--muted);font-size:13px;line-height:1.6;margin-top:5px}
+
+/* Role-based equipment recommendations. */
+.build-recommend-panel{margin-bottom:22px;padding:20px 22px}.build-recommend-panel h2{font-size:20px;margin:0 0 7px}.build-recommend-panel .section-note{font-size:14px;margin:7px 0}
+.build-recommend-controls{display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin:16px 0}.build-recommend-controls .field{flex:0 1 255px}.build-recommend-controls select{margin-top:6px;min-height:49px}.build-recommend-controls .button{min-height:49px}
+.build-recommend-result{border-top:1px solid var(--line);padding-top:8px;font-size:15px}.build-recommend-result h3{color:var(--blue);font-size:17px;margin:8px 0}.build-recommend-result p{margin:7px 0}.build-recommend-result strong{color:var(--text)}
+@media(max-width:560px){.build-recommend-panel{padding:18px}.build-recommend-controls{display:grid;grid-template-columns:1fr}.build-recommend-controls .field,.build-recommend-controls .button{width:100%}}

@@ -53,12 +53,16 @@
   return s;
  }
  function calculate(items,input){
-  const state=normalize(input,items),map=new Map(items.map(x=>[x.id,x])),base=baseStats(state.level),stats={...base},gear={},equipmentBonus={maxHp:0,atk:0,def:0,agi:0,crit:0,critDmg:0,evade:0,block:0},warnings=[];
+  const state=normalize(input,items),map=new Map(items.map(x=>[x.id,x])),base=baseStats(state.level),gear={},equipmentBonus={maxHp:0,atk:0,def:0,agi:0,crit:0,critDmg:0,evade:0,block:0},warnings=[];
   for(const slot of slots){let item=map.get(state.slots[slot].id);if(!item)continue;item=enhance(item,state.slots[slot],state.params.smithEnhEffect);gear[slot]=item;
    if(item.reqLevel>state.level)warnings.push(`${names[slot]}「${item.name}」需求 Lv${item.reqLevel}，目前角色 Lv${state.level}；此配裝暫時無法在遊戲中使用。`);
    const factor=slot==='offhand'&&!item.shield?.6:1;
-   for(const key of Object.keys(equipmentBonus)){let value=(item.bonus[key]||0)*factor;if(['atk','def','maxHp','agi'].includes(key))value=Math.round(value);stats[key]+=value;equipmentBonus[key]+=value}
+   for(const key of Object.keys(equipmentBonus)){let value=(item.bonus[key]||0)*factor;if(['atk','def','maxHp','agi'].includes(key))value=Math.round(value);equipmentBonus[key]+=value}
   }
+  return {state,base,gear,equipmentBonus,...finishStats(state,base,gear,equipmentBonus,warnings),warnings};
+ }
+ function finishStats(state,base,gear,equipmentBonus,warnings=[]){
+  const stats={...base};for(const key of Object.keys(stats))stats[key]+=equipmentBonus[key]||0;
   stats.evade=Math.min(.28,Math.max(0,stats.evade));
   const main=gear.weapon,off=gear.offhand,style=main?.weaponType,active=state.unique[style]?style:null,passives=[];
   let multiplier=(main?.speed??100)/100;if(off?.slow&&style!=='mace')multiplier*=1-off.slow;
@@ -71,7 +75,7 @@
   for(const b of activeBuffs){for(const [k,v]of Object.entries(b.effect))buffEffects[k]=(buffEffects[k]||0)+v;if(!b.party&&state.level<b.reqLevel)warnings.push(`自身增益「${b.name}」需求 Lv${b.reqLevel}，目前僅供未來配裝規劃。`)}
   if(buffEffects.atk)stats.atk=Math.round(stats.atk*(1+buffEffects.atk));if(buffEffects.def)stats.def=Math.round(stats.def*(1+buffEffects.def));stats.crit+=buffEffects.crit||0;stats.critDmg+=buffEffects.critDmg||0;multiplier*=1+(buffEffects.speed||0);
   const effective=stats.agi<=0?stats.agi:250*Math.tanh(stats.agi/250),interval=Math.max(400,Math.round(2200*(100/(100+effective*1.5))/multiplier));
-  return {state,base,gear,equipmentBonus,activeBuffs,buffEffects,stats:{...stats,critDamage:1.6+stats.critDmg,attackSpeed:Math.round(200000/interval),interval,weaponSpeed:main?.speed??100,regenBase:60*baseStats(state.level).maxHp/11255,regen:60*baseStats(state.level).maxHp/11255*(1+state.perks.regen),hitRate:state.hitRate,moveSpeed:100},multiplier,warnings,passives};
+  return {activeBuffs,buffEffects,stats:{...stats,critDamage:1.6+stats.critDmg,attackSpeed:Math.round(200000/interval),interval,weaponSpeed:main?.speed??100,regenBase:60*baseStats(state.level).maxHp/11255,regen:60*baseStats(state.level).maxHp/11255*(1+state.perks.regen),hitRate:state.hitRate,moveSpeed:100},multiplier,passives};
  }
  // Share format 1: these dictionaries are frozen. Never reorder/remove entries;
  // new item IDs use the inline-ID escape, so data-file reordering cannot break old links.
@@ -143,5 +147,5 @@
   if(format===2){const mask=byte()|(byte()<<8),history=byte();if(mask>=(1<<buffDefinitions.length))throw Error('無效的增益設定');s.buffs=buffDefinitions.filter((b,i)=>mask&(1<<i)).map(b=>b.id);for(const [i,slot]of slots.entries())if(history&(1<<i)){const g=s.slots[slot],item=map.get(g.id);if(!item||!s.unique.mace||!smithEligible(item))throw Error('無效的匠魂紀錄');const packed=byte()|(byte()<<8);if(packed>4095)throw Error('無效的匠魂次數');/* Consume legacy history bytes without restoring the removed override. */for(const [j,k]of dirs(item).entries())if(((packed>>(j*4))&15)>(g.enh[k]||0))throw Error('匠魂次數超過強化次數')}}
   if(pos!==end)throw Error('配裝連結包含多餘資料');return normalize(s,items);
  }
- const api={buffDefinitions,encodeShare,decodeShare,storyChapters,storyPerks,slots,names,directionsInfo,defaults,dirs,smithEligible,maxPlus,baseStats,enhance,empty,normalize,calculate,offhandAllowed};root.BuildGuide=api;if(typeof module==='object')module.exports=api;
+ const api={buffDefinitions,encodeShare,decodeShare,storyChapters,storyPerks,slots,names,directionsInfo,defaults,dirs,smithEligible,maxPlus,baseStats,enhance,empty,normalize,calculate,finishStats,offhandAllowed};root.BuildGuide=api;if(typeof module==='object')module.exports=api;
 })(typeof globalThis==='object'?globalThis:this);
