@@ -78,7 +78,7 @@
   const share=`［1 ＋ 5% ×（${o.participants} − 1）］÷ ${o.participants}`;
   return `<code>個人經驗 ＝ 四捨五入｛<br>基礎經驗 × 較大值［1%，75% ^ 較大值（0，你的等級 − 怪物等級 − 5）］<br>×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數<br>× 低等隊員折減 × 額外經驗折減｝</code>
    <code>個人摳 ＝ 四捨五入｛<br>基礎摳 ×［1 ＋ 5% ×（分配人數 − 1）］÷ 分配人數 × 低等隊員折減｝</code>
-   <ul class="reward-formula-definitions"><li>分配人數包含自己；單人填 1。人數加成與平均分配已直接寫進上面兩條公式。</li><li>「較大值」是取括號中較大的數；「^」是次方，例如 75% ^ 3 ＝ 75% × 75% × 75%。比怪物高 5 級以內不扣經驗，超過後每多 1 級再乘 75%，等級差部分最低保留 1%。</li><li><strong>低等隊員折減 ＝ 當分配人數 ≥ 2 且（怪物等級 − 你的等級）＞ 10 時為 50%，其餘為 100%。</strong>此組隊條件仍待驗證；單人不套用。</li><li><strong>額外經驗折減：起始折減等級 ＝ 13 ＋ 四捨五入（最高已通關樓層 × 1.25）；你的等級 ≥ 起始折減等級時為 10%，其餘為 100%。</strong>只影響經驗，不影響摳。下拉選單的「第1層（尚未通關）」對應尚未通關任何樓層；「第2層（已通關第1層）」對應已通關 1 層。採用實測核對的攻略進度規則：已通關 0、2、3、4、40 層，分別從 Lv13、16、17、18、63 開始額外折減。</li></ul>
+   <ul class="reward-formula-definitions"><li>分配人數包含自己；單人填 1。人數加成與平均分配已直接寫進上面兩條公式。</li><li>「較大值」是取括號中較大的數；「^」是次方，例如 75% ^ 3 ＝ 75% × 75% × 75%。比怪物高 5 級以內不扣經驗，超過後每多 1 級再乘 75%，等級差部分最低保留 1%。</li><li><strong>低等隊員折減 ＝ 當分配人數 ≥ 2 且（怪物等級 − 你的等級）＞ 10 時為 50%，其餘為 100%。</strong>此組隊條件仍待驗證；單人不套用。</li><li><strong>額外經驗折減：起始折減等級 ＝ 13 ＋ 四捨五入（最高已通關樓層 × 1.25）；你的等級 ≥ 起始折減等級時為 10%，其餘為 100%。</strong>只影響經驗，不影響摳。下拉選單的「第1層（尚未通關）」對應尚未通關任何樓層；「第2層（已通關第1層）」對應已通關 1 層。</li></ul>
    <div class="reward-formula-example"><b>代入範例：你 Lv${exampleLevel}、${o.participants} 人分配</b><p>${parsed===null?'尚未填角色等級，暫以 Lv58 示範。':''}假設怪物 Lv40，基礎經驗 1,000、基礎摳 1,000（只示範算法，不是特定怪物的數值）。${o.highestClearedFloor===null?'請先選最高攻略進度，再顯示完整代入結果。':`最高攻略進度：${progressLabel(o.highestClearedFloor)}；起始折減等級 ＝ 13 ＋ 四捨五入（${o.highestClearedFloor} × 1.25）＝ ${f.threshold}。`}</p>${example?`
     <code>經驗 ＝ 四捨五入｛1,000 × 較大值［1%，75% ^ 較大值（0，${exampleLevel} − 40 − 5）］ × ${share} × ${f.low===1?'100%':'50%'} × ${f.extra===1?'100%':'10%'}｝＝ ${example.value.toLocaleString('zh-TW')}</code>
     <code>摳 ＝ 四捨五入｛1,000 × ${share} × ${f.low===1?'100%':'50%'}｝＝ ${cash.toLocaleString('zh-TW')}</code>`:''}
@@ -98,8 +98,8 @@
    <p id="reward-level-status" class="reward-wide section-note" role="status" aria-live="polite"></p>
    <details class="reward-formula"><summary>每隻怪物的完整獎勵公式（推估）</summary><div id="reward-formula">${formulaHtml(parsed,o)}</div></details>
    <details><summary>人數倍率表與實測範圍</summary><div class="table-wrap"><table><thead><tr><th>分配人數（含自己）</th><th>每人倍率</th><th>驗證狀態</th></tr></thead><tbody>${Array.from({length:6},(_,i)=>i+1).map(n=>`<tr><td>${n} 人</td><td>${formatMultiplier(factors({participants:n}).share)}</td><td>${n===1?'單人基準':[2,5,6].includes(n)?'已有實測吻合':'公式推估，待確認'}</td></tr>`).join('')}</tbody></table></div>
-    <p>依 2026.10.26 的單人與組隊紀錄核對。2、5、6 人分配已有對照；3、4 人仍需確認，不能把「有人稱三人、數值卻符合四人」的紀錄直接視為驗證。組隊實測以頭目為主，其他怪物套用同一公式屬延伸推估。</p>
-    <p>攻略進度的額外經驗折減採上列公式，已核對通關 0、2、3、4、40 層的等級交界；其餘樓層依同一公式計算。組隊低等折減的條件仍待驗證。離線、活動及其他特殊獎勵仍可能影響實得；不另假設最少獲得 1 點。</p></details></section>`;
+    <p>3、4 人分配仍待確認；組隊公式以頭目戰為主，套用至其他怪物屬延伸推估。</p>
+    <p>攻略進度的額外經驗折減依上列公式計算。組隊低等折減的條件仍待驗證。離線、活動及其他特殊獎勵仍可能影響實得；不另假設最少獲得 1 點。</p></details></section>`;
  }
  function bind(callback,settings){
   let current=options(settings)||options();
