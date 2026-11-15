@@ -45,9 +45,6 @@ function apply(G,payload){
   for(const key of ['hit','pace'])if(typeof row[key]==='string')m[key]=row[key];
   if(changed){m.dataStatus='partial';beasts++;}
  }
- for(const [id,values]of Object.entries(s.observedHp||{})){
-  const m=mobs.get(id);if(m&&Array.isArray(values))m.observedMaxHp=values.filter(x=>Number.isFinite(x)&&x>0);
- }
  for(const row of s.fwb||[]){
   if(typeof row.m!=='string'||typeof row.area?.id!=='string')continue;
   let m=mobs.get(row.m);
@@ -58,6 +55,10 @@ function apply(G,payload){
   const from=areas.get(row.from);if(from){from.links??=[];if(!from.links.includes(area.id))from.links.push(area.id);}
  }
  const jack=areas.get('f1-wb');if(jack)jack.worldBossId='wb-jack';
+ // Additional world bosses must exist before attaching observed HP to them.
+ for(const [id,values]of Object.entries(s.observedHp||{})){
+  const m=mobs.get(id);if(m&&Array.isArray(values))m.observedMaxHp=values.filter(x=>Number.isFinite(x)&&x>0);
+ }
  D.legacyMonsters=Object.create(null);
  const legacy=s.legacyFallback;
  const stable=x=>x&&typeof x==='object'?Array.isArray(x)?x.map(stable):Object.fromEntries(Object.keys(x).sort().map(k=>[k,stable(x[k])])):x;

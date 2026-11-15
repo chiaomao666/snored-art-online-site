@@ -10,7 +10,7 @@
    return;
   }
   document.title='點數商店｜SAO 攻略資料庫';document.getElementById('breadcrumb').textContent='點數商店';
-  main.innerHTML=`<div class="page-intro"><div><div class="eyebrow">DATABASE / POINT SHOP</div><h1>點數商店</h1><p>查看商品用途與所需點數。</p></div></div><p><a class="button secondary" href="#quests">← 商店與任務</a></p><section class="panel"><div class="table-wrap"><table><thead><tr><th>商品</th><th>用途</th><th>點數</th></tr></thead><tbody>${(D.serverGuide?.pointShop||[]).map(x=>`<tr><td>${esc(text(x.name)||'未公開商品')}</td><td>${esc(text(x.desc)||'—')}</td><td>${Number.isFinite(x.price)?nf(x.price):'—'}</td></tr>`).join('')}</tbody></table></div></section>`;
+  main.innerHTML=`<div class="page-intro"><div><div class="eyebrow">DATABASE / POINT SHOP</div><h1>點數商店</h1><p>查看商品用途與所需點數。</p></div></div><p><a class="button secondary" href="#quests">← 商店與任務</a></p><section class="panel"><div class="table-wrap"><table><thead><tr><th>商品</th><th>用途</th><th>點數</th></tr></thead><tbody>${(D.serverGuide?.pointShop||[]).map(x=>`<tr><td>${esc(text(x.name)||'未公開商品')}</td><td>${esc(text(x.desc)||'—')}</td><td>${x.priceRule==='doubles'?'每次購買後加倍':Number.isFinite(x.price)?nf(x.price):'—'}</td></tr>`).join('')}</tbody></table></div></section>`;
  }
  window.addEventListener('hashchange',enhance);enhance();
 })();

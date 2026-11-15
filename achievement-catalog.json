@@ -2,7 +2,7 @@
   "version": 2,
   "updated": "2026-11-15",
   "source": "websocket-ach-list",
-  "asset": "main-BSa8z2Bt.js",
+  "asset": "main-BqVswO5r.js",
   "precision": "server-json",
   "counts": {
     "collect": 144,
@@ -299,7 +299,8 @@
           "bases": [
             "boss-f1",
             "boss-f1-b",
-            "boss-f1-c"
+            "boss-f1-c",
+            "boss-f1-d"
           ]
         }
       ],
@@ -328,7 +329,8 @@
           "bases": [
             "boss-f2",
             "boss-f2-b",
-            "boss-f2-c"
+            "boss-f2-c",
+            "boss-f2-d"
           ]
         }
       ],
@@ -357,7 +359,8 @@
           "bases": [
             "boss-f3",
             "boss-f3-b",
-            "boss-f3-c"
+            "boss-f3-c",
+            "boss-f3-d"
           ]
         }
       ],
@@ -386,7 +389,8 @@
           "bases": [
             "boss-f4",
             "boss-f4-b",
-            "boss-f4-c"
+            "boss-f4-c",
+            "boss-f4-d"
           ]
         }
       ],
@@ -684,7 +688,8 @@
           "bases": [
             "boss-f5",
             "boss-f5-b",
-            "boss-f5-c"
+            "boss-f5-c",
+            "boss-f5-d"
           ]
         }
       ],
@@ -713,7 +718,8 @@
           "bases": [
             "boss-f6",
             "boss-f6-b",
-            "boss-f6-c"
+            "boss-f6-c",
+            "boss-f6-d"
           ]
         }
       ],
@@ -742,7 +748,8 @@
           "bases": [
             "boss-f7",
             "boss-f7-b",
-            "boss-f7-c"
+            "boss-f7-c",
+            "boss-f7-d"
           ]
         }
       ],
@@ -771,7 +778,8 @@
           "bases": [
             "boss-f8",
             "boss-f8-b",
-            "boss-f8-c"
+            "boss-f8-c",
+            "boss-f8-d"
           ]
         }
       ],
@@ -800,7 +808,8 @@
           "bases": [
             "boss-f9",
             "boss-f9-b",
-            "boss-f9-c"
+            "boss-f9-c",
+            "boss-f9-d"
           ]
         }
       ],
@@ -1098,7 +1107,8 @@
           "bases": [
             "boss-f10",
             "boss-f10-b",
-            "boss-f10-c"
+            "boss-f10-c",
+            "boss-f10-d"
           ]
         }
       ],
@@ -1127,7 +1137,8 @@
           "bases": [
             "boss-f11",
             "boss-f11-b",
-            "boss-f11-c"
+            "boss-f11-c",
+            "boss-f11-d"
           ]
         }
       ],
@@ -1156,7 +1167,8 @@
           "bases": [
             "boss-f12",
             "boss-f12-b",
-            "boss-f12-c"
+            "boss-f12-c",
+            "boss-f12-d"
           ]
         }
       ],
@@ -1185,7 +1197,8 @@
           "bases": [
             "boss-f13",
             "boss-f13-b",
-            "boss-f13-c"
+            "boss-f13-c",
+            "boss-f13-d"
           ]
         }
       ],
@@ -1214,7 +1227,8 @@
           "bases": [
             "boss-f14",
             "boss-f14-b",
-            "boss-f14-c"
+            "boss-f14-c",
+            "boss-f14-d"
           ]
         }
       ],
@@ -1512,7 +1526,8 @@
           "bases": [
             "boss-f15",
             "boss-f15-b",
-            "boss-f15-c"
+            "boss-f15-c",
+            "boss-f15-d"
           ]
         }
       ],
@@ -1541,7 +1556,8 @@
           "bases": [
             "boss-f16",
             "boss-f16-b",
-            "boss-f16-c"
+            "boss-f16-c",
+            "boss-f16-d"
           ]
         }
       ],
@@ -1570,7 +1586,8 @@
           "bases": [
             "boss-f17",
             "boss-f17-b",
-            "boss-f17-c"
+            "boss-f17-c",
+            "boss-f17-d"
           ]
         }
       ],
@@ -1599,7 +1616,8 @@
           "bases": [
             "boss-f18",
             "boss-f18-b",
-            "boss-f18-c"
+            "boss-f18-c",
+            "boss-f18-d"
           ]
         }
       ],
@@ -1628,7 +1646,8 @@
           "bases": [
             "boss-f19",
             "boss-f19-b",
-            "boss-f19-c"
+            "boss-f19-c",
+            "boss-f19-d"
           ]
         }
       ],
@@ -1926,7 +1945,8 @@
           "bases": [
             "boss-f20",
             "boss-f20-b",
-            "boss-f20-c"
+            "boss-f20-c",
+            "boss-f20-d"
           ]
         }
       ],
@@ -1955,7 +1975,8 @@
           "bases": [
             "boss-f21",
             "boss-f21-b",
-            "boss-f21-c"
+            "boss-f21-c",
+            "boss-f21-d"
           ]
         }
       ],
@@ -1984,7 +2005,8 @@
           "bases": [
             "boss-f22",
             "boss-f22-b",
-            "boss-f22-c"
+            "boss-f22-c",
+            "boss-f22-d"
           ]
         }
       ],
@@ -2013,7 +2035,8 @@
           "bases": [
             "boss-f23",
             "boss-f23-b",
-            "boss-f23-c"
+            "boss-f23-c",
+            "boss-f23-d"
           ]
         }
       ],
@@ -2042,7 +2065,8 @@
           "bases": [
             "boss-f24",
             "boss-f24-b",
-            "boss-f24-c"
+            "boss-f24-c",
+            "boss-f24-d"
           ]
         }
       ],
@@ -2340,7 +2364,8 @@
           "bases": [
             "boss-f25",
             "boss-f25-b",
-            "boss-f25-c"
+            "boss-f25-c",
+            "boss-f25-d"
           ]
         }
       ],
@@ -2369,7 +2394,8 @@
           "bases": [
             "boss-f26",
             "boss-f26-b",
-            "boss-f26-c"
+            "boss-f26-c",
+            "boss-f26-d"
           ]
         }
       ],
@@ -2398,7 +2424,8 @@
           "bases": [
             "boss-f27",
             "boss-f27-b",
-            "boss-f27-c"
+            "boss-f27-c",
+            "boss-f27-d"
           ]
         }
       ],
@@ -2427,7 +2454,8 @@
           "bases": [
             "boss-f28",
             "boss-f28-b",
-            "boss-f28-c"
+            "boss-f28-c",
+            "boss-f28-d"
           ]
         }
       ],
@@ -2456,7 +2484,8 @@
           "bases": [
             "boss-f29",
             "boss-f29-b",
-            "boss-f29-c"
+            "boss-f29-c",
+            "boss-f29-d"
           ]
         }
       ],
@@ -2754,7 +2783,8 @@
           "bases": [
             "boss-f30",
             "boss-f30-b",
-            "boss-f30-c"
+            "boss-f30-c",
+            "boss-f30-d"
           ]
         }
       ],
@@ -2783,7 +2813,8 @@
           "bases": [
             "boss-f31",
             "boss-f31-b",
-            "boss-f31-c"
+            "boss-f31-c",
+            "boss-f31-d"
           ]
         }
       ],
@@ -2812,7 +2843,8 @@
           "bases": [
             "boss-f32",
             "boss-f32-b",
-            "boss-f32-c"
+            "boss-f32-c",
+            "boss-f32-d"
           ]
         }
       ],
@@ -2841,7 +2873,8 @@
           "bases": [
             "boss-f33",
             "boss-f33-b",
-            "boss-f33-c"
+            "boss-f33-c",
+            "boss-f33-d"
           ]
         }
       ],
@@ -2870,7 +2903,8 @@
           "bases": [
             "boss-f34",
             "boss-f34-b",
-            "boss-f34-c"
+            "boss-f34-c",
+            "boss-f34-d"
           ]
         }
       ],
@@ -3168,7 +3202,8 @@
           "bases": [
             "boss-f35",
             "boss-f35-b",
-            "boss-f35-c"
+            "boss-f35-c",
+            "boss-f35-d"
           ]
         }
       ],
@@ -3197,7 +3232,8 @@
           "bases": [
             "boss-f36",
             "boss-f36-b",
-            "boss-f36-c"
+            "boss-f36-c",
+            "boss-f36-d"
           ]
         }
       ],
@@ -3226,7 +3262,8 @@
           "bases": [
             "boss-f37",
             "boss-f37-b",
-            "boss-f37-c"
+            "boss-f37-c",
+            "boss-f37-d"
           ]
         }
       ],
@@ -3255,7 +3292,8 @@
           "bases": [
             "boss-f38",
             "boss-f38-b",
-            "boss-f38-c"
+            "boss-f38-c",
+            "boss-f38-d"
           ]
         }
       ],
@@ -3284,7 +3322,8 @@
           "bases": [
             "boss-f39",
             "boss-f39-b",
-            "boss-f39-c"
+            "boss-f39-c",
+            "boss-f39-d"
           ]
         }
       ],
@@ -3582,7 +3621,8 @@
           "bases": [
             "boss-f40",
             "boss-f40-b",
-            "boss-f40-c"
+            "boss-f40-c",
+            "boss-f40-d"
           ]
         }
       ],
@@ -3611,7 +3651,8 @@
           "bases": [
             "boss-f41",
             "boss-f41-b",
-            "boss-f41-c"
+            "boss-f41-c",
+            "boss-f41-d"
           ]
         }
       ],
@@ -3640,7 +3681,8 @@
           "bases": [
             "boss-f42",
             "boss-f42-b",
-            "boss-f42-c"
+            "boss-f42-c",
+            "boss-f42-d"
           ]
         }
       ],
@@ -3669,7 +3711,8 @@
           "bases": [
             "boss-f43",
             "boss-f43-b",
-            "boss-f43-c"
+            "boss-f43-c",
+            "boss-f43-d"
           ]
         }
       ],
@@ -3698,7 +3741,8 @@
           "bases": [
             "boss-f44",
             "boss-f44-b",
-            "boss-f44-c"
+            "boss-f44-c",
+            "boss-f44-d"
           ]
         }
       ],
@@ -3996,7 +4040,8 @@
           "bases": [
             "boss-f45",
             "boss-f45-b",
-            "boss-f45-c"
+            "boss-f45-c",
+            "boss-f45-d"
           ]
         }
       ],
@@ -4025,7 +4070,8 @@
           "bases": [
             "boss-f46",
             "boss-f46-b",
-            "boss-f46-c"
+            "boss-f46-c",
+            "boss-f46-d"
           ]
         }
       ],
@@ -4054,7 +4100,8 @@
           "bases": [
             "boss-f47",
             "boss-f47-b",
-            "boss-f47-c"
+            "boss-f47-c",
+            "boss-f47-d"
           ]
         }
       ],
@@ -4083,7 +4130,8 @@
           "bases": [
             "boss-f48",
             "boss-f48-b",
-            "boss-f48-c"
+            "boss-f48-c",
+            "boss-f48-d"
           ]
         }
       ],
@@ -4112,7 +4160,8 @@
           "bases": [
             "boss-f49",
             "boss-f49-b",
-            "boss-f49-c"
+            "boss-f49-c",
+            "boss-f49-d"
           ]
         }
       ],
@@ -4409,8 +4458,10 @@
           "label": "頭目的金裝",
           "bases": [
             "boss-f50",
+            "duo-f50",
             "boss-f50-b",
-            "boss-f50-c"
+            "boss-f50-c",
+            "boss-f50-d"
           ]
         }
       ],
@@ -4439,7 +4490,8 @@
           "bases": [
             "boss-f51",
             "boss-f51-b",
-            "boss-f51-c"
+            "boss-f51-c",
+            "boss-f51-d"
           ]
         }
       ],
@@ -4468,7 +4520,8 @@
           "bases": [
             "boss-f52",
             "boss-f52-b",
-            "boss-f52-c"
+            "boss-f52-c",
+            "boss-f52-d"
           ]
         }
       ],
@@ -4497,7 +4550,8 @@
           "bases": [
             "boss-f53",
             "boss-f53-b",
-            "boss-f53-c"
+            "boss-f53-c",
+            "boss-f53-d"
           ]
         }
       ],
@@ -4526,7 +4580,8 @@
           "bases": [
             "boss-f54",
             "boss-f54-b",
-            "boss-f54-c"
+            "boss-f54-c",
+            "boss-f54-d"
           ]
         }
       ],
@@ -4824,7 +4879,8 @@
           "bases": [
             "boss-f55",
             "boss-f55-b",
-            "boss-f55-c"
+            "boss-f55-c",
+            "boss-f55-d"
           ]
         }
       ],
@@ -4853,7 +4909,8 @@
           "bases": [
             "boss-f56",
             "boss-f56-b",
-            "boss-f56-c"
+            "boss-f56-c",
+            "boss-f56-d"
           ]
         }
       ],
@@ -4882,7 +4939,8 @@
           "bases": [
             "boss-f57",
             "boss-f57-b",
-            "boss-f57-c"
+            "boss-f57-c",
+            "boss-f57-d"
           ]
         }
       ],
@@ -4911,7 +4969,8 @@
           "bases": [
             "boss-f58",
             "boss-f58-b",
-            "boss-f58-c"
+            "boss-f58-c",
+            "boss-f58-d"
           ]
         }
       ],
@@ -4940,7 +4999,8 @@
           "bases": [
             "boss-f59",
             "boss-f59-b",
-            "boss-f59-c"
+            "boss-f59-c",
+            "boss-f59-d"
           ]
         }
       ],
@@ -5237,8 +5297,10 @@
           "label": "頭目的金裝",
           "bases": [
             "boss-f60",
+            "duo-f60",
             "boss-f60-b",
-            "boss-f60-c"
+            "boss-f60-c",
+            "boss-f60-d"
           ]
         }
       ],
@@ -5267,7 +5329,8 @@
           "bases": [
             "boss-f61",
             "boss-f61-b",
-            "boss-f61-c"
+            "boss-f61-c",
+            "boss-f61-d"
           ]
         }
       ],
@@ -5296,7 +5359,8 @@
           "bases": [
             "boss-f62",
             "boss-f62-b",
-            "boss-f62-c"
+            "boss-f62-c",
+            "boss-f62-d"
           ]
         }
       ],
@@ -5325,7 +5389,8 @@
           "bases": [
             "boss-f63",
             "boss-f63-b",
-            "boss-f63-c"
+            "boss-f63-c",
+            "boss-f63-d"
           ]
         }
       ],
@@ -5354,7 +5419,8 @@
           "bases": [
             "boss-f64",
             "boss-f64-b",
-            "boss-f64-c"
+            "boss-f64-c",
+            "boss-f64-d"
           ]
         }
       ],
@@ -5652,7 +5718,8 @@
           "bases": [
             "boss-f65",
             "boss-f65-b",
-            "boss-f65-c"
+            "boss-f65-c",
+            "boss-f65-d"
           ]
         }
       ],
@@ -5681,7 +5748,8 @@
           "bases": [
             "boss-f66",
             "boss-f66-b",
-            "boss-f66-c"
+            "boss-f66-c",
+            "boss-f66-d"
           ]
         }
       ],
@@ -5710,7 +5778,8 @@
           "bases": [
             "boss-f67",
             "boss-f67-b",
-            "boss-f67-c"
+            "boss-f67-c",
+            "boss-f67-d"
           ]
         }
       ],
@@ -5739,7 +5808,8 @@
           "bases": [
             "boss-f68",
             "boss-f68-b",
-            "boss-f68-c"
+            "boss-f68-c",
+            "boss-f68-d"
           ]
         }
       ],
@@ -5768,7 +5838,8 @@
           "bases": [
             "boss-f69",
             "boss-f69-b",
-            "boss-f69-c"
+            "boss-f69-c",
+            "boss-f69-d"
           ]
         }
       ],
@@ -6065,8 +6136,10 @@
           "label": "頭目的金裝",
           "bases": [
             "boss-f70",
+            "duo-f70",
             "boss-f70-b",
-            "boss-f70-c"
+            "boss-f70-c",
+            "boss-f70-d"
           ]
         }
       ],
@@ -6095,7 +6168,8 @@
           "bases": [
             "boss-f71",
             "boss-f71-b",
-            "boss-f71-c"
+            "boss-f71-c",
+            "boss-f71-d"
           ]
         }
       ],
@@ -6124,7 +6198,8 @@
           "bases": [
             "boss-f72",
             "boss-f72-b",
-            "boss-f72-c"
+            "boss-f72-c",
+            "boss-f72-d"
           ]
         }
       ],
@@ -6153,7 +6228,8 @@
           "bases": [
             "boss-f73",
             "boss-f73-b",
-            "boss-f73-c"
+            "boss-f73-c",
+            "boss-f73-d"
           ]
         }
       ],
@@ -6182,7 +6258,8 @@
           "bases": [
             "boss-f74",
             "boss-f74-b",
-            "boss-f74-c"
+            "boss-f74-c",
+            "boss-f74-d"
           ]
         }
       ],
@@ -6211,7 +6288,8 @@
           "bases": [
             "boss-f75",
             "boss-f75-b",
-            "boss-f75-c"
+            "boss-f75-c",
+            "boss-f75-d"
           ]
         }
       ],
