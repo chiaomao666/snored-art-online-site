@@ -13,6 +13,7 @@ const api = `
 const catalog={items:Object.values(le),monsters:Object.values(mt).map(m=>({...m,stats:null,exp:null,col:null,drops:null,dataStatus:'pending'})),areas:Object.values(ge),floors:wn,
  sideQuests:Vb,chapters:[...YS,...SS,...xS],talents:u1,skills:I1,skillPaths:XA,buffs:Xs,
  styles:bb,stats:Object.values(Ie).map(({extra,...x})=>x),talentNodes:kb(),talentCosts:Cu,
+ achievementTitles:Object.entries(Pl).map(([titleId,value])=>({titleId,...value})),
  attributeEffects:Do,statCaps:Y1,statSteps:Fi,uniqueNames:ya,uniqueQuests:bo,sets:[],version:'2026-11-15',floorCap:y0};
 function createPlayer(config={}){
  const p={level:Math.max(1,Math.min(120,Math.floor(Number(config.level)||1))),equipment:{},gear:{},
@@ -43,5 +44,5 @@ vm.runInNewContext(runtime, box, {timeout:15000});
 const data = box.module.exports.catalog;
 if (data.items.length < 4000 || data.floors.length !== 75 || data.skills.length !== 48) throw Error('Incomplete catalogue');
 fs.writeFileSync(path.join(__dirname,'current-runtime.js'),runtime);
-fs.writeFileSync(path.join(__dirname,'current-manifest.json'),JSON.stringify({version:data.version,sha256:crypto.createHash('sha256').update(source).digest('hex'),counts:Object.fromEntries(['items','monsters','areas','floors','sideQuests','chapters','talents','skills','skillPaths','buffs','talentNodes'].map(k=>[k,data[k].length])),serverValues:['monster stats','monster rewards','monster drops','translations','affix rolls','set effects','unique balance']},null,2)+'\n');
+fs.writeFileSync(path.join(__dirname,'current-manifest.json'),JSON.stringify({version:data.version,sha256:crypto.createHash('sha256').update(source).digest('hex'),counts:Object.fromEntries(['items','monsters','areas','floors','sideQuests','chapters','talents','skills','skillPaths','buffs','talentNodes','achievementTitles'].map(k=>[k,data[k].length])),serverValues:['monster stats','monster rewards','monster drops','translations','affix rolls','set effects','unique balance','achievement catalogue, tiers and bonuses']},null,2)+'\n');
 console.log(JSON.stringify({bytes:Buffer.byteLength(runtime),counts:JSON.parse(fs.readFileSync(path.join(__dirname,'current-manifest.json'))).counts}));

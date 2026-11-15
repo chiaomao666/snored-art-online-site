@@ -1,0 +1,8123 @@
+{
+  "version": 1,
+  "updated": "2026-11-15",
+  "source": "rendered-game-achievement-list",
+  "precision": "game-display",
+  "counts": {
+    "collect": 144,
+    "hunt": 228,
+    "boss": 77,
+    "fun": 20
+  },
+  "total": 469,
+  "hidden": 17,
+  "entries": [
+    {
+      "id": "guide-87cbf13f1cd2ca31",
+      "name": "第 1 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 1,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "攻擊 +0.07%"
+    },
+    {
+      "id": "guide-00f9c589570bd007",
+      "name": "第 1 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 1,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-209b56ae454a6b0f",
+      "name": "第 1 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 1,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "防禦 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "防禦 +0.05%"
+    },
+    {
+      "id": "guide-f819e577f54ccd73",
+      "name": "第 1 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 1,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.27%",
+      "displayValue": 0.0027,
+      "rewardText": "攻擊 +0.27%"
+    },
+    {
+      "id": "guide-2685b2926a094f49",
+      "name": "第 1 層的戰利品",
+      "desc": "上繳一件第 1 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 1,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "對頭目傷害 +0.02%"
+    },
+    {
+      "id": "guide-52a1b668e153faae",
+      "name": "第 2 層的戰利品",
+      "desc": "上繳一件第 2 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 2,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "防禦 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "防禦 +0.05%"
+    },
+    {
+      "id": "guide-0db49016f4c5a9cf",
+      "name": "第 3 層的戰利品",
+      "desc": "上繳一件第 3 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 3,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "對頭目傷害 +0.02%"
+    },
+    {
+      "id": "guide-f133b2e88ac81b78",
+      "name": "第 4 層的戰利品",
+      "desc": "上繳一件第 4 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 4,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "防禦 +0.05%"
+    },
+    {
+      "id": "guide-74f9d5fefb080735",
+      "name": "第 5 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 5,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "暴擊傷害 +0.16%"
+    },
+    {
+      "id": "guide-7a7559f70c236dc4",
+      "name": "第 5 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 5,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.34%",
+      "displayValue": 0.0034000000000000002,
+      "rewardText": "藥水回復量 +0.34%"
+    },
+    {
+      "id": "guide-9299384a47469181",
+      "name": "第 5 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 5,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-60bc227b4ce654fb",
+      "name": "第 5 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 5,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.59%",
+      "displayValue": 0.0059,
+      "rewardText": "暴擊傷害 +0.59%"
+    },
+    {
+      "id": "guide-f57a342dbb63f355",
+      "name": "第 5 層的戰利品",
+      "desc": "上繳一件第 5 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 5,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "對頭目傷害 +0.03%"
+    },
+    {
+      "id": "guide-e2d7eeeb42b75c3d",
+      "name": "第 6 層的戰利品",
+      "desc": "上繳一件第 6 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 6,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "防禦 +0.06%"
+    },
+    {
+      "id": "guide-b00891517c64418e",
+      "name": "第 7 層的戰利品",
+      "desc": "上繳一件第 7 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 7,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "對頭目傷害 +0.03%"
+    },
+    {
+      "id": "guide-8f6b3eb188b86f49",
+      "name": "第 8 層的戰利品",
+      "desc": "上繳一件第 8 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 8,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "防禦 +0.06%"
+    },
+    {
+      "id": "guide-93a30acf7e343067",
+      "name": "第 9 層的戰利品",
+      "desc": "上繳一件第 9 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 9,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "對頭目傷害 +0.03%"
+    },
+    {
+      "id": "guide-730c46e3ffb2608f",
+      "name": "第 10 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 10,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "攻擊 +0.09%"
+    },
+    {
+      "id": "guide-199d3a5cecb87a94",
+      "name": "第 10 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 10,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-2a6ee5a06cc7f324",
+      "name": "第 10 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 10,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "防禦 +0.09%"
+    },
+    {
+      "id": "guide-ad4918d06cbadec3",
+      "name": "第 10 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 10,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.29%",
+      "displayValue": 0.0029,
+      "rewardText": "對頭目傷害 +0.29%"
+    },
+    {
+      "id": "guide-db88a825987af06a",
+      "name": "第 10 層的戰利品",
+      "desc": "上繳一件第 10 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 10,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "防禦 +0.07%"
+    },
+    {
+      "id": "guide-886394ae23edea5d",
+      "name": "第 11 層的戰利品",
+      "desc": "上繳一件第 11 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 11,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "對頭目傷害 +0.03%"
+    },
+    {
+      "id": "guide-9e7ea840297c6ccf",
+      "name": "第 12 層的戰利品",
+      "desc": "上繳一件第 12 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 12,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "防禦 +0.07%"
+    },
+    {
+      "id": "guide-ba1bf623dd1000e8",
+      "name": "第 13 層的戰利品",
+      "desc": "上繳一件第 13 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 13,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "對頭目傷害 +0.03%"
+    },
+    {
+      "id": "guide-591ba8d00ff773d8",
+      "name": "第 14 層的戰利品",
+      "desc": "上繳一件第 14 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 14,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "防禦 +0.07%"
+    },
+    {
+      "id": "guide-06833da0d3a3603f",
+      "name": "第 15 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 15,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.2%",
+      "displayValue": 0.002,
+      "rewardText": "暴擊傷害 +0.2%"
+    },
+    {
+      "id": "guide-54b5cbb9fe59e093",
+      "name": "第 15 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 15,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.47%",
+      "displayValue": 0.004699999999999999,
+      "rewardText": "藥水回復量 +0.47%"
+    },
+    {
+      "id": "guide-b60e6b662eb76804",
+      "name": "第 15 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 15,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "HP +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "HP +0.03%"
+    },
+    {
+      "id": "guide-76a49b49d1da3f4a",
+      "name": "第 15 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 15,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.34%",
+      "displayValue": 0.0034000000000000002,
+      "rewardText": "攻擊 +0.34%"
+    },
+    {
+      "id": "guide-471a3b08860681ef",
+      "name": "第 15 層的戰利品",
+      "desc": "上繳一件第 15 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 15,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "對頭目傷害 +0.03%"
+    },
+    {
+      "id": "guide-e4467aaab4ca509a",
+      "name": "第 16 層的戰利品",
+      "desc": "上繳一件第 16 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 16,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "防禦 +0.08%"
+    },
+    {
+      "id": "guide-42583b954558a25e",
+      "name": "第 17 層的戰利品",
+      "desc": "上繳一件第 17 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 17,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "對頭目傷害 +0.03%"
+    },
+    {
+      "id": "guide-b250d9af5e09f359",
+      "name": "第 18 層的戰利品",
+      "desc": "上繳一件第 18 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 18,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "防禦 +0.08%"
+    },
+    {
+      "id": "guide-8dcbcd8fcc713837",
+      "name": "第 19 層的戰利品",
+      "desc": "上繳一件第 19 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 19,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "對頭目傷害 +0.04%"
+    },
+    {
+      "id": "guide-7c31f377aa0e4486",
+      "name": "第 20 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 20,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "攻擊 +0.11%"
+    },
+    {
+      "id": "guide-47b85b0cb3c0d89b",
+      "name": "第 20 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 20,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-052183e94f981959",
+      "name": "第 20 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 20,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "防禦 +0.14%"
+    },
+    {
+      "id": "guide-161345ddb3a11b2e",
+      "name": "第 20 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 20,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.72%",
+      "displayValue": 0.0072,
+      "rewardText": "暴擊傷害 +0.72%"
+    },
+    {
+      "id": "guide-df0953ae3ad31475",
+      "name": "第 20 層的戰利品",
+      "desc": "上繳一件第 20 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 20,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "防禦 +0.08%"
+    },
+    {
+      "id": "guide-e1c85ab3b83cce64",
+      "name": "第 21 層的戰利品",
+      "desc": "上繳一件第 21 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 21,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "對頭目傷害 +0.04%"
+    },
+    {
+      "id": "guide-3f8663455e61af78",
+      "name": "第 22 層的戰利品",
+      "desc": "上繳一件第 22 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 22,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "防禦 +0.09%"
+    },
+    {
+      "id": "guide-631d1ae10543cb2f",
+      "name": "第 23 層的戰利品",
+      "desc": "上繳一件第 23 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 23,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "對頭目傷害 +0.04%"
+    },
+    {
+      "id": "guide-34378229730dbd41",
+      "name": "第 24 層的戰利品",
+      "desc": "上繳一件第 24 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 24,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "防禦 +0.09%"
+    },
+    {
+      "id": "guide-e0bebf215fa38ac5",
+      "name": "第 25 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 25,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.25%",
+      "displayValue": 0.0025,
+      "rewardText": "暴擊傷害 +0.25%"
+    },
+    {
+      "id": "guide-29633e2171dbb200",
+      "name": "第 25 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 25,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.61%",
+      "displayValue": 0.0060999999999999995,
+      "rewardText": "藥水回復量 +0.61%"
+    },
+    {
+      "id": "guide-b5eee9de1000a0ad",
+      "name": "第 25 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 25,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "HP +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "HP +0.03%"
+    },
+    {
+      "id": "guide-193db32377916019",
+      "name": "第 25 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 25,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.35%",
+      "displayValue": 0.0034999999999999996,
+      "rewardText": "對頭目傷害 +0.35%"
+    },
+    {
+      "id": "guide-f93447caee25adcd",
+      "name": "第 25 層的戰利品",
+      "desc": "上繳一件第 25 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 25,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "對頭目傷害 +0.04%"
+    },
+    {
+      "id": "guide-44f0202cbe5f368a",
+      "name": "第 26 層的戰利品",
+      "desc": "上繳一件第 26 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 26,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "防禦 +0.1%"
+    },
+    {
+      "id": "guide-6635d0ebba9a76a7",
+      "name": "第 27 層的戰利品",
+      "desc": "上繳一件第 27 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 27,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "對頭目傷害 +0.04%"
+    },
+    {
+      "id": "guide-1d25be7601ea4a5e",
+      "name": "第 28 層的戰利品",
+      "desc": "上繳一件第 28 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 28,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "防禦 +0.1%"
+    },
+    {
+      "id": "guide-19bceb38eef6b269",
+      "name": "第 29 層的戰利品",
+      "desc": "上繳一件第 29 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 29,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "對頭目傷害 +0.04%"
+    },
+    {
+      "id": "guide-df31399cf6c02d91",
+      "name": "第 30 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 30,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "攻擊 +0.14%"
+    },
+    {
+      "id": "guide-74d14601aa8713d2",
+      "name": "第 30 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 30,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "全異常抗性 +0.03%"
+    },
+    {
+      "id": "guide-b83d53d3909bbadf",
+      "name": "第 30 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 30,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.19%",
+      "displayValue": 0.0019,
+      "rewardText": "防禦 +0.19%"
+    },
+    {
+      "id": "guide-8d5d16052c738cc3",
+      "name": "第 30 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 30,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.4%",
+      "displayValue": 0.004,
+      "rewardText": "攻擊 +0.4%"
+    },
+    {
+      "id": "guide-54ac06b13c44b74d",
+      "name": "第 30 層的戰利品",
+      "desc": "上繳一件第 30 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 30,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "防禦 +0.1%"
+    },
+    {
+      "id": "guide-f9ff90253211a780",
+      "name": "第 31 層的戰利品",
+      "desc": "上繳一件第 31 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 31,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "對頭目傷害 +0.05%"
+    },
+    {
+      "id": "guide-d6a769ae7e0c0710",
+      "name": "第 32 層的戰利品",
+      "desc": "上繳一件第 32 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 32,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "防禦 +0.11%"
+    },
+    {
+      "id": "guide-8000dd1c2f25a1bf",
+      "name": "第 33 層的戰利品",
+      "desc": "上繳一件第 33 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 33,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "對頭目傷害 +0.05%"
+    },
+    {
+      "id": "guide-35a04feebd74a125",
+      "name": "第 34 層的戰利品",
+      "desc": "上繳一件第 34 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 34,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "防禦 +0.11%"
+    },
+    {
+      "id": "guide-eff1f1c97672e429",
+      "name": "第 35 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 35,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.29%",
+      "displayValue": 0.0029,
+      "rewardText": "暴擊傷害 +0.29%"
+    },
+    {
+      "id": "guide-c2b8b68e0a6010ca",
+      "name": "第 35 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 35,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.75%",
+      "displayValue": 0.0075,
+      "rewardText": "藥水回復量 +0.75%"
+    },
+    {
+      "id": "guide-ea01b00bbfd57c6e",
+      "name": "第 35 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 35,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "HP +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "HP +0.04%"
+    },
+    {
+      "id": "guide-d66e068a690acd26",
+      "name": "第 35 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 35,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.86%",
+      "displayValue": 0.0086,
+      "rewardText": "暴擊傷害 +0.86%"
+    },
+    {
+      "id": "guide-c905e9d30514dac0",
+      "name": "第 35 層的戰利品",
+      "desc": "上繳一件第 35 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 35,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "對頭目傷害 +0.05%"
+    },
+    {
+      "id": "guide-a3d7e870907561c8",
+      "name": "第 36 層的戰利品",
+      "desc": "上繳一件第 36 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 36,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "防禦 +0.11%"
+    },
+    {
+      "id": "guide-94b604bfb5a891e7",
+      "name": "第 37 層的戰利品",
+      "desc": "上繳一件第 37 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 37,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "對頭目傷害 +0.05%"
+    },
+    {
+      "id": "guide-099eaeefeec32417",
+      "name": "第 38 層的戰利品",
+      "desc": "上繳一件第 38 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 38,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "防禦 +0.12%"
+    },
+    {
+      "id": "guide-93791e0d9a6aa5cf",
+      "name": "第 39 層的戰利品",
+      "desc": "上繳一件第 39 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 39,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "對頭目傷害 +0.05%"
+    },
+    {
+      "id": "guide-99450829971c382e",
+      "name": "第 40 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 40,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "攻擊 +0.16%"
+    },
+    {
+      "id": "guide-43f8d19bf152c353",
+      "name": "第 40 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 40,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "全異常抗性 +0.03%"
+    },
+    {
+      "id": "guide-c063ae5350c5a027",
+      "name": "第 40 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 40,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.23%",
+      "displayValue": 0.0023,
+      "rewardText": "防禦 +0.23%"
+    },
+    {
+      "id": "guide-d720a2d819e2dce5",
+      "name": "第 40 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 40,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.41%",
+      "displayValue": 0.0040999999999999995,
+      "rewardText": "對頭目傷害 +0.41%"
+    },
+    {
+      "id": "guide-e511646f038590f4",
+      "name": "第 40 層的戰利品",
+      "desc": "上繳一件第 40 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 40,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "防禦 +0.12%"
+    },
+    {
+      "id": "guide-5025693631eeaf37",
+      "name": "第 41 層的戰利品",
+      "desc": "上繳一件第 41 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 41,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "對頭目傷害 +0.06%"
+    },
+    {
+      "id": "guide-8bbe4566ab25da7b",
+      "name": "第 42 層的戰利品",
+      "desc": "上繳一件第 42 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 42,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "防禦 +0.12%"
+    },
+    {
+      "id": "guide-299c7f0e0a4928e6",
+      "name": "第 43 層的戰利品",
+      "desc": "上繳一件第 43 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 43,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "對頭目傷害 +0.06%"
+    },
+    {
+      "id": "guide-8606611248b5a2e6",
+      "name": "第 44 層的戰利品",
+      "desc": "上繳一件第 44 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 44,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.13%",
+      "displayValue": 0.0013,
+      "rewardText": "防禦 +0.13%"
+    },
+    {
+      "id": "guide-6650f69fb77545b1",
+      "name": "第 45 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 45,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.34%",
+      "displayValue": 0.0034000000000000002,
+      "rewardText": "暴擊傷害 +0.34%"
+    },
+    {
+      "id": "guide-c9311a1d4556e5de",
+      "name": "第 45 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 45,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.88%",
+      "displayValue": 0.0088,
+      "rewardText": "藥水回復量 +0.88%"
+    },
+    {
+      "id": "guide-3a38dbf79d342fb2",
+      "name": "第 45 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 45,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "HP +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "HP +0.06%"
+    },
+    {
+      "id": "guide-611d4fa9bd47929e",
+      "name": "第 45 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 45,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.47%",
+      "displayValue": 0.004699999999999999,
+      "rewardText": "攻擊 +0.47%"
+    },
+    {
+      "id": "guide-76124fca728a8caa",
+      "name": "第 45 層的戰利品",
+      "desc": "上繳一件第 45 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 45,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "對頭目傷害 +0.06%"
+    },
+    {
+      "id": "guide-ce38ad7c4820ab4c",
+      "name": "第 46 層的戰利品",
+      "desc": "上繳一件第 46 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 46,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.13%",
+      "displayValue": 0.0013,
+      "rewardText": "防禦 +0.13%"
+    },
+    {
+      "id": "guide-66a2f5a0c34fe2cb",
+      "name": "第 47 層的戰利品",
+      "desc": "上繳一件第 47 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 47,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "對頭目傷害 +0.06%"
+    },
+    {
+      "id": "guide-e497c80aff87d5b3",
+      "name": "第 48 層的戰利品",
+      "desc": "上繳一件第 48 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 48,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "防禦 +0.14%"
+    },
+    {
+      "id": "guide-0e746d3490f3531f",
+      "name": "第 49 層的戰利品",
+      "desc": "上繳一件第 49 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 49,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "對頭目傷害 +0.06%"
+    },
+    {
+      "id": "guide-1ef07eaf47ce54ac",
+      "name": "第 50 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 50,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "攻擊 +0.18%"
+    },
+    {
+      "id": "guide-59b98300a6da2f8d",
+      "name": "第 50 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 50,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "全異常抗性 +0.03%"
+    },
+    {
+      "id": "guide-98ae6aadebf9a3ca",
+      "name": "第 50 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 50,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.28%",
+      "displayValue": 0.0028000000000000004,
+      "rewardText": "防禦 +0.28%"
+    },
+    {
+      "id": "guide-d5e264aa70a5fe9e",
+      "name": "第 50 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 50,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.99%",
+      "displayValue": 0.009899999999999999,
+      "rewardText": "暴擊傷害 +0.99%"
+    },
+    {
+      "id": "guide-1c0f2fa6249370ba",
+      "name": "第 50 層的戰利品",
+      "desc": "上繳一件第 50 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 50,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "防禦 +0.14%"
+    },
+    {
+      "id": "guide-04481b3032343c88",
+      "name": "第 51 層的戰利品",
+      "desc": "上繳一件第 51 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 51,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "對頭目傷害 +0.06%"
+    },
+    {
+      "id": "guide-32ba21811d22dec7",
+      "name": "第 52 層的戰利品",
+      "desc": "上繳一件第 52 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 52,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "防禦 +0.14%"
+    },
+    {
+      "id": "guide-c466ca3def1a3adf",
+      "name": "第 53 層的戰利品",
+      "desc": "上繳一件第 53 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 53,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "對頭目傷害 +0.07%"
+    },
+    {
+      "id": "guide-c99fe7588d4ee80a",
+      "name": "第 54 層的戰利品",
+      "desc": "上繳一件第 54 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 54,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "防禦 +0.15%"
+    },
+    {
+      "id": "guide-c206ab70ba1e8963",
+      "name": "第 55 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 55,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.38%",
+      "displayValue": 0.0038,
+      "rewardText": "暴擊傷害 +0.38%"
+    },
+    {
+      "id": "guide-4f30bfddbdb14683",
+      "name": "第 55 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 55,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +1.02%",
+      "displayValue": 0.0102,
+      "rewardText": "藥水回復量 +1.02%"
+    },
+    {
+      "id": "guide-0102914c2629f7aa",
+      "name": "第 55 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 55,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-2aae22c1ac6109c3",
+      "name": "第 55 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 55,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.48%",
+      "displayValue": 0.0048,
+      "rewardText": "對頭目傷害 +0.48%"
+    },
+    {
+      "id": "guide-bf463e3a63b44427",
+      "name": "第 55 層的戰利品",
+      "desc": "上繳一件第 55 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 55,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "對頭目傷害 +0.07%"
+    },
+    {
+      "id": "guide-e2a608479e8cf54c",
+      "name": "第 56 層的戰利品",
+      "desc": "上繳一件第 56 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 56,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "防禦 +0.15%"
+    },
+    {
+      "id": "guide-a5c19fe7116f3f06",
+      "name": "第 57 層的戰利品",
+      "desc": "上繳一件第 57 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 57,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "對頭目傷害 +0.07%"
+    },
+    {
+      "id": "guide-a4b5035645601377",
+      "name": "第 58 層的戰利品",
+      "desc": "上繳一件第 58 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 58,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "防禦 +0.15%"
+    },
+    {
+      "id": "guide-6acb95bfdd941533",
+      "name": "第 59 層的戰利品",
+      "desc": "上繳一件第 59 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 59,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "對頭目傷害 +0.07%"
+    },
+    {
+      "id": "guide-0b7446c5f066e476",
+      "name": "第 60 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 60,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.2%",
+      "displayValue": 0.002,
+      "rewardText": "攻擊 +0.2%"
+    },
+    {
+      "id": "guide-931430918b5f0e47",
+      "name": "第 60 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 60,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-b8e2ac4b66d0d95e",
+      "name": "第 60 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 60,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.33%",
+      "displayValue": 0.0033,
+      "rewardText": "防禦 +0.33%"
+    },
+    {
+      "id": "guide-3248856ed8f6d6d8",
+      "name": "第 60 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 60,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.54%",
+      "displayValue": 0.0054,
+      "rewardText": "攻擊 +0.54%"
+    },
+    {
+      "id": "guide-e469844def73976c",
+      "name": "第 60 層的戰利品",
+      "desc": "上繳一件第 60 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 60,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "防禦 +0.16%"
+    },
+    {
+      "id": "guide-840e1b2d7037f3f2",
+      "name": "第 61 層的戰利品",
+      "desc": "上繳一件第 61 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 61,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "對頭目傷害 +0.07%"
+    },
+    {
+      "id": "guide-25f8b891857c7732",
+      "name": "第 62 層的戰利品",
+      "desc": "上繳一件第 62 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 62,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "防禦 +0.16%"
+    },
+    {
+      "id": "guide-827924cec332a1f0",
+      "name": "第 63 層的戰利品",
+      "desc": "上繳一件第 63 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 63,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "對頭目傷害 +0.07%"
+    },
+    {
+      "id": "guide-d2714d0e3b4a8655",
+      "name": "第 64 層的戰利品",
+      "desc": "上繳一件第 64 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 64,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "防禦 +0.17%"
+    },
+    {
+      "id": "guide-b597d569555e647a",
+      "name": "第 65 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 65,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +0.43%",
+      "displayValue": 0.0043,
+      "rewardText": "暴擊傷害 +0.43%"
+    },
+    {
+      "id": "guide-1c09c64587721d80",
+      "name": "第 65 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 65,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +1.15%",
+      "displayValue": 0.0115,
+      "rewardText": "藥水回復量 +1.15%"
+    },
+    {
+      "id": "guide-ba6b457bb8f1caf3",
+      "name": "第 65 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 65,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-cc85bc0eb4a29d04",
+      "name": "第 65 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 65,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +1.13%",
+      "displayValue": 0.0113,
+      "rewardText": "暴擊傷害 +1.13%"
+    },
+    {
+      "id": "guide-29fcf63ec874f26d",
+      "name": "第 65 層的戰利品",
+      "desc": "上繳一件第 65 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 65,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "對頭目傷害 +0.07%"
+    },
+    {
+      "id": "guide-a0fc0b53a4a043e0",
+      "name": "第 66 層的戰利品",
+      "desc": "上繳一件第 66 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 66,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "防禦 +0.17%"
+    },
+    {
+      "id": "guide-c400748ff0fefb85",
+      "name": "第 67 層的戰利品",
+      "desc": "上繳一件第 67 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 67,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "對頭目傷害 +0.08%"
+    },
+    {
+      "id": "guide-be17ef3a60a17eed",
+      "name": "第 68 層的戰利品",
+      "desc": "上繳一件第 68 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 68,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "防禦 +0.17%"
+    },
+    {
+      "id": "guide-f27d05946baa3698",
+      "name": "第 69 層的戰利品",
+      "desc": "上繳一件第 69 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 69,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "對頭目傷害 +0.08%"
+    },
+    {
+      "id": "guide-f9a07ec071c1a8c8",
+      "name": "第 70 層的上品行頭",
+      "desc": "全部都要是精釀的。",
+      "cat": "collect",
+      "floor": 70,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +0.22%",
+      "displayValue": 0.0022,
+      "rewardText": "攻擊 +0.22%"
+    },
+    {
+      "id": "guide-beb89cfc0d90b1a0",
+      "name": "第 70 層的小飾品",
+      "desc": "耳環、戒指各上繳一件。",
+      "cat": "collect",
+      "floor": 70,
+      "hidden": false,
+      "target": 2,
+      "parts": [
+        {
+          "label": "耳環",
+          "bases": []
+        },
+        {
+          "label": "戒指",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-26e4d83a6f1723b9",
+      "name": "第 70 層的行頭",
+      "desc": "武器、頭盔、身體、鞋子、手套各上繳一件（精釀也可以）。",
+      "cat": "collect",
+      "floor": 70,
+      "hidden": false,
+      "target": 5,
+      "parts": [
+        {
+          "label": "武器",
+          "bases": []
+        },
+        {
+          "label": "頭盔",
+          "bases": []
+        },
+        {
+          "label": "身體",
+          "bases": []
+        },
+        {
+          "label": "鞋子",
+          "bases": []
+        },
+        {
+          "label": "手套",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.37%",
+      "displayValue": 0.0037,
+      "rewardText": "防禦 +0.37%"
+    },
+    {
+      "id": "guide-70ec656af9846a71",
+      "name": "第 70 層的精釀武器庫",
+      "desc": "七種武器的精釀版各上繳一把。",
+      "cat": "collect",
+      "floor": 70,
+      "hidden": false,
+      "target": 7,
+      "parts": [
+        {
+          "label": "單手劍",
+          "bases": []
+        },
+        {
+          "label": "單手槌",
+          "bases": []
+        },
+        {
+          "label": "細劍",
+          "bases": []
+        },
+        {
+          "label": "太刀",
+          "bases": []
+        },
+        {
+          "label": "鐮刀",
+          "bases": []
+        },
+        {
+          "label": "短刀",
+          "bases": []
+        },
+        {
+          "label": "雙手斧",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.54%",
+      "displayValue": 0.0054,
+      "rewardText": "對頭目傷害 +0.54%"
+    },
+    {
+      "id": "guide-914fe3f8896716bd",
+      "name": "第 70 層的戰利品",
+      "desc": "上繳一件第 70 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 70,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "防禦 +0.18%"
+    },
+    {
+      "id": "guide-e6b6caf5b0da2b5e",
+      "name": "第 71 層的戰利品",
+      "desc": "上繳一件第 71 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 71,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "對頭目傷害 +0.08%"
+    },
+    {
+      "id": "guide-63bf678efc4f248c",
+      "name": "第 72 層的戰利品",
+      "desc": "上繳一件第 72 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 72,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "防禦 +0.18%"
+    },
+    {
+      "id": "guide-112781b7a1c4b1d7",
+      "name": "第 73 層的戰利品",
+      "desc": "上繳一件第 73 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 73,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "對頭目傷害 +0.08%"
+    },
+    {
+      "id": "guide-3633380053619f7f",
+      "name": "第 74 層的戰利品",
+      "desc": "上繳一件第 74 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 74,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "防禦 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "防禦 +0.18%"
+    },
+    {
+      "id": "guide-85e0934bcb374158",
+      "name": "第 75 層的戰利品",
+      "desc": "上繳一件第 75 層頭目的金裝。",
+      "cat": "collect",
+      "floor": 75,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "頭目的金裝",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "對頭目傷害 +0.08%"
+    },
+    {
+      "id": "guide-8b45e6fc97bd076b",
+      "name": "上品的人",
+      "desc": "上繳了三套全精釀的行頭。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 3,
+      "parts": [],
+      "titleName": "上品的人",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「上品的人」"
+    },
+    {
+      "id": "guide-166e1217fa394169",
+      "name": "午夜大姨",
+      "desc": "上繳這件名品。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "午夜大姨",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "攻擊 +1.01%",
+      "displayValue": 0.0101,
+      "rewardText": "攻擊 +1.01%"
+    },
+    {
+      "id": "guide-171addd1ede00652",
+      "name": "全身行頭收藏家",
+      "desc": "上繳了八套商店的行頭。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 8,
+      "parts": [],
+      "titleName": "全身行頭收藏家",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「全身行頭收藏家」"
+    },
+    {
+      "id": "guide-e5c416b9eaedf3d4",
+      "name": "名品鑑定師",
+      "desc": "上繳了一件名品。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": "名品鑑定師",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「名品鑑定師」"
+    },
+    {
+      "id": "guide-b300d0d228b76de1",
+      "name": "移動武器庫",
+      "desc": "交齊了一階的七種精釀武器。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": "移動武器庫",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「移動武器庫」"
+    },
+    {
+      "id": "guide-467b684c7d95084f",
+      "name": "頭目衣帽間管理員",
+      "desc": "上繳了四十層頭目的金裝。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 40,
+      "parts": [],
+      "titleName": "頭目衣帽間管理員",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「頭目衣帽間管理員」"
+    },
+    {
+      "id": "guide-3e24bb5db5df8bb6",
+      "name": "頭目的衣櫃",
+      "desc": "上繳了十層頭目的金裝。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 10,
+      "parts": [],
+      "titleName": "頭目的衣櫃",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「頭目的衣櫃」"
+    },
+    {
+      "id": "guide-3171552c6c4729ec",
+      "name": "燭暗者",
+      "desc": "上繳這件名品。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "燭暗者",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "對頭目傷害 +0.94%",
+      "displayValue": 0.009399999999999999,
+      "rewardText": "對頭目傷害 +0.94%"
+    },
+    {
+      "id": "guide-8df81979d7cd2522",
+      "name": "鏟屎者",
+      "desc": "上繳這件名品。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 1,
+      "parts": [
+        {
+          "label": "鏟屎者",
+          "bases": []
+        }
+      ],
+      "titleName": null,
+      "displayBonus": "暴擊傷害 +2.03%",
+      "displayValue": 0.0203,
+      "rewardText": "暴擊傷害 +2.03%"
+    },
+    {
+      "id": "guide-40f268d74165ad0d",
+      "name": "第 1 層・浩劫",
+      "desc": "在第 1 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 1,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "HP +0.09%"
+    },
+    {
+      "id": "guide-593f0d1df8b60387",
+      "name": "第 1 層・掃蕩",
+      "desc": "在第 1 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 1,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "自然回復 +0.08%"
+    },
+    {
+      "id": "guide-0459ac740773170f",
+      "name": "第 1 層・清掃",
+      "desc": "在第 1 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 1,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-d3c45667b6eb3c52",
+      "name": "第 2 層・浩劫",
+      "desc": "在第 2 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 2,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "全異常抗性 +0.09%"
+    },
+    {
+      "id": "guide-f1e0900d11c7aa69",
+      "name": "第 2 層・掃蕩",
+      "desc": "在第 2 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 2,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "HP +0.03%"
+    },
+    {
+      "id": "guide-29c3bf9b7e05463f",
+      "name": "第 2 層・清掃",
+      "desc": "在第 2 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 2,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "自然回復 +0.03%"
+    },
+    {
+      "id": "guide-aa2ed681436dd0de",
+      "name": "第 3 層・浩劫",
+      "desc": "在第 3 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 3,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.24%",
+      "displayValue": 0.0024,
+      "rewardText": "自然回復 +0.24%"
+    },
+    {
+      "id": "guide-38fbbe350f1f8726",
+      "name": "第 3 層・掃蕩",
+      "desc": "在第 3 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 3,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "全異常抗性 +0.03%"
+    },
+    {
+      "id": "guide-d1095320eeb4dda7",
+      "name": "第 3 層・清掃",
+      "desc": "在第 3 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 3,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-2440a2436a4d9f19",
+      "name": "第 4 層・浩劫",
+      "desc": "在第 4 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 4,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "HP +0.1%"
+    },
+    {
+      "id": "guide-ad344773ae8795b3",
+      "name": "第 4 層・掃蕩",
+      "desc": "在第 4 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 4,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "自然回復 +0.08%"
+    },
+    {
+      "id": "guide-f6ac7f76c21d1c82",
+      "name": "第 4 層・清掃",
+      "desc": "在第 4 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 4,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-a2499f52a15b3b6e",
+      "name": "第 5 層・浩劫",
+      "desc": "在第 5 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 5,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "全異常抗性 +0.1%"
+    },
+    {
+      "id": "guide-e83acd31e57589d0",
+      "name": "第 5 層・掃蕩",
+      "desc": "在第 5 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 5,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "HP +0.03%"
+    },
+    {
+      "id": "guide-50926fdb499810d6",
+      "name": "第 5 層・清掃",
+      "desc": "在第 5 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 5,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "自然回復 +0.03%"
+    },
+    {
+      "id": "guide-9ff8ee63d93fbadd",
+      "name": "第 6 層・浩劫",
+      "desc": "在第 6 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 6,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.26%",
+      "displayValue": 0.0026,
+      "rewardText": "自然回復 +0.26%"
+    },
+    {
+      "id": "guide-82336711bbd07d7a",
+      "name": "第 6 層・掃蕩",
+      "desc": "在第 6 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 6,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "全異常抗性 +0.03%"
+    },
+    {
+      "id": "guide-2f902085bd8ccafa",
+      "name": "第 6 層・清掃",
+      "desc": "在第 6 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 6,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-8b0b48076cf1754a",
+      "name": "第 7 層・浩劫",
+      "desc": "在第 7 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 7,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "HP +0.1%"
+    },
+    {
+      "id": "guide-09e3f316dbc07248",
+      "name": "第 7 層・掃蕩",
+      "desc": "在第 7 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 7,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "自然回復 +0.09%"
+    },
+    {
+      "id": "guide-d791c9c4b6e81720",
+      "name": "第 7 層・清掃",
+      "desc": "在第 7 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 7,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-ed719f5f5f41761b",
+      "name": "第 8 層・浩劫",
+      "desc": "在第 8 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 8,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "全異常抗性 +0.1%"
+    },
+    {
+      "id": "guide-1537e45839fac9a8",
+      "name": "第 8 層・掃蕩",
+      "desc": "在第 8 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 8,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "HP +0.03%"
+    },
+    {
+      "id": "guide-822bc6fa5c71f5e9",
+      "name": "第 8 層・清掃",
+      "desc": "在第 8 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 8,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "自然回復 +0.03%"
+    },
+    {
+      "id": "guide-a328e9c668eceb8b",
+      "name": "第 9 層・浩劫",
+      "desc": "在第 9 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 9,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.27%",
+      "displayValue": 0.0027,
+      "rewardText": "自然回復 +0.27%"
+    },
+    {
+      "id": "guide-71c9b0734c1d5f1d",
+      "name": "第 9 層・掃蕩",
+      "desc": "在第 9 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 9,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-602bf9e88a8c01ed",
+      "name": "第 9 層・清掃",
+      "desc": "在第 9 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 9,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-0d95ed15d9947273",
+      "name": "第 10 層・浩劫",
+      "desc": "在第 10 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 10,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "HP +0.11%"
+    },
+    {
+      "id": "guide-2197687a4b55d022",
+      "name": "第 10 層・掃蕩",
+      "desc": "在第 10 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 10,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.09%",
+      "displayValue": 0.0009,
+      "rewardText": "自然回復 +0.09%"
+    },
+    {
+      "id": "guide-eec2a45c87cba8cd",
+      "name": "第 10 層・清掃",
+      "desc": "在第 10 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 10,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-c8b870575f76900c",
+      "name": "第 11 層・浩劫",
+      "desc": "在第 11 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 11,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "全異常抗性 +0.11%"
+    },
+    {
+      "id": "guide-bd1c9d27b7c10ecc",
+      "name": "第 11 層・掃蕩",
+      "desc": "在第 11 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 11,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "HP +0.04%"
+    },
+    {
+      "id": "guide-b53247a15678d1bb",
+      "name": "第 11 層・清掃",
+      "desc": "在第 11 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 11,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "自然回復 +0.03%"
+    },
+    {
+      "id": "guide-074002617a04f335",
+      "name": "第 12 層・浩劫",
+      "desc": "在第 12 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 12,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.29%",
+      "displayValue": 0.0029,
+      "rewardText": "自然回復 +0.29%"
+    },
+    {
+      "id": "guide-c9bc89d899d99f61",
+      "name": "第 12 層・掃蕩",
+      "desc": "在第 12 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 12,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-1ce3423b09f860db",
+      "name": "第 12 層・清掃",
+      "desc": "在第 12 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 12,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-b64059779473c7e9",
+      "name": "第 13 層・浩劫",
+      "desc": "在第 13 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 13,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "HP +0.11%"
+    },
+    {
+      "id": "guide-2a22194d25724a87",
+      "name": "第 13 層・掃蕩",
+      "desc": "在第 13 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 13,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "自然回復 +0.1%"
+    },
+    {
+      "id": "guide-e58991b41044b5f7",
+      "name": "第 13 層・清掃",
+      "desc": "在第 13 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 13,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-442b95b98b05a810",
+      "name": "第 14 層・浩劫",
+      "desc": "在第 14 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 14,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "全異常抗性 +0.12%"
+    },
+    {
+      "id": "guide-9c56139ba11a01f3",
+      "name": "第 14 層・掃蕩",
+      "desc": "在第 14 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 14,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "HP +0.04%"
+    },
+    {
+      "id": "guide-a6ac58ce4e3accdc",
+      "name": "第 14 層・清掃",
+      "desc": "在第 14 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 14,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "自然回復 +0.03%"
+    },
+    {
+      "id": "guide-e731458cbda143c5",
+      "name": "第 15 層・浩劫",
+      "desc": "在第 15 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 15,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.3%",
+      "displayValue": 0.003,
+      "rewardText": "自然回復 +0.3%"
+    },
+    {
+      "id": "guide-c9aa89d077f5f041",
+      "name": "第 15 層・掃蕩",
+      "desc": "在第 15 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 15,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-2c6b0efe4d391f4d",
+      "name": "第 15 層・清掃",
+      "desc": "在第 15 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 15,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-f0d7007b469baafc",
+      "name": "第 16 層・浩劫",
+      "desc": "在第 16 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 16,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "HP +0.12%"
+    },
+    {
+      "id": "guide-6a069905d2349c29",
+      "name": "第 16 層・掃蕩",
+      "desc": "在第 16 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 16,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.1%",
+      "displayValue": 0.001,
+      "rewardText": "自然回復 +0.1%"
+    },
+    {
+      "id": "guide-95dd1aa1b27a46b0",
+      "name": "第 16 層・清掃",
+      "desc": "在第 16 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 16,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-7dc93121b2fae770",
+      "name": "第 17 層・浩劫",
+      "desc": "在第 17 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 17,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "全異常抗性 +0.12%"
+    },
+    {
+      "id": "guide-36c50bc2e508c40e",
+      "name": "第 17 層・掃蕩",
+      "desc": "在第 17 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 17,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "HP +0.04%"
+    },
+    {
+      "id": "guide-d14f7f7ea8b41110",
+      "name": "第 17 層・清掃",
+      "desc": "在第 17 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 17,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "自然回復 +0.03%"
+    },
+    {
+      "id": "guide-443f46bff51c052f",
+      "name": "第 18 層・浩劫",
+      "desc": "在第 18 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 18,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.31%",
+      "displayValue": 0.0031,
+      "rewardText": "自然回復 +0.31%"
+    },
+    {
+      "id": "guide-a9bc517480feb819",
+      "name": "第 18 層・掃蕩",
+      "desc": "在第 18 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 18,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-8393f445bccdbcd7",
+      "name": "第 18 層・清掃",
+      "desc": "在第 18 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 18,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-8c3c0438823bf0ca",
+      "name": "第 19 層・浩劫",
+      "desc": "在第 19 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 19,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "HP +0.12%"
+    },
+    {
+      "id": "guide-a96680776e592d11",
+      "name": "第 19 層・掃蕩",
+      "desc": "在第 19 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 19,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "自然回復 +0.11%"
+    },
+    {
+      "id": "guide-ae445da2a66927ec",
+      "name": "第 19 層・清掃",
+      "desc": "在第 19 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 19,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-35080243107d4c85",
+      "name": "第 20 層・浩劫",
+      "desc": "在第 20 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 20,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.13%",
+      "displayValue": 0.0013,
+      "rewardText": "全異常抗性 +0.13%"
+    },
+    {
+      "id": "guide-e0ef7a41f9178b5f",
+      "name": "第 20 層・掃蕩",
+      "desc": "在第 20 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 20,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "HP +0.04%"
+    },
+    {
+      "id": "guide-2fe92e753206ed15",
+      "name": "第 20 層・清掃",
+      "desc": "在第 20 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 20,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "自然回復 +0.04%"
+    },
+    {
+      "id": "guide-5e9e57c1a421276e",
+      "name": "第 21 層・浩劫",
+      "desc": "在第 21 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 21,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.33%",
+      "displayValue": 0.0033,
+      "rewardText": "自然回復 +0.33%"
+    },
+    {
+      "id": "guide-376d9ae76e17269f",
+      "name": "第 21 層・掃蕩",
+      "desc": "在第 21 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 21,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-a114f6b08f5e9938",
+      "name": "第 21 層・清掃",
+      "desc": "在第 21 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 21,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-9f4c291d297ba861",
+      "name": "第 22 層・浩劫",
+      "desc": "在第 22 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 22,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.13%",
+      "displayValue": 0.0013,
+      "rewardText": "HP +0.13%"
+    },
+    {
+      "id": "guide-333f81c8dcc6b37e",
+      "name": "第 22 層・掃蕩",
+      "desc": "在第 22 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 22,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "自然回復 +0.11%"
+    },
+    {
+      "id": "guide-3ba6bb9c7a2c3117",
+      "name": "第 22 層・清掃",
+      "desc": "在第 22 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 22,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-130f3972510c1f57",
+      "name": "第 23 層・浩劫",
+      "desc": "在第 23 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 23,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.13%",
+      "displayValue": 0.0013,
+      "rewardText": "全異常抗性 +0.13%"
+    },
+    {
+      "id": "guide-4644ae13499cd670",
+      "name": "第 23 層・掃蕩",
+      "desc": "在第 23 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 23,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "HP +0.04%"
+    },
+    {
+      "id": "guide-c358f49948651515",
+      "name": "第 23 層・清掃",
+      "desc": "在第 23 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 23,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "自然回復 +0.04%"
+    },
+    {
+      "id": "guide-8bcb948e5d424e9b",
+      "name": "第 24 層・浩劫",
+      "desc": "在第 24 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 24,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.34%",
+      "displayValue": 0.0034000000000000002,
+      "rewardText": "自然回復 +0.34%"
+    },
+    {
+      "id": "guide-ebd8cf94592908aa",
+      "name": "第 24 層・掃蕩",
+      "desc": "在第 24 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 24,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "全異常抗性 +0.04%"
+    },
+    {
+      "id": "guide-a6ce7ae5dcedf2a8",
+      "name": "第 24 層・清掃",
+      "desc": "在第 24 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 24,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-04d91076c0c3f8c9",
+      "name": "第 25 層・浩劫",
+      "desc": "在第 25 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 25,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "HP +0.14%"
+    },
+    {
+      "id": "guide-f2743b0f16e833aa",
+      "name": "第 25 層・掃蕩",
+      "desc": "在第 25 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 25,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.11%",
+      "displayValue": 0.0011,
+      "rewardText": "自然回復 +0.11%"
+    },
+    {
+      "id": "guide-4a1e77d96d5ed1a7",
+      "name": "第 25 層・清掃",
+      "desc": "在第 25 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 25,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "全異常抗性 +0.01%"
+    },
+    {
+      "id": "guide-fef0c5e44cafa84c",
+      "name": "第 26 層・浩劫",
+      "desc": "在第 26 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 26,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "全異常抗性 +0.14%"
+    },
+    {
+      "id": "guide-bcc39d627a08d8c4",
+      "name": "第 26 層・掃蕩",
+      "desc": "在第 26 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 26,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "HP +0.05%"
+    },
+    {
+      "id": "guide-04e057dabcb71b60",
+      "name": "第 26 層・清掃",
+      "desc": "在第 26 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 26,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "自然回復 +0.04%"
+    },
+    {
+      "id": "guide-b8f214bba0af5750",
+      "name": "第 27 層・浩劫",
+      "desc": "在第 27 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 27,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.36%",
+      "displayValue": 0.0036,
+      "rewardText": "自然回復 +0.36%"
+    },
+    {
+      "id": "guide-e3c83885704cc66b",
+      "name": "第 27 層・掃蕩",
+      "desc": "在第 27 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 27,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "全異常抗性 +0.05%"
+    },
+    {
+      "id": "guide-71e206fc766e5bc7",
+      "name": "第 27 層・清掃",
+      "desc": "在第 27 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 27,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "HP +0.01%"
+    },
+    {
+      "id": "guide-17c730f4b6429402",
+      "name": "第 28 層・浩劫",
+      "desc": "在第 28 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 28,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "HP +0.14%"
+    },
+    {
+      "id": "guide-4999e43b28e2ca25",
+      "name": "第 28 層・掃蕩",
+      "desc": "在第 28 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 28,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "自然回復 +0.12%"
+    },
+    {
+      "id": "guide-bc747e376bcce71c",
+      "name": "第 28 層・清掃",
+      "desc": "在第 28 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 28,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-020e7c70d1a6d456",
+      "name": "第 29 層・浩劫",
+      "desc": "在第 29 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 29,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "全異常抗性 +0.14%"
+    },
+    {
+      "id": "guide-196f42ce158cca0e",
+      "name": "第 29 層・掃蕩",
+      "desc": "在第 29 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 29,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "HP +0.05%"
+    },
+    {
+      "id": "guide-ef080828fdbd9f8c",
+      "name": "第 29 層・清掃",
+      "desc": "在第 29 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 29,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "自然回復 +0.04%"
+    },
+    {
+      "id": "guide-2a748800107cab06",
+      "name": "第 30 層・浩劫",
+      "desc": "在第 30 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 30,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.37%",
+      "displayValue": 0.0037,
+      "rewardText": "自然回復 +0.37%"
+    },
+    {
+      "id": "guide-412d3c613cfb635b",
+      "name": "第 30 層・掃蕩",
+      "desc": "在第 30 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 30,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "全異常抗性 +0.05%"
+    },
+    {
+      "id": "guide-65a0be9ee939667a",
+      "name": "第 30 層・清掃",
+      "desc": "在第 30 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 30,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-349629d97fc305a3",
+      "name": "第 31 層・浩劫",
+      "desc": "在第 31 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 31,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "HP +0.15%"
+    },
+    {
+      "id": "guide-c688e8240a6e13e9",
+      "name": "第 31 層・掃蕩",
+      "desc": "在第 31 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 31,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.12%",
+      "displayValue": 0.0012,
+      "rewardText": "自然回復 +0.12%"
+    },
+    {
+      "id": "guide-5e2895047c8bbd31",
+      "name": "第 31 層・清掃",
+      "desc": "在第 31 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 31,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-3c96bf88e51024d3",
+      "name": "第 32 層・浩劫",
+      "desc": "在第 32 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 32,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "全異常抗性 +0.15%"
+    },
+    {
+      "id": "guide-514cbabc4d86c0c0",
+      "name": "第 32 層・掃蕩",
+      "desc": "在第 32 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 32,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "HP +0.05%"
+    },
+    {
+      "id": "guide-ef1846e0b1169022",
+      "name": "第 32 層・清掃",
+      "desc": "在第 32 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 32,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "自然回復 +0.04%"
+    },
+    {
+      "id": "guide-cae93a6ba4066670",
+      "name": "第 33 層・浩劫",
+      "desc": "在第 33 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 33,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.38%",
+      "displayValue": 0.0038,
+      "rewardText": "自然回復 +0.38%"
+    },
+    {
+      "id": "guide-400c28b25d73639c",
+      "name": "第 33 層・掃蕩",
+      "desc": "在第 33 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 33,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "全異常抗性 +0.05%"
+    },
+    {
+      "id": "guide-345cec1e66ad4e2c",
+      "name": "第 33 層・清掃",
+      "desc": "在第 33 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 33,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-44eafcc687aaa112",
+      "name": "第 34 層・浩劫",
+      "desc": "在第 34 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 34,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "HP +0.15%"
+    },
+    {
+      "id": "guide-49aeed0a22db089b",
+      "name": "第 34 層・掃蕩",
+      "desc": "在第 34 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 34,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.13%",
+      "displayValue": 0.0013,
+      "rewardText": "自然回復 +0.13%"
+    },
+    {
+      "id": "guide-54e7907c70cb36c1",
+      "name": "第 34 層・清掃",
+      "desc": "在第 34 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 34,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-1c3179a21b28f2b9",
+      "name": "第 35 層・浩劫",
+      "desc": "在第 35 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 35,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "全異常抗性 +0.15%"
+    },
+    {
+      "id": "guide-73e8f544b50bdf6d",
+      "name": "第 35 層・掃蕩",
+      "desc": "在第 35 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 35,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "HP +0.05%"
+    },
+    {
+      "id": "guide-91c3a8ba519f7afc",
+      "name": "第 35 層・清掃",
+      "desc": "在第 35 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 35,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "自然回復 +0.04%"
+    },
+    {
+      "id": "guide-0d2465ac5c375379",
+      "name": "第 36 層・浩劫",
+      "desc": "在第 36 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 36,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.4%",
+      "displayValue": 0.004,
+      "rewardText": "自然回復 +0.4%"
+    },
+    {
+      "id": "guide-2962e16c044ddfeb",
+      "name": "第 36 層・掃蕩",
+      "desc": "在第 36 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 36,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "全異常抗性 +0.05%"
+    },
+    {
+      "id": "guide-16cd9dce44a34b61",
+      "name": "第 36 層・清掃",
+      "desc": "在第 36 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 36,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-26ae8b326cb5a465",
+      "name": "第 37 層・浩劫",
+      "desc": "在第 37 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 37,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "HP +0.16%"
+    },
+    {
+      "id": "guide-eeada9d18e01a771",
+      "name": "第 37 層・掃蕩",
+      "desc": "在第 37 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 37,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.13%",
+      "displayValue": 0.0013,
+      "rewardText": "自然回復 +0.13%"
+    },
+    {
+      "id": "guide-34846a39e108fe5b",
+      "name": "第 37 層・清掃",
+      "desc": "在第 37 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 37,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-4f3fc456b8782ba9",
+      "name": "第 38 層・浩劫",
+      "desc": "在第 38 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 38,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "全異常抗性 +0.16%"
+    },
+    {
+      "id": "guide-c1869474996c4af5",
+      "name": "第 38 層・掃蕩",
+      "desc": "在第 38 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 38,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "HP +0.05%"
+    },
+    {
+      "id": "guide-92921b7e6154728f",
+      "name": "第 38 層・清掃",
+      "desc": "在第 38 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 38,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.04%",
+      "displayValue": 0.0004,
+      "rewardText": "自然回復 +0.04%"
+    },
+    {
+      "id": "guide-5b5f53a9da06a585",
+      "name": "第 39 層・浩劫",
+      "desc": "在第 39 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 39,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.41%",
+      "displayValue": 0.0040999999999999995,
+      "rewardText": "自然回復 +0.41%"
+    },
+    {
+      "id": "guide-a4e88b0e8b9c41f7",
+      "name": "第 39 層・掃蕩",
+      "desc": "在第 39 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 39,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "全異常抗性 +0.05%"
+    },
+    {
+      "id": "guide-09ce21e76beeef31",
+      "name": "第 39 層・清掃",
+      "desc": "在第 39 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 39,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-b3f0d3488ce1d7ef",
+      "name": "第 40 層・浩劫",
+      "desc": "在第 40 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 40,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "HP +0.16%"
+    },
+    {
+      "id": "guide-fb01ec1f76297ce2",
+      "name": "第 40 層・掃蕩",
+      "desc": "在第 40 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 40,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "自然回復 +0.14%"
+    },
+    {
+      "id": "guide-d91b846c2a336cef",
+      "name": "第 40 層・清掃",
+      "desc": "在第 40 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 40,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-1a0f7d41ca95226a",
+      "name": "第 41 層・浩劫",
+      "desc": "在第 41 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 41,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "全異常抗性 +0.17%"
+    },
+    {
+      "id": "guide-5719259c15ccafaf",
+      "name": "第 41 層・掃蕩",
+      "desc": "在第 41 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 41,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "HP +0.06%"
+    },
+    {
+      "id": "guide-a976e2109c886704",
+      "name": "第 41 層・清掃",
+      "desc": "在第 41 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 41,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "自然回復 +0.05%"
+    },
+    {
+      "id": "guide-b192bd7db3327d95",
+      "name": "第 42 層・浩劫",
+      "desc": "在第 42 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 42,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.42%",
+      "displayValue": 0.0042,
+      "rewardText": "自然回復 +0.42%"
+    },
+    {
+      "id": "guide-90a82558e751523b",
+      "name": "第 42 層・掃蕩",
+      "desc": "在第 42 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 42,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "全異常抗性 +0.06%"
+    },
+    {
+      "id": "guide-d78a6d15e7e67696",
+      "name": "第 42 層・清掃",
+      "desc": "在第 42 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 42,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-340674c0bc5a0518",
+      "name": "第 43 層・浩劫",
+      "desc": "在第 43 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 43,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "HP +0.17%"
+    },
+    {
+      "id": "guide-4f431e446664aa33",
+      "name": "第 43 層・掃蕩",
+      "desc": "在第 43 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 43,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.14%",
+      "displayValue": 0.0014000000000000002,
+      "rewardText": "自然回復 +0.14%"
+    },
+    {
+      "id": "guide-2ac5c1b14c96255d",
+      "name": "第 43 層・清掃",
+      "desc": "在第 43 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 43,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-3b0fdbeb3ac26e84",
+      "name": "第 44 層・浩劫",
+      "desc": "在第 44 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 44,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "全異常抗性 +0.17%"
+    },
+    {
+      "id": "guide-bfa8c8325a962388",
+      "name": "第 44 層・掃蕩",
+      "desc": "在第 44 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 44,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "HP +0.06%"
+    },
+    {
+      "id": "guide-8e717bbb7d2fff9a",
+      "name": "第 44 層・清掃",
+      "desc": "在第 44 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 44,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "自然回復 +0.05%"
+    },
+    {
+      "id": "guide-c09f228ad0faa809",
+      "name": "第 45 層・浩劫",
+      "desc": "在第 45 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 45,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.44%",
+      "displayValue": 0.0044,
+      "rewardText": "自然回復 +0.44%"
+    },
+    {
+      "id": "guide-68b4f8b6c3c431c5",
+      "name": "第 45 層・掃蕩",
+      "desc": "在第 45 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 45,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "全異常抗性 +0.06%"
+    },
+    {
+      "id": "guide-f5ffe3f0b0d2ab93",
+      "name": "第 45 層・清掃",
+      "desc": "在第 45 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 45,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-6c7b443e276d5e22",
+      "name": "第 46 層・浩劫",
+      "desc": "在第 46 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 46,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "HP +0.17%"
+    },
+    {
+      "id": "guide-3ed8908a4f2590a7",
+      "name": "第 46 層・掃蕩",
+      "desc": "在第 46 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 46,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "自然回復 +0.15%"
+    },
+    {
+      "id": "guide-0533859e2241b25c",
+      "name": "第 46 層・清掃",
+      "desc": "在第 46 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 46,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-7666f6c3890a255f",
+      "name": "第 47 層・浩劫",
+      "desc": "在第 47 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 47,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "全異常抗性 +0.18%"
+    },
+    {
+      "id": "guide-d7e01f1042353643",
+      "name": "第 47 層・掃蕩",
+      "desc": "在第 47 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 47,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "HP +0.06%"
+    },
+    {
+      "id": "guide-259a225c5c7e2062",
+      "name": "第 47 層・清掃",
+      "desc": "在第 47 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 47,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "自然回復 +0.05%"
+    },
+    {
+      "id": "guide-3fea37f9d00fc272",
+      "name": "第 48 層・浩劫",
+      "desc": "在第 48 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 48,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.45%",
+      "displayValue": 0.0045000000000000005,
+      "rewardText": "自然回復 +0.45%"
+    },
+    {
+      "id": "guide-0e6bfa481a618ed1",
+      "name": "第 48 層・掃蕩",
+      "desc": "在第 48 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 48,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "全異常抗性 +0.06%"
+    },
+    {
+      "id": "guide-600dae459fa900ff",
+      "name": "第 48 層・清掃",
+      "desc": "在第 48 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 48,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-5d693c7f2e4bba38",
+      "name": "第 49 層・浩劫",
+      "desc": "在第 49 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 49,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "HP +0.18%"
+    },
+    {
+      "id": "guide-9a1e7df4db70af6f",
+      "name": "第 49 層・掃蕩",
+      "desc": "在第 49 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 49,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.15%",
+      "displayValue": 0.0015,
+      "rewardText": "自然回復 +0.15%"
+    },
+    {
+      "id": "guide-6d70128a9682c479",
+      "name": "第 49 層・清掃",
+      "desc": "在第 49 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 49,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-8bf976195b6f56c6",
+      "name": "第 50 層・浩劫",
+      "desc": "在第 50 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 50,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "全異常抗性 +0.18%"
+    },
+    {
+      "id": "guide-50211ddbfd30847a",
+      "name": "第 50 層・掃蕩",
+      "desc": "在第 50 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 50,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "HP +0.06%"
+    },
+    {
+      "id": "guide-f779e973d224f461",
+      "name": "第 50 層・清掃",
+      "desc": "在第 50 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 50,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "自然回復 +0.05%"
+    },
+    {
+      "id": "guide-385b321d8856ce31",
+      "name": "第 51 層・浩劫",
+      "desc": "在第 51 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 51,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.46%",
+      "displayValue": 0.0046,
+      "rewardText": "自然回復 +0.46%"
+    },
+    {
+      "id": "guide-d0d645ce4c387dec",
+      "name": "第 51 層・掃蕩",
+      "desc": "在第 51 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 51,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "全異常抗性 +0.06%"
+    },
+    {
+      "id": "guide-d49d027ba5910d0a",
+      "name": "第 51 層・清掃",
+      "desc": "在第 51 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 51,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-b14bd0bfcb6de633",
+      "name": "第 52 層・浩劫",
+      "desc": "在第 52 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 52,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "HP +0.18%"
+    },
+    {
+      "id": "guide-87947e2b6828e5bd",
+      "name": "第 52 層・掃蕩",
+      "desc": "在第 52 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 52,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "自然回復 +0.16%"
+    },
+    {
+      "id": "guide-6fbc1d59749f6f88",
+      "name": "第 52 層・清掃",
+      "desc": "在第 52 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 52,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-e43c4ba56a017c11",
+      "name": "第 53 層・浩劫",
+      "desc": "在第 53 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 53,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.19%",
+      "displayValue": 0.0019,
+      "rewardText": "全異常抗性 +0.19%"
+    },
+    {
+      "id": "guide-2ff4a165b87a72d9",
+      "name": "第 53 層・掃蕩",
+      "desc": "在第 53 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 53,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "HP +0.06%"
+    },
+    {
+      "id": "guide-8d65363cb8ebbcdd",
+      "name": "第 53 層・清掃",
+      "desc": "在第 53 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 53,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "自然回復 +0.05%"
+    },
+    {
+      "id": "guide-db69d8106246c375",
+      "name": "第 54 層・浩劫",
+      "desc": "在第 54 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 54,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.48%",
+      "displayValue": 0.0048,
+      "rewardText": "自然回復 +0.48%"
+    },
+    {
+      "id": "guide-7004289ff351f5db",
+      "name": "第 54 層・掃蕩",
+      "desc": "在第 54 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 54,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "全異常抗性 +0.06%"
+    },
+    {
+      "id": "guide-5472d79dad7285e5",
+      "name": "第 54 層・清掃",
+      "desc": "在第 54 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 54,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-8f5133095eb7b2c4",
+      "name": "第 55 層・浩劫",
+      "desc": "在第 55 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 55,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.19%",
+      "displayValue": 0.0019,
+      "rewardText": "HP +0.19%"
+    },
+    {
+      "id": "guide-fee6361124dca04a",
+      "name": "第 55 層・掃蕩",
+      "desc": "在第 55 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 55,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.16%",
+      "displayValue": 0.0016,
+      "rewardText": "自然回復 +0.16%"
+    },
+    {
+      "id": "guide-5e7fe857bbd7b5f8",
+      "name": "第 55 層・清掃",
+      "desc": "在第 55 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 55,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-09df7065fcb6a0ec",
+      "name": "第 56 層・浩劫",
+      "desc": "在第 56 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 56,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.19%",
+      "displayValue": 0.0019,
+      "rewardText": "全異常抗性 +0.19%"
+    },
+    {
+      "id": "guide-540554ad7f31cb87",
+      "name": "第 56 層・掃蕩",
+      "desc": "在第 56 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 56,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "HP +0.06%"
+    },
+    {
+      "id": "guide-0c2738ac36ece2c0",
+      "name": "第 56 層・清掃",
+      "desc": "在第 56 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 56,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.05%",
+      "displayValue": 0.0005,
+      "rewardText": "自然回復 +0.05%"
+    },
+    {
+      "id": "guide-28b4c754d57ea70b",
+      "name": "第 57 層・浩劫",
+      "desc": "在第 57 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 57,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.49%",
+      "displayValue": 0.0049,
+      "rewardText": "自然回復 +0.49%"
+    },
+    {
+      "id": "guide-6e377b2986c8571e",
+      "name": "第 57 層・掃蕩",
+      "desc": "在第 57 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 57,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "全異常抗性 +0.07%"
+    },
+    {
+      "id": "guide-a33de1490b11793d",
+      "name": "第 57 層・清掃",
+      "desc": "在第 57 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 57,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-e67531e74b898005",
+      "name": "第 58 層・浩劫",
+      "desc": "在第 58 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 58,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.19%",
+      "displayValue": 0.0019,
+      "rewardText": "HP +0.19%"
+    },
+    {
+      "id": "guide-a986a4f31d1f8562",
+      "name": "第 58 層・掃蕩",
+      "desc": "在第 58 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 58,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "自然回復 +0.17%"
+    },
+    {
+      "id": "guide-1f2187e407997cc8",
+      "name": "第 58 層・清掃",
+      "desc": "在第 58 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 58,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-3b5eff95ae870c16",
+      "name": "第 59 層・浩劫",
+      "desc": "在第 59 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 59,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.2%",
+      "displayValue": 0.002,
+      "rewardText": "全異常抗性 +0.2%"
+    },
+    {
+      "id": "guide-e898ab70e0ec4239",
+      "name": "第 59 層・掃蕩",
+      "desc": "在第 59 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 59,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-b7ca41c26ee40372",
+      "name": "第 59 層・清掃",
+      "desc": "在第 59 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 59,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "自然回復 +0.06%"
+    },
+    {
+      "id": "guide-853270bc3a0fa536",
+      "name": "第 60 層・浩劫",
+      "desc": "在第 60 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 60,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.51%",
+      "displayValue": 0.0051,
+      "rewardText": "自然回復 +0.51%"
+    },
+    {
+      "id": "guide-1fe422cb2520a32b",
+      "name": "第 60 層・掃蕩",
+      "desc": "在第 60 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 60,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "全異常抗性 +0.07%"
+    },
+    {
+      "id": "guide-8d1d276a0efc30ef",
+      "name": "第 60 層・清掃",
+      "desc": "在第 60 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 60,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-834da37239581cfe",
+      "name": "第 61 層・浩劫",
+      "desc": "在第 61 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 61,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.2%",
+      "displayValue": 0.002,
+      "rewardText": "HP +0.2%"
+    },
+    {
+      "id": "guide-2e7c66fda1c4b030",
+      "name": "第 61 層・掃蕩",
+      "desc": "在第 61 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 61,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.17%",
+      "displayValue": 0.0017000000000000001,
+      "rewardText": "自然回復 +0.17%"
+    },
+    {
+      "id": "guide-07e062a9c7b73dff",
+      "name": "第 61 層・清掃",
+      "desc": "在第 61 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 61,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-140b5dde60d3f29a",
+      "name": "第 62 層・浩劫",
+      "desc": "在第 62 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 62,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.2%",
+      "displayValue": 0.002,
+      "rewardText": "全異常抗性 +0.2%"
+    },
+    {
+      "id": "guide-abbaaae0318c8955",
+      "name": "第 62 層・掃蕩",
+      "desc": "在第 62 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 62,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-96313db296f43d87",
+      "name": "第 62 層・清掃",
+      "desc": "在第 62 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 62,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "自然回復 +0.06%"
+    },
+    {
+      "id": "guide-bf54c5cfba41394e",
+      "name": "第 63 層・浩劫",
+      "desc": "在第 63 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 63,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.52%",
+      "displayValue": 0.0052,
+      "rewardText": "自然回復 +0.52%"
+    },
+    {
+      "id": "guide-9e7d6f8a5cff89df",
+      "name": "第 63 層・掃蕩",
+      "desc": "在第 63 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 63,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "全異常抗性 +0.07%"
+    },
+    {
+      "id": "guide-ceedc485c4ee4439",
+      "name": "第 63 層・清掃",
+      "desc": "在第 63 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 63,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-d6bef3dc35a88cd8",
+      "name": "第 64 層・浩劫",
+      "desc": "在第 64 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 64,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.21%",
+      "displayValue": 0.0021,
+      "rewardText": "HP +0.21%"
+    },
+    {
+      "id": "guide-1c5934c9c4c90ec1",
+      "name": "第 64 層・掃蕩",
+      "desc": "在第 64 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 64,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "自然回復 +0.18%"
+    },
+    {
+      "id": "guide-77fd63a6f0552604",
+      "name": "第 64 層・清掃",
+      "desc": "在第 64 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 64,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-bbbc34d70c2686d7",
+      "name": "第 65 層・浩劫",
+      "desc": "在第 65 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 65,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.21%",
+      "displayValue": 0.0021,
+      "rewardText": "全異常抗性 +0.21%"
+    },
+    {
+      "id": "guide-299abbd14648becf",
+      "name": "第 65 層・掃蕩",
+      "desc": "在第 65 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 65,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-199db56f29dd5d0d",
+      "name": "第 65 層・清掃",
+      "desc": "在第 65 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 65,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "自然回復 +0.06%"
+    },
+    {
+      "id": "guide-100dee77093e0564",
+      "name": "第 66 層・浩劫",
+      "desc": "在第 66 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 66,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.53%",
+      "displayValue": 0.0053,
+      "rewardText": "自然回復 +0.53%"
+    },
+    {
+      "id": "guide-f7a2585df7a56ce5",
+      "name": "第 66 層・掃蕩",
+      "desc": "在第 66 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 66,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "全異常抗性 +0.07%"
+    },
+    {
+      "id": "guide-0fd81ea70c202b25",
+      "name": "第 66 層・清掃",
+      "desc": "在第 66 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 66,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-9d8114e8fb69152e",
+      "name": "第 67 層・浩劫",
+      "desc": "在第 67 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 67,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.21%",
+      "displayValue": 0.0021,
+      "rewardText": "HP +0.21%"
+    },
+    {
+      "id": "guide-c176790e713d4b34",
+      "name": "第 67 層・掃蕩",
+      "desc": "在第 67 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 67,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "自然回復 +0.18%"
+    },
+    {
+      "id": "guide-f612ff4a8b527c47",
+      "name": "第 67 層・清掃",
+      "desc": "在第 67 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 67,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-de87cf80739d897e",
+      "name": "第 68 層・浩劫",
+      "desc": "在第 68 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 68,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.21%",
+      "displayValue": 0.0021,
+      "rewardText": "全異常抗性 +0.21%"
+    },
+    {
+      "id": "guide-158010390692f3d7",
+      "name": "第 68 層・掃蕩",
+      "desc": "在第 68 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 68,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-6b41936f77e631dc",
+      "name": "第 68 層・清掃",
+      "desc": "在第 68 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 68,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "自然回復 +0.06%"
+    },
+    {
+      "id": "guide-2eb627acb18712c3",
+      "name": "第 69 層・浩劫",
+      "desc": "在第 69 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 69,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.55%",
+      "displayValue": 0.0055000000000000005,
+      "rewardText": "自然回復 +0.55%"
+    },
+    {
+      "id": "guide-74cd13dd0a1d179d",
+      "name": "第 69 層・掃蕩",
+      "desc": "在第 69 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 69,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "全異常抗性 +0.07%"
+    },
+    {
+      "id": "guide-d89f66fd459b07df",
+      "name": "第 69 層・清掃",
+      "desc": "在第 69 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 69,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-0c6249b641f6a901",
+      "name": "第 70 層・浩劫",
+      "desc": "在第 70 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 70,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.22%",
+      "displayValue": 0.0022,
+      "rewardText": "HP +0.22%"
+    },
+    {
+      "id": "guide-8bff8f5e36f3a61b",
+      "name": "第 70 層・掃蕩",
+      "desc": "在第 70 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 70,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.18%",
+      "displayValue": 0.0018,
+      "rewardText": "自然回復 +0.18%"
+    },
+    {
+      "id": "guide-408114606454a3d2",
+      "name": "第 70 層・清掃",
+      "desc": "在第 70 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 70,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "全異常抗性 +0.02%"
+    },
+    {
+      "id": "guide-8b82cd432ec1afec",
+      "name": "第 71 層・浩劫",
+      "desc": "在第 71 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 71,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.22%",
+      "displayValue": 0.0022,
+      "rewardText": "全異常抗性 +0.22%"
+    },
+    {
+      "id": "guide-8af9ee17132de169",
+      "name": "第 71 層・掃蕩",
+      "desc": "在第 71 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 71,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-58f6eab26116bc3f",
+      "name": "第 71 層・清掃",
+      "desc": "在第 71 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 71,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "自然回復 +0.06%"
+    },
+    {
+      "id": "guide-dcc056d24a74173e",
+      "name": "第 72 層・浩劫",
+      "desc": "在第 72 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 72,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.56%",
+      "displayValue": 0.005600000000000001,
+      "rewardText": "自然回復 +0.56%"
+    },
+    {
+      "id": "guide-e47b42389ccc9ced",
+      "name": "第 72 層・掃蕩",
+      "desc": "在第 72 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 72,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "全異常抗性 +0.07%"
+    },
+    {
+      "id": "guide-26512f56a19707c4",
+      "name": "第 72 層・清掃",
+      "desc": "在第 72 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 72,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.02%",
+      "displayValue": 0.0002,
+      "rewardText": "HP +0.02%"
+    },
+    {
+      "id": "guide-35dcf2996b4adae7",
+      "name": "第 73 層・浩劫",
+      "desc": "在第 73 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 73,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.22%",
+      "displayValue": 0.0022,
+      "rewardText": "HP +0.22%"
+    },
+    {
+      "id": "guide-9fd14997bdddfb63",
+      "name": "第 73 層・掃蕩",
+      "desc": "在第 73 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 73,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.19%",
+      "displayValue": 0.0019,
+      "rewardText": "自然回復 +0.19%"
+    },
+    {
+      "id": "guide-3c9bc5401b98a834",
+      "name": "第 73 層・清掃",
+      "desc": "在第 73 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 73,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "全異常抗性 +0.03%"
+    },
+    {
+      "id": "guide-43e70a010edc8d74",
+      "name": "第 74 層・浩劫",
+      "desc": "在第 74 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 74,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.22%",
+      "displayValue": 0.0022,
+      "rewardText": "全異常抗性 +0.22%"
+    },
+    {
+      "id": "guide-e71f985609bed125",
+      "name": "第 74 層・掃蕩",
+      "desc": "在第 74 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 74,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.07%",
+      "displayValue": 0.0007000000000000001,
+      "rewardText": "HP +0.07%"
+    },
+    {
+      "id": "guide-97af6737f3719719",
+      "name": "第 74 層・清掃",
+      "desc": "在第 74 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 74,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.06%",
+      "displayValue": 0.0006,
+      "rewardText": "自然回復 +0.06%"
+    },
+    {
+      "id": "guide-748069f9116fcbfa",
+      "name": "第 75 層・浩劫",
+      "desc": "在第 75 層打倒 50,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 75,
+      "hidden": false,
+      "target": 50000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.58%",
+      "displayValue": 0.0058,
+      "rewardText": "自然回復 +0.58%"
+    },
+    {
+      "id": "guide-d76910f73439b116",
+      "name": "第 75 層・掃蕩",
+      "desc": "在第 75 層打倒 5,000 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 75,
+      "hidden": false,
+      "target": 5000,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "全異常抗性 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "全異常抗性 +0.08%"
+    },
+    {
+      "id": "guide-a019c8a859ae0c77",
+      "name": "第 75 層・清掃",
+      "desc": "在第 75 層打倒 500 隻怪（頭目不算）。",
+      "cat": "hunt",
+      "floor": 75,
+      "hidden": false,
+      "target": 500,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "HP +0.03%",
+      "displayValue": 0.0003,
+      "rewardText": "HP +0.03%"
+    },
+    {
+      "id": "guide-108c8e3d97dc9bf7",
+      "name": "生態浩劫",
+      "desc": "在二十層各打倒了五萬隻怪。",
+      "cat": "hunt",
+      "floor": null,
+      "hidden": false,
+      "target": 20,
+      "parts": [],
+      "titleName": "生態浩劫",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「生態浩劫」"
+    },
+    {
+      "id": "guide-1e1e3c91dbb4c446",
+      "name": "怪物看到我就跑",
+      "desc": "在五層各打倒了五萬隻怪。",
+      "cat": "hunt",
+      "floor": null,
+      "hidden": false,
+      "target": 5,
+      "parts": [],
+      "titleName": "怪物看到我就跑",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「怪物看到我就跑」"
+    },
+    {
+      "id": "guide-2115b26b230709ce",
+      "name": "屠夫見習",
+      "desc": "在同一層打倒了五萬隻怪。",
+      "cat": "hunt",
+      "floor": null,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": "屠夫見習",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「屠夫見習」"
+    },
+    {
+      "id": "guide-ca61d0cea05934c8",
+      "name": "第 1 層的頭目",
+      "desc": "打倒第 1 層的頭目。",
+      "cat": "boss",
+      "floor": 1,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-79ad44119d7045e3",
+      "name": "第 2 層的頭目",
+      "desc": "打倒第 2 層的頭目。",
+      "cat": "boss",
+      "floor": 2,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-1b187a89a00e0b87",
+      "name": "第 3 層的頭目",
+      "desc": "打倒第 3 層的頭目。",
+      "cat": "boss",
+      "floor": 3,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-d943e304e36a864b",
+      "name": "第 4 層的頭目",
+      "desc": "打倒第 4 層的頭目。",
+      "cat": "boss",
+      "floor": 4,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-e66a60e56c45eaa4",
+      "name": "第 5 層的頭目",
+      "desc": "打倒第 5 層的頭目。",
+      "cat": "boss",
+      "floor": 5,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-7420efc4c0dfe580",
+      "name": "第 6 層的頭目",
+      "desc": "打倒第 6 層的頭目。",
+      "cat": "boss",
+      "floor": 6,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-d94e9d7b3521f880",
+      "name": "第 7 層的頭目",
+      "desc": "打倒第 7 層的頭目。",
+      "cat": "boss",
+      "floor": 7,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-5c6f0f4fb0702175",
+      "name": "第 8 層的頭目",
+      "desc": "打倒第 8 層的頭目。",
+      "cat": "boss",
+      "floor": 8,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-c7080cbf43175585",
+      "name": "第 9 層的頭目",
+      "desc": "打倒第 9 層的頭目。",
+      "cat": "boss",
+      "floor": 9,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-c581d97989f6853f",
+      "name": "第 10 層的頭目",
+      "desc": "打倒第 10 層的頭目。",
+      "cat": "boss",
+      "floor": 10,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-739e548fa3674e3d",
+      "name": "第 11 層的頭目",
+      "desc": "打倒第 11 層的頭目。",
+      "cat": "boss",
+      "floor": 11,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-fe1f186d4ffd159f",
+      "name": "第 12 層的頭目",
+      "desc": "打倒第 12 層的頭目。",
+      "cat": "boss",
+      "floor": 12,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-9debce0b623a36d0",
+      "name": "第 13 層的頭目",
+      "desc": "打倒第 13 層的頭目。",
+      "cat": "boss",
+      "floor": 13,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-0766652efc84914a",
+      "name": "第 14 層的頭目",
+      "desc": "打倒第 14 層的頭目。",
+      "cat": "boss",
+      "floor": 14,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-c2acd5845b7d1be7",
+      "name": "第 15 層的頭目",
+      "desc": "打倒第 15 層的頭目。",
+      "cat": "boss",
+      "floor": 15,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-d504395865b94d0e",
+      "name": "第 16 層的頭目",
+      "desc": "打倒第 16 層的頭目。",
+      "cat": "boss",
+      "floor": 16,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-8da22de1b4269a9c",
+      "name": "第 17 層的頭目",
+      "desc": "打倒第 17 層的頭目。",
+      "cat": "boss",
+      "floor": 17,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-7098d1da93e71716",
+      "name": "第 18 層的頭目",
+      "desc": "打倒第 18 層的頭目。",
+      "cat": "boss",
+      "floor": 18,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-831997162edea380",
+      "name": "第 19 層的頭目",
+      "desc": "打倒第 19 層的頭目。",
+      "cat": "boss",
+      "floor": 19,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-2ec0100555d8342a",
+      "name": "第 20 層的頭目",
+      "desc": "打倒第 20 層的頭目。",
+      "cat": "boss",
+      "floor": 20,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-b735b625c8bc17e9",
+      "name": "第 21 層的頭目",
+      "desc": "打倒第 21 層的頭目。",
+      "cat": "boss",
+      "floor": 21,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-94242220811eeedd",
+      "name": "第 22 層的頭目",
+      "desc": "打倒第 22 層的頭目。",
+      "cat": "boss",
+      "floor": 22,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-291ac75c3258f69f",
+      "name": "第 23 層的頭目",
+      "desc": "打倒第 23 層的頭目。",
+      "cat": "boss",
+      "floor": 23,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-eed5c5397d7623eb",
+      "name": "第 24 層的頭目",
+      "desc": "打倒第 24 層的頭目。",
+      "cat": "boss",
+      "floor": 24,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-1b4881f2999fab27",
+      "name": "第 25 層的頭目",
+      "desc": "打倒第 25 層的頭目。",
+      "cat": "boss",
+      "floor": 25,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-ef24bf8f126303b9",
+      "name": "第 26 層的頭目",
+      "desc": "打倒第 26 層的頭目。",
+      "cat": "boss",
+      "floor": 26,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-7211d2fbaef0f727",
+      "name": "第 27 層的頭目",
+      "desc": "打倒第 27 層的頭目。",
+      "cat": "boss",
+      "floor": 27,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-d69b7945005be508",
+      "name": "第 28 層的頭目",
+      "desc": "打倒第 28 層的頭目。",
+      "cat": "boss",
+      "floor": 28,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-110d51a8797ea852",
+      "name": "第 29 層的頭目",
+      "desc": "打倒第 29 層的頭目。",
+      "cat": "boss",
+      "floor": 29,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-43cb7f4da5b41769",
+      "name": "第 30 層的頭目",
+      "desc": "打倒第 30 層的頭目。",
+      "cat": "boss",
+      "floor": 30,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-02cdf26df91afc3a",
+      "name": "第 31 層的頭目",
+      "desc": "打倒第 31 層的頭目。",
+      "cat": "boss",
+      "floor": 31,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-39461ea1d7327b23",
+      "name": "第 32 層的頭目",
+      "desc": "打倒第 32 層的頭目。",
+      "cat": "boss",
+      "floor": 32,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-0afa2dab962d3745",
+      "name": "第 33 層的頭目",
+      "desc": "打倒第 33 層的頭目。",
+      "cat": "boss",
+      "floor": 33,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-e40a969cb85e0130",
+      "name": "第 34 層的頭目",
+      "desc": "打倒第 34 層的頭目。",
+      "cat": "boss",
+      "floor": 34,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-0ea27ef1c6caf47b",
+      "name": "第 35 層的頭目",
+      "desc": "打倒第 35 層的頭目。",
+      "cat": "boss",
+      "floor": 35,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-053bfb5be8b9057f",
+      "name": "第 36 層的頭目",
+      "desc": "打倒第 36 層的頭目。",
+      "cat": "boss",
+      "floor": 36,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-0bc455756a67f4fb",
+      "name": "第 37 層的頭目",
+      "desc": "打倒第 37 層的頭目。",
+      "cat": "boss",
+      "floor": 37,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-1eb7ca4be8c9bf38",
+      "name": "第 38 層的頭目",
+      "desc": "打倒第 38 層的頭目。",
+      "cat": "boss",
+      "floor": 38,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-2661d1e854be2f00",
+      "name": "第 39 層的頭目",
+      "desc": "打倒第 39 層的頭目。",
+      "cat": "boss",
+      "floor": 39,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-2aca81a25c7a4852",
+      "name": "第 40 層的頭目",
+      "desc": "打倒第 40 層的頭目。",
+      "cat": "boss",
+      "floor": 40,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-916885121e9996ba",
+      "name": "第 41 層的頭目",
+      "desc": "打倒第 41 層的頭目。",
+      "cat": "boss",
+      "floor": 41,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-491bff75658c4dc3",
+      "name": "第 42 層的頭目",
+      "desc": "打倒第 42 層的頭目。",
+      "cat": "boss",
+      "floor": 42,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-7934a696073cdadb",
+      "name": "第 43 層的頭目",
+      "desc": "打倒第 43 層的頭目。",
+      "cat": "boss",
+      "floor": 43,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-cc42e677ca0516c8",
+      "name": "第 44 層的頭目",
+      "desc": "打倒第 44 層的頭目。",
+      "cat": "boss",
+      "floor": 44,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-e9a51593a9a5eed6",
+      "name": "第 45 層的頭目",
+      "desc": "打倒第 45 層的頭目。",
+      "cat": "boss",
+      "floor": 45,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-93bfda8149271187",
+      "name": "第 46 層的頭目",
+      "desc": "打倒第 46 層的頭目。",
+      "cat": "boss",
+      "floor": 46,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-5ca8cabb74968dc2",
+      "name": "第 47 層的頭目",
+      "desc": "打倒第 47 層的頭目。",
+      "cat": "boss",
+      "floor": 47,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-924d39634e0cd681",
+      "name": "第 48 層的頭目",
+      "desc": "打倒第 48 層的頭目。",
+      "cat": "boss",
+      "floor": 48,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-cbb4fbe41c1794c6",
+      "name": "第 49 層的頭目",
+      "desc": "打倒第 49 層的頭目。",
+      "cat": "boss",
+      "floor": 49,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-8531cab7c8ba3e3d",
+      "name": "第 50 層的頭目",
+      "desc": "打倒第 50 層的頭目。",
+      "cat": "boss",
+      "floor": 50,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": "...",
+      "displayBonus": "攻擊 +0.9%",
+      "displayValue": 0.009000000000000001,
+      "rewardText": "攻擊 +0.9% · 稱號「...」"
+    },
+    {
+      "id": "guide-2860fed5cd5b9a52",
+      "name": "第 51 層的頭目",
+      "desc": "打倒第 51 層的頭目。",
+      "cat": "boss",
+      "floor": 51,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-27ac68fc7d6c01c1",
+      "name": "第 52 層的頭目",
+      "desc": "打倒第 52 層的頭目。",
+      "cat": "boss",
+      "floor": 52,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-e369a4ca256e68f4",
+      "name": "第 53 層的頭目",
+      "desc": "打倒第 53 層的頭目。",
+      "cat": "boss",
+      "floor": 53,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-32940d3377803d1e",
+      "name": "第 54 層的頭目",
+      "desc": "打倒第 54 層的頭目。",
+      "cat": "boss",
+      "floor": 54,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-cb02129e1bc8077e",
+      "name": "第 55 層的頭目",
+      "desc": "打倒第 55 層的頭目。",
+      "cat": "boss",
+      "floor": 55,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-c8f9ecf274de06a8",
+      "name": "第 56 層的頭目",
+      "desc": "打倒第 56 層的頭目。",
+      "cat": "boss",
+      "floor": 56,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-126d818e905bd49e",
+      "name": "第 57 層的頭目",
+      "desc": "打倒第 57 層的頭目。",
+      "cat": "boss",
+      "floor": 57,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-98138272234fc478",
+      "name": "第 58 層的頭目",
+      "desc": "打倒第 58 層的頭目。",
+      "cat": "boss",
+      "floor": 58,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-f4452f982439690d",
+      "name": "第 59 層的頭目",
+      "desc": "打倒第 59 層的頭目。",
+      "cat": "boss",
+      "floor": 59,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-335aead3226650ce",
+      "name": "第 60 層的頭目",
+      "desc": "打倒第 60 層的頭目。",
+      "cat": "boss",
+      "floor": 60,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": "...",
+      "displayBonus": "暴擊傷害 +1.81%",
+      "displayValue": 0.0181,
+      "rewardText": "暴擊傷害 +1.81% · 稱號「...」"
+    },
+    {
+      "id": "guide-80ad70c324dde27d",
+      "name": "第 61 層的頭目",
+      "desc": "打倒第 61 層的頭目。",
+      "cat": "boss",
+      "floor": 61,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-83eb428dfa95fd9d",
+      "name": "第 62 層的頭目",
+      "desc": "打倒第 62 層的頭目。",
+      "cat": "boss",
+      "floor": 62,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-1b06bd0724359b43",
+      "name": "第 63 層的頭目",
+      "desc": "打倒第 63 層的頭目。",
+      "cat": "boss",
+      "floor": 63,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-605eee87d3204286",
+      "name": "第 64 層的頭目",
+      "desc": "打倒第 64 層的頭目。",
+      "cat": "boss",
+      "floor": 64,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-fa38c5b6201c85ee",
+      "name": "第 65 層的頭目",
+      "desc": "打倒第 65 層的頭目。",
+      "cat": "boss",
+      "floor": 65,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-1385c4c8fc3a9b7d",
+      "name": "第 66 層的頭目",
+      "desc": "打倒第 66 層的頭目。",
+      "cat": "boss",
+      "floor": 66,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-b985f2afea16f267",
+      "name": "第 67 層的頭目",
+      "desc": "打倒第 67 層的頭目。",
+      "cat": "boss",
+      "floor": 67,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-65356f31ee420be1",
+      "name": "第 68 層的頭目",
+      "desc": "打倒第 68 層的頭目。",
+      "cat": "boss",
+      "floor": 68,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-e303f7710e0fa8cb",
+      "name": "第 69 層的頭目",
+      "desc": "打倒第 69 層的頭目。",
+      "cat": "boss",
+      "floor": 69,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-f8983da68e909eb1",
+      "name": "第 70 層的頭目",
+      "desc": "打倒第 70 層的頭目。",
+      "cat": "boss",
+      "floor": 70,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": "...",
+      "displayBonus": "攻擊 +0.9%",
+      "displayValue": 0.009000000000000001,
+      "rewardText": "攻擊 +0.9% · 稱號「...」"
+    },
+    {
+      "id": "guide-8a821319c3c994cc",
+      "name": "第 71 層的頭目",
+      "desc": "打倒第 71 層的頭目。",
+      "cat": "boss",
+      "floor": 71,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-6be2f4670ae67a77",
+      "name": "第 72 層的頭目",
+      "desc": "打倒第 72 層的頭目。",
+      "cat": "boss",
+      "floor": 72,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-9ab3bce467ad8cf7",
+      "name": "第 73 層的頭目",
+      "desc": "打倒第 73 層的頭目。",
+      "cat": "boss",
+      "floor": 73,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "自然回復 +0.01%",
+      "displayValue": 0.0001,
+      "rewardText": "自然回復 +0.01%"
+    },
+    {
+      "id": "guide-282ecf2a1be9a290",
+      "name": "第 74 層的頭目",
+      "desc": "打倒第 74 層的頭目。",
+      "cat": "boss",
+      "floor": 74,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": "藥水回復量 +0.08%",
+      "displayValue": 0.0008,
+      "rewardText": "藥水回復量 +0.08%"
+    },
+    {
+      "id": "guide-15b799658a9a1686",
+      "name": "第 75 層的頭目",
+      "desc": "打倒第 75 層的頭目。",
+      "cat": "boss",
+      "floor": 75,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "titleName": "...",
+      "displayBonus": "暴擊傷害 +1.81%",
+      "displayValue": 0.0181,
+      "rewardText": "暴擊傷害 +1.81% · 稱號「...」"
+    },
+    {
+      "id": "guide-49a27cf32f2f1bfb",
+      "name": "頭目的惡夢",
+      "desc": "打倒了四十層的頭目。",
+      "cat": "boss",
+      "floor": null,
+      "hidden": false,
+      "target": 40,
+      "parts": [],
+      "titleName": "頭目的惡夢",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「頭目的惡夢」"
+    },
+    {
+      "id": "guide-1585eff8f2fddc07",
+      "name": "頭目常客",
+      "desc": "打倒了十層的頭目。",
+      "cat": "boss",
+      "floor": null,
+      "hidden": false,
+      "target": 10,
+      "parts": [],
+      "titleName": "頭目常客",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「頭目常客」"
+    },
+    {
+      "id": "guide-fbf609617aac31c9",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-51029ca1d7adf32d",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-58d26bfdd6bde672",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-6d2b9e5140a51166",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-c7a8659d5d5713f9",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-0accb8766a146000",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-362eb95d50948672",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-107bf92b84acb256",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-a45cc4d91db40e3b",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-7948250213162a45",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-cfb0ef24f233140f",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-3a4d9af31a60a0ab",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-0a60a0ab2581282d",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-68adcb62428c1a00",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-299e005cd3db6409",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-f5d53b6f60c801db",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-c87ed874f6e4827b",
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "fun",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "titleName": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "guide-302700586f3b24e8",
+      "name": "成就成癮",
+      "desc": "達成了一百五十個成就。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": 150,
+      "parts": [],
+      "titleName": "成就成癮",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「成就成癮」"
+    },
+    {
+      "id": "guide-915542f555a73589",
+      "name": "成就獵人",
+      "desc": "達成了五十個成就。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": 50,
+      "parts": [],
+      "titleName": "成就獵人",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「成就獵人」"
+    },
+    {
+      "id": "guide-208f6e9704ceef45",
+      "name": "第一次說再見",
+      "desc": "第一次倒下。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "titleName": "第一次說再見",
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「第一次說再見」"
+    }
+  ]
+}

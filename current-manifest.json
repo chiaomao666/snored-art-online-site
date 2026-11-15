@@ -12,7 +12,10 @@
     "skills": 48,
     "skillPaths": 96,
     "buffs": 24,
-    "talentNodes": 408
+    "talentNodes": 408,
+    "achievementTitles": 35,
+    "achievements": 469,
+    "hiddenAchievements": 17
   },
   "serverValues": [
     "monster stats",
@@ -21,6 +24,7 @@
     "translations",
     "affix rolls",
     "set effects",
-    "unique balance"
+    "unique balance",
+    "raw achievement bonus precision and hidden conditions"
   ]
 }

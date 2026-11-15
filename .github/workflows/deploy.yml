@@ -36,6 +36,7 @@ jobs:
           node --check classic-layout.js
       - name: Build browser data and validate guide
         run: |
+          node build-achievement-data.cjs
           node current-checks.cjs
       - name: Prepare public website
         run: node build-site.cjs

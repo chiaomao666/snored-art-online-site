@@ -81,6 +81,7 @@ Whoever saved you is long gone. They left only one line: "Don't fall asleep out 
 const catalog={items:Object.values(le),monsters:Object.values(mt).map(m=>({...m,stats:null,exp:null,col:null,drops:null,dataStatus:'pending'})),areas:Object.values(ge),floors:wn,
  sideQuests:Vb,chapters:[...YS,...SS,...xS],talents:u1,skills:I1,skillPaths:XA,buffs:Xs,
  styles:bb,stats:Object.values(Ie).map(({extra,...x})=>x),talentNodes:kb(),talentCosts:Cu,
+ achievementTitles:Object.entries(Pl).map(([titleId,value])=>({titleId,...value})),
  attributeEffects:Do,statCaps:Y1,statSteps:Fi,uniqueNames:ya,uniqueQuests:bo,sets:[],version:'2026-11-15',floorCap:y0};
 function createPlayer(config={}){
  const p={level:Math.max(1,Math.min(120,Math.floor(Number(config.level)||1))),equipment:{},gear:{},

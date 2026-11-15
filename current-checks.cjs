@@ -4,6 +4,8 @@ assert.equal(D.items.length,4728);assert.equal(D.items.filter(x=>x.kind==='equip
 assert.equal(D.monsters.length,990);assert.equal(D.floors.length,75);assert.equal(D.areas.length,593);
 assert(D.monsters.every(m=>m.dataStatus==='pending'&&m.exp===null&&m.drops===null));
 assert.equal(D.skills.length,48);assert.equal(D.buffs.length,24);assert.equal(D.skillPaths.length,96);assert.equal(D.talents.length,32);assert.equal(D.talentNodes.length,408);
+assert.equal(D.achievementTitles.length,35);assert.equal(new Set(D.achievementTitles.map(x=>x.titleId)).size,35);assert.equal(D.achievementTitles.filter(x=>x.name.zh!=='...'&&x.desc.zh!=='...').length,31);
+const achievementCatalog=JSON.parse(fs.readFileSync(path.join(__dirname,'achievement-catalog.json'),'utf8'));assert.equal(achievementCatalog.total,469);assert.equal(achievementCatalog.hidden,17);assert.deepEqual(achievementCatalog.counts,{collect:144,hunt:228,boss:77,fun:20});assert.equal(new Set(achievementCatalog.entries.map(x=>x.id)).size,469);assert(achievementCatalog.entries.filter(x=>!x.hidden).every(x=>x.name&&x.desc&&x.rewardText));for(const x of achievementCatalog.entries)for(const k of ['done','current','player','token','password','account'])assert(!Object.hasOwn(x,k));
 for(const key of ['items','monsters','areas','skills','buffs','talents'])assert.equal(new Set(D[key].map(x=>x.id)).size,D[key].length,key+' IDs');
 for(const style of D.styles){assert.equal(D.skills.filter(x=>x.style===style.style).length,6);assert.equal(D.buffs.filter(x=>x.style===style.style).length,3);}
 for(const s of D.skills){assert.equal(D.skillPaths.filter(p=>p.skill===s.id).length,2);for(const lv of [1,5,10]){const x=G.skillStats(s,lv);assert(x.multiplier>0&&x.hits>0&&x.cooldownMs>0);}}
@@ -24,6 +26,6 @@ for(const agi of [-100,0,1,250,1000])for(const spd of [-.9,0,.1,1,4]){const spee
 const p=G.createPlayer({level:10,style:'sword',slots:{weapon:{id:'weapon-t1'}},talents:{}});assert.equal(G.validateTree(p,'sword',{'sk:vertical':1}),null);assert(G.validateTree(p,'sword',{'sk:knife-fan':1})===null);assert(G.validateTree(p,'sword',{'sword-7-resBlunt':1}));
 const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');for(const match of html.matchAll(/(?:src|href)="([^"#?:]+\.(?:js|css|svg))"/g))assert(fs.existsSync(path.join(__dirname,match[1])));
 assert(!html.includes('src="data.js"'));assert(!html.includes('src="reward-guide.js"'));assert(!html.includes('src="site.js"'));
-for(const f of ['current-runtime.js','current-site.js','build-engine.js','classic-templates.js','classic-layout.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
+for(const f of ['current-runtime.js','current-site.js','build-engine.js','classic-templates.js','classic-layout.js','achievement-data.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
 const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'current-manifest.json')));assert.equal(manifest.counts.talentNodes,D.talentNodes.length);
 console.log(JSON.stringify({status:'passed',catalogue:'75 floors / 3007 equipment / 990 monsters',experienceLevels:120,skills:48,branches:96,talentNodes:408,calculations:'base, dual hand, actual gear stats, buffs, attack speed, talent connectivity'}));
