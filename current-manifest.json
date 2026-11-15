@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-15",
-  "sha256": "bbc1f4c0b4ecaeb5a314165d98954fc10f0ac137ef98ad434fb2a18134b261e6",
+  "version": "2026-11-16",
+  "sha256": "d762551c3348419f3f1cf83c6c5696a2430c259d9aa1da840ccd505e2ec0f1f4",
   "counts": {
     "items": 4728,
     "monsters": 990,
@@ -20,13 +20,14 @@
     "serverMonsterHp": 6,
     "bossGuides": 9,
     "floorDropPools": 3,
-    "observedMonsterHp": 58,
-    "observedDropSources": 447,
-    "monstersWithObservedSkills": 93,
+    "observedMonsterHp": 59,
+    "observedDropSources": 468,
+    "monstersWithObservedSkills": 94,
     "additionalWorldBosses": 1,
-    "additionalEquipment": 9,
-    "legacyMonsterReferences": 447,
-    "legacyDropReferences": 10543
+    "additionalEquipment": 15,
+    "legacyMonsterReferences": 446,
+    "legacyDropReferences": 10518,
+    "additionalStaticEquipment": 14
   },
   "serverValues": [
     "monster stats",
@@ -39,5 +40,5 @@
     "hidden achievement conditions"
   ],
   "achievementPrecision": "server-json",
-  "serverAsset": "main-BqVswO5r.js"
+  "serverAsset": "main-BA8u9I_o.js"
 }

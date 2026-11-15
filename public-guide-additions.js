@@ -3,8 +3,24 @@
  const D=window.SAOCurrent.catalog,esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const text=x=>typeof x==='string'?x:x?.zh||'',nf=x=>Number(x).toLocaleString('zh-TW');
  function enhance(){
-  const [page,query]=(location.hash.slice(1)||'home').split('?');if(page!=='quests')return;
+  const [page,query]=(location.hash.slice(1)||'home').split('?');
+  if(page==='systems'){
+   const main=document.getElementById('main-content');if(main.querySelector('[data-current-mechanics]'))return;
+   const rows=D.serverGuide?.mechanics?.rules||[];if(rows.length)main.querySelector('.page-intro')?.insertAdjacentHTML('afterend',`<div class="v2-cards" data-current-mechanics>${rows.map(x=>`<section class="panel"><h2>${esc(x.title)}</h2>${x.lines.map(line=>`<p>${esc(line)}</p>`).join('')}</section>`).join('')}</div>`);
+   return;
+  }
+  if(page!=='quests')return;
   const main=document.getElementById('main-content'),params=new URLSearchParams(query||'');
+  const chapter=D.chapters.find(x=>x.id===params.get('id'));
+  if(chapter){
+   const names=new Map(D.items.map(x=>[x.id,text(x.name)]));
+   const choice=reward=>reward?.choose?.length?`<span data-reward-choice> · 擇一：${reward.choose.map(id=>`<a href="#equipment?id=${encodeURIComponent(id)}">${esc(names.get(id)||id)}</a>`).join('、')}</span>`:'';
+   if(!main.querySelector('[data-reward-choice]')){
+    for(const [i,step]of (chapter.steps||[]).entries()){const node=main.querySelectorAll('.v2-queststeps li')[i]?.querySelector('small');if(node)node.insertAdjacentHTML('beforeend',choice(step.reward));}
+    main.querySelector('h3')?.nextElementSibling?.insertAdjacentHTML('beforeend',choice(chapter.reward));
+   }
+   return;
+  }
   if(params.get('type')!=='points'){
    if(!params.get('id')&&!main.querySelector('[data-point-shop-link]'))main.querySelector('.page-intro')?.insertAdjacentHTML('afterend','<p data-point-shop-link><a class="button secondary" href="#quests?type=points">點數商店 →</a></p>');
    return;

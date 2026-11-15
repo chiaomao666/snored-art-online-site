@@ -22,7 +22,20 @@ function apply(G,payload){
   G.calculate=config=>originalCalculate(compatible(config));G.createPlayer=config=>originalCreate(compatible(config));
   G.publicEquipment=definitions;
  }
- for(const row of s.items||[]){
+ // Generated chapters may reuse reward objects across different steps.
+ // Make each occurrence independent before applying per-chapter amounts.
+ if(s.catalogueChanges?.patches?.some(x=>x.collection==='chapters'))D.chapters=JSON.parse(JSON.stringify(D.chapters));
+ for(const change of s.catalogueChanges?.patches||[]){
+  if(!['items','areas','chapters','sideQuests','skills','talents','buffs'].includes(change.collection))continue;
+  const target=D[change.collection].find(x=>x.id===change.id);if(!target)continue;
+  for(const op of change.ops||[]){
+   const keys=op?.[0];if(!Array.isArray(keys)||!keys.length||keys.some(k=>['__proto__','prototype','constructor'].includes(k)))continue;
+   let ref=target;for(const key of keys.slice(0,-1)){if(!ref||typeof ref!=='object'){ref=null;break;}ref=ref[key];}
+   if(!ref||typeof ref!=='object')continue;
+   const key=keys.at(-1);if(op.length>1)ref[key]=JSON.parse(JSON.stringify(op[1]));else delete ref[key];
+  }
+ }
+ for(const row of [...s.catalogueChanges?.items||[],...s.items||[]]){
   if(row.kind!=='equipment'||typeof row.id!=='string'||!G.slotKeys.includes(row.slot))continue;
   const existing=D.items.find(x=>x.id===row.id);
   if(existing)Object.assign(existing,row);else{D.items.push(row);G.publicEquipment.set(row.id,row);}
@@ -55,6 +68,14 @@ function apply(G,payload){
   const from=areas.get(row.from);if(from){from.links??=[];if(!from.links.includes(area.id))from.links.push(area.id);}
  }
  const jack=areas.get('f1-wb');if(jack)jack.worldBossId='wb-jack';
+ G.regionCapacity=(area,{autoHunt=true,hunters=1}={})=>{
+  if(!area?.spawns?.length)return null;
+  const floor=area.spawnFloor??area.floor,kind=area.id.replace(/^f\d+-/,''),rate=s.mechanics?.partyEnemyRate??.5;
+  let count=floor<5?3:Math.min(10,Math.max(3,4+Math.floor((floor-10)/10)));
+  if(floor>=5)count+=['field','outskirts','path'].includes(kind)?-1:['depths','wilds','secret'].includes(kind)?1:0;
+  if(area.maxEnemies)count=Math.min(count,area.maxEnemies);if(!autoHunt)count=Math.ceil(count/2);
+  return Math.round(Math.max(1,count)*(1+rate*(Math.max(1,hunters)-1)));
+ };
  // Additional world bosses must exist before attaching observed HP to them.
  for(const [id,values]of Object.entries(s.observedHp||{})){
   const m=mobs.get(id);if(m&&Array.isArray(values))m.observedMaxHp=values.filter(x=>Number.isFinite(x)&&x>0);
