@@ -19,7 +19,12 @@
     "serverMonsterRecords": 20,
     "serverMonsterHp": 5,
     "bossGuides": 9,
-    "floorDropPools": 2
+    "floorDropPools": 2,
+    "observedMonsterHp": 14,
+    "observedDropSources": 366,
+    "monstersWithObservedSkills": 73,
+    "additionalWorldBosses": 1,
+    "additionalEquipment": 3
   },
   "serverValues": [
     "monster stats",

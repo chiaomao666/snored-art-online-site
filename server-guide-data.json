@@ -2,7 +2,7 @@
   "format": "sao-public-guide-v1",
   "asset": "main-BSa8z2Bt.js",
   "precision": "server-json",
-  "updated": "2026-11-15T10:58:53.007Z",
+  "updated": "2026-11-15T13:22:34.722Z",
   "data": {
     "bosses": {
       "1": {
@@ -895,6 +895,38 @@
           "ja": "暴風の輪"
         },
         "shape": "area"
+      },
+      "b-quake": {
+        "name": {
+          "zh": "地震玻",
+          "en": "Quake Shake",
+          "ja": "地震ゆらゆら"
+        },
+        "shape": "area"
+      },
+      "b-smash": {
+        "name": {
+          "zh": "大地粉翠",
+          "en": "Earth Smashed Potato",
+          "ja": "大地砕きポテト"
+        },
+        "shape": "single"
+      },
+      "b-crush": {
+        "name": {
+          "zh": "碎骨重壓",
+          "en": "Bone Crush-ade",
+          "ja": "骨砕きプレス"
+        },
+        "shape": "single"
+      },
+      "b-breath": {
+        "name": {
+          "zh": "聾息",
+          "en": "Draggin' Breath",
+          "ja": "ドラ銀ブレス"
+        },
+        "shape": "area"
       }
     },
     "says": {
@@ -1691,6 +1723,11 @@
           "zh": "吸血疼的藤蔓可以拿去做繩子。傳說永者想再多存一點，剩下的打算去礦坑挖礦還。",
           "en": "Vamp Vine tendrils make good rope. Legend Braised want to save a bit more; they plan to mine the rest in the tunnels.",
           "ja": "吸血ツルのつるは縄になる。伝説の湯者はもう少し貯めて、残りは坑道で掘って返すつもりだ。"
+        },
+        "done": {
+          "zh": "「剩下的，我們去第 14 層的礦坑挖。」捏茲哈握了握你的手。「到時候，再一起喝一杯吧。」",
+          "en": "\"We'll mine the rest in the floor 14 tunnels.\" Nezzah shakes your hand. \"Let's have a drink together then.\"",
+          "ja": "「残りは第 14 層の坑道で掘るよ。」ネズッハはあなたの手を握った。「そのときは、一緒に一杯やろう。」"
         }
       },
       "q:sq-f8-hood": {
@@ -1703,6 +1740,11 @@
           "zh": "書屋村有人在散播謠言：「另一個公會在搶你們的頭目。」叢林外圍的毒賤蛙旁邊，有人看到一個戴兜帽的男人。",
           "en": "Someone in Treehaus is spreading rumors: \"The other guild is stealing your boss.\" A hooded man was seen near the Dart Frog-gies.",
           "ja": "ツリーハウス村で噂を流している者がいる。「向こうのギルドが、おまえたちのボスを横取りしようとしてるぞ。」毒矢ガエルのそばで、フードの男を見た人がいる。"
+        },
+        "done": {
+          "zh": "你追到叢林的盡頭，只聽到一陣笑聲。兜帽的男人不見了，地上留著一張紙：「好戲才剛開始。」",
+          "en": "You chase him to the edge of the jungle and hear only laughter. The hooded man is gone. A note lies on the ground: \"The show has only just begun.\"",
+          "ja": "ジャングルの果てまで追いかけたが、聞こえたのは笑い声だけだった。フードの男は消え、地面に紙が一枚残っていた。「ショーは、始まったばかりだ。」"
         }
       },
       "q:sq-f1-news": {
@@ -1715,6 +1757,11 @@
           "zh": "情報販子阿爾狗在廣場貼了一張紙：「本日情報」。「哪一層打得最兇、大家的錢都花到哪裡去了...這些消息，我每天都會整理。」「第一次看，不收錢。去看一眼吧。」",
           "en": "The info broker Argoat has pinned a sheet up in the plaza: \"Today's Scoop.\" \"Which floor is seeing the fiercest fighting, where everyone's Col is going... I put it all together every day.\" \"First look's free. Go take a peek.\"",
           "ja": "情報屋のアルゴートが広場に紙を貼っていた。「本日の情報」。「どの層がいちばん激戦か、みんなのコールがどこに消えてるか……そういう話を毎日まとめてるヨ。」「初回はタダ。ちょっと見てきナ。」"
+        },
+        "done": {
+          "zh": "阿爾狗咬著一根草，笑了一下：「看懂了嗎？看不懂也沒關係。有一天，這些消息會值很多錢的。」",
+          "en": "Argoat grins around a blade of grass. \"Make sense of it? Doesn't matter if you didn't. Someday, this kind of news is gonna be worth a lot.\"",
+          "ja": "アルゴートは草をくわえたまま、にっと笑った。「わかったカ？わからなくてもいいヨ。いつか、こういう情報がすごく高く売れる日が来るんダ。」"
         }
       },
       "q:sq-f1-boar": {
@@ -1727,6 +1774,11 @@
           "zh": "稀飯原野的山豬一直撞壞村子的柵欄。村長說，誰幫忙就請吃一頓。",
           "en": "Boars from the Waist Field keep smashing the village fence. The village chief promises a meal to whoever helps.",
           "ja": "おかゆ平原のイノシシが村の柵を壊してばかりいる。村長は、手伝ってくれた人にごちそうするという。"
+        },
+        "done": {
+          "zh": "村長端出一大碗稀飯：「我們這裡，就這個最多。」",
+          "en": "The chief brings out a big bowl of porridge. \"It's the one thing we have plenty of.\"",
+          "ja": "村長は大きなお椀のおかゆを出してくれた。「うちには、これだけはたくさんあるんだ。」"
         }
       },
       "q:sq-f2-whisker": {
@@ -1739,6 +1791,11 @@
           "zh": "阿爾狗臉上的鬍子一直沒擦掉。她說戰抖牛的牛奶可以洗掉墨汁，要你幫忙擠。",
           "en": "The whiskers on Argoat's face never came off. She says Tremble Moo milk washes out ink, and wants you to fetch some.",
           "ja": "アルゴートの顔のひげは、ずっと消えないままだ。ぶるぶる牛のミルクで墨が落ちるらしく、取ってきてほしいと言う。"
+        },
+        "done": {
+          "zh": "阿爾狗洗完臉，鬍子還在。「...算了。留著也挺可愛的吧？」",
+          "en": "Argoat washes her face. The whiskers are still there. \"...Forget it. They're kinda cute, right?\"",
+          "ja": "アルゴートが顔を洗っても、ひげは残っていた。「……もういいヨ。けっこうかわいいダロ？」"
         }
       },
       "q:sq-braised-1": {
@@ -1751,6 +1808,11 @@
           "zh": "捏茲哈的公會「傳說永者」決定把騙來的錢還給大家。可是他們太弱了，賺得很慢。幫他們打瘋胡蜂，賣針換錢吧。",
           "en": "Nezzah's guild, Legend Braised, has decided to pay back everyone they cheated. But they're weak, and the money comes in slowly. Help them hunt Wine Wasps to sell the stingers.",
           "ja": "ネズッハのギルド「伝説の湯者」は、だまし取ったお金をみんなに返すことにした。でも弱くて、なかなか稼げない。酔っぱらいバチを倒して、針を売るのを手伝おう。"
+        },
+        "done": {
+          "zh": "傳說永者的隊長深深鞠了一個躬：「還差很多。可是我們會還完的。」",
+          "en": "The leader of Legend Braised bows deeply. \"We're still far short. But we'll pay it all back.\"",
+          "ja": "伝説の湯者のリーダーが深く頭を下げた。「まだ全然足りない。でも、必ず返します。」"
         }
       },
       "q:sq-f3-exchange": {
@@ -1763,6 +1825,11 @@
           "zh": "愛擠爾把一疊紙攤在桌上：「城鎮裡開了[[股市]]，可以買賣股票。只有在城鎮才能用。」「股票會發股息。錢從哪裡來？大家在這個世界花掉的摳。」「最先上市的是[[攻略股]]：每一層第一次被攻略，拿著它的人就分得到錢。」「官網上也看得到。先去打開看一眼吧，不用急著買。」",
           "en": "Ajile spreads a stack of papers across his table. \"The towns have a [[Stock Market]] now. You can buy and sell stocks there. You can only use it in town.\" \"Stocks pay dividends. Where does the money come from? The Col everyone spends in this world.\" \"The first to go public are the [[Frontline Stocks]]: every time a floor is cleared for the first time, whoever holds them gets a share.\" \"You can check it on the website too. Go open it up and have a look. No rush to buy.\"",
           "ja": "エッグルは机の上に紙の束を広げた。「街に[[株式市場]]ができた。株の売り買いができる。街の中でしか使えない。」「株には配当がつく。その金はどこから来るかって？みんながこの世界で使ったコールだ。」「最初に上場するのは[[攻略株]]。どこかの層が初めて攻略されるたびに、持ってるやつに分け前が入る。」「公式サイトでも見られるぞ。とりあえず開いて見てこい。買うのは急がなくていい。」"
+        },
+        "done": {
+          "zh": "愛擠爾把紙收好：「怎麼樣？看不懂的地方，先看看就好。」「我啊，總有一天要開一間店。到時候，我的店也要上市。」",
+          "en": "Ajile tidies up his papers. \"Well? If any of it went over your head, just watch for a while.\" \"Me, I'm opening a shop someday. And when I do, my shop's going public too.\"",
+          "ja": "エッグルは紙をまとめた。「どうだ？わからないところは、まず眺めてりゃいい。」「おれはな、いつか店を開く。そのときは、おれの店も上場させるんだ。」"
         }
       },
       "q:sq-f3-auction": {
@@ -1775,6 +1842,11 @@
           "zh": "愛擠爾在廣場擺了一張小桌子：「聽說了嗎？第 2 層的頭目倒下之後，城鎮裡開了[[市集]]。用不到的東西放上去，別人出摳就買走了。」「我以後想開一間店。先幫我打幾隻大知足，我拿牠們的絲練習做生意。」",
           "en": "Ajile has set up a little table in the plaza. \"Heard the news? Since the floor 2 boss went down, the towns have a [[Marketplace]]. Put up what you don't need, and someone pays Col for it.\" \"I want to open a shop someday. Go take out some Giant Spyders for me. I'll practice my trade with their silk.\"",
           "ja": "エッグルが広場に小さな机を出していた。「聞いたか？第 2 層のボスが倒れてから、街に[[マーケット]]ができたんだ。いらないものを出しておけば、誰かがコールで買っていく。」「おれはいつか店を開きたい。大グモ足るを何匹か倒してきてくれ。その糸で商売の練習をするんだ。」"
+        },
+        "done": {
+          "zh": "愛擠爾把絲收進箱子，咧嘴一笑：「市集就在城鎮裡，跟商店、倉庫排在一起。上架要先付一點錢，賣掉了也會抽一點。有好貨，記得先給我看看。」",
+          "en": "Ajile packs the silk into a crate and grins. \"The Marketplace is right in town, next to the shop and the warehouse. Listing costs a little up front, and they take a cut when it sells. Got anything good? Show me first.\"",
+          "ja": "エッグルは糸を箱にしまい、にやりと笑った。「マーケットは街の中、店や倉庫と並んでる。出すときに少し払って、売れたら少し引かれる。いいものが出たら、まずおれに見せてくれよ。」"
         }
       },
       "q:sq-guilds-1": {
@@ -1787,6 +1859,11 @@
           "zh": "牙汪的解放君和聾騎士旅團吵起來了：誰先清掉米霧森林的大知足，阿爾狗的頭目情報就賣給誰。兩邊都想找你幫忙。",
           "en": "Kibawow's Liberation Harmy and the Draggin' Knights Brigade are fighting: whoever clears the Giant Spyders in the Missed Forest first gets Argoat's boss intel. Both sides want your help.",
           "ja": "キバワンの解放群とドラ銀騎士旅団がもめている。ミス霧の森の大グモ足るを先に片づけた方が、アルゴートのボス情報を買える。どっちもあなたに手伝ってほしいらしい。"
+        },
+        "done": {
+          "zh": "你兩邊都幫了。阿爾狗笑了：「那就兩邊都賣。生意人嘛。」",
+          "en": "You helped both sides. Argoat grins. \"Then I'll sell to both. Business is business.\"",
+          "ja": "両方を手伝った。アルゴートは笑った。「なら両方に売るヨ。商売ダ。」"
         }
       },
       "q:sq-braised-2": {
@@ -1799,6 +1876,11 @@
           "zh": "囉唯亞的運河岸，傳說永者的人正在撈巨錢蟹。聽說殼裡偶爾有硬幣。",
           "en": "On the canal banks of Rovia-ble, Legend Braised are hauling in Giant Crabbies. Rumor says there are coins in the shells sometimes.",
           "ja": "ロヴィアの運河岸で、伝説の湯者が巨大な銭ガニをすくっている。殻の中に、ときどき硬貨が入っているらしい。"
+        },
+        "done": {
+          "zh": "捏茲哈數著硬幣，手在發抖：「這一筆，可以還給被我騙最多的那個人了。」",
+          "en": "Nezzah counts the coins with shaking hands. \"With this, I can pay back the one I cheated the most.\"",
+          "ja": "ネズッハは震える手で硬貨を数えた。「これで、一番だました人に返せる。」"
         }
       },
       "q:sq-f4-race": {
@@ -1811,6 +1893,11 @@
           "zh": "囉唯亞要辦划船比賽。可是喝童一直在河裡搗蛋，把船弄翻。",
           "en": "Rovia-ble is holding a boat race, but the Kappa-chinos keep tipping the boats over.",
           "ja": "ロヴィアでボートレースが開かれる。でもカッパチーノが川でいたずらばかりして、舟をひっくり返す。"
+        },
+        "done": {
+          "zh": "比賽順利結束了。你的船，最後一名。",
+          "en": "The race goes off without a hitch. Your boat comes in dead last.",
+          "ja": "レースは無事に終わった。あなたの舟は、最下位だった。"
         }
       },
       "q:sq-braised-3": {
@@ -1823,6 +1910,11 @@
           "zh": "死他奇恩的商人收方塊史萊母的凝膠。傳說永者說，再一點點就還完一半了。",
           "en": "A merchant in Stack-ion buys Cube Slimy Mom gel. Legend Braised say they're almost halfway paid off.",
           "ja": "スタッキオンの商人がキューブスライム母さんのゼリーを買い取っている。伝説の湯者は、あと少しで半分返せると言う。"
+        },
+        "done": {
+          "zh": "他們在帳本上劃掉一行又一行。「有人說原諒我們了。」捏茲哈小聲說。",
+          "en": "They cross out line after line in their ledger. \"Someone said they forgive us,\" Nezzah says quietly.",
+          "ja": "帳簿の行を一本ずつ消していく。「許してくれるって言った人がいたんだ。」ネズッハが小さな声で言った。"
         }
       },
       "q:sq-guilds-2": {
@@ -1835,6 +1927,11 @@
           "zh": "兩大公會的人都偷偷來找你：「謎宮區的吃輪兵怎麼打，只告訴我們就好。」",
           "en": "People from both guilds come to you in secret: \"How to beat the Gear-y Soldiers in the Laby-rinse... just tell us, okay?\"",
           "ja": "ふたつのギルドの人が、こっそりあなたのところに来た。「謎宮区の歯車兵の倒し方、うちにだけ教えてくれ。」"
+        },
+        "done": {
+          "zh": "你把打法寫成兩份一模一樣的紙條。兩邊拿到的時候，都以為自己賺到了。",
+          "en": "You write the strategy out twice, word for word. Both sides think they got the better deal.",
+          "ja": "攻略法をまったく同じ紙に二枚書いた。両方とも、自分たちが得をしたと思っている。"
         }
       },
       "q:sq-f6-dice": {
@@ -1847,6 +1944,11 @@
           "zh": "死他奇恩的城主說：「把骰子乖打倒，湊齊一到六點，就告訴你一個秘密。」",
           "en": "The lord of Stack-ion says: \"Knock out the Dice-ys until you've got every number from one to six, and I'll tell you a secret.\"",
           "ja": "スタッキオンの城主が言った。「サイコロちゃんを倒して、一から六までそろえたら、秘密をひとつ教えてやろう。」"
+        },
+        "done": {
+          "zh": "城主小聲說：「秘密就是...這題沒有答案。」他自己笑得很開心。",
+          "en": "The lord whispers: \"The secret is... this riddle has no answer.\" He laughs very hard at his own joke.",
+          "ja": "城主は小声で言った。「秘密とは……この問題には答えがないことだ。」本人だけが大笑いしていた。"
         }
       },
       "prologue": {
@@ -1951,6 +2053,78 @@
           "en": "More and more people are losing everything at the Blackjack tables of the Vol-up-ta casino. Someone saw a Fox Gambler-ish slip a card up its sleeve while dealing. The casino had to close the Blackjack tables for now.",
           "ja": "ボロプタのカジノのブラックジャックの台で、すってんてんになる人がどんどん増えている。キツネのギャンブラーが配りながら袖にカードを隠すのを見た人がいる。カジノはひとまずブラックジャックの台を閉めた。"
         }
+      },
+      "shroom": {
+        "title": {
+          "zh": "第十四章　蘑菇婆婆的爐子",
+          "en": "Chapter 14: Granny Shroom's Furnace",
+          "ja": "第十四章　キノコばあさんのかまど"
+        },
+        "steps.0.text": {
+          "zh": "要塞的角落有一座長得像大香菇的爐子，一個戴香菇帽的婆婆在顧火。",
+          "en": "In a corner of the fortress stands a furnace shaped like a giant mushroom. A granny in a mushroom cap tends the fire.",
+          "ja": "要塞の片すみに、大きなキノコのような形のかまどがある。キノコの帽子をかぶったおばあさんが火の番をしている。"
+        },
+        "steps.0.scene": {
+          "zh": "黑暗驚靈要塞的角落，有一座奇怪的爐子。\n傘蓋是爐蓋，菇柄是爐身，長得就像一朵大香菇。\n一個戴著香菇帽的婆婆坐在旁邊，打著瞌睡。\n爐子裡的火，只剩一點點紅光。",
+          "en": "In a corner of the Dork Elf Fortress stands an odd furnace.\nThe cap is the lid, the stem is the body: it looks exactly like a giant mushroom.\nA granny in a mushroom cap dozes beside it.\nThe fire inside is down to a faint red glow.",
+          "ja": "ドーク・エルフの要塞の片すみに、変わったかまどがあった。\nかさがふたで、柄が胴体。まるで大きなキノコそのものだ。\nキノコの帽子をかぶったおばあさんが、そばでうたた寝をしている。\nかまどの火は、かすかに赤く光っているだけだった。"
+        },
+        "steps.0.hint": {
+          "zh": "第 9 層的黑暗驚靈要塞。",
+          "en": "The Dork Elf Fortress on floor 9.",
+          "ja": "第 9 層のドーク・エルフの要塞。"
+        },
+        "steps.1.text": {
+          "zh": "「爐子快冷了。去幫我撿幾朵會發光的蘑菇來。」",
+          "en": "\"The furnace is going cold. Fetch me a few glowing mushrooms.\"",
+          "ja": "「かまどが冷えてきたよ。光るキノコをいくつか拾ってきておくれ。」"
+        },
+        "steps.1.scene": {
+          "zh": "婆婆睜開一隻眼睛。\n「爐子快冷了。」\n「戰場上的吸血疼，根上會長一種會發光的蘑菇。」\n「去幫我撿幾朵來。要新鮮的。」\n她又閉上眼睛了。",
+          "en": "The granny opens one eye.\n\"The furnace is going cold.\"\n\"The Vamp Vines on the battlefield grow a glowing mushroom on their roots.\"\n\"Go fetch me a few. Fresh ones.\"\nShe closes her eye again.",
+          "ja": "おばあさんが片目を開けた。\n「かまどが冷えてきたよ。」\n「戦場の吸血ツルの根っこに、光るキノコが生えるんだ。」\n「いくつか拾ってきておくれ。新しいのをね。」\nそう言うと、また目を閉じてしまった。"
+        },
+        "steps.1.hint": {
+          "zh": "驚靈戰場的吸血疼身上會掉會發光的蘑菇。",
+          "en": "Vamp Vines on the Elf Battlefield drop Glowshrooms.",
+          "ja": "エルフの戦場の吸血ツルが光るキノコを落とす。"
+        },
+        "steps.2.text": {
+          "zh": "蘑菇丟進爐子，傘蓋「噗」地跳起來，冒出香香的煙。",
+          "en": "You toss the mushrooms in. The cap pops up with a \"poof\" and fragrant smoke billows out.",
+          "ja": "キノコをかまどに入れると、かさが「ぽんっ」と跳ね上がり、いい匂いの煙が立ちのぼった。"
+        },
+        "steps.2.scene": {
+          "zh": "你把蘑菇丟進爐子。\n傘蓋「噗」的一聲跳了起來，冒出一陣香香的煙。\n婆婆笑了，露出沒剩幾顆的牙齒。\n「什麼東西放進去，都會變成別的東西。」\n「有時候變好，有時候燒焦。」\n「人生不就是這樣嗎。」",
+          "en": "You toss the mushrooms into the furnace.\nThe cap pops up with a \"poof\" and fragrant smoke billows out.\nThe granny grins, showing the few teeth she has left.\n\"Whatever goes in comes out as something else.\"\n\"Sometimes better. Sometimes burnt.\"\n\"Isn't that just life.\"",
+          "ja": "キノコをかまどに入れた。\nかさが「ぽんっ」と跳ね上がり、いい匂いの煙が立ちのぼる。\nおばあさんは、残り少ない歯を見せて笑った。\n「何を入れても、別のものになって出てくる。」\n「よくなるときもあれば、焦げるときもある。」\n「人生なんて、そんなもんさ。」"
+        },
+        "steps.2.hint": {
+          "zh": "回黑暗驚靈要塞。",
+          "en": "Back to the Dork Elf Fortress.",
+          "ja": "ドーク・エルフの要塞へ戻る。"
+        },
+        "steps.3.text": {
+          "zh": "婆婆丟給你三頂舊頭盔：「用不到的裝備，丟進來。」",
+          "en": "The old woman tosses you three old helmets. \"Gear you don't need. Throw it in.\"",
+          "ja": "おばあさんが古い兜を三つ放ってよこした。「いらない装備は、放りこみな。」"
+        },
+        "steps.3.scene": {
+          "zh": "婆婆從爐子後面拖出三頂舊頭盔，丟到你腳邊。\n「用不到的裝備，丟進來。」\n「[[爐子會把它們煉成礦]]，運氣好，還會跑出幾顆石頭。」\n「火開小一點，慢，可是穩。火開大一點，快，東西也多...」\n她瞇起眼睛：「[[可是會燒焦。燒焦了，就什麼都沒有。]]」\n「三顆一樣的石頭，可以換一顆別種的；礦可以換成高一階的。」\n「鍋子裡亂丟東西試配方也行。[[沒煉成的，會原封不動還給你]]，只收一點柴火錢。」\n「放進去之後，等它煉好再來拿。」",
+          "en": "The old woman drags three old helmets out from behind the furnace and drops them at your feet.\n\"Gear you don't need. Throw it in.\"\n\"[[The furnace turns them into ore.]] With luck, a few stones pop out too.\"\n\"Low heat is slow, but safe. High heat is fast, and you get more...\"\nShe squints at you. \"[[But it can burn. Burn it, and you get nothing.]]\"\n\"Three of the same stone can be turned into one of a different kind. Ore can be turned into the next grade up.\"\n\"You can toss things in the pot to try out recipes, too. [[Whatever doesn't turn into something comes back to you untouched.]] I only charge a bit for firewood.\"\n\"Once it's in, come back for it when it's done.\"",
+          "ja": "おばあさんは炉のうしろから古い兜を三つ引っぱりだして、あなたの足もとに放った。\n「いらない装備は、放りこみな。」\n「[[炉が鉱石に煉りなおしてくれる]]。運がよけりゃ、石もいくつか出てくる。」\n「弱火はゆっくりだけど、確実。強火は早いし、たくさん出る……」\nおばあさんは目を細めた。「[[でも、焦げることがある。焦げたら、なんにも残らないよ。]]」\n「同じ石三つで、別の種類の石一つに換えられる。鉱石はひとつ上の等級に換えられる。」\n「鍋にいろいろ放りこんで、配合を試すのもいい。[[うまくいかなかったものは、そっくりそのまま返ってくる]]。薪代だけはもらうけどね。」\n「入れたら、煉りあがったころに取りにきな。」"
+        },
+        "steps.3.hint": {
+          "zh": "茸鍊的「分解」：放幾件裝備進去。",
+          "en": "In the Shroom Forge's salvage tab: put some gear in.",
+          "ja": "茸錬の「分解」：装備をいくつか入れる。"
+        },
+        "ending": {
+          "zh": "「爐子借你用。」\n婆婆把一頂小小的香菇帽放在你頭上。\n「火要自己顧喔。」",
+          "en": "\"You can borrow the furnace.\"\nThe granny plops a tiny mushroom cap on your head.\n\"Mind the fire yourself, now.\"",
+          "ja": "「かまどを貸してあげるよ。」\nおばあさんは、小さなキノコの帽子をあなたの頭にのせた。\n「火の番は自分でするんだよ。」"
+        }
       }
     },
     "params": {
@@ -2002,6 +2176,2168 @@
       "talentSwitchCol": 100,
       "talentRefundCol": 20,
       "worldSpeed": 1
+    },
+    "observedHp": {
+      "f8-a": [
+        178
+      ],
+      "f8-b": [
+        326
+      ],
+      "f8-c": [
+        143
+      ],
+      "f8-d": [
+        337
+      ],
+      "f8-boss": [
+        3645
+      ],
+      "f9-b": [
+        116
+      ],
+      "f9-a": [
+        326
+      ],
+      "f9-d": [
+        686
+      ],
+      "f9-c": [
+        337
+      ],
+      "f9-f": [
+        238
+      ],
+      "f9-g": [
+        155
+      ],
+      "f9-e": [
+        194
+      ],
+      "f9-r": [
+        429
+      ],
+      "f9-boss": [
+        4455
+      ]
+    },
+    "observedDrops": [
+      {
+        "itemId": "ore-1",
+        "monsterId": "f1-boar"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f1-wolf"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f1-kobold-trooper"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f2-cow"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f2-taurus-striker"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f2-lesser-taurus"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f3-thorn"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f3-h"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f3-root"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f4-a"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f5-h"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f5-e"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f5-g"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f5-c"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f6-a"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f6-d"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sturdy-feet-t1",
+        "monsterId": "f1-boar"
+      },
+      {
+        "itemId": "sturdy-feet-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f1-wolf"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f1-boar"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f1-kobold-trooper"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f2-h"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f2-taurus-striker"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f2-lesser-taurus"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f2-cow"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f2-wasp"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f3-h"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f3-i"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f3-thorn"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f4-a"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f4-i"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f5-i"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f5-e"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f5-f"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f5-c"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f5-d"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f6-d"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f7-e"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-f"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-e"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "mg-f1-ring",
+        "monsterId": "f1-kobold-trooper"
+      },
+      {
+        "itemId": "sturdy-katana-t1",
+        "monsterId": "f1-kobold-trooper"
+      },
+      {
+        "itemId": "sturdy-katana-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "armor-t1",
+        "monsterId": "f1-kobold-sentinel"
+      },
+      {
+        "itemId": "armor-t1",
+        "monsterId": "f2-h"
+      },
+      {
+        "itemId": "armor-t1",
+        "monsterId": "f3-h"
+      },
+      {
+        "itemId": "armor-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "dagger-t1",
+        "monsterId": "f1-kobold-trooper"
+      },
+      {
+        "itemId": "dagger-t1",
+        "monsterId": "f3-i"
+      },
+      {
+        "itemId": "dagger-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "dagger-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "instant-1",
+        "monsterId": "f1-kobold-trooper"
+      },
+      {
+        "itemId": "instant-1",
+        "monsterId": "f4-i"
+      },
+      {
+        "itemId": "instant-1",
+        "monsterId": "f4-a"
+      },
+      {
+        "itemId": "instant-1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "instant-1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sturdy-head-t1",
+        "monsterId": "f2-wasp"
+      },
+      {
+        "itemId": "sturdy-head-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sturdy-head-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "fine-mid-t1",
+        "monsterId": "f2-cow"
+      },
+      {
+        "itemId": "fine-gloves-hp-t1",
+        "monsterId": "f2-cow"
+      },
+      {
+        "itemId": "sharp-light-t5",
+        "monsterId": "f2-cow"
+      },
+      {
+        "itemId": "sturdy-weapon-t1",
+        "monsterId": "f2-wasp"
+      },
+      {
+        "itemId": "sturdy-weapon-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sharp-scythe-t1",
+        "monsterId": "f2-i"
+      },
+      {
+        "itemId": "sturdy-ear-t1",
+        "monsterId": "f2-taurus-striker"
+      },
+      {
+        "itemId": "sturdy-ear-t1",
+        "monsterId": "f3-i"
+      },
+      {
+        "itemId": "sturdy-ear-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "axe-t1",
+        "monsterId": "f2-lesser-taurus"
+      },
+      {
+        "itemId": "sharp-weapon-t1",
+        "monsterId": "f2-lesser-taurus"
+      },
+      {
+        "itemId": "fine-acc-t1",
+        "monsterId": "f2-j"
+      },
+      {
+        "itemId": "sharp-gloves-hp-t1",
+        "monsterId": "f2-cow"
+      },
+      {
+        "itemId": "sharp-gloves-hp-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "boss-f2",
+        "monsterId": "f2-boss"
+      },
+      {
+        "itemId": "boss-f2-b",
+        "monsterId": "f2-boss"
+      },
+      {
+        "itemId": "fine-scythe-t1",
+        "monsterId": "f3-thorn"
+      },
+      {
+        "itemId": "fine-light-t1",
+        "monsterId": "f4-a"
+      },
+      {
+        "itemId": "enh-dark",
+        "monsterId": "f4-g"
+      },
+      {
+        "itemId": "sturdy-shield-t1",
+        "monsterId": "f4-a"
+      },
+      {
+        "itemId": "fine-armor-t1",
+        "monsterId": "f4-a"
+      },
+      {
+        "itemId": "sturdy-gloves-hp-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "light-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "boss-f4-c",
+        "monsterId": "f4-boss"
+      },
+      {
+        "itemId": "weapon-t5",
+        "monsterId": "f5-f"
+      },
+      {
+        "itemId": "weapon-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "weapon-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "weapon-t5",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "boss-f1-c",
+        "monsterId": "f1-boss"
+      },
+      {
+        "itemId": "boss-f3-d",
+        "monsterId": "f3-boss"
+      },
+      {
+        "itemId": "mg-f5-shield",
+        "monsterId": "f5-f"
+      },
+      {
+        "itemId": "mg-f5-shield",
+        "monsterId": "f5-c"
+      },
+      {
+        "itemId": "sturdy-acc-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "sturdy-acc-t5",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f5-d"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f8-j"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "gloves-hp-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "gloves-hp-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sturdy-ear-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "sturdy-ear-t5",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "sturdy-ear-t5",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "feet-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "feet-t5",
+        "monsterId": "f8-k"
+      },
+      {
+        "itemId": "sharp-ear-t5",
+        "monsterId": "f5-f"
+      },
+      {
+        "itemId": "sturdy-scythe-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "sturdy-scythe-t5",
+        "monsterId": "f6-a"
+      },
+      {
+        "itemId": "head-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "head-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sharp-light-t10",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "light-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "light-t5",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "gloves-atk-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "gloves-atk-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "armor-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "sturdy-katana-t10",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "sturdy-katana-t10",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "rapier-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "rapier-t5",
+        "monsterId": "f6-d"
+      },
+      {
+        "itemId": "rapier-t5",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "sharp-feet-t10",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "mid-t10",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "fine-acc-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "fine-acc-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "fine-acc-t5",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "fine-acc-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-mace-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "sharp-mace-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "sharp-mace-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sharp-axe-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "sharp-axe-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "mg-f5-armor",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "sharp-armor-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "sharp-armor-t5",
+        "monsterId": "f6-d"
+      },
+      {
+        "itemId": "set-secret1-hands",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "sturdy-katana-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "fine-gloves-hp-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "fine-gloves-hp-t5",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "fine-gloves-hp-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "fine-ear-t5",
+        "monsterId": "f5-a"
+      },
+      {
+        "itemId": "fine-ear-t5",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "fine-scythe-t5",
+        "monsterId": "f5-f"
+      },
+      {
+        "itemId": "fine-scythe-t5",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "fine-scythe-t5",
+        "monsterId": "f8-j"
+      },
+      {
+        "itemId": "fine-scythe-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "crystal-heal",
+        "monsterId": "f5-r"
+      },
+      {
+        "itemId": "crystal-teleport",
+        "monsterId": "f5-r"
+      },
+      {
+        "itemId": "crystal-teleport",
+        "monsterId": "f7-r"
+      },
+      {
+        "itemId": "crystal-teleport",
+        "monsterId": "f8-r"
+      },
+      {
+        "itemId": "mg-f5-dagger",
+        "monsterId": "f5-e"
+      },
+      {
+        "itemId": "food-s-1",
+        "monsterId": "f5-r"
+      },
+      {
+        "itemId": "boss-f5",
+        "monsterId": "f5-boss"
+      },
+      {
+        "itemId": "sturdy-gloves-atk-t5",
+        "monsterId": "f5-b"
+      },
+      {
+        "itemId": "sturdy-gloves-atk-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sturdy-gloves-atk-t5",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "sturdy-gloves-atk-t5",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "sturdy-scythe-t10",
+        "monsterId": "f6-a"
+      },
+      {
+        "itemId": "gloves-spd-t5",
+        "monsterId": "f6-a"
+      },
+      {
+        "itemId": "gloves-spd-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "gloves-spd-t5",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "gloves-spd-t5",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "fine-gloves-atk-t5",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "sharp-weapon-t10",
+        "monsterId": "f6-f"
+      },
+      {
+        "itemId": "sharp-weapon-t10",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "sturdy-weapon-t10",
+        "monsterId": "f7-e"
+      },
+      {
+        "itemId": "sturdy-weapon-t10",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "acc-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "fine-axe-t5",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "fine-axe-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "craft-value",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "craft-value",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "craft-value",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "craft-value",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "craft-value",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "craft-value",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sturdy-mace-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "mg-f4-sword",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "fine-ear-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "fine-ear-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "sturdy-dagger-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "craft-add",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "craft-add",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "craft-add",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "craft-add",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-ear-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "sturdy-acc-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sturdy-acc-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "sturdy-mid-t5",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sturdy-mid-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "feet-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "acc-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "acc-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "fine-dagger-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sturdy-head-t5",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sturdy-head-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sturdy-head-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-mace-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "mg-f4-shield",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sturdy-scythe-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "ear-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sharp-feet-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "fine-feet-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "craft-reroll",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "craft-reroll",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "craft-reroll",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "craft-remove",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "craft-remove",
+        "monsterId": "f7-e"
+      },
+      {
+        "itemId": "craft-remove",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "craft-remove",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "craft-remove",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "craft-remove",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sturdy-gloves-atk-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "gloves-hp-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "sharp-gloves-hp-t5",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "sharp-rapier-t1",
+        "monsterId": "f4-d"
+      },
+      {
+        "itemId": "fine-weapon-t1",
+        "monsterId": "f4-c"
+      },
+      {
+        "itemId": "boss-f1",
+        "monsterId": "f1-boss"
+      },
+      {
+        "itemId": "boss-f2-d",
+        "monsterId": "f2-boss"
+      },
+      {
+        "itemId": "sharp-katana-t5",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "sharp-katana-t5",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "sturdy-feet-t5",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "sturdy-feet-t5",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "mid-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "mid-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-head-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sharp-head-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "fine-gloves-spd-t5",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "sharp-weapon-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sturdy-weapon-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sharp-armor-t10",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "fine-mace-t5",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "fine-mace-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-gloves-atk-t10",
+        "monsterId": "f7-h"
+      },
+      {
+        "itemId": "sturdy-mace-t5",
+        "monsterId": "f7-i"
+      },
+      {
+        "itemId": "sturdy-mace-t5",
+        "monsterId": "f6-d"
+      },
+      {
+        "itemId": "mg-f6-katana",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "fine-armor-t5",
+        "monsterId": "f6-d"
+      },
+      {
+        "itemId": "ear-t5",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "shield-t5",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "shield-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sharp-feet-t5",
+        "monsterId": "f6-c"
+      },
+      {
+        "itemId": "sharp-feet-t5",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "sharp-feet-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sharp-rapier-t10",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "scythe-t10",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "mace-t5",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "sturdy-dagger-t5",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "sturdy-rapier-t5",
+        "monsterId": "f8-b"
+      },
+      {
+        "itemId": "sturdy-rapier-t5",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "sharp-axe-t10",
+        "monsterId": "f8-a"
+      },
+      {
+        "itemId": "fine-weapon-t5",
+        "monsterId": "f8-g"
+      },
+      {
+        "itemId": "fine-weapon-t5",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "dagger-t5",
+        "monsterId": "f8-e"
+      },
+      {
+        "itemId": "dagger-t5",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "sharp-head-t10",
+        "monsterId": "f8-g"
+      },
+      {
+        "itemId": "sharp-shield-t5",
+        "monsterId": "f8-g"
+      },
+      {
+        "itemId": "sharp-shield-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "scythe-t5",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "mg-f8-armor",
+        "monsterId": "f8-i"
+      },
+      {
+        "itemId": "axe-t10",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "mg-f8-ear",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "sturdy-mid-t10",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "sturdy-shield-t10",
+        "monsterId": "f8-h"
+      },
+      {
+        "itemId": "light-t10",
+        "monsterId": "f8-g"
+      },
+      {
+        "itemId": "boss-f7-b",
+        "monsterId": "f7-boss"
+      },
+      {
+        "itemId": "boss-f7-c",
+        "monsterId": "f7-boss"
+      },
+      {
+        "itemId": "sharp-rapier-t5",
+        "monsterId": "f8-k"
+      },
+      {
+        "itemId": "sharp-rapier-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "boss-f7",
+        "monsterId": "f7-boss"
+      },
+      {
+        "itemId": "sharp-mid-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-mid-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "mg-f8-sword",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sturdy-light-t10",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "fine-head-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sturdy-light-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "katana-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "fine-feet-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "armor-t10",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "boss-f8-b",
+        "monsterId": "f8-boss"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f9-a"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f9-f"
+      },
+      {
+        "itemId": "ore-1",
+        "monsterId": "f9-e"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f9-f"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f9-e"
+      },
+      {
+        "itemId": "food-1",
+        "monsterId": "f9-r"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f9-d"
+      },
+      {
+        "itemId": "instant-1b",
+        "monsterId": "f9-c"
+      },
+      {
+        "itemId": "sturdy-ear-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "light-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-armor-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "fine-ear-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "crystal-teleport",
+        "monsterId": "f9-r"
+      },
+      {
+        "itemId": "sturdy-scythe-t10",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "gloves-spd-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "fine-gloves-atk-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "acc-t5",
+        "monsterId": "f9-a"
+      },
+      {
+        "itemId": "craft-add",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "craft-reroll",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sturdy-feet-t5",
+        "monsterId": "f9-f"
+      },
+      {
+        "itemId": "sturdy-weapon-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sturdy-mace-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sturdy-mace-t5",
+        "monsterId": "f9-f"
+      },
+      {
+        "itemId": "fine-armor-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "ear-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-feet-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-rapier-t10",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "fine-weapon-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "dagger-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sharp-head-t10",
+        "monsterId": "f9-f"
+      },
+      {
+        "itemId": "katana-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "katana-t5",
+        "monsterId": "f9-f"
+      },
+      {
+        "itemId": "mg-f8-rapier",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "mg-f8-hands",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "fine-katana-t5",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sturdy-armor-t10",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "gloves-atk-t10",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "set-secret1-acc",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sharp-gloves-atk-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sharp-gloves-spd-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "sturdy-armor-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "head-t10",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sturdy-axe-t5",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "shield-t10",
+        "monsterId": "f8-d"
+      },
+      {
+        "itemId": "sharp-scythe-t10",
+        "monsterId": "f8-c"
+      },
+      {
+        "itemId": "boss-f8-c",
+        "monsterId": "f8-boss"
+      },
+      {
+        "itemId": "sturdy-feet-t10",
+        "monsterId": "f9-a"
+      },
+      {
+        "itemId": "sharp-acc-t5",
+        "monsterId": "f9-f"
+      },
+      {
+        "itemId": "sturdy-head-t10",
+        "monsterId": "f9-r"
+      },
+      {
+        "itemId": "mg-f9-scythe",
+        "monsterId": "f9-e"
+      },
+      {
+        "itemId": "boss-f9-c",
+        "monsterId": "f9-boss"
+      },
+      {
+        "itemId": "enh-gem",
+        "monsterId": "f8-boss"
+      },
+      {
+        "itemId": "enh-dark",
+        "monsterId": "f8-boss"
+      },
+      {
+        "itemId": "enh-gem",
+        "monsterId": "f9-boss"
+      }
+    ],
+    "observedSkills": {
+      "f1-boss": [
+        "if-axe",
+        "if-talwar"
+      ],
+      "f2-cow": [
+        "m-smash"
+      ],
+      "f2-wasp": [
+        "m-double"
+      ],
+      "f2-i": [
+        "m-smash"
+      ],
+      "f2-h": [
+        "m-smash"
+      ],
+      "f2-taurus-striker": [
+        "m-smash"
+      ],
+      "f2-lesser-taurus": [
+        "m-smash"
+      ],
+      "f2-boss": [
+        "b-guillotine"
+      ],
+      "f3-treant": [
+        "m-smash"
+      ],
+      "f3-root": [
+        "m-double"
+      ],
+      "f3-thorn": [
+        "m-double"
+      ],
+      "f3-elf": [
+        "m-smash"
+      ],
+      "f3-h": [
+        "m-smash"
+      ],
+      "f3-i": [
+        "m-smash"
+      ],
+      "f3-boss": [
+        "b-cleave"
+      ],
+      "f4-a": [
+        "m-double"
+      ],
+      "f4-r": [
+        "m-smash"
+      ],
+      "f4-f": [
+        "m-smash"
+      ],
+      "f4-i": [
+        "m-double"
+      ],
+      "f4-b": [
+        "m-double"
+      ],
+      "f4-h": [
+        "m-smash"
+      ],
+      "f4-d": [
+        "m-smash"
+      ],
+      "f4-c": [
+        "m-double"
+      ],
+      "f4-boss": [
+        "b-skyfall"
+      ],
+      "f5-f": [
+        "m-double"
+      ],
+      "f5-e": [
+        "m-smash"
+      ],
+      "f5-b": [
+        "m-double"
+      ],
+      "f5-a": [
+        "m-double"
+      ],
+      "f5-r": [
+        "m-smash"
+      ],
+      "f5-h": [
+        "m-double"
+      ],
+      "f5-i": [
+        "m-smash"
+      ],
+      "f5-g": [
+        "m-smash"
+      ],
+      "f5-c": [
+        "m-smash"
+      ],
+      "f5-d": [
+        "m-smash"
+      ],
+      "f5-boss": [
+        "b-nova",
+        "b-summon",
+        "b-meteor"
+      ],
+      "f6-a": [
+        "m-double"
+      ],
+      "f6-b": [
+        "m-smash"
+      ],
+      "f6-f": [
+        "m-smash"
+      ],
+      "f6-e": [
+        "m-double"
+      ],
+      "f6-c": [
+        "m-smash"
+      ],
+      "f6-d": [
+        "m-smash"
+      ],
+      "f6-g": [
+        "m-double"
+      ],
+      "f6-boss": [
+        "b-sweep",
+        "b-charge"
+      ],
+      "f7-g": [
+        "m-smash"
+      ],
+      "f7-e": [
+        "m-smash"
+      ],
+      "f7-h": [
+        "m-double"
+      ],
+      "f7-i": [
+        "m-double"
+      ],
+      "f7-f": [
+        "m-double"
+      ],
+      "f7-c": [
+        "m-smash"
+      ],
+      "f7-d": [
+        "m-double"
+      ],
+      "f7-boss": [
+        "b-impale",
+        "b-storm",
+        "b-summon"
+      ],
+      "f8-a": [
+        "m-smash"
+      ],
+      "f8-b": [
+        "m-smash"
+      ],
+      "f8-g": [
+        "m-double"
+      ],
+      "f8-e": [
+        "m-double"
+      ],
+      "f8-f": [
+        "m-smash"
+      ],
+      "f8-r": [
+        "m-smash"
+      ],
+      "f8-h": [
+        "m-double"
+      ],
+      "f8-i": [
+        "m-double"
+      ],
+      "f8-d": [
+        "m-smash"
+      ],
+      "f8-j": [
+        "m-smash"
+      ],
+      "f8-k": [
+        "m-smash"
+      ],
+      "f8-c": [
+        "m-double"
+      ],
+      "f8-boss": [
+        "b-quake",
+        "b-smash",
+        "b-summon"
+      ],
+      "f9-a": [
+        "m-smash"
+      ],
+      "f9-b": [
+        "m-double"
+      ],
+      "f9-d": [
+        "m-double"
+      ],
+      "f9-c": [
+        "m-smash"
+      ],
+      "f9-f": [
+        "m-double"
+      ],
+      "f9-e": [
+        "m-smash"
+      ],
+      "f9-g": [
+        "m-double"
+      ],
+      "f9-r": [
+        "m-smash"
+      ],
+      "f9-boss": [
+        "b-crush",
+        "b-breath"
+      ]
+    },
+    "fwb": [
+      {
+        "area": {
+          "id": "f10-wb",
+          "floor": 10,
+          "kind": "field",
+          "wb": "fwb-f10",
+          "name": {
+            "zh": "第10層 百鬼的屋脊",
+            "en": "Floor 10 Ridge of a Hundred Oni",
+            "ja": "第10層 百鬼の屋根"
+          },
+          "desc": {
+            "zh": "鬼之山最深處，一座只剩屋頂的城。屋脊上坐著一個比城還大的鬼。",
+            "en": "At the far end of Oni Mountain, a castle with only its roof left. On the ridge sits an oni bigger than the castle.",
+            "ja": "鬼の山のいちばん奥、屋根だけ残った城。棟の上に城より大きな鬼が座っている。"
+          },
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "links": []
+        },
+        "from": "f10-wilds",
+        "m": "fwb-f10",
+        "name": {
+          "zh": "鬼哇大將",
+          "en": "Oni-Wow General",
+          "ja": "鬼ワァ大将"
+        }
+      }
+    ],
+    "items": [
+      {
+        "id": "ai-gpt",
+        "name": {
+          "zh": "吉皮提鎧甲",
+          "en": "Gee-Pee-Tee Armor",
+          "ja": "ジーピーティーの鎧"
+        },
+        "desc": {
+          "zh": "什麼都擋得住一點。擋不住的時候，會很有自信地告訴你剛剛擋住了。",
+          "en": "Blocks a little of everything. When it fails, it confidently tells you it blocked it.",
+          "ja": "なんでも少しは防ぐ。防げなかったときは、自信満々に「防ぎました」と言う。"
+        },
+        "kind": "equipment",
+        "slot": "armor",
+        "rare": true,
+        "named": true,
+        "armorType": "mid",
+        "price": 1040,
+        "reqLevel": 2,
+        "bonus": {
+          "def": 11,
+          "maxHp": 59
+        },
+        "fx": {
+          "zh": "被打的時候，有時很有自信地擋住了一半；偶爾說錯了，反而更痛。",
+          "en": "When hit, it sometimes confidently blocks half. Now and then it's wrong, and it hurts more.",
+          "ja": "殴られたとき、ときどき自信満々に半分防ぐ。たまに間違えて、かえって痛い。"
+        }
+      },
+      {
+        "id": "ai-cursor",
+        "name": {
+          "zh": "柯瑟手套",
+          "en": "Kerser Gloves",
+          "ja": "カーサーの手袋"
+        },
+        "desc": {
+          "zh": "按一下 Tab 就自己打完了，打錯的地方也是。",
+          "en": "Press Tab and it finishes for you. The mistakes too.",
+          "ja": "Tab を押せば勝手に最後までやってくれる。間違いもそのまま。"
+        },
+        "kind": "equipment",
+        "slot": "hands",
+        "rare": true,
+        "named": true,
+        "gloveType": "spd",
+        "price": 1040,
+        "reqLevel": 2,
+        "bonus": {
+          "agi": 2
+        },
+        "fx": {
+          "zh": "劍技有時會自己補完，特別痛；偶爾補錯了，很輕。",
+          "en": "Skills sometimes autocomplete and hit extra hard. Now and then they autocomplete wrong and barely land.",
+          "ja": "スキルがときどき勝手に補完されて、とても痛い。たまに補完を間違えて、ほとんど効かない。"
+        }
+      },
+      {
+        "id": "ai-midjourney",
+        "name": {
+          "zh": "米德炯尼戒指",
+          "en": "Midjurny Ring",
+          "ja": "ミッドジャーニの指輪"
+        },
+        "desc": {
+          "zh": "戴上之後看什麼都很美，只是手指好像多了一根。",
+          "en": "Everything looks beautiful while you wear it. You do seem to have an extra finger, though.",
+          "ja": "つけると何もかも美しく見える。ただ、指が一本多い気がする。"
+        },
+        "kind": "equipment",
+        "slot": "accessory",
+        "rare": true,
+        "named": true,
+        "price": 1040,
+        "reqLevel": 2,
+        "bonus": {
+          "agi": 2,
+          "crit": 0.025
+        }
+      }
+    ],
+    "pointShop": [
+      {
+        "id": "vip-7",
+        "cat": "vip",
+        "name": {
+          "zh": "微皮卡（7 天）",
+          "en": "Very Idle Pass (7 days)",
+          "ja": "微皮カード（7日）"
+        },
+        "desc": {
+          "zh": "買了馬上生效：人數滿的時候不用排隊、可以選名字的顏色。還沒到期的話，時間接著往後加。",
+          "en": "Takes effect right away: skip the queue when the world is full, and pick a name color. Stacks with the time you have left.",
+          "ja": "買ったらすぐ有効：満員でも並ばずに入れて、名前の色を選べる。期限が残っていれば後ろに足される。"
+        },
+        "price": 50
+      },
+      {
+        "id": "maid-30",
+        "cat": "maid",
+        "name": {
+          "zh": "女僕（30 天）",
+          "en": "Maid (30 days)",
+          "ja": "メイド（30日）"
+        },
+        "desc": {
+          "zh": "城鎮外也能用倉庫、商店、市集、股市、公會倉庫，燉好、煉好的自動收進背包，設定裡過濾掉的掉落自動賣掉。頭目房間裡不能用。",
+          "en": "Use storage, the shop, the Marketplace, the Stock Market and guild storage outside town; finished stews and Shroom Forge batches go straight to your bag, and loot caught by your filter is sold automatically. Not usable in boss rooms.",
+          "ja": "街の外でも倉庫・ショップ・マーケット・株式市場・ギルド倉庫が使え、煮込みと茸錬は自動でカバンへ、設定でフィルターした戦利品は自動で売る。ボス部屋では使えない。"
+        },
+        "price": 180
+      },
+      {
+        "id": "butler-30",
+        "cat": "maid",
+        "name": {
+          "zh": "男僕（30 天）",
+          "en": "Butler (30 days)",
+          "ja": "執事（30日）"
+        },
+        "desc": {
+          "zh": "城鎮外也能用倉庫、商店、市集、股市、公會倉庫，燉好、煉好的自動收進背包，設定裡過濾掉的掉落自動賣掉。頭目房間裡不能用。",
+          "en": "Use storage, the shop, the Marketplace, the Stock Market and guild storage outside town; finished stews and Shroom Forge batches go straight to your bag, and loot caught by your filter is sold automatically. Not usable in boss rooms.",
+          "ja": "街の外でも倉庫・ショップ・マーケット・株式市場・ギルド倉庫が使え、煮込みと茸錬は自動でカバンへ、設定でフィルターした戦利品は自動で売る。ボス部屋では使えない。"
+        },
+        "price": 180
+      },
+      {
+        "id": "vip-30",
+        "cat": "vip",
+        "name": {
+          "zh": "微皮卡（30 天）",
+          "en": "Very Idle Pass (30 days)",
+          "ja": "微皮カード（30日）"
+        },
+        "desc": {
+          "zh": "買了馬上生效：人數滿的時候不用排隊、可以選名字的顏色。還沒到期的話，時間接著往後加。",
+          "en": "Takes effect right away: skip the queue when the world is full, and pick a name color. Stacks with the time you have left.",
+          "ja": "買ったらすぐ有効：満員でも並ばずに入れて、名前の色を選べる。期限が残っていれば後ろに足される。"
+        },
+        "price": 120
+      },
+      {
+        "id": "cape-nocape",
+        "cat": "cape",
+        "name": {
+          "zh": "不要披風",
+          "en": "No Capes",
+          "ja": "マントはダメ"
+        },
+        "desc": {
+          "zh": "裁縫師說過：「不要披風！」所以它什麼都不會做。",
+          "en": "The tailor was very clear: \"No capes!\" So it does absolutely nothing.",
+          "ja": "仕立て屋は言った。「マントはダメ！」だから何の効果もない。"
+        },
+        "price": 30
+      },
+      {
+        "id": "cape-towel",
+        "cat": "cape",
+        "name": {
+          "zh": "嬸嬸的浴巾",
+          "en": "Auntie's Bath Towel",
+          "ja": "おばちゃんのバスタオル"
+        },
+        "desc": {
+          "zh": "嬸嬸剛洗好的，還有洗衣精的香味。披上去很溫暖，除此之外沒有任何用處。",
+          "en": "Freshly washed by Auntie and still smells of detergent. Warm on the shoulders. Useless otherwise.",
+          "ja": "おばちゃんが洗ったばかりで、洗剤のいい匂いがする。羽織ると暖かい。それ以外は何の役にも立たない。"
+        },
+        "price": 30
+      },
+      {
+        "id": "cape-emperor",
+        "cat": "cape",
+        "name": {
+          "zh": "國王的新披風",
+          "en": "The Emperor's New Cape",
+          "ja": "王様の新しいマント"
+        },
+        "desc": {
+          "zh": "只有聰明的人才看得見。穿上之後，看起來跟沒穿一樣。",
+          "en": "Only the wise can see it. Once you put it on, you look exactly like you are wearing nothing.",
+          "ja": "賢い人にしか見えない。着てみると、何も着ていないのと同じに見える。"
+        },
+        "price": 30
+      },
+      {
+        "id": "cape-flag",
+        "cat": "cape",
+        "name": {
+          "zh": "攻略組的旗子",
+          "en": "Clearers' Banner",
+          "ja": "攻略組の旗"
+        },
+        "desc": {
+          "zh": "綁在背上很有氣勢。不會讓你變強，頭目也不會比較怕你。",
+          "en": "Strapped to your back, it looks impressive. It won't make you stronger, and bosses won't fear you any more.",
+          "ja": "背中にくくると勢いがある。強くはならないし、ボスに怖がられもしない。"
+        },
+        "price": 30
+      },
+      {
+        "id": "rename",
+        "cat": "item",
+        "name": {
+          "zh": "羹冥券",
+          "en": "Re:Name Ticket",
+          "ja": "怪冥券"
+        },
+        "desc": {
+          "zh": "到冥界喝一碗羹，忘掉舊的名字，換一個新的。",
+          "en": "Trade in your old name for a new one.",
+          "ja": "冥界の汁を一杯飲めば、古い名前を忘れて新しい名前になる。"
+        },
+        "price": 200
+      },
+      {
+        "id": "locked-9",
+        "cat": "item",
+        "name": {
+          "zh": "",
+          "en": "",
+          "ja": ""
+        },
+        "desc": {
+          "zh": "",
+          "en": "",
+          "ja": ""
+        },
+        "price": null
+      },
+      {
+        "id": "bag-page",
+        "cat": "expand",
+        "name": {
+          "zh": "背包擴充券",
+          "en": "Bag Expansion Ticket",
+          "ja": "カバン拡張券"
+        },
+        "desc": {
+          "zh": "背包多 50 格。每買一張，下一張的價格加倍。",
+          "en": "Adds 50 bag slots. Each ticket doubles the price of the next.",
+          "ja": "カバンが50マス増える。買うたびに次の値段は倍になる。"
+        },
+        "price": 20
+      },
+      {
+        "id": "wh-page",
+        "cat": "expand",
+        "name": {
+          "zh": "倉庫擴充券",
+          "en": "Storage Expansion Ticket",
+          "ja": "倉庫拡張券"
+        },
+        "desc": {
+          "zh": "倉庫多 20 格。角色倒下時，下一個角色只能接手倉庫裡的 20 格物品：先留標了「保留」的，其他的留最值錢的。",
+          "en": "Adds 20 storage slots. When your character falls, the next one inherits only 20 slots: the ones you marked Kept first, then the most valuable.",
+          "ja": "倉庫が20マス増える。キャラが倒れると、次のキャラが受け継げるのは20マス分だけ：「保留」にしたものが先、残りは価値の高いもの。"
+        },
+        "price": 50
+      },
+      {
+        "id": "gear-set",
+        "cat": "expand",
+        "name": {
+          "zh": "裝備方案擴充券",
+          "en": "Gear Set Expansion Ticket",
+          "ja": "装備セット拡張券"
+        },
+        "desc": {
+          "zh": "裝備方案多一套。",
+          "en": "One more gear set.",
+          "ja": "装備セットが1つ増える。"
+        },
+        "price": 50
+      },
+      {
+        "id": "locked-13",
+        "cat": "expand",
+        "name": {
+          "zh": "",
+          "en": "",
+          "ja": ""
+        },
+        "desc": {
+          "zh": "",
+          "en": "",
+          "ja": ""
+        },
+        "price": null
+      }
+    ],
+    "observedRewards": {
+      "f8-a": [
+        {
+          "level": 20,
+          "exp": 52,
+          "col": 39
+        }
+      ],
+      "f8-b": [
+        {
+          "level": 20,
+          "exp": 71,
+          "col": 38
+        }
+      ],
+      "f8-c": [
+        {
+          "level": 20,
+          "exp": 80,
+          "col": 50
+        },
+        {
+          "level": 21,
+          "exp": 80,
+          "col": 50
+        }
+      ],
+      "f8-d": [
+        {
+          "level": 20,
+          "exp": 182,
+          "col": 42
+        },
+        {
+          "level": 21,
+          "exp": 182,
+          "col": 42
+        }
+      ],
+      "f9-b": [
+        {
+          "level": 21,
+          "exp": 67,
+          "col": 45
+        }
+      ],
+      "f9-a": [
+        {
+          "level": 21,
+          "exp": 71,
+          "col": 38
+        }
+      ],
+      "f9-d": [
+        {
+          "level": 21,
+          "exp": 70,
+          "col": 33
+        }
+      ],
+      "f9-c": [
+        {
+          "level": 21,
+          "exp": 182,
+          "col": 42
+        }
+      ],
+      "f9-f": [
+        {
+          "level": 21,
+          "exp": 53,
+          "col": 109
+        }
+      ],
+      "f9-g": [
+        {
+          "level": 21,
+          "exp": 67,
+          "col": 40
+        }
+      ],
+      "f9-e": [
+        {
+          "level": 21,
+          "exp": 74,
+          "col": 45
+        }
+      ],
+      "f9-r": [
+        {
+          "level": 21,
+          "exp": 192,
+          "col": 83
+        }
+      ]
     }
   }
 }
