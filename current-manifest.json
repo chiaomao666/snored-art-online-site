@@ -24,7 +24,9 @@
     "observedDropSources": 366,
     "monstersWithObservedSkills": 73,
     "additionalWorldBosses": 1,
-    "additionalEquipment": 3
+    "additionalEquipment": 3,
+    "legacyMonsterReferences": 490,
+    "legacyDropReferences": 11461
   },
   "serverValues": [
     "monster stats",

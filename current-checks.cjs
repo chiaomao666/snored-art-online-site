@@ -34,6 +34,7 @@ const coverage=require('./server-guide-overlay.js').apply(G,server);assert.equal
 for(const f of ['server-guide-data.js','server-guide-overlay.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
 assert.equal(D.items.length,4731);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3010);assert.equal(D.monsters.length,991);assert.equal(D.areas.length,594);
 assert.equal(coverage.observedHp,14);assert.equal(coverage.dropSources,366);assert.equal(coverage.monsterSkills,73);
+assert.equal(coverage.legacyMonsters,490);assert.equal(coverage.legacyDropEntries,11461);assert.equal(D.monsters.find(x=>x.id==='f1-boar').legacyReference.stats.maxHp,46);assert.equal(D.monsters.find(x=>x.id==='f4-c').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='f8-a').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='wb-jack').legacyReference,undefined);
 assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,366);
 for(const row of server.data.observedDrops){assert(D.items.some(x=>x.id===row.itemId),row.itemId);assert(D.monsters.some(x=>x.id===row.monsterId),row.monsterId);assert.deepEqual(Object.keys(row).sort(),['itemId','monsterId']);}
 for(const [id,skills]of Object.entries(server.data.observedSkills)){assert(D.monsters.some(x=>x.id===id));for(const skill of skills)assert(server.data.skills[skill],skill);}

@@ -58,9 +58,24 @@ function apply(G,payload){
   const from=areas.get(row.from);if(from){from.links??=[];if(!from.links.includes(area.id))from.links.push(area.id);}
  }
  const jack=areas.get('f1-wb');if(jack)jack.worldBossId='wb-jack';
+ D.legacyMonsters=Object.create(null);
+ const legacy=s.legacyFallback;
+ const stable=x=>x&&typeof x==='object'?Array.isArray(x)?x.map(stable):Object.fromEntries(Object.keys(x).sort().map(k=>[k,stable(x[k])])):x;
+ const itemCheck=item=>JSON.stringify(stable(Object.fromEntries(['id','kind','slot','reqLevel','weaponType','armorType','gloveType','shield','speed','bonus','heal','healDurationMs','set','cosmeticOnly','rare','named','bound','nameZh'].map(k=>[k,k==='nameZh'?(typeof item.name?.zh==='string'&&!['...','…','???'].includes(item.name.zh)?item.name.zh:null):['rare','named','bound'].includes(k)?!!item[k]:item[k]??null]))));
+ const compatibleLegacyItems=new Set(Object.entries(legacy?.itemChecks||{}).filter(([id,signature])=>items.has(id)&&itemCheck(items.get(id))===signature).map(([id])=>id));
+ for(const m of D.monsters)delete m.legacyReference;
+ for(const [id,row]of Object.entries(legacy?.monsters||{})){
+  const m=mobs.get(id);if(!m||m.levelUnknown||m.worldBoss||m.level!==row.level||valid(m.name)&&m.name.zh!=='...'&&m.name.zh!==row.name?.zh)continue;
+  const conflict=Object.entries(m.stats||{}).some(([k,v])=>Number.isFinite(v)&&(!Number.isFinite(row.stats?.[k])||Math.abs(v-row.stats[k])>1e-9))
+   ||m.observedMaxHp?.some(v=>!Number.isFinite(row.stats?.maxHp)||Math.abs(v-row.stats.maxHp)>1e-9)
+   ||['exp','col'].some(k=>Number.isFinite(m[k])&&m[k]!==row[k]);
+  if(conflict)continue;
+  const drops=(row.drops||[]).filter(drop=>compatibleLegacyItems.has(drop.itemId)&&Number.isFinite(drop.chance)&&drop.chance>0&&drop.chance<=1);
+  m.legacyReference={...row,drops};D.legacyMonsters[id]=m.legacyReference;
+ }
  D.serverGuide=s;D.serverGuideAsset=payload.asset;
  if(G.applyParameters)G.applyParameters(s.params||{});
- const report={names,storyFields:stories,beasts,bosses:Object.keys(s.bosses).length,floorDrops:Object.keys(s.floorDrops).length,observedHp:Object.keys(s.observedHp||{}).length,dropSources:(s.observedDrops||[]).length,monsterSkills:Object.keys(s.observedSkills||{}).length,worldBosses:(s.fwb||[]).length,items:(s.items||[]).length};
+ const report={names,storyFields:stories,beasts,bosses:Object.keys(s.bosses).length,floorDrops:Object.keys(s.floorDrops).length,observedHp:Object.keys(s.observedHp||{}).length,dropSources:(s.observedDrops||[]).length,monsterSkills:Object.keys(s.observedSkills||{}).length,worldBosses:(s.fwb||[]).length,items:(s.items||[]).length,legacyMonsters:Object.keys(D.legacyMonsters).length,legacyDropEntries:Object.values(D.legacyMonsters).reduce((n,m)=>n+m.drops.length,0)};
  D.serverGuideCoverage=report;return report;
 }
 if(typeof module==='object')module.exports={apply};
