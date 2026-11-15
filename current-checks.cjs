@@ -24,6 +24,6 @@ for(const agi of [-100,0,1,250,1000])for(const spd of [-.9,0,.1,1,4]){const spee
 const p=G.createPlayer({level:10,style:'sword',slots:{weapon:{id:'weapon-t1'}},talents:{}});assert.equal(G.validateTree(p,'sword',{'sk:vertical':1}),null);assert(G.validateTree(p,'sword',{'sk:knife-fan':1})===null);assert(G.validateTree(p,'sword',{'sword-7-resBlunt':1}));
 const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');for(const match of html.matchAll(/(?:src|href)="([^"#?:]+\.(?:js|css|svg))"/g))assert(fs.existsSync(path.join(__dirname,match[1])));
 assert(!html.includes('src="data.js"'));assert(!html.includes('src="reward-guide.js"'));assert(!html.includes('src="site.js"'));
-for(const f of ['current-runtime.js','current-site.js','build-engine.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
+for(const f of ['current-runtime.js','current-site.js','build-engine.js','classic-templates.js','classic-layout.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
 const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'current-manifest.json')));assert.equal(manifest.counts.talentNodes,D.talentNodes.length);
 console.log(JSON.stringify({status:'passed',catalogue:'75 floors / 3007 equipment / 990 monsters',experienceLevels:120,skills:48,branches:96,talentNodes:408,calculations:'base, dual hand, actual gear stats, buffs, attack speed, talent connectivity'}));
