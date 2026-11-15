@@ -1,0 +1,26 @@
+{
+  "version": "2026-11-15",
+  "sha256": "bbc1f4c0b4ecaeb5a314165d98954fc10f0ac137ef98ad434fb2a18134b261e6",
+  "counts": {
+    "items": 4728,
+    "monsters": 990,
+    "areas": 593,
+    "floors": 75,
+    "sideQuests": 218,
+    "chapters": 94,
+    "talents": 32,
+    "skills": 48,
+    "skillPaths": 96,
+    "buffs": 24,
+    "talentNodes": 408
+  },
+  "serverValues": [
+    "monster stats",
+    "monster rewards",
+    "monster drops",
+    "translations",
+    "affix rolls",
+    "set effects",
+    "unique balance"
+  ]
+}

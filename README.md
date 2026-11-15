@@ -1,3 +1,9 @@
+> Current implementation: [major-update notes](CURRENT-UPDATE.md).
+> Validate with `node current-checks.cjs` or `node validate.cjs`, then build with `node build-site.cjs`.
+> The public site uses current-runtime.js / current-site.js. Notes below document the earlier implementation.
+
+---
+
 # Snored Art Online 攻略資料庫
 
 任務素材掉落率、魔王掉落、裝備圖鑑、獨特技能、樓層情報與攻速 500 試算。

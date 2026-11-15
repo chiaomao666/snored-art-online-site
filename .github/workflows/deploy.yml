@@ -29,13 +29,12 @@ jobs:
           package-manager-cache: false
       - name: Check JavaScript syntax
         run: |
-          node --check site.js
-          node --check speed-engine.js
-          node --check drop-engine.js
+          node --check current-runtime.js
+          node --check current-site.js
+          node --check build-engine.js
       - name: Build browser data and validate guide
         run: |
-          node build-data.cjs
-          node validate.cjs
+          node current-checks.cjs
       - name: Prepare public website
         run: node build-site.cjs
       - name: Upload Pages artifact
