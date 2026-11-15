@@ -32,6 +32,7 @@ function createPlayer(config={}){
 function calculate(config){const player=createPlayer(config),stats=gh(player),interval=yc(stats);return{player,stats,interval,attackSpeed:ff(interval),base:Ii(player.level),activeStyle:La(player),talentPoints:vb(player),spent:$o(player,player.talentStyle)};}
 function gear(item,entry={}){return entry.bonus?{...item,bonus:{...entry.bonus}}:eA(item,{enh:entry.enh||{},plus:Object.values(entry.enh||{}).reduce((a,b)=>a+b,0)});}
 const API={catalog,calculate,createPlayer,gear,baseStats:Ii,experience:Bi,totalExperience:O0,interval:yc,attackSpeed:ff,
+ applyParameters:q0,getParameters:bs,applyGuideTranslations:hi=>k0(hi,ref=>{const split=ref.indexOf(':'),table={a:ge,m:mt,i:le}[ref.slice(0,split)];return table&&table[ref.slice(split+1)];}),
  skillStats:j1,skillProgress:uc,skillXpRequired:Fc,enhanceDirections:Qw,maxEnhance:X$,nativeGear:Se,
  softSpeed:W0,softAgility:z0,statCap:Ob,buildNode:ks,talentRank:ca,talentTierAllowed:Sb,
  quality:Cl,weaponTwoHanded:dm,slotKeys:Fn,validateTree:yb};

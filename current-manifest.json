@@ -15,7 +15,11 @@
     "talentNodes": 408,
     "achievementTitles": 35,
     "achievements": 469,
-    "hiddenAchievements": 17
+    "hiddenAchievements": 17,
+    "serverMonsterRecords": 20,
+    "serverMonsterHp": 5,
+    "bossGuides": 9,
+    "floorDropPools": 2
   },
   "serverValues": [
     "monster stats",
@@ -25,6 +29,8 @@
     "affix rolls",
     "set effects",
     "unique balance",
-    "raw achievement bonus precision and hidden conditions"
-  ]
+    "hidden achievement conditions"
+  ],
+  "achievementPrecision": "server-json",
+  "serverAsset": "main-BSa8z2Bt.js"
 }
