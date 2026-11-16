@@ -6,6 +6,12 @@
   const [page,query]=(location.hash.slice(1)||'home').split('?');
   if(page==='systems'){
    const main=document.getElementById('main-content');if(main.querySelector('[data-current-mechanics]'))return;
+   const caps=D.serverGuide?.mechanics?.softCaps;
+   if(caps){
+    const names={dmgTaken:'減傷',ailRes:'異常抗性',cdr:'冷卻縮減',armorPen:'穿透',evade:'迴避'};
+    const table=[...main.querySelectorAll('table')].find(t=>t.querySelector('thead')?.textContent.includes('基本上限'));
+    if(table){table.dataset.softCaps='';table.querySelector('thead').innerHTML='<tr><th>項目</th><th>遞減起點</th><th>逐漸逼近的極限</th></tr>';table.querySelector('tbody').innerHTML=Object.entries(caps).filter(([k,v])=>names[k]&&Array.isArray(v)&&v.length===2&&v.every(Number.isFinite)).map(([k,[from,to]])=>`<tr><td>${names[k]}</td><td>${from*100}%</td><td>${to*100}%</td></tr>`).join('')+['斬擊抗性','突刺抗性','打擊抗性','龍族抗性'].map(name=>`<tr><td>${name}</td><td colspan="2">基本上限 70%</td></tr>`).join('');}
+   }
    const rows=D.serverGuide?.mechanics?.rules||[];if(rows.length)main.querySelector('.page-intro')?.insertAdjacentHTML('afterend',`<div class="v2-cards" data-current-mechanics>${rows.map(x=>`<section class="panel"><h2>${esc(x.title)}</h2>${x.lines.map(line=>`<p>${esc(line)}</p>`).join('')}</section>`).join('')}</div>`);
    return;
   }
