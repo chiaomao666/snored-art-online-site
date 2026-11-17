@@ -16,14 +16,14 @@
     "achievementTitles": 35,
     "achievements": 469,
     "hiddenAchievements": 17,
-    "serverMonsterRecords": 31,
-    "serverMonsterHp": 13,
+    "serverMonsterRecords": 74,
+    "serverMonsterHp": 27,
     "bossGuides": 9,
-    "floorDropPools": 6,
-    "observedMonsterHp": 141,
-    "observedDropSources": 1380,
-    "monstersWithObservedSkills": 163,
-    "additionalWorldBosses": 2,
+    "floorDropPools": 8,
+    "observedMonsterHp": 152,
+    "observedDropSources": 1444,
+    "monstersWithObservedSkills": 174,
+    "additionalWorldBosses": 3,
     "additionalEquipment": 26,
     "legacyMonsterReferences": 446,
     "legacyDropReferences": 10518,
@@ -40,5 +40,5 @@
     "hidden achievement conditions"
   ],
   "achievementPrecision": "server-json",
-  "serverAsset": "main-CrGN8Owq.js"
+  "serverAsset": "main-BQHApAw4.js"
 }
