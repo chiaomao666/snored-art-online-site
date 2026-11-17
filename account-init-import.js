@@ -3,17 +3,19 @@
  const isObject=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
  const utf8=new TextEncoder();
  const Evidence=root?.SAOInitGuide||(typeof require==='function'?require('./init-guide-evidence.js'):null);
- function character(message){
-  if(!isObject(message)||message.t!=='init')throw Error('只支援遊戲 init 或工具包匯出的 init 檔；舊角色快照與掛機收益檔已不支援。');
-  const p=message.state?.player;
+ function validPlayer(p){
   if(!isObject(p)||typeof p.name!=='string'||!Number.isInteger(p.level)||p.level<1)throw Error('這則 init 沒有完整的角色名稱與等級。');
   return p;
+ }
+ function character(message){
+  if(!isObject(message)||message.t!=='init')throw Error('只支援遊戲 init 或工具包匯出的完整狀態檔；舊角色快照與掛機收益檔已不支援。');
+  return validPlayer(message.state?.player);
  }
  function binary(base64){
   if(typeof base64!=='string'||base64.length%4!==0||/[^A-Za-z0-9+/=]/.test(base64)||/=/.test(base64.slice(0,-2))||(/=$/.test(base64.slice(0,-1))&&!/==$/.test(base64)))throw Error('init 二進位編碼無效。');
   return Uint8Array.from(atob(base64),c=>c.charCodeAt(0));
  }
- async function frame(record){
+ async function frame(record,allowHttp=false){
   let data,text;
   if(record.payload?.kind==='text'&&typeof record.payload.text==='string'){text=record.payload.text;data=utf8.encode(text)}
   else if(record.payload?.kind==='binary'){data=binary(record.payload.base64);try{text=new TextDecoder('utf-8',{fatal:true}).decode(data)}catch{throw Error('init 二進位內容不是有效 UTF-8。')}}
@@ -24,8 +26,10 @@
    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',data)),x=>x.toString(16).padStart(2,'0')).join('');
    if(digest!==record.sha256.toLowerCase())throw Error('init 原文雜湊不符，檔案可能已損壞。');
   }
-  let message;try{message=JSON.parse(text)}catch{throw Error('init 原文不是有效 JSON。')}
-  const player=character(message);
+  let message;try{message=JSON.parse(text.replace(/^\uFEFF/,''))}catch{throw Error('init 原文不是有效 JSON。')}
+  const http=allowHttp&&record.record==='http-snapshot'&&record.source==='game-state-full'&&record.path==='/api/state/full'&&record.method==='GET'&&record.status===200;
+  if(record.record!=='message'&&!http)throw Error('不支援的完整狀態來源。');
+  const player=http?validPlayer(message?.state?.player??message?.player):character(message);
   return {player,guide:Evidence.extract(player),at:typeof record.at==='string'?record.at:null};
  }
  function finish(rows,expected){
@@ -40,8 +44,8 @@
  }
  async function parseDocument(value){
   if(value?.t==='init'){const player=character(value);return finish([{player,guide:Evidence.extract(player),at:null}]);}
-  if(value?.format==='sao-ws-init-v1'&&Array.isArray(value.records)){
-   const rows=[];for(const record of value.records){if(record?.record!=='message')throw Error('init 快照包含不支援的紀錄。');rows.push(await frame(record))}
+  if(['sao-ws-init-v1','sao-init-capture-v2'].includes(value?.format)&&Array.isArray(value.records)){
+   const rows=[];for(const record of value.records)rows.push(await frame(record,value.format==='sao-init-capture-v2'));
    return finish(rows,value.integrity?.messages);
   }
   character(value); // Gives a specific rejection for legacy snapshots.
@@ -57,8 +61,8 @@
    lineNumber++;const text=raw.replace(/^\uFEFF/,'').trim();if(!text)continue;
    let record;try{record=JSON.parse(text)}catch{throw Error('第 '+lineNumber+' 行不是有效 JSON；init 檔可能尚未下載完整。')}
    if(end)throw Error('init 結尾標記後還有資料。');
-   if(!header){if(record.record!=='manifest'||record.format!=='sao-ws-init-v1')throw Error('請選擇工具包「下載完整 init」匯出的檔案。');header=record;continue}
-   if(record.record==='message')rows.push(await frame(record));
+   if(!header){if(record.record!=='manifest'||!['sao-ws-init-v1','sao-init-capture-v2'].includes(record.format))throw Error('請選擇工具包「下載完整 init」匯出的檔案。');header=record;continue}
+   if(record.record==='message'||record.record==='http-snapshot')rows.push(await frame(record,header.format==='sao-init-capture-v2'));
    else if(record.record==='end')end=record;
    else throw Error('第 '+lineNumber+' 行不是 init 訊息紀錄。');
   }
@@ -96,7 +100,7 @@
   const old=document.getElementById('account-import');if(!old||old.hasAttribute('data-init-only'))return;
   // Replace the legacy input node entirely, removing its old-format handler.
   const input=old.cloneNode(false);input.value='';input.dataset.initOnly='';input.accept='.json,.jsonl,application/json,application/x-ndjson';input.setAttribute('aria-label','選擇 init JSON 或 JSONL 檔案');old.replaceWith(input);
-  const section=input.closest('section');section.querySelector('h2').textContent='匯入 init，補齊攻略資料';section.querySelector('p').textContent='匯入後自動比對並補入已確認掉落、怪物招式與實戰 HP，也可查看角色快照。只支援 init JSON／JSONL；原文不會上傳。';
+  const section=input.closest('section');section.querySelector('h2').textContent='匯入完整狀態，補齊攻略資料';section.querySelector('p').textContent='匯入後自動比對並補入已確認掉落、怪物招式與實戰 HP，也可查看角色快照。支援遊戲 init 或工具匯出的原生完整狀態檔；原文不會上傳。';
   const intro=document.querySelector('#main-content .page-intro p');if(intro)intro.textContent='匯入遊戲 init 補齊攻略資料，並查看角色快照。';
   const status=document.createElement('p');status.id='account-import-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');section.append(status);
   const choose=document.createElement('label');choose.className='field';choose.hidden=true;choose.append(document.createTextNode('選擇 init 快照 '));const select=document.createElement('select');select.id='account-init-select';choose.append(select);section.append(choose);

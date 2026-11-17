@@ -1,8 +1,8 @@
 {
   "version": "2026-11-17",
-  "sha256": "d762551c3348419f3f1cf83c6c5696a2430c259d9aa1da840ccd505e2ec0f1f4",
+  "sha256": "21d3aa6deedbe5e6d4ef0c2717f3f73b8754fcbd3c4c0903c84a1752e984a2b7",
   "counts": {
-    "items": 4728,
+    "items": 10320,
     "monsters": 990,
     "areas": 593,
     "floors": 75,
@@ -16,18 +16,18 @@
     "achievementTitles": 35,
     "achievements": 469,
     "hiddenAchievements": 17,
-    "serverMonsterRecords": 74,
-    "serverMonsterHp": 27,
+    "serverMonsterRecords": 79,
+    "serverMonsterHp": 31,
     "bossGuides": 9,
-    "floorDropPools": 8,
-    "observedMonsterHp": 153,
-    "observedDropSources": 1905,
-    "monstersWithObservedSkills": 194,
+    "floorDropPools": 9,
+    "observedMonsterHp": 164,
+    "observedDropSources": 2045,
+    "monstersWithObservedSkills": 202,
     "additionalWorldBosses": 3,
     "additionalEquipment": 26,
     "legacyMonsterReferences": 446,
     "legacyDropReferences": 10518,
-    "additionalStaticEquipment": 14
+    "additionalStaticEquipment": 0
   },
   "serverValues": [
     "monster stats",
@@ -40,5 +40,5 @@
     "hidden achievement conditions"
   ],
   "achievementPrecision": "server-json",
-  "serverAsset": "main-BQHApAw4.js"
+  "serverAsset": "main-Cb6NXnqX.js"
 }

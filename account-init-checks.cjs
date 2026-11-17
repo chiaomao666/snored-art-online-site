@@ -20,5 +20,9 @@ function file(records,{count=records.length,end=true}={}){return new File([JSON.
  await assert.rejects(()=>parseFile(new File(['{broken}'],'init.json')),/有效 JSON/);
  await assert.rejects(()=>parseFile(new File(['{broken}\n'],'init.jsonl')),/第 1 行/);
  const many=Array.from({length:120},(_,i)=>record({...message('large-'+i),padding:'甲'.repeat(1000)},null));assert.equal((await parseFile(file(many))).snapshots.length,120,'streamed UTF-8 JSONL chunk boundaries');
+ const h=record({player:player('HTTP角色'),unknown:{intact:true}},'2026-11-17T11:00:00Z',true);Object.assign(h,{record:'http-snapshot',source:'game-state-full',path:'/api/state/full',method:'GET',status:200});
+ result=await parseDocument({format:'sao-init-capture-v2',records:[a,h],integrity:{messages:2}});assert.equal(result.snapshots[1].player.name,'HTTP角色');
+ const v2=new File([JSON.stringify({record:'manifest',format:'sao-init-capture-v2',integrity:{messages:1}})+'\n'+JSON.stringify(h)+'\n'+JSON.stringify({record:'end',integrity:{messages:1}})],'http.jsonl');assert.equal((await parseFile(v2)).snapshots[0].player.name,'HTTP角色');
+ await assert.rejects(()=>parseDocument({format:'sao-ws-init-v1',records:[h]}),/來源/);await assert.rejects(()=>parseDocument({format:'sao-init-capture-v2',records:[{...h,path:'/api/other'}]}),/來源/);await assert.rejects(()=>parseDocument({format:'sao-init-capture-v2',records:[{...h,status:401}]}),/來源/);
  console.log('Passed init-only imports: raw/pretty JSON, tool text/binary JSONL, multiple characters/latest selection, streamed Unicode, legacy/auth/patch rejection, truncation/count/length/hash validation.');
 })().catch(e=>{console.error(e);process.exitCode=1});
