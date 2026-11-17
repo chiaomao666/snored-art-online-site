@@ -1,7 +1,8 @@
-/* Local-only init import. Never logs, persists or transmits imported contents. */
+/* Local init import; only anonymized guide evidence may be saved/exported. */
 (function(root){'use strict';
  const isObject=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
  const utf8=new TextEncoder();
+ const Evidence=root?.SAOInitGuide||(typeof require==='function'?require('./init-guide-evidence.js'):null);
  function character(message){
   if(!isObject(message)||message.t!=='init')throw Error('只支援遊戲 init 或工具包匯出的 init 檔；舊角色快照與掛機收益檔已不支援。');
   const p=message.state?.player;
@@ -24,7 +25,8 @@
    if(digest!==record.sha256.toLowerCase())throw Error('init 原文雜湊不符，檔案可能已損壞。');
   }
   let message;try{message=JSON.parse(text)}catch{throw Error('init 原文不是有效 JSON。')}
-  return {player:character(message),at:typeof record.at==='string'?record.at:null};
+  const player=character(message);
+  return {player,guide:Evidence.extract(player),at:typeof record.at==='string'?record.at:null};
  }
  function finish(rows,expected){
   if(!rows.length)throw Error('檔案內沒有可匯入的 init 角色資料。');
@@ -34,10 +36,10 @@
    const a=Date.parse(rows[latest].at),b=Date.parse(rows[i].at);
    if(!Number.isFinite(a)||!Number.isFinite(b)||b>=a)latest=i;
   }
-  return {snapshots:rows,selectedIndex:latest};
+  return {snapshots:rows,selectedIndex:latest,evidence:Evidence.combine(rows.map(x=>x.guide))};
  }
  async function parseDocument(value){
-  if(value?.t==='init')return finish([{player:character(value),at:null}]);
+  if(value?.t==='init'){const player=character(value);return finish([{player,guide:Evidence.extract(player),at:null}]);}
   if(value?.format==='sao-ws-init-v1'&&Array.isArray(value.records)){
    const rows=[];for(const record of value.records){if(record?.record!=='message')throw Error('init 快照包含不支援的紀錄。');rows.push(await frame(record))}
    return finish(rows,value.integrity?.messages);
@@ -94,10 +96,22 @@
   const old=document.getElementById('account-import');if(!old||old.hasAttribute('data-init-only'))return;
   // Replace the legacy input node entirely, removing its old-format handler.
   const input=old.cloneNode(false);input.value='';input.dataset.initOnly='';input.accept='.json,.jsonl,application/json,application/x-ndjson';input.setAttribute('aria-label','選擇 init JSON 或 JSONL 檔案');old.replaceWith(input);
-  const section=input.closest('section');section.querySelector('h2').textContent='匯入 init 角色資料';section.querySelector('p').textContent='僅支援遊戲 init JSON 或工具包匯出的完整 init JSONL。檔案只在目前瀏覽器解析，不會上傳。';
-  const intro=document.querySelector('#main-content .page-intro p');if(intro)intro.textContent='查詢角色資料，或匯入遊戲 init 檔案。';
+  const section=input.closest('section');section.querySelector('h2').textContent='匯入 init，補齊攻略資料';section.querySelector('p').textContent='匯入後自動比對並補入已確認掉落、怪物招式與實戰 HP，也可查看角色快照。只支援 init JSON／JSONL；原文不會上傳。';
+  const intro=document.querySelector('#main-content .page-intro p');if(intro)intro.textContent='匯入遊戲 init 補齊攻略資料，並查看角色快照。';
   const status=document.createElement('p');status.id='account-import-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');section.append(status);
   const choose=document.createElement('label');choose.className='field';choose.hidden=true;choose.append(document.createTextNode('選擇 init 快照 '));const select=document.createElement('select');select.id='account-init-select';choose.append(select);section.append(choose);
+  const guideResult=document.createElement('section');guideResult.className='panel';guideResult.id='account-guide-result';document.getElementById('account-result').before(guideResult);
+  let evidence=Evidence.read();
+  function guideView(delta=null,incoming=null,storageError=''){
+   const total=Evidence.counts(evidence),n=delta&&Evidence.counts(delta),received=incoming&&Evidence.counts(incoming),G=root.SAOCurrent;
+   const label=(type,id)=>{const entry=G.catalog[type].find(x=>x.id===id);return name(entry?.name)||id};
+   const link=(page,id,title)=>'<a href="#'+page+'?id='+encodeURIComponent(id)+'">'+esc(title)+'</a>';
+   const data=delta?.data,changes=data?[...data.observedDrops.map(r=>'<tr><td>掉落來源</td><td>'+link('monsters',r.monsterId,label('monsters',r.monsterId))+'</td><td>'+link('equipment',r.itemId,label('items',r.itemId))+'</td></tr>'),...Object.entries(data.observedSkills).flatMap(([m,list])=>list.map(id=>'<tr><td>怪物招式</td><td>'+link('monsters',m,label('monsters',m))+'</td><td>'+esc(name(G.catalog.serverGuide.skills?.[id]?.name)||id)+'</td></tr>')),...Object.entries(data.observedHp).flatMap(([m,list])=>list.map(h=>'<tr><td>實戰最大 HP</td><td>'+link('monsters',m,label('monsters',m))+'</td><td>'+nf(h)+'</td></tr>'))]:[];
+   guideResult.innerHTML='<h2>攻略資料補全</h2>'+(n?'<p id="account-guide-summary">本次新增：'+n.drops+' 組掉落來源、'+n.skills+' 組怪物招式、'+n.hp+' 筆實戰 HP。</p><p>已解析：'+received.drops+' 組掉落來源、'+received.skills+' 組怪物招式、'+received.hp+' 筆實戰 HP；已收錄的項目會自動略過。</p>':'<p>匯入 init 後會自動比對攻略資料，所有快照的可用紀錄會合併，不只讀取畫面選中的角色。</p>')+(changes.length?'<details><summary>查看本次新增攻略資料（'+changes.length+' 筆）</summary><div class="table-wrap"><table><thead><tr><th>項目</th><th>怪物</th><th>補充內容</th></tr></thead><tbody>'+changes.join('')+'</tbody></table></div></details>':'')+'<p id="account-guide-scope">'+(storageError?'儲存失敗，本次資料只套用至目前分頁，請先下載備份。':'新增攻略資料會保存在這個瀏覽器，切換圖鑑或重整後仍可查看。')+' 公開網站不會因本機匯入自動改寫；可下載不含角色資料的攻略補充檔，用來合併更新公開圖鑑。</p><p>本機攻略補充累計：'+total.drops+' 組掉落來源、'+total.skills+' 組怪物招式、'+total.hp+' 筆實戰 HP。</p><div class="tag-row"><button class="button" id="account-guide-export" '+(total.drops+total.skills+total.hp?'':'disabled')+'>下載攻略補充檔（不含角色資料）</button><button class="button secondary" id="account-guide-clear">清除本機攻略補充</button></div><p class="section-note">僅匯出物品／怪物／招式代碼及觀察到的 HP；不含角色名稱、帳號、憑證、背包、掉落次數或聊天。實際掉落不代表完整掉落池，HP 保留為戰鬥觀察值；不推算掉落率或覆寫基礎能力。</p>';
+   guideResult.querySelector('#account-guide-export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(Evidence.normalize(evidence),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='SAO攻略補充_'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)};
+   guideResult.querySelector('#account-guide-clear').onclick=()=>{Evidence.clear();location.reload()};
+  }
+  guideView();
   let snapshots=[];
   const active=()=>input.isConnected&&document.getElementById('account-import')===input;
   select.onchange=()=>{if(active())show(snapshots[Number(select.value)].player,document.getElementById('account-result'))};
@@ -106,6 +120,10 @@
    input.disabled=true;status.textContent='正在讀取並核對 init…';choose.hidden=true;select.replaceChildren();snapshots=[];document.getElementById('account-result').replaceChildren();
    try{
     const result=await parseFile(file);if(!active())return;snapshots=result.snapshots;
+    const incoming=result.evidence,delta=Evidence.difference(incoming,root.SAOCurrent.catalog.serverGuide),amount=Evidence.counts(incoming);let storageError='';
+    evidence=Evidence.combine([Evidence.read(),incoming]);
+    if(amount.drops+amount.skills+amount.hp){try{evidence=Evidence.save(incoming)}catch(e){storageError=e.message}Evidence.apply(root.SAOCurrent,incoming)}
+    guideView(delta,incoming,storageError);
     snapshots.forEach((x,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=x.player.name+' · Lv'+x.player.level+(x.at?' · '+(Number.isFinite(Date.parse(x.at))?new Date(x.at).toLocaleString():x.at):'')+' · 第 '+(i+1)+' 則';select.append(option)});
     select.value=String(result.selectedIndex);choose.hidden=snapshots.length<2;
     show(snapshots[result.selectedIndex].player,document.getElementById('account-result'));

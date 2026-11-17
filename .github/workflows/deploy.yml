@@ -35,12 +35,14 @@ jobs:
           node --check classic-templates.js
           node --check classic-layout.js
           node --check account-init-import.js
+          node --check init-guide-evidence.js
       - name: Build browser data and validate guide
         run: |
           node build-server-guide.cjs
           node build-achievement-data.cjs
           node current-checks.cjs
           node account-init-checks.cjs
+          node init-guide-checks.cjs
       - name: Prepare public website
         run: node build-site.cjs
       - name: Upload Pages artifact
