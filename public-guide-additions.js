@@ -2,10 +2,16 @@
 (()=>{'use strict';
  const D=window.SAOCurrent.catalog,esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const text=x=>typeof x==='string'?x:x?.zh||'',nf=x=>Number(x).toLocaleString('zh-TW');
+ function recipes(main){
+  if(main.querySelector('[data-fuse-recipes]'))return;
+  const rows=D.serverGuide?.recipes||[];if(!rows.length)return;
+  const names=new Map(D.items.map(x=>[x.id,text(x.name)])),item=(id,n)=>`<a href="#equipment?id=${encodeURIComponent(id)}">${esc(names.get(id)||id)}</a> ×${nf(n)}`;
+  main.insertAdjacentHTML('beforeend',`<section class="panel" data-fuse-recipes><h2>茸配配方簿</h2><p>只列已成功煉成的配方，材料數量依表內填入。</p><div class="table-wrap"><table><thead><tr><th>材料</th><th>產物</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${Object.entries(r.in).map(([id,n])=>item(id,n)).join(' ＋ ')}</td><td>${r.out.map(x=>x.id?item(x.id,x.n):`隨機千石 ×${nf(x.n)}`).join('、')}</td></tr>`).join('')}</tbody></table></div></section>`);
+ }
  function enhance(){
   const [page,query]=(location.hash.slice(1)||'home').split('?');
   if(page==='systems'){
-   const main=document.getElementById('main-content');if(main.querySelector('[data-current-mechanics]'))return;
+   const main=document.getElementById('main-content');recipes(main);if(main.querySelector('[data-current-mechanics]'))return;
    const caps=D.serverGuide?.mechanics?.softCaps;
    if(caps){
     const names={dmgTaken:'減傷',ailRes:'異常抗性',cdr:'冷卻縮減',armorPen:'穿透',evade:'迴避'};
