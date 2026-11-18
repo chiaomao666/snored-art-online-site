@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "updated": "2026-11-15",
+  "updated": "2026-11-18",
   "source": "websocket-ach-list",
-  "asset": "main-BqVswO5r.js",
+  "asset": "main-oHIVUDQ3.js",
   "precision": "server-json",
   "counts": {
     "collect": 144,
@@ -11,7 +11,7 @@
     "fun": 20
   },
   "total": 469,
-  "hidden": 17,
+  "hidden": 15,
   "entries": [
     {
       "id": "fine-t1",
@@ -12055,12 +12055,12 @@
       "target": 1,
       "parts": [],
       "title": "boss-f50",
-      "titleName": null,
+      "titleName": "...",
       "stat": "atkPct",
       "value": 0.00898,
       "displayBonus": "攻擊 +0.898%",
       "displayValue": 0.00898,
-      "rewardText": "攻擊 +0.898% · 稱號（名稱未公開）"
+      "rewardText": "攻擊 +0.898% · 稱號「...」"
     },
     {
       "id": "boss-f51",
@@ -12255,12 +12255,12 @@
       "target": 1,
       "parts": [],
       "title": "boss-f60",
-      "titleName": null,
+      "titleName": "...",
       "stat": "critDmg",
       "value": 0.01808,
       "displayBonus": "暴擊傷害 +1.808%",
       "displayValue": 0.01808,
-      "rewardText": "暴擊傷害 +1.808% · 稱號（名稱未公開）"
+      "rewardText": "暴擊傷害 +1.808% · 稱號「...」"
     },
     {
       "id": "boss-f61",
@@ -12455,12 +12455,12 @@
       "target": 1,
       "parts": [],
       "title": "boss-f70",
-      "titleName": null,
+      "titleName": "...",
       "stat": "atkPct",
       "value": 0.00898,
       "displayBonus": "攻擊 +0.898%",
       "displayValue": 0.00898,
-      "rewardText": "攻擊 +0.898% · 稱號（名稱未公開）"
+      "rewardText": "攻擊 +0.898% · 稱號「...」"
     },
     {
       "id": "boss-f71",
@@ -12555,12 +12555,12 @@
       "target": 1,
       "parts": [],
       "title": "boss-f75",
-      "titleName": null,
+      "titleName": "...",
       "stat": "critDmg",
       "value": 0.01808,
       "displayBonus": "暴擊傷害 +1.808%",
       "displayValue": 0.01808,
-      "rewardText": "暴擊傷害 +1.808% · 稱號（名稱未公開）"
+      "rewardText": "暴擊傷害 +1.808% · 稱號「...」"
     },
     {
       "id": "ach-bosskill40",
@@ -12749,20 +12749,20 @@
     {
       "id": "fun-five21",
       "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
+      "name": "五張的奇蹟",
+      "desc": "五張以上的牌湊到剛好 21 點。",
       "cat": "fun",
       "floor": null,
-      "hidden": true,
+      "hidden": false,
       "target": null,
       "parts": [],
-      "title": null,
-      "titleName": null,
+      "title": "fun-five21",
+      "titleName": "五張的奇蹟",
       "stat": null,
       "value": null,
       "displayBonus": null,
       "displayValue": null,
-      "rewardText": null
+      "rewardText": "稱號「五張的奇蹟」"
     },
     {
       "id": "fun-split4",
@@ -12785,20 +12785,20 @@
     {
       "id": "fun-broke",
       "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
+      "name": "傾家蕩產體驗營",
+      "desc": "一天在荷官桌輸掉一百萬摳。",
       "cat": "fun",
       "floor": null,
-      "hidden": true,
+      "hidden": false,
       "target": null,
       "parts": [],
-      "title": null,
-      "titleName": null,
+      "title": "fun-broke",
+      "titleName": "傾家蕩產體驗營",
       "stat": null,
       "value": null,
       "displayBonus": null,
       "displayValue": null,
-      "rewardText": null
+      "rewardText": "稱號「傾家蕩產體驗營」"
     },
     {
       "id": "fun-hands1000",
