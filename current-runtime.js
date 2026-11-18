@@ -97,7 +97,7 @@ function createPlayer(config={}){
 }
 function calculate(config){const player=createPlayer(config),stats=ns(player),interval=Ir(stats);return{player,stats,interval,attackSpeed:ad(interval),base:ir(player.level),activeStyle:Ha(player),talentPoints:Nk(player),spent:Go(player,player.talentStyle)};}
 function gear(item,entry={}){return entry.bonus?{...item,bonus:{...entry.bonus}}:L1(item,{enh:entry.enh||{},plus:Object.values(entry.enh||{}).reduce((a,b)=>a+b,0)});}
-const API={catalog,calculate,createPlayer,gear,baseStats:ir,experience:or,totalExperience:vb,interval:Ir,attackSpeed:ad,
+const API={catalog,calculate,createPlayer,gear,registerGuideItems:Uh,gearRecord:Ke,baseStats:ir,experience:or,totalExperience:vb,interval:Ir,attackSpeed:ad,
  applyParameters:sw,getParameters:fs,applyGuideTranslations:hi=>W0(hi,ref=>{const split=ref.indexOf(':'),table={a:ve,m:kt,i:re}[ref.slice(0,split)];return table&&table[ref.slice(split+1)];}),
  skillStats:px,skillProgress:Yc,skillXpRequired:xd,enhanceDirections:A1,maxEnhance:dk,nativeGear:qe,
  softSpeed:pw,softAgility:gw,statCap:ey,buildNode:xs,talentRank:ba,talentTierAllowed:Rk,

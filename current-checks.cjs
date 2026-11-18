@@ -33,17 +33,17 @@ const server=require('./server-guide-data.json');assert.equal(server.format,'sao
 const coverage=require('./server-guide-overlay.js').apply(G,server);assert.equal(coverage.beasts,79);assert.equal(coverage.bosses,9);assert.equal(coverage.floorDrops,9);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.maxHp,70);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.atk,undefined);assert.equal(D.monsters.find(x=>x.id==='f1-boar').exp,null);assert.equal(D.items.find(x=>x.id==='story-plank').name.zh,'咬爛的船板');assert.equal(G.getParameters().talentRefundCol,20);assert.equal(D.serverTitles.elfFriend.name.zh,'驚靈之友');
 for(const f of ['server-guide-data.js','server-guide-overlay.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
 assert.equal(D.items.length,10345);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3046);assert.equal(D.monsters.length,993);assert.equal(D.areas.length,596);
-assert.equal(coverage.observedHp,164);assert.equal(coverage.dropSources,2289);assert.equal(coverage.monsterSkills,202);
+assert.equal(coverage.observedHp,164);assert.equal(coverage.dropSources,2724);assert.equal(coverage.monsterSkills,232);
 assert.equal(coverage.legacyMonsters,340);assert.equal(coverage.legacyDropEntries,8075);assert.equal(D.monsters.find(x=>x.id==='f1-boar').legacyReference,undefined);assert.deepEqual(D.monsters.find(x=>x.id==='f1-boar').observedMaxHp,server.data.observedHp['f1-boar']);assert.equal(D.monsters.find(x=>x.id==='f4-c').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='f8-a').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='wb-jack').legacyReference,undefined);
-assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,2289);
-assert.deepEqual(server.data.unresolvedItemIds,['named-pajamas']);
+assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,2724);
+assert.deepEqual(server.data.unresolvedItemIds,['named-pajamas','named-cane','named-higan']);
 for(const row of server.data.observedDrops){assert(D.items.some(x=>x.id===row.itemId)||server.data.unresolvedItemIds.includes(row.itemId),row.itemId);assert(D.monsters.some(x=>x.id===row.monsterId),row.monsterId);assert.deepEqual(Object.keys(row).sort(),['itemId','monsterId']);}
-for(const [id,skills]of Object.entries(server.data.observedSkills)){assert(D.monsters.some(x=>x.id===id));for(const skill of skills)assert(server.data.skills[skill],skill);}
+for(const [id,skills]of Object.entries(server.data.observedSkills)){assert(D.monsters.some(x=>x.id===id));for(const skill of skills)assert(server.data.skills[skill]||server.data.unresolvedSkillIds.includes(skill),skill);}
 assert.deepEqual(D.monsters.find(x=>x.id==='f8-a').observedMaxHp,[178]);assert.equal(D.monsters.find(x=>x.id==='f8-a').stats,null);assert.equal(D.monsters.find(x=>x.id==='f8-a').exp,server.data.beasts['f8-a'].exp);assert.equal(D.monsters.find(x=>x.id==='f9-r').exp,null);
 assert.equal(D.monsters.find(x=>x.id==='fwb-f10').worldBoss,true);assert.equal(D.areas.find(x=>x.id==='f10-wb').worldBossId,'fwb-f10');assert(D.areas.find(x=>x.id==='f10-wilds').links.includes('f10-wb'));
 const aiBase=G.calculate({level:20}),aiGear=G.calculate({level:20,slots:{armor:{id:'ai-gpt'}}});assert.equal(aiGear.stats.def-aiBase.stats.def,11);assert.equal(aiGear.stats.maxHp-aiBase.stats.maxHp,59);
 const aiHands=G.calculate({level:20,slots:{hands:{id:'ai-cursor'}}}),aiRing=G.calculate({level:20,slots:{accessory:{id:'ai-midjourney'}}});assert.equal(aiHands.stats.agi-aiBase.stats.agi,2);assert.equal(aiRing.stats.agi-aiBase.stats.agi,2);assert(Math.abs(aiRing.stats.crit-aiBase.stats.crit-.025)<1e-10);
-const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,2289);assert.equal(D.items.length,10345);assert.equal(D.monsters.length,993);assert.equal(D.areas.length,596);
+const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,2724);assert.equal(D.items.length,10345);assert.equal(D.monsters.length,993);assert.equal(D.areas.length,596);
 assert.equal(server.asset,'main-Cb6NXnqX.js');
 assert.equal(achievementCatalog.entries.find(x=>x.id==='bossgear-f1').parts[0].bases.length,4);
 assert.equal(D.monsters.find(x=>x.id==='f10-a').exp,85);
@@ -74,3 +74,5 @@ for(const [monsterId,itemId]of [['f14-boss','set-blackfur-ear'],['f15-s','ore-2'
 assert.equal(D.items.find(x=>x.id==='side-egg').price,30);assert(D.items.some(x=>x.id==='spice-boss'));assert(D.items.some(x=>x.id==='meal-bread-1'));for(const id of ['gash','flurry','holy-square','star-splash','nova-ascension'])assert.equal(D.skills.find(x=>x.id===id).chase,true);
 
 for(const [monsterId,itemId]of [["f1-boar","mg-f1-rapier"],["f1-kobold-trooper","ai-gpt"],["f1-kobold-sentinel","craft-add"],["f4-r","crystal-teleport"],["f7-r","sharp-gloves-hp-t5"]])assert(server.data.observedDrops.some(x=>x.monsterId===monsterId&&x.itemId===itemId));
+
+for(const [base,label]of [["ai-gpt","吉皮提鎧甲"],["named-parasol","阿嬤的花傘"]])assert.equal(G.nativeGear({gear:{fixture:{base,plus:0}}},"g:fixture").name.zh,label);

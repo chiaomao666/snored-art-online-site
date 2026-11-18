@@ -14,6 +14,12 @@ const {G,D,main,$,esc,nf,pct,named,text,known,items,mobs,areas,styles,slots,qual
 const E={styles},slotNames={...slots,weapon:'武器',accessory:'戒指',ear:'耳環'},rateStats=new Set(['crit','critDmg','block','evade']);
 const rawEquipment=c.equipment,guide={equipment:rawEquipment.map(x=>({...x,bonus:x.bonus||{},name:named(x),quality:quality[G.quality(x)]}))};
 const equipMap=new Map(guide.equipment.map(x=>[x.id,x]));
+window.SAORefreshGuideCatalogue=()=>{
+ for(const [map,list] of [[items,D.items],[mobs,D.monsters],[areas,D.areas]]){map.clear();for(const x of list)map.set(x.id,x)}
+ rawEquipment.splice(0,rawEquipment.length,...D.items.filter(x=>x.kind==='equipment'));
+ guide.equipment.splice(0,guide.equipment.length,...rawEquipment.map(x=>({...x,bonus:x.bonus||{},name:named(x),quality:quality[G.quality(x)]})));
+ equipMap.clear();for(const x of guide.equipment)equipMap.set(x.id,x);
+};
 const equipmentEffect=x=>text(x.fx).replace(/\{([^{}]+)\}/g,(placeholder,key)=>typeof x.fxRange?.[key]==='string'?x.fxRange[key]:placeholder);
 const intro=(eye,title,desc,extra='')=>`<div class="page-intro"><div><div class="eyebrow">${eye}</div><h1>${title}</h1><p>${desc}</p></div>${extra}</div>`;
 const heading=(title,desc='',extra='')=>`<div class="section-title"><div><h2>${title}</h2>${desc?'<p>'+desc+'</p>':''}</div>${extra}</div>`;

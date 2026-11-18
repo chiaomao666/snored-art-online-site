@@ -5,6 +5,7 @@ function apply(G,payload){
  // New public equipment definitions stay outside the retained game registry.
  // For calculations, use an existing item of the same equipment type with
  // the public item's explicit final bonus, through the site's custom-stat API.
+ if(!G.publicEquipment&&G.registerGuideItems)G.publicEquipment=new Map();
  if(!G.publicEquipment){
   const definitions=new Map(),originalCalculate=G.calculate,originalCreate=G.createPlayer;
   const registered=D.items.slice();
@@ -35,10 +36,11 @@ function apply(G,payload){
    const key=keys.at(-1);if(op.length>1)ref[key]=JSON.parse(JSON.stringify(op[1]));else delete ref[key];
   }
  }
+ G.registerGuideItems?.([...s.catalogueChanges?.items||[],...s.items||[]]);
  for(const row of [...s.catalogueChanges?.items||[],...s.items||[]]){
-  if(row.kind!=='equipment'||typeof row.id!=='string'||!G.slotKeys.includes(row.slot))continue;
+  if(typeof row.id!=='string'||typeof row.kind!=='string'||row.kind==='equipment'&&!G.slotKeys.includes(row.slot))continue;
   const existing=D.items.find(x=>x.id===row.id);
-  if(existing)Object.assign(existing,row);else{D.items.push(row);G.publicEquipment.set(row.id,row);}
+  if(existing)Object.assign(existing,row);else{D.items.push(row);if(row.kind==='equipment')G.publicEquipment.set(row.id,row);}
  }
  const items=new Map(D.items.map(x=>[x.id,x])),mobs=new Map(D.monsters.map(x=>[x.id,x])),areas=new Map(D.areas.map(x=>[x.id,x]));
  const valid=x=>x&&typeof x==='object'&&typeof x.zh==='string',blocked=new Set(['__proto__','prototype','constructor']);
@@ -95,7 +97,9 @@ function apply(G,payload){
   const drops=(row.drops||[]).filter(drop=>compatibleLegacyItems.has(drop.itemId)&&Number.isFinite(drop.chance)&&drop.chance>0&&drop.chance<=1);
   m.legacyReference={...row,drops};D.legacyMonsters[id]=m.legacyReference;
  }
- D.serverGuide=s;D.serverGuideAsset=payload.asset;
+ G.applyGuideLore?.({hi:s.hi,skills:s.skills,skillNames:s.skillNames,says:s.says,beasts:s.beasts,bosses:Array.isArray(s.bosses)?s.bosses:Object.values(s.bosses||{}),floorDrops:s.floorDrops,unique:s.unique,hints:s.hints,space:s.space,granny:s.granny,fwb:s.fwb});
+ if(s.storyTexts)G.applyGuideStoryTexts?.({texts:s.storyTexts,full:[]});
+ D.serverGuide=s;D.serverGuideAsset=payload.asset;G.applyPublicGuide=data=>apply(G,{asset:D.serverGuideAsset,data});
  if(G.applyParameters)G.applyParameters(s.params||{});
  const report={names,storyFields:stories,beasts,bosses:Object.keys(s.bosses).length,floorDrops:Object.keys(s.floorDrops).length,observedHp:Object.keys(s.observedHp||{}).length,dropSources:(s.observedDrops||[]).length,monsterSkills:Object.keys(s.observedSkills||{}).length,worldBosses:(s.fwb||[]).length,items:(s.items||[]).length,legacyMonsters:Object.keys(D.legacyMonsters).length,legacyDropEntries:Object.values(D.legacyMonsters).reduce((n,m)=>n+m.drops.length,0)};
  D.serverGuideCoverage=report;return report;

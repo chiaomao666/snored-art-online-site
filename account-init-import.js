@@ -15,7 +15,7 @@
   if(typeof base64!=='string'||base64.length%4!==0||/[^A-Za-z0-9+/=]/.test(base64)||/=/.test(base64.slice(0,-2))||(/=$/.test(base64.slice(0,-1))&&!/==$/.test(base64)))throw Error('init 二進位編碼無效。');
   return Uint8Array.from(atob(base64),c=>c.charCodeAt(0));
  }
- async function frame(record,allowHttp=false){
+ async function decodeRecord(record){
   let data,text;
   if(record.payload?.kind==='text'&&typeof record.payload.text==='string'){text=record.payload.text;data=utf8.encode(text)}
   else if(record.payload?.kind==='binary'){data=binary(record.payload.base64);try{text=new TextDecoder('utf-8',{fatal:true}).decode(data)}catch{throw Error('init 二進位內容不是有效 UTF-8。')}}
@@ -27,12 +27,16 @@
    if(digest!==record.sha256.toLowerCase())throw Error('init 原文雜湊不符，檔案可能已損壞。');
   }
   let message;try{message=JSON.parse(text.replace(/^\uFEFF/,''))}catch{throw Error('init 原文不是有效 JSON。')}
+  return message;
+ }
+ async function frame(record,allowHttp=false){
+  const message=await decodeRecord(record);
   const http=allowHttp&&record.record==='http-snapshot'&&record.source==='game-state-full'&&record.path==='/api/state/full'&&record.method==='GET'&&record.status===200;
   if(record.record!=='message'&&!http)throw Error('不支援的完整狀態來源。');
   const player=http?validPlayer(message?.state?.player??message?.player):character(message);
-  return {player,guide:Evidence.extract(player),at:typeof record.at==='string'?record.at:null};
+  return {player,guide:Evidence.extractInit(message),at:typeof record.at==='string'?record.at:null};
  }
- function finish(rows,expected){
+ function finish(rows,expected,extra=[]){
   if(!rows.length)throw Error('檔案內沒有可匯入的 init 角色資料。');
   if(expected!==undefined&&(!Number.isSafeInteger(expected)||expected!==rows.length))throw Error('init 筆數不符，檔案可能不完整。');
   let latest=0;
@@ -40,14 +44,20 @@
    const a=Date.parse(rows[latest].at),b=Date.parse(rows[i].at);
    if(!Number.isFinite(a)||!Number.isFinite(b)||b>=a)latest=i;
   }
-  return {snapshots:rows,selectedIndex:latest,evidence:Evidence.combine(rows.map(x=>x.guide))};
+  return {snapshots:rows,selectedIndex:latest,evidence:Evidence.combine([...rows.map(x=>x.guide),...extra])};
  }
+ async function guideEvidence(records,expected){
+  if(records===undefined)records=[];if(!Array.isArray(records))throw Error('圖鑑回覆紀錄格式錯誤。');if(expected!==undefined&&expected!==records.length)throw Error('圖鑑回覆筆數不符。');const values=[];
+  for(const r of records){if(r?.record!=='guide-message'||r.source!=='game-websocket'||!['lore','storyText','params'].includes(r.messageType))throw Error('不支援的圖鑑回覆來源。');const p=await decodeRecord(r);if(p?.t!==r.messageType)throw Error('圖鑑回覆類型不符。');values.push(Evidence.extractMessage(p));}return values;
+ }
+ function contribution(value,records){return {...value,record:undefined,format:'sao-guide-contribution-v2',records};}
  async function parseDocument(value){
-  if(value?.t==='init'){const player=character(value);return finish([{player,guide:Evidence.extract(player),at:null}]);}
-  if(['sao-ws-init-v1','sao-init-capture-v2'].includes(value?.format)&&Array.isArray(value.records)){
-   const rows=[];for(const record of value.records)rows.push(await frame(record,value.format==='sao-init-capture-v2'));
-   return finish(rows,value.integrity?.messages);
+  if(value?.t==='init'){const player=character(value),result=finish([{player,guide:Evidence.extractInit(value),at:null}]);result.contribution={format:'sao-guide-contribution-v2',records:[{record:'message',payload:{kind:'text',text:JSON.stringify(value)}}]};return result;}
+  if(['sao-ws-init-v1','sao-init-capture-v2','sao-guide-contribution-v2'].includes(value?.format)&&Array.isArray(value.records)){
+   const rows=[];for(const record of value.records)rows.push(await frame(record,value.format!=='sao-ws-init-v1'));
+   const result=finish(rows,value.integrity?.messages,await guideEvidence(value.guideRecords,value.integrity?.guideMessages));result.contribution=contribution(value,value.records);return result;
   }
+  if(value?.format===Evidence.format)return {snapshots:[],selectedIndex:-1,evidence:Evidence.normalize(value),contribution:null};
   character(value); // Gives a specific rejection for legacy snapshots.
  }
  async function* lines(file){
@@ -56,18 +66,18 @@
   finally{reader.releaseLock()}
  }
  async function parseJsonl(file){
-  const rows=[];let header=null,end=null,lineNumber=0;
+  const rows=[],rawRecords=[];let header=null,end=null,lineNumber=0;
   for await(const raw of lines(file)){
    lineNumber++;const text=raw.replace(/^\uFEFF/,'').trim();if(!text)continue;
    let record;try{record=JSON.parse(text)}catch{throw Error('第 '+lineNumber+' 行不是有效 JSON；init 檔可能尚未下載完整。')}
    if(end)throw Error('init 結尾標記後還有資料。');
    if(!header){if(record.record!=='manifest'||!['sao-ws-init-v1','sao-init-capture-v2'].includes(record.format))throw Error('請選擇工具包「下載完整 init」匯出的檔案。');header=record;continue}
-   if(record.record==='message'||record.record==='http-snapshot')rows.push(await frame(record,header.format==='sao-init-capture-v2'));
+   if(record.record==='message'||record.record==='http-snapshot'){rawRecords.push(record);rows.push(await frame(record,header.format==='sao-init-capture-v2'));}
    else if(record.record==='end')end=record;
    else throw Error('第 '+lineNumber+' 行不是 init 訊息紀錄。');
   }
   if(!header||!end)throw Error('init 檔缺少檔頭或結尾，請重新下載完整檔案。');
-  const result=finish(rows,header.integrity?.messages);finish(rows,end.integrity?.messages);return result;
+  const result=finish(rows,header.integrity?.messages,await guideEvidence(header.guideRecords,header.integrity?.guideMessages));finish(rows,end.integrity?.messages);result.contribution=contribution(header,rawRecords);return result;
  }
  async function parseFile(file){
   if(/\.jsonl$/i.test(file.name||''))return parseJsonl(file);
@@ -91,7 +101,8 @@
   const rows=G.slotKeys.map(slot=>{
    const id=p.equipment?.[slot];if(typeof id!=='string'||!id)return '';
    let item;try{item=G.nativeGear(p,id)}catch{}
-   return '<tr><td>'+esc(slots[slot]||slot)+'</td><td>'+(item?'<a href="#equipment?id='+encodeURIComponent(item.id)+'">'+esc(name(item.name)||item.id)+'</a>':esc(id))+'</td><td>'+(item?statSummary(item.bonus):'物品資料尚未取得')+'</td></tr>';
+   const baseId=item?.id||G.gearRecord?.(p,id)?.base||id,base=D.items.find(x=>x.id===baseId),candidate=[name(item?.name),name(base?.name)].find(x=>x&&!/^(?:[?？]+|\.{3}|…)$/.test(x)),label=candidate?candidate:'未收錄裝備（'+baseId+'）';
+   return '<tr><td>'+esc(slots[slot]||slot)+'</td><td>'+(item?'<a href="#equipment?id='+encodeURIComponent(item.id)+'">'+esc(label)+'</a>':esc(id))+'</td><td>'+(item?statSummary(item.bonus):'物品資料尚未取得')+'</td></tr>';
   }).join('');
   target.innerHTML='<section class="panel"><h2>'+esc(p.name)+' · Lv'+esc(p.level)+'</h2><p>HP '+nf(p.hp||0)+' · 本級經驗 '+nf(p.exp||0)+'／'+nf(G.experience(p.level))+' · 摳 '+nf(p.col||0)+'</p><p>目前位置 <a href="#floors?id='+encodeURIComponent(p.areaId||'')+'">'+esc(name(area?.name)||p.areaId||'未知')+'</a> · 最高已通關 '+Math.max(0,...cleared)+' 層</p></section><section class="panel"><h2>裝備快照</h2>'+(rows?'<div class="table-wrap"><table><thead><tr><th>部位</th><th>裝備</th><th>實際性能</th></tr></thead><tbody>'+rows+'</tbody></table></div>':'<p>這則 init 沒有已裝備物品。</p>')+'</section>';
  }
@@ -100,19 +111,21 @@
   const old=document.getElementById('account-import');if(!old||old.hasAttribute('data-init-only'))return;
   // Replace the legacy input node entirely, removing its old-format handler.
   const input=old.cloneNode(false);input.value='';input.dataset.initOnly='';input.accept='.json,.jsonl,application/json,application/x-ndjson';input.setAttribute('aria-label','選擇 init JSON 或 JSONL 檔案');old.replaceWith(input);
-  const section=input.closest('section');section.querySelector('h2').textContent='匯入完整狀態，補齊攻略資料';section.querySelector('p').textContent='匯入後自動比對並補入已確認掉落、怪物招式與實戰 HP，也可查看角色快照。支援遊戲 init 或工具匯出的原生完整狀態檔；原文不會上傳。';
+  const section=input.closest('section');section.querySelector('h2').textContent='匯入完整狀態，補齊攻略資料';section.querySelector('p').textContent='匯入完整 init 與伴隨圖鑑回覆，補入裝備／物品定義、名稱、怪物資料、配方與實戰紀錄，並查看角色快照。也支援舊攻略補充檔；檔案只在本機解析。';
   const intro=document.querySelector('#main-content .page-intro p');if(intro)intro.textContent='匯入遊戲 init 補齊攻略資料，並查看角色快照。';
   const status=document.createElement('p');status.id='account-import-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');section.append(status);
   const choose=document.createElement('label');choose.className='field';choose.hidden=true;choose.append(document.createTextNode('選擇 init 快照 '));const select=document.createElement('select');select.id='account-init-select';choose.append(select);section.append(choose);
   const guideResult=document.createElement('section');guideResult.className='panel';guideResult.id='account-guide-result';document.getElementById('account-result').before(guideResult);
-  let evidence=Evidence.read();
+  let evidence=Evidence.read(),fullContribution=null;
   function guideView(delta=null,incoming=null,storageError=''){
    const total=Evidence.counts(evidence),n=delta&&Evidence.counts(delta),received=incoming&&Evidence.counts(incoming),G=root.SAOCurrent;
    const label=(type,id)=>{const entry=G.catalog[type].find(x=>x.id===id);return name(entry?.name)||id};
    const link=(page,id,title)=>'<a href="#'+page+'?id='+encodeURIComponent(id)+'">'+esc(title)+'</a>';
-   const data=delta?.data,changes=data?[...data.observedDrops.map(r=>'<tr><td>掉落來源</td><td>'+link('monsters',r.monsterId,label('monsters',r.monsterId))+'</td><td>'+link('equipment',r.itemId,label('items',r.itemId))+'</td></tr>'),...Object.entries(data.observedSkills).flatMap(([m,list])=>list.map(id=>'<tr><td>怪物招式</td><td>'+link('monsters',m,label('monsters',m))+'</td><td>'+esc(name(G.catalog.serverGuide.skills?.[id]?.name)||id)+'</td></tr>')),...Object.entries(data.observedHp).flatMap(([m,list])=>list.map(h=>'<tr><td>實戰最大 HP</td><td>'+link('monsters',m,label('monsters',m))+'</td><td>'+nf(h)+'</td></tr>'))]:[];
-   guideResult.innerHTML='<h2>攻略資料補全</h2>'+(n?'<p id="account-guide-summary">本次新增：'+n.drops+' 組掉落來源、'+n.skills+' 組怪物招式、'+n.hp+' 筆實戰 HP。</p><p>已解析：'+received.drops+' 組掉落來源、'+received.skills+' 組怪物招式、'+received.hp+' 筆實戰 HP；已收錄的項目會自動略過。</p>':'<p>匯入 init 後會自動比對攻略資料，所有快照的可用紀錄會合併，不只讀取畫面選中的角色。</p>')+(changes.length?'<details><summary>查看本次新增攻略資料（'+changes.length+' 筆）</summary><div class="table-wrap"><table><thead><tr><th>項目</th><th>怪物</th><th>補充內容</th></tr></thead><tbody>'+changes.join('')+'</tbody></table></div></details>':'')+'<p id="account-guide-scope">'+(storageError?'儲存失敗，本次資料只套用至目前分頁，請先下載備份。':'新增攻略資料會保存在這個瀏覽器，切換圖鑑或重整後仍可查看。')+' 公開網站不會因本機匯入自動改寫；可下載不含角色資料的攻略補充檔，用來合併更新公開圖鑑。</p><p>本機攻略補充累計：'+total.drops+' 組掉落來源、'+total.skills+' 組怪物招式、'+total.hp+' 筆實戰 HP。</p><div class="tag-row"><button class="button" id="account-guide-export" '+(total.drops+total.skills+total.hp?'':'disabled')+'>下載攻略補充檔（不含角色資料）</button><button class="button secondary" id="account-guide-clear">清除本機攻略補充</button></div><p class="section-note">僅匯出物品／怪物／招式代碼及觀察到的 HP；不含角色名稱、帳號、憑證、背包、掉落次數或聊天。實際掉落不代表完整掉落池，HP 保留為戰鬥觀察值；不推算掉落率或覆寫基礎能力。</p>';
-   guideResult.querySelector('#account-guide-export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(Evidence.normalize(evidence),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='SAO攻略補充_'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)};
+   const fullCounts=incoming&&Evidence.detailCounts(incoming),totalDetails=Evidence.detailCounts(evidence),newDetails=delta&&Evidence.detailCounts(delta);
+   const data=delta?.data,changes=data?[...data.observedDrops.map(r=>'<tr><td>掉落來源</td><td>'+link('monsters',r.monsterId,label('monsters',r.monsterId))+'</td><td>'+link('equipment',r.itemId,label('items',r.itemId))+'</td></tr>'),...Object.entries(data.observedSkills).flatMap(([m,list])=>list.map(id=>'<tr><td>怪物招式</td><td>'+link('monsters',m,label('monsters',m))+'</td><td>'+esc(name(G.catalog.serverGuide.skills?.[id]?.name)||id)+'</td></tr>')),...Object.entries(data.observedHp).flatMap(([m,list])=>list.map(h=>'<tr><td>實戰最大 HP</td><td>'+link('monsters',m,label('monsters',m))+'</td><td>'+nf(h)+'</td></tr>')),...(data.catalogue?.items||[]).map(x=>'<tr><td>物品定義</td><td>'+link('equipment',x.id,name(x.name)||x.id)+'</td><td>'+esc(x.id)+'</td></tr>'),...(data.catalogue?.recipes||[]).map(x=>'<tr><td>配方</td><td>'+Object.entries(x.in).map(([id,n])=>esc(label('items',id))+' ×'+nf(n)).join('＋')+'</td><td>'+x.out.map(r=>esc(r.id?label('items',r.id):'隨機千石')+' ×'+nf(r.n)).join('、')+'</td></tr>')]:[];
+   guideResult.innerHTML='<h2>攻略資料補全</h2>'+(n?'<p id="account-guide-summary">本次新增：'+n.drops+' 組掉落來源、'+n.skills+' 組怪物招式、'+n.hp+' 筆實戰 HP。</p><p>已解析：'+received.drops+' 組掉落來源、'+received.skills+' 組怪物招式、'+received.hp+' 筆實戰 HP；已收錄的項目會自動略過。</p>':'<p>匯入 init 後會自動比對攻略資料，所有快照的可用紀錄會合併，不只讀取畫面選中的角色。</p>')+(changes.length?'<details><summary>查看本次新增攻略資料（'+changes.length+' 筆）</summary><div class="table-wrap"><table><thead><tr><th>項目</th><th>對象</th><th>補充內容</th></tr></thead><tbody>'+changes.join('')+'</tbody></table></div></details>':'')+'<p>裝備／物品定義：本次新增 '+(newDetails?.items||0)+' 筆，解析 '+(fullCounts?.items||0)+' 筆；其他圖鑑定義 '+(newDetails?.definitions||0)+' 組；配方 '+(newDetails?.recipes||0)+' 組。</p><p id="account-guide-scope">'+(storageError?'儲存失敗，本次資料只套用至目前分頁，請先下載備份。':'新增攻略資料會保存在這個瀏覽器，切換圖鑑或重整後仍可查看。')+' 公開網站不會因本機匯入自動改寫；可下載不含角色資料的圖鑑資料檔，用來合併更新公開圖鑑。</p><p>本機攻略補充累計：'+total.drops+' 組掉落來源、'+total.skills+' 組怪物招式、'+total.hp+' 筆實戰 HP。</p><div class="tag-row"><button class="button" id="account-full-export" '+(fullContribution?'':'disabled')+'>下載完整補充檔（含 init）</button><button class="button secondary" id="account-guide-export" '+(total.drops+total.skills+total.hp+totalDetails.items+totalDetails.definitions+totalDetails.recipes?'':'disabled')+'>下載圖鑑資料（不含角色）</button><button class="button secondary" id="account-guide-clear">清除本機攻略補充</button></div><p class="section-note">完整補充檔保留完整 init 與圖鑑回覆，包含角色快照；圖鑑資料檔只保留公開定義、配方及實戰觀察。兩者皆不會自動上傳。實際掉落不代表完整掉落池，HP 保留為戰鬥觀察值；不推算掉落率或覆寫基礎能力。</p>';
+   guideResult.querySelector('#account-full-export').onclick=()=>{if(!fullContribution)return;const url=URL.createObjectURL(new Blob([JSON.stringify(fullContribution,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='SAO攻略補充_'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)};
+   guideResult.querySelector('#account-guide-export').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(Evidence.normalize(evidence),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='SAO圖鑑資料_'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)};
    guideResult.querySelector('#account-guide-clear').onclick=()=>{Evidence.clear();location.reload()};
   }
   guideView();
@@ -121,17 +134,17 @@
   select.onchange=()=>{if(active())show(snapshots[Number(select.value)].player,document.getElementById('account-result'))};
   input.onchange=async()=>{
    const file=input.files?.[0];if(!file)return;
-   input.disabled=true;status.textContent='正在讀取並核對 init…';choose.hidden=true;select.replaceChildren();snapshots=[];document.getElementById('account-result').replaceChildren();
+   input.disabled=true;status.textContent='正在讀取並核對 init…';choose.hidden=true;select.replaceChildren();snapshots=[];fullContribution=null;guideView();document.getElementById('account-result').replaceChildren();
    try{
     const result=await parseFile(file);if(!active())return;snapshots=result.snapshots;
-    const incoming=result.evidence,delta=Evidence.difference(incoming,root.SAOCurrent.catalog.serverGuide),amount=Evidence.counts(incoming);let storageError='';
+    fullContribution=result.contribution||null;const incoming=result.evidence,delta=Evidence.difference(incoming,root.SAOCurrent.catalog.serverGuide),amount=Evidence.counts(incoming);let storageError='';
     evidence=Evidence.combine([Evidence.read(),incoming]);
-    if(amount.drops+amount.skills+amount.hp){try{evidence=Evidence.save(incoming)}catch(e){storageError=e.message}Evidence.apply(root.SAOCurrent,incoming)}
+    const details=Evidence.detailCounts(incoming);if(amount.drops+amount.skills+amount.hp+details.items+details.definitions+details.recipes){try{evidence=Evidence.save(incoming)}catch(e){storageError=e.message}Evidence.apply(root.SAOCurrent,incoming)}
     guideView(delta,incoming,storageError);
     snapshots.forEach((x,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=x.player.name+' · Lv'+x.player.level+(x.at?' · '+(Number.isFinite(Date.parse(x.at))?new Date(x.at).toLocaleString():x.at):'')+' · 第 '+(i+1)+' 則';select.append(option)});
     select.value=String(result.selectedIndex);choose.hidden=snapshots.length<2;
-    show(snapshots[result.selectedIndex].player,document.getElementById('account-result'));
-    status.textContent='已匯入 '+snapshots.length+' 則 init，顯示'+(snapshots.length>1?'最新一則；可切換快照，各則角色資料分開顯示。':'此則角色資料。');
+    if(snapshots.length)show(snapshots[result.selectedIndex].player,document.getElementById('account-result'));
+    status.textContent=snapshots.length===0?'已補入圖鑑資料；這份舊補充檔未包含完整 init，無角色快照。':'已匯入 '+snapshots.length+' 則 init，顯示'+(snapshots.length>1?'最新一則；可切換快照，各則角色資料分開顯示。':'此則角色資料。');
    }catch(e){if(active())status.textContent='讀取失敗：'+e.message}
    finally{if(active())input.disabled=false}
   };
