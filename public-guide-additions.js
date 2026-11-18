@@ -10,6 +10,15 @@
  }
  function enhance(){
   const [page,query]=(location.hash.slice(1)||'home').split('?');
+  if(page==='floors'){
+   const results=document.getElementById('floor-reward-results');
+   if(results&&!document.querySelector('[data-miasma-exp-note]')&&D.serverGuide?.mechanics?.miasmaExperience){
+    const note=document.createElement('p');note.className='muted';note.dataset.miasmaExpNote='';
+    note.innerHTML='秘境瘴氣經驗倍率＝1＋5% × 層數，摳不變。0～2 層已實測，3 層以上沿用推估；實得紀錄已含當下加成，請勿重複計算。<a href="#systems">查看規則與範例 →</a>';
+    results.before(note);
+   }
+   return;
+  }
   if(page==='systems'){
    const main=document.getElementById('main-content');recipes(main);if(main.querySelector('[data-current-mechanics]'))return;
    const caps=D.serverGuide?.mechanics?.softCaps;

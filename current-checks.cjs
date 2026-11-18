@@ -99,3 +99,7 @@ for(const id of ['enh-gem','enh-dark','crystal-heal','crystal-teleport'])assert(
 
 assert.equal(D.monsters.find(x=>x.id==='f19-d').exp,2336);assert.equal(D.monsters.find(x=>x.id==='f19-d').col,72);assert.equal(D.items.find(x=>x.id==='named-souvenir').name.zh,'伴手禮木劍');
 assert.equal(achievementCatalog.entries.find(x=>x.id==='fun-five21').desc,'五張以上的牌湊到剛好 21 點。');assert.equal(achievementCatalog.entries.find(x=>x.id==='fun-broke').hidden,false);
+const miasmaExp=server.data.mechanics.miasmaExperience;
+assert.equal(miasmaExp.perStack,.05);assert.equal(miasmaExp.stacking,'additive');assert.deepEqual(miasmaExp.verifiedStacks,[0,1,2]);assert.equal(miasmaExp.extrapolateHigher,true);assert.equal(miasmaExp.cap,null);assert.equal(miasmaExp.colMultiplier,1);
+for(const row of miasmaExp.examples)for(let stack=0;stack<=2;stack++)assert.equal(row.expByStack[stack],Math.round(row.expByStack[0]*(1+.05*stack)));
+assert(server.data.mechanics.rules.find(x=>x.id==='miasma-experience').lines.some(x=>x.includes('3 層以上暫沿用')));
