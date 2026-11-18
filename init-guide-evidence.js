@@ -1,6 +1,7 @@
 /* Public evidence extracted from init; never retain character identity or counts. */
 (function(root){'use strict';
  const format='sao-init-guide-evidence-v1',storageKey='sao-guide:init-evidence:v1';
+ const retired=new Set(['enh-weapon','enh-armor','enh-accessory']);
  const id=x=>typeof x==='string'&&/^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$/.test(x)&&!Object.hasOwn(Object.prototype,x)&&x!=='prototype';
  const entries=x=>x&&typeof x==='object'&&!Array.isArray(x)?Object.entries(x):[];
 
@@ -23,13 +24,13 @@
  }
  const rewardMap=value=>Object.fromEntries(entries(value).filter(([m])=>id(m)).map(([m,rows])=>[m,rewardRows(rows)]).filter(([,rows])=>rows.length).sort(([a],[b])=>a.localeCompare(b)));
  function rewardCount(value){return Object.values(normalize(value).data.observedRewards||{}).reduce((n,rows)=>n+rows.length,0)}
- function clean(x){if(x===null||typeof x==='string'||typeof x==='boolean')return x;if(typeof x==='number')return Number.isFinite(x)?x:null;if(Array.isArray(x))return x.map(clean);if(plain(x))return Object.fromEntries(Object.entries(x).filter(([k])=>!privateKeys.has(k.toLowerCase())).map(([k,v])=>[k,clean(v)]));return null}
+ function clean(x){if(x===null||typeof x==='string'||typeof x==='boolean')return x;if(typeof x==='number')return Number.isFinite(x)?x:null;if(Array.isArray(x))return x.filter(v=>!retired.has(v)&&!(plain(v)&&(retired.has(v.id)||retired.has(v.itemId)))).map(clean);if(plain(x))return Object.fromEntries(Object.entries(x).filter(([k])=>!privateKeys.has(k.toLowerCase())&&!retired.has(k)&&!(k.startsWith('i:')&&retired.has(k.slice(2)))).map(([k,v])=>[k,clean(v)]));return null}
  function deep(a,b){if(!plain(b))return clean(b);const out=plain(a)?clean(a):{};for(const [k,v]of entries(b))if(!privateKeys.has(k.toLowerCase()))out[k]=plain(v)?deep(out[k],v):clean(v);return out}
- function recipe(r){if(!plain(r?.in)||!Array.isArray(r.out))return null;const input=Object.fromEntries(entries(r.in).filter(([k,v])=>id(k)&&Number.isSafeInteger(v)&&v>0).sort(([a],[b])=>a.localeCompare(b)));if(!Object.keys(input).length||Object.keys(input).length!==Object.keys(r.in).length)return null;const out=r.out.filter(x=>Number.isSafeInteger(x?.n)&&x.n>0&&(!x.id||id(x.id))).map(x=>({...x.id?{id:x.id}:{},n:x.n}));return out.length===r.out.length&&out.length?{in:input,out}:null}
+ function recipe(r){if(!plain(r?.in)||!Array.isArray(r.out)||Object.keys(r.in).some(k=>retired.has(k))||r.out.some(x=>retired.has(x?.id)))return null;const input=Object.fromEntries(entries(r.in).filter(([k,v])=>id(k)&&Number.isSafeInteger(v)&&v>0).sort(([a],[b])=>a.localeCompare(b)));if(!Object.keys(input).length||Object.keys(input).length!==Object.keys(r.in).length)return null;const out=r.out.filter(x=>Number.isSafeInteger(x?.n)&&x.n>0&&(!x.id||id(x.id))).map(x=>({...x.id?{id:x.id}:{},n:x.n}));return out.length===r.out.length&&out.length?{in:input,out}:null}
  function catalogue(value){const out={};if(!plain(value))return out;
   for(const field of publicFields){const v=value[field];if(v===undefined)continue;
    if(field==='recipes'){const rows=(Array.isArray(v)?v:[]).map(recipe).filter(Boolean);if(rows.length)out.recipes=[...new Map(rows.map(x=>[JSON.stringify(x),x])).values()];continue}
-   if(['items','fwb','bosses','granny'].includes(field)){const rows=Array.isArray(v)?v:plain(v)?Object.values(v):[];const list=rows.filter(r=>plain(r)&&(field==='items'?id(r.id)&&typeof r.kind==='string':field==='fwb'?id(r.m)&&id(r.area?.id):field==='bosses'?Number.isInteger(r.floor)&&r.floor>0:id(r.itemId))).map(clean);if(list.length)out[field]=list;continue}
+   if(['items','fwb','bosses','granny'].includes(field)){const rows=Array.isArray(v)?v:plain(v)?Object.values(v):[];const list=rows.filter(r=>plain(r)&&(field==='items'?id(r.id)&&!retired.has(r.id)&&typeof r.kind==='string':field==='fwb'?id(r.m)&&id(r.area?.id):field==='bosses'?Number.isInteger(r.floor)&&r.floor>0:id(r.itemId)&&!retired.has(r.itemId))).map(clean);if(list.length)out[field]=list;continue}
    if(field==='beasts'){const map={};for(const [k,r]of entries(v))if(id(k)&&plain(r)){const row=Object.fromEntries(entries(r).filter(([k,x])=>['hp','exp','col'].includes(k)?Number.isFinite(x)&&x>=0:['hit','pace'].includes(k)&&typeof x==='string'));if(Object.keys(row).length)map[k]=row}if(Object.keys(map).length)out.beasts=map;continue}
    if(field==='params'){const map=Object.fromEntries(entries(v).filter(([k,x])=>id(k)&&typeof x==='number'&&Number.isFinite(x)));if(Object.keys(map).length)out.params=map;continue}
    if(plain(v)&&Object.keys(v).length)out[field]=clean(v);
@@ -42,7 +43,7 @@
  function extractInit(message,context={}){const player=message?.state?.player??message?.player;if(!player)return normalize(null);return combine([extract(player,context),...([message,message.state,message.lore,message.state?.lore,message.guide].filter(plain).map(extractMessage))])}
  function normalize(value){
   const data=value?.data||{},drops=new Map(),skills=new Map(),hp=new Map();
-  for(const row of Array.isArray(data.observedDrops)?data.observedDrops:[])if(id(row?.itemId)&&id(row?.monsterId))drops.set(row.monsterId+'|'+row.itemId,{itemId:row.itemId,monsterId:row.monsterId});
+  for(const row of Array.isArray(data.observedDrops)?data.observedDrops:[])if(id(row?.itemId)&&!retired.has(row.itemId)&&id(row?.monsterId))drops.set(row.monsterId+'|'+row.itemId,{itemId:row.itemId,monsterId:row.monsterId});
   for(const [monster,values]of entries(data.observedSkills))if(id(monster)&&Array.isArray(values)){const list=new Set(values.filter(id));if(list.size)skills.set(monster,[...list].sort())}
   for(const [monster,values]of entries(data.observedHp))if(id(monster)&&Array.isArray(values)){const list=new Set(values.filter(x=>Number.isSafeInteger(x)&&x>0));if(list.size)hp.set(monster,[...list].sort((a,b)=>a-b))}
   const c=catalogue(data.catalogue),rewards=rewardMap(data.observedRewards);return {format,data:{...(Object.keys(c).length?{catalogue:c}:{}),...(Object.keys(rewards).length?{observedRewards:rewards}:{}),observedDrops:[...drops.values()].sort((a,b)=>a.monsterId.localeCompare(b.monsterId)||a.itemId.localeCompare(b.itemId)),observedSkills:Object.fromEntries([...skills].sort(([a],[b])=>a.localeCompare(b))),observedHp:Object.fromEntries([...hp].sort(([a],[b])=>a.localeCompare(b)))}};

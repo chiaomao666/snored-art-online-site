@@ -2,6 +2,8 @@
 'use strict';
 function apply(G,payload){
  const D=G.catalog,s=payload.data;
+ const retired=new Set(['enh-weapon','enh-armor','enh-accessory',...(s.retiredItemIds||[])]);
+ D.items=D.items.filter(x=>!retired.has(x.id));G.retiredItemIds=retired;
  // New public equipment definitions stay outside the retained game registry.
  // For calculations, use an existing item of the same equipment type with
  // the public item's explicit final bonus, through the site's custom-stat API.
@@ -36,8 +38,9 @@ function apply(G,payload){
    const key=keys.at(-1);if(op.length>1)ref[key]=JSON.parse(JSON.stringify(op[1]));else delete ref[key];
   }
  }
- G.registerGuideItems?.([...s.catalogueChanges?.items||[],...s.items||[]]);
- for(const row of [...s.catalogueChanges?.items||[],...s.items||[]]){
+ const activeItems=[...s.catalogueChanges?.items||[],...s.items||[]].filter(x=>!retired.has(x.id));
+ G.registerGuideItems?.(activeItems);
+ for(const row of activeItems){
   if(typeof row.id!=='string'||typeof row.kind!=='string'||row.kind==='equipment'&&!G.slotKeys.includes(row.slot))continue;
   const existing=D.items.find(x=>x.id===row.id);
   if(existing)Object.assign(existing,row);else{D.items.push(row);if(row.kind==='equipment')G.publicEquipment.set(row.id,row);}
