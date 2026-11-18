@@ -84,3 +84,12 @@ assert.deepEqual(D.monsters.find(x=>x.id==='f25-c').observedMaxHp,[3001]);assert
 for(const [base,label]of [['named-concern','阿嬤的關心'],['named-headless','無首之盔'],['named-bicycle','阿嬤的腳踏車'],['named-fruitknife','阿嬤的水果刀'],['named-goldaxe','湖中女神的金斧'],['named-grandmahands','阿嬤的手'],['named-zakum','炎魔石盔']])assert.equal(G.nativeGear({gear:{fixture:{base,plus:0}}},'g:fixture').name.zh,label);
 assert.deepEqual(server.data.recipes,[{in:{'craft-add':1,'craft-remove':1},out:[{id:'craft-change',n:1}]}]);
 assert(server.data.floorDrops['24'].items.includes('side-garlic'));assert(server.data.floorDrops['25'].items.includes('forge-temper'));
+
+const materialApi=require('./material-catalogue.js'),materialIndex=materialApi.buildIndex(D),materialRows=new Map(materialIndex.rows.map(x=>[x.id,x]));
+assert.equal(materialIndex.rows.length,1068);assert.equal(materialRows.get('craft-add').category,'stone');assert.equal(materialRows.get('essence-str').category,'essence');assert.equal(materialRows.get('ore-1').category,'ore');assert.equal(materialRows.get('side-egg').category,'food');
+assert(!materialRows.has('meal-bread-1'));assert(!materialRows.has('pot-atk-1-1'));assert(!materialRows.has('named-cane'));
+assert(materialRows.get('craft-change').sources.some(x=>x.kind==='recipe'&&x.label.includes('添石 ×1')&&x.label.includes('走石 ×1')));assert(materialRows.get('craft-add').usage.some(x=>x.kind==='recipe'));
+assert(materialRows.get('mat-f25-c').sources.some(x=>x.key==='material:f25-c'&&x.href==='#monsters?id=f25-c'&&x.floor===25));assert.equal(materialRows.get('mat-f75-a').known,false);assert.equal(materialRows.get('mat-f75-a').name,'mat-f75-a');
+assert(materialRows.get('craft-add').sources.some(x=>x.key==='observed:f25-c'));const collectionGoal=D.chapters.flatMap(x=>(x.steps||[]).filter(s=>s.goal?.kind==='collect'&&s.goal.from).map(s=>s.goal))[0];assert(materialRows.get(collectionGoal.itemId).sources.some(x=>x.id===collectionGoal.from&&x.key.startsWith('quest-target:')));
+new vm.Script(fs.readFileSync(path.join(__dirname,'material-catalogue.js'),'utf8'));
+console.log('Passed material catalogue: 1,068 materials and quest items, distinct categories, actual sources/confirmed recipes, quest targets, explicit unknown names and prepared-food exclusion.');
