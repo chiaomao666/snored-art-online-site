@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "source": "websocket-ach-list",
-  "asset": "main-oHIVUDQ3.js",
+  "asset": "main-Cw7MDD3W.js",
   "precision": "server-json",
   "counts": {
-    "collect": 144,
+    "collect": 146,
     "hunt": 228,
     "boss": 77,
     "fun": 20
   },
-  "total": 469,
-  "hidden": 15,
+  "total": 471,
+  "hidden": 13,
   "entries": [
     {
       "id": "fine-t1",
@@ -6389,6 +6389,174 @@
       "rewardText": "稱號「名品鑑定師」"
     },
     {
+      "id": "series-granny",
+      "aliases": [],
+      "name": "阿嬤系列",
+      "desc": "阿嬤系列的名品，每一件各上繳一件。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 12,
+      "parts": [
+        {
+          "label": "阿嬤的枕頭",
+          "bases": [
+            "named-pillow"
+          ]
+        },
+        {
+          "label": "阿嬤的花傘",
+          "bases": [
+            "named-parasol"
+          ]
+        },
+        {
+          "label": "阿嬤的腳踏車",
+          "bases": [
+            "named-bicycle"
+          ]
+        },
+        {
+          "label": "阿嬤的兇兆",
+          "bases": [
+            "named-omen"
+          ]
+        },
+        {
+          "label": "阿嬤的水果刀",
+          "bases": [
+            "named-fruitknife"
+          ]
+        },
+        {
+          "label": "阿嬤的關心",
+          "bases": [
+            "named-concern"
+          ]
+        },
+        {
+          "label": "阿嬤的睡衣",
+          "bases": [
+            "named-pajamas"
+          ]
+        },
+        {
+          "label": "阿嬤的手",
+          "bases": [
+            "named-grandmahands"
+          ]
+        },
+        {
+          "label": "阿嬤的枴杖",
+          "bases": [
+            "named-cane"
+          ]
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        }
+      ],
+      "title": "series-granny",
+      "titleName": null,
+      "stat": "hpPct",
+      "value": 0.03,
+      "displayBonus": "HP +3%",
+      "displayValue": 0.03,
+      "rewardText": "HP +3% · 稱號（名稱未公開）"
+    },
+    {
+      "id": "series-ai",
+      "aliases": [],
+      "name": "欸哎系列",
+      "desc": "欸哎系列的名品，每一件各上繳一件。",
+      "cat": "collect",
+      "floor": null,
+      "hidden": false,
+      "target": 14,
+      "parts": [
+        {
+          "label": "克勞德之劍",
+          "bases": [
+            "ai-claude"
+          ]
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "傑米奈短刀",
+          "bases": [
+            "ai-gemini"
+          ]
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "拉瑪巨斧",
+          "bases": [
+            "ai-llama"
+          ]
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "米德炯尼戒指",
+          "bases": [
+            "ai-midjourney"
+          ]
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        },
+        {
+          "label": "???",
+          "bases": []
+        }
+      ],
+      "title": "series-ai",
+      "titleName": null,
+      "stat": "critDmg",
+      "value": 0.05,
+      "displayBonus": "暴擊傷害 +5%",
+      "displayValue": 0.05,
+      "rewardText": "暴擊傷害 +5% · 稱號（名稱未公開）"
+    },
+    {
       "id": "ach-armory",
       "aliases": [
         "guide-b300d0d228b76de1"
@@ -12603,6 +12771,42 @@
       "rewardText": "稱號「頭目常客」"
     },
     {
+      "id": "fun-kills",
+      "aliases": [],
+      "name": "十萬斬",
+      "desc": "總共打倒了十萬隻怪。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-kills",
+      "titleName": "十萬斬",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「十萬斬」"
+    },
+    {
+      "id": "fun-five21",
+      "aliases": [],
+      "name": "五張的奇蹟",
+      "desc": "五張以上的牌湊到剛好 21 點。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-five21",
+      "titleName": "五張的奇蹟",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「五張的奇蹟」"
+    },
+    {
       "id": "fun-death10",
       "aliases": [],
       "name": "未公開成就",
@@ -12711,24 +12915,6 @@
       "rewardText": null
     },
     {
-      "id": "fun-kills",
-      "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
-      "cat": "fun",
-      "floor": null,
-      "hidden": true,
-      "target": null,
-      "parts": [],
-      "title": null,
-      "titleName": null,
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": null
-    },
-    {
       "id": "fun-bj100",
       "aliases": [],
       "name": "未公開成就",
@@ -12747,24 +12933,6 @@
       "rewardText": null
     },
     {
-      "id": "fun-five21",
-      "aliases": [],
-      "name": "五張的奇蹟",
-      "desc": "五張以上的牌湊到剛好 21 點。",
-      "cat": "fun",
-      "floor": null,
-      "hidden": false,
-      "target": null,
-      "parts": [],
-      "title": "fun-five21",
-      "titleName": "五張的奇蹟",
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": "稱號「五張的奇蹟」"
-    },
-    {
       "id": "fun-split4",
       "aliases": [],
       "name": "未公開成就",
@@ -12781,24 +12949,6 @@
       "displayBonus": null,
       "displayValue": null,
       "rewardText": null
-    },
-    {
-      "id": "fun-broke",
-      "aliases": [],
-      "name": "傾家蕩產體驗營",
-      "desc": "一天在荷官桌輸掉一百萬摳。",
-      "cat": "fun",
-      "floor": null,
-      "hidden": false,
-      "target": null,
-      "parts": [],
-      "title": "fun-broke",
-      "titleName": "傾家蕩產體驗營",
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": "稱號「傾家蕩產體驗營」"
     },
     {
       "id": "fun-hands1000",
@@ -12838,24 +12988,6 @@
     },
     {
       "id": "fun-sweep",
-      "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
-      "cat": "fun",
-      "floor": null,
-      "hidden": true,
-      "target": null,
-      "parts": [],
-      "title": null,
-      "titleName": null,
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": null
-    },
-    {
-      "id": "fun-miasma10",
       "aliases": [],
       "name": "未公開成就",
       "desc": "",
@@ -12967,6 +13099,42 @@
       "displayBonus": null,
       "displayValue": null,
       "rewardText": "稱號「第一次說再見」"
+    },
+    {
+      "id": "fun-broke",
+      "aliases": [],
+      "name": "傾家蕩產體驗營",
+      "desc": "一天在荷官桌輸掉一百萬摳。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-broke",
+      "titleName": "傾家蕩產體驗營",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「傾家蕩產體驗營」"
+    },
+    {
+      "id": "fun-miasma10",
+      "aliases": [],
+      "name": "瘴氣品鑑師",
+      "desc": "在秘境裡撐到瘴氣 10 層。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-miasma10",
+      "titleName": "瘴氣品鑑師",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「瘴氣品鑑師」"
     }
   ]
 }
