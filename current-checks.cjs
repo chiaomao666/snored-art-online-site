@@ -30,12 +30,12 @@ for(const f of ['current-runtime.js','current-site.js','build-engine.js','classi
 const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'current-manifest.json')));assert.equal(manifest.counts.talentNodes,D.talentNodes.length);
 
 const server=require('./server-guide-data.json');assert.equal(server.format,'sao-public-guide-v1');assert.equal(achievementCatalog.precision,'server-json');assert.equal(achievementCatalog.entries.find(x=>x.id==='set-t1').value,.00051);assert.equal(achievementCatalog.entries.find(x=>x.id==='armory-t1').parts.length,7);
-const coverage=require('./server-guide-overlay.js').apply(G,server);assert.equal(coverage.beasts,87);assert.equal(coverage.bosses,11);assert.equal(coverage.floorDrops,14);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.maxHp,70);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.atk,undefined);assert.equal(D.monsters.find(x=>x.id==='f1-boar').exp,null);assert.equal(D.items.find(x=>x.id==='story-plank').name.zh,'咬爛的船板');assert.equal(G.getParameters().talentRefundCol,20);assert.equal(D.serverTitles.elfFriend.name.zh,'驚靈之友');
+const coverage=require('./server-guide-overlay.js').apply(G,server);assert.equal(coverage.beasts,87);assert.equal(coverage.bosses,11);assert.equal(coverage.floorDrops,15);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.maxHp,70);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.atk,undefined);assert.equal(D.monsters.find(x=>x.id==='f1-boar').exp,null);assert.equal(D.items.find(x=>x.id==='story-plank').name.zh,'咬爛的船板');assert.equal(G.getParameters().talentRefundCol,20);assert.equal(D.serverTitles.elfFriend.name.zh,'驚靈之友');
 for(const f of ['server-guide-data.js','server-guide-overlay.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
-assert.equal(D.items.length,10356);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3060);assert.equal(D.monsters.length,995);assert.equal(D.areas.length,598);
-assert.equal(coverage.observedHp,198);assert.equal(coverage.dropSources,3832);assert.equal(coverage.monsterSkills,288);
-assert.equal(coverage.legacyMonsters,304);assert.equal(coverage.legacyDropEntries,6419);assert.equal(D.monsters.find(x=>x.id==='f1-boar').legacyReference,undefined);assert.deepEqual(D.monsters.find(x=>x.id==='f1-boar').observedMaxHp,server.data.observedHp['f1-boar']);assert.equal(D.monsters.find(x=>x.id==='f4-c').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='f8-a').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='wb-jack').legacyReference,undefined);
-assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,3832);
+assert.equal(D.items.length,10359);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3063);assert.equal(D.monsters.length,996);assert.equal(D.areas.length,599);
+assert.equal(coverage.observedHp,199);assert.equal(coverage.dropSources,4047);assert.equal(coverage.monsterSkills,305);
+assert.equal(coverage.legacyMonsters,303);assert.equal(coverage.legacyDropEntries,6396);assert.equal(D.monsters.find(x=>x.id==='f1-boar').legacyReference,undefined);assert.deepEqual(D.monsters.find(x=>x.id==='f1-boar').observedMaxHp,server.data.observedHp['f1-boar']);assert.equal(D.monsters.find(x=>x.id==='f4-c').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='f8-a').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='wb-jack').legacyReference,undefined);
+assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,4047);
 assert.deepEqual(server.data.unresolvedItemIds,[]);
 for(const row of server.data.observedDrops){assert(D.items.some(x=>x.id===row.itemId)||server.data.unresolvedItemIds.includes(row.itemId),row.itemId);assert(D.monsters.some(x=>x.id===row.monsterId),row.monsterId);assert.deepEqual(Object.keys(row).sort(),['itemId','monsterId']);}
 for(const [id,skills]of Object.entries(server.data.observedSkills)){assert(D.monsters.some(x=>x.id===id));for(const skill of skills)assert(server.data.skills[skill]||server.data.unresolvedSkillIds.includes(skill),skill);}
@@ -43,7 +43,7 @@ assert.deepEqual(D.monsters.find(x=>x.id==='f8-a').observedMaxHp,[178]);assert.e
 assert.equal(D.monsters.find(x=>x.id==='fwb-f10').worldBoss,true);assert.equal(D.areas.find(x=>x.id==='f10-wb').worldBossId,'fwb-f10');assert(D.areas.find(x=>x.id==='f10-wilds').links.includes('f10-wb'));
 const aiBase=G.calculate({level:20}),aiGear=G.calculate({level:20,slots:{armor:{id:'ai-gpt'}}});assert.equal(aiGear.stats.def-aiBase.stats.def,11);assert.equal(aiGear.stats.maxHp-aiBase.stats.maxHp,59);
 const aiHands=G.calculate({level:20,slots:{hands:{id:'ai-cursor'}}}),aiRing=G.calculate({level:20,slots:{accessory:{id:'ai-midjourney'}}});assert.equal(aiHands.stats.agi-aiBase.stats.agi,2);assert.equal(aiRing.stats.agi-aiBase.stats.agi,2);assert(Math.abs(aiRing.stats.crit-aiBase.stats.crit-.025)<1e-10);
-const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,3832);assert.equal(D.items.length,10356);assert.equal(D.monsters.length,995);assert.equal(D.areas.length,598);
+const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,4047);assert.equal(D.items.length,10359);assert.equal(D.monsters.length,996);assert.equal(D.areas.length,599);
 assert.equal(server.asset,'main-Cw7MDD3W.js');
 assert.equal(achievementCatalog.entries.find(x=>x.id==='bossgear-f1').parts[0].bases.length,4);
 assert.equal(D.monsters.find(x=>x.id==='f10-a').exp,85);
@@ -82,7 +82,7 @@ assert.equal(D.monsters.find(x=>x.id==='fwb-f25').name.zh,'世界輸之根');ass
 assert.deepEqual(D.monsters.find(x=>x.id==='f25-c').observedMaxHp,[3001]);assert.equal(D.monsters.find(x=>x.id==='f25-c').legacyReference,undefined);
 
 for(const [base,label]of [['named-concern','阿嬤的關心'],['named-headless','無首之盔'],['named-bicycle','阿嬤的腳踏車'],['named-fruitknife','阿嬤的水果刀'],['named-goldaxe','湖中女神的金斧'],['named-grandmahands','阿嬤的手'],['named-zakum','炎魔石盔']])assert.equal(G.nativeGear({gear:{fixture:{base,plus:0}}},'g:fixture').name.zh,label);
-assert.deepEqual(server.data.recipes,[{in:{'craft-add':1,'craft-remove':1},out:[{id:'craft-change',n:1}]},{in:{'craft-change':4,'craft-reroll':30,'craft-tier':10},out:[{id:'omen-keep',n:1}]}]);
+assert.equal(server.data.recipes.length,4);for(const recipe of [{in:{'craft-add':1,'craft-remove':1},out:[{id:'craft-change',n:1}]},{in:{'craft-change':4,'craft-reroll':30,'craft-tier':10},out:[{id:'omen-keep',n:1}]},{in:{'craft-remove':5,'craft-tier':10,'craft-value':20},out:[{id:'omen-weakest',n:1}]},{in:{'craft-remove':3,'forge-temper':1},out:[{id:'craft-fracture',n:1}]}])assert(server.data.recipes.some(row=>JSON.stringify(row)===JSON.stringify(recipe)));
 assert(server.data.floorDrops['24'].items.includes('side-garlic'));assert(server.data.floorDrops['25'].items.includes('forge-temper'));
 
 const materialApi=require('./material-catalogue.js'),materialIndex=materialApi.buildIndex(D),materialRows=new Map(materialIndex.rows.map(x=>[x.id,x]));
@@ -113,3 +113,5 @@ assert.equal(achievementCatalog.entries.find(x=>x.id==='fun-death200').hidden,tr
 assert.equal(D.monsters.find(x=>x.id==='f30-s').exp,24870);assert.equal(D.monsters.find(x=>x.id==='f30-t').col,132);assert.equal(D.items.find(x=>x.id==='named-shadowstitch').fxRange.mul,'1.1～1.2');assert(materialRows.get('omen-keep').sources.some(x=>x.kind==='recipe'&&x.label.includes('×30')));
 
 const sweep=achievementCatalog.entries.find(x=>x.id==='fun-sweep');assert.equal(sweep.name,'通殺');assert.equal(sweep.desc,'當莊家時，三個人以上的一局全部都贏。');assert.equal(sweep.hidden,false);assert.equal(sweep.titleName,'通殺');assert.equal(sweep.rewardText,'稱號「通殺」');assert.equal(sweep.stat,null);assert.equal(sweep.value,null);
+
+assert.equal(D.monsters.find(x=>x.id==='fwb-f35').name.zh,'雪怪叔叔');assert.equal(D.areas.find(x=>x.id==='f35-wb').worldBossId,'fwb-f35');assert(D.areas.find(x=>x.id==='f35-outskirts').links.includes('f35-wb'));for(const [id,name]of [['named-thunder','擂神之錘'],['named-crescent','收割者的月芽'],['named-heart','氓國將的心臟']])assert.equal(D.items.find(x=>x.id===id).name.zh,name);assert(materialRows.get('craft-fracture').sources.some(x=>x.kind==='recipe'&&x.label.includes('走石 ×3')));
