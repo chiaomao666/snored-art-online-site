@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "source": "websocket-ach-list",
   "asset": "main-Cw7MDD3W.js",
   "precision": "server-json",
@@ -11,7 +11,7 @@
     "fun": 20
   },
   "total": 471,
-  "hidden": 9,
+  "hidden": 8,
   "entries": [
     {
       "id": "fine-t1",
@@ -12915,24 +12915,6 @@
       "rewardText": null
     },
     {
-      "id": "fun-sweep",
-      "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
-      "cat": "fun",
-      "floor": null,
-      "hidden": true,
-      "target": null,
-      "parts": [],
-      "title": null,
-      "titleName": null,
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": null
-    },
-    {
       "id": "fun-miasma20",
       "aliases": [],
       "name": "未公開成就",
@@ -13084,6 +13066,25 @@
       "displayBonus": null,
       "displayValue": null,
       "rewardText": "稱號「第一次說再見」"
+    },
+    {
+      "id": "fun-sweep",
+      "aliases": [],
+      "name": "通殺",
+      "desc": "當莊家時，三個人以上的一局全部都贏。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-sweep",
+      "titleName": "通殺",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「通殺」",
+      "definitionPrecision": "game-display"
     },
     {
       "id": "fun-broke",
