@@ -32,19 +32,19 @@ const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'current-manifest.
 const server=require('./server-guide-data.json');assert.equal(server.format,'sao-public-guide-v1');assert.equal(achievementCatalog.precision,'server-json');assert.equal(achievementCatalog.entries.find(x=>x.id==='set-t1').value,.00051);assert.equal(achievementCatalog.entries.find(x=>x.id==='armory-t1').parts.length,7);
 const coverage=require('./server-guide-overlay.js').apply(G,server);assert.equal(coverage.beasts,87);assert.equal(coverage.bosses,11);assert.equal(coverage.floorDrops,15);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.maxHp,70);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.atk,undefined);assert.equal(D.monsters.find(x=>x.id==='f1-boar').exp,null);assert.equal(D.items.find(x=>x.id==='story-plank').name.zh,'咬爛的船板');assert.equal(G.getParameters().talentRefundCol,20);assert.equal(D.serverTitles.elfFriend.name.zh,'驚靈之友');
 for(const f of ['server-guide-data.js','server-guide-overlay.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
-assert.equal(D.items.length,10360);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3064);assert.equal(D.monsters.length,996);assert.equal(D.areas.length,599);
-assert.equal(coverage.observedHp,201);assert.equal(coverage.dropSources,4197);assert.equal(coverage.monsterSkills,316);
+assert.equal(D.items.length,10365);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3069);assert.equal(D.monsters.length,996);assert.equal(D.areas.length,599);
+assert.equal(coverage.observedHp,201);assert.equal(coverage.dropSources,4476);assert.equal(coverage.monsterSkills,344);
 assert.equal(coverage.legacyMonsters,301);assert.equal(coverage.legacyDropEntries,6350);assert.equal(D.monsters.find(x=>x.id==='f1-boar').legacyReference,undefined);assert.deepEqual(D.monsters.find(x=>x.id==='f1-boar').observedMaxHp,server.data.observedHp['f1-boar']);assert.equal(D.monsters.find(x=>x.id==='f4-c').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='f8-a').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='wb-jack').legacyReference,undefined);
-assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,4197);
+assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,4476);
 // A drop ID alone is evidence of a source, not an equipment definition.
-assert.deepEqual(server.data.unresolvedItemIds,['ai-perplexity']);
+assert.deepEqual(server.data.unresolvedItemIds,[]);
 for(const row of server.data.observedDrops){assert(D.items.some(x=>x.id===row.itemId)||server.data.unresolvedItemIds.includes(row.itemId),row.itemId);assert(D.monsters.some(x=>x.id===row.monsterId),row.monsterId);assert.deepEqual(Object.keys(row).sort(),['itemId','monsterId']);}
 for(const [id,skills]of Object.entries(server.data.observedSkills)){assert(D.monsters.some(x=>x.id===id));for(const skill of skills)assert(server.data.skills[skill]||server.data.unresolvedSkillIds.includes(skill),skill);}
 assert.deepEqual(D.monsters.find(x=>x.id==='f8-a').observedMaxHp,[178]);assert.equal(D.monsters.find(x=>x.id==='f8-a').stats,null);assert.equal(D.monsters.find(x=>x.id==='f8-a').exp,server.data.beasts['f8-a'].exp);assert.equal(D.monsters.find(x=>x.id==='f9-r').exp,null);
 assert.equal(D.monsters.find(x=>x.id==='fwb-f10').worldBoss,true);assert.equal(D.areas.find(x=>x.id==='f10-wb').worldBossId,'fwb-f10');assert(D.areas.find(x=>x.id==='f10-wilds').links.includes('f10-wb'));
 const aiBase=G.calculate({level:20}),aiGear=G.calculate({level:20,slots:{armor:{id:'ai-gpt'}}});assert.equal(aiGear.stats.def-aiBase.stats.def,11);assert.equal(aiGear.stats.maxHp-aiBase.stats.maxHp,59);
 const aiHands=G.calculate({level:20,slots:{hands:{id:'ai-cursor'}}}),aiRing=G.calculate({level:20,slots:{accessory:{id:'ai-midjourney'}}});assert.equal(aiHands.stats.agi-aiBase.stats.agi,2);assert.equal(aiRing.stats.agi-aiBase.stats.agi,2);assert(Math.abs(aiRing.stats.crit-aiBase.stats.crit-.025)<1e-10);
-const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,4197);assert.equal(D.items.length,10360);assert.equal(D.monsters.length,996);assert.equal(D.areas.length,599);
+const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,4476);assert.equal(D.items.length,10365);assert.equal(D.monsters.length,996);assert.equal(D.areas.length,599);
 assert.equal(server.asset,'main-Cw7MDD3W.js');
 assert.equal(achievementCatalog.entries.find(x=>x.id==='bossgear-f1').parts[0].bases.length,4);
 assert.equal(D.monsters.find(x=>x.id==='f10-a').exp,85);
@@ -118,6 +118,10 @@ const sweep=achievementCatalog.entries.find(x=>x.id==='fun-sweep');assert.equal(
 assert.equal(D.monsters.find(x=>x.id==='fwb-f35').name.zh,'雪怪叔叔');assert.equal(D.areas.find(x=>x.id==='f35-wb').worldBossId,'fwb-f35');assert(D.areas.find(x=>x.id==='f35-outskirts').links.includes('f35-wb'));for(const [id,name]of [['named-thunder','擂神之錘'],['named-crescent','收割者的月芽'],['named-heart','氓國將的心臟']])assert.equal(D.items.find(x=>x.id===id).name.zh,name);assert(materialRows.get('craft-fracture').sources.some(x=>x.kind==='recipe'&&x.label.includes('走石 ×3')));
 
 // Public catalogue supplement captured 2026-11-21; personal snapshots stay local.
-assert.equal(G.getParameters().maxOnline,2200);assert.equal(server.data.catalogue.storyTexts.s31.title.zh,'第三十八章　霧中的信');assert.equal(server.data.catalogue.hints['granny-envelope'].zh,'皺巴巴的紅包，阿嬤說拿去買糖吃。存了這麼多，回起司之鎮給阿嬤看看。');assert(server.data.observedHp['f35-s'].includes(7411));
+assert.equal(G.getParameters().maxOnline,2000);assert.equal(server.data.catalogue.storyTexts.s31.title.zh,'第三十八章　霧中的信');assert.equal(server.data.catalogue.hints['granny-envelope'].zh,'皺巴巴的紅包，阿嬤說拿去買糖吃。存了這麼多，回起司之鎮給阿嬤看看。');assert(server.data.observedHp['f35-s'].includes(7411));
 
 assert.equal(G.getParameters().skillXpRate,.33);assert.equal(G.getParameters().maxOnlineVip,1000);assert(server.data.observedHp['f35-t'].includes(3935));assert.equal(D.items.find(x=>x.id==='named-galeboots').name.zh,'急瘋之靴');assert.equal(D.items.find(x=>x.id==='named-musashi').bonus.def,102);assert(server.data.recipes.some(x=>JSON.stringify(x.in)===JSON.stringify({'craft-add':4,'ore-4':5})&&x.out.some(y=>y.id==='craft-add3'&&y.n===1)));assert(server.data.observedDrops.some(x=>x.itemId==='ai-perplexity'&&x.monsterId==='f35-t'));
+
+// Full init and attached public guide frames collected 2026-11-23 (Taipei).
+for(const [id,name]of [['ai-perplexity','普萊希提鐮刀'],['named-starshield','紅藍星盾'],['named-abus','阿不思的皮衣'],['named-thermos','經濟艙保溫瓶'],['named-unseen','無形之盾']])assert.equal(D.items.find(x=>x.id===id).name.zh,name);
+assert.equal(D.items.find(x=>x.id==='ai-perplexity').bonus.atk,12);assert.equal(D.items.find(x=>x.id==='named-starshield').reqLevel,51);assert.equal(D.items.find(x=>x.id==='named-thermos').weaponType,'mace');
