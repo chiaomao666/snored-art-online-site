@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-22",
+  "updated": "2026-11-24",
   "source": "websocket-ach-list",
   "asset": "main-Cw7MDD3W.js",
   "precision": "server-json",
@@ -8,9 +8,9 @@
     "collect": 146,
     "hunt": 228,
     "boss": 77,
-    "fun": 20
+    "fun": 21
   },
-  "total": 471,
+  "total": 472,
   "hidden": 7,
   "entries": [
     {
@@ -13140,6 +13140,25 @@
       "displayBonus": null,
       "displayValue": null,
       "rewardText": "稱號「轉生專業戶」",
+      "definitionPrecision": "game-display"
+    },
+    {
+      "id": "fun-bc-run8",
+      "aliases": [],
+      "name": "一路長紅",
+      "desc": "比嘉樂連續贏了八局。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": 8,
+      "parts": [],
+      "title": "fun-bc-run8",
+      "titleName": "一路長紅",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「一路長紅」",
       "definitionPrecision": "game-display"
     }
   ]
