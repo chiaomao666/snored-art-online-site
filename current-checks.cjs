@@ -32,9 +32,9 @@ const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'current-manifest.
 const server=require('./server-guide-data.json');assert.equal(server.format,'sao-public-guide-v1');assert.equal(achievementCatalog.precision,'server-json');assert.equal(achievementCatalog.entries.find(x=>x.id==='set-t1').value,.00051);assert.equal(achievementCatalog.entries.find(x=>x.id==='armory-t1').parts.length,7);
 const coverage=require('./server-guide-overlay.js').apply(G,server);assert.equal(coverage.beasts,87);assert.equal(coverage.bosses,11);assert.equal(coverage.floorDrops,15);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.maxHp,70);assert.equal(D.monsters.find(x=>x.id==='f4-c').stats.atk,undefined);assert.equal(D.monsters.find(x=>x.id==='f1-boar').exp,null);assert.equal(D.items.find(x=>x.id==='story-plank').name.zh,'咬爛的船板');assert.equal(G.getParameters().talentRefundCol,20);assert.equal(D.serverTitles.elfFriend.name.zh,'驚靈之友');
 for(const f of ['server-guide-data.js','server-guide-overlay.js'])new vm.Script(fs.readFileSync(path.join(__dirname,f),'utf8'));
-assert.equal(D.items.length,10386);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3089);assert.equal(D.monsters.length,997);assert.equal(D.areas.length,600);
+assert.equal(D.items.length,9484);assert.equal(D.items.filter(x=>x.kind==='equipment').length,3089);assert.equal(D.monsters.length,997);assert.equal(D.areas.length,600);
 assert.equal(coverage.observedHp,203);assert.equal(coverage.dropSources,6348);assert.equal(coverage.monsterSkills,415);
-assert.equal(coverage.legacyMonsters,301);assert.equal(coverage.legacyDropEntries,6350);assert.equal(D.monsters.find(x=>x.id==='f1-boar').legacyReference,undefined);assert.deepEqual(D.monsters.find(x=>x.id==='f1-boar').observedMaxHp,server.data.observedHp['f1-boar']);assert.equal(D.monsters.find(x=>x.id==='f4-c').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='f8-a').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='wb-jack').legacyReference,undefined);
+assert.equal(coverage.legacyMonsters,301);assert.equal(coverage.legacyDropEntries,6069);assert.equal(D.monsters.find(x=>x.id==='f1-boar').legacyReference,undefined);assert.deepEqual(D.monsters.find(x=>x.id==='f1-boar').observedMaxHp,server.data.observedHp['f1-boar']);assert.equal(D.monsters.find(x=>x.id==='f4-c').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='f8-a').legacyReference,undefined);assert.equal(D.monsters.find(x=>x.id==='wb-jack').legacyReference,undefined);
 assert.equal(new Set(server.data.observedDrops.map(x=>x.itemId+'|'+x.monsterId)).size,6348);
 // A drop ID alone is evidence of a source, not an equipment definition.
 assert.deepEqual(server.data.unresolvedItemIds,['named-ichigo','named-ricesickle']);
@@ -44,7 +44,7 @@ assert.deepEqual(D.monsters.find(x=>x.id==='f8-a').observedMaxHp,[178]);assert.e
 assert.equal(D.monsters.find(x=>x.id==='fwb-f10').worldBoss,true);assert.equal(D.areas.find(x=>x.id==='f10-wb').worldBossId,'fwb-f10');assert(D.areas.find(x=>x.id==='f10-wilds').links.includes('f10-wb'));
 const aiBase=G.calculate({level:20}),aiGear=G.calculate({level:20,slots:{armor:{id:'ai-gpt'}}});assert.equal(aiGear.stats.def-aiBase.stats.def,11);assert.equal(aiGear.stats.maxHp-aiBase.stats.maxHp,59);
 const aiHands=G.calculate({level:20,slots:{hands:{id:'ai-cursor'}}}),aiRing=G.calculate({level:20,slots:{accessory:{id:'ai-midjourney'}}});assert.equal(aiHands.stats.agi-aiBase.stats.agi,2);assert.equal(aiRing.stats.agi-aiBase.stats.agi,2);assert(Math.abs(aiRing.stats.crit-aiBase.stats.crit-.025)<1e-10);
-const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,6348);assert.equal(D.items.length,10386);assert.equal(D.monsters.length,997);assert.equal(D.areas.length,600);
+const again=require('./server-guide-overlay.js').apply(G,server);assert.equal(again.dropSources,6348);assert.equal(D.items.length,9484);assert.equal(D.monsters.length,997);assert.equal(D.areas.length,600);
 assert.equal(server.asset,'main-DiT5cq2I.js');
 assert.equal(achievementCatalog.entries.find(x=>x.id==='bossgear-f1').parts[0].bases.length,4);
 assert.equal(D.monsters.find(x=>x.id==='f10-a').exp,85);
@@ -87,13 +87,13 @@ assert.equal(server.data.recipes.length,5);for(const recipe of [{in:{'craft-add'
 assert(server.data.floorDrops['24'].items.includes('side-garlic'));assert(server.data.floorDrops['25'].items.includes('forge-temper'));
 
 const materialApi=require('./material-catalogue.js'),materialIndex=materialApi.buildIndex(D),materialRows=new Map(materialIndex.rows.map(x=>[x.id,x]));
-assert.equal(materialIndex.rows.length,1066);assert.equal(materialRows.get('craft-add').category,'stone');assert.equal(materialRows.get('essence-str').category,'essence');assert.equal(materialRows.get('ore-1').category,'ore');assert.equal(materialRows.get('side-egg').category,'food');
+assert.equal(materialIndex.rows.length,164);assert.equal(materialRows.get('craft-add').category,'stone');assert.equal(materialRows.get('essence-str').category,'essence');assert.equal(materialRows.get('ore-1').category,'ore');assert.equal(materialRows.get('side-egg').category,'food');
 assert(!materialRows.has('meal-bread-1'));assert(!materialRows.has('pot-atk-1-1'));assert(!materialRows.has('named-cane'));
 assert(materialRows.get('craft-change').sources.some(x=>x.kind==='recipe'&&x.label.includes('添石 ×1')&&x.label.includes('走石 ×1')));assert(materialRows.get('craft-add').usage.some(x=>x.kind==='recipe'));
-assert(materialRows.get('mat-f25-c').sources.some(x=>x.key==='material:f25-c'&&x.href==='#monsters?id=f25-c'&&x.floor===25));assert.equal(materialRows.get('mat-f75-a').known,false);assert.equal(materialRows.get('mat-f75-a').name,'mat-f75-a');
+assert(!D.items.some(x=>/^mat-f\d+-/.test(x.id)));assert(!materialIndex.rows.some(x=>/^mat-f\d+-/.test(x.id)));assert(Object.values(server.data.legacyFallback.monsters).every(m=>m.drops.every(d=>!/^mat-f\d+-/.test(d.itemId))));
 assert(materialRows.get('craft-add').sources.some(x=>x.key==='observed:f25-c'));const collectionGoal=D.chapters.flatMap(x=>(x.steps||[]).filter(s=>s.goal?.kind==='collect'&&s.goal.from).map(s=>s.goal))[0];assert(materialRows.get(collectionGoal.itemId).sources.some(x=>x.id===collectionGoal.from&&x.key.startsWith('quest-target:')));
 new vm.Script(fs.readFileSync(path.join(__dirname,'material-catalogue.js'),'utf8'));
-console.log('Passed material catalogue: 1,066 materials and quest items, distinct categories, actual sources/confirmed recipes, quest targets, explicit unknown names and prepared-food exclusion.');
+console.log('Passed material catalogue: 164 active materials and quest items, distinct categories, actual sources/confirmed recipes, quest targets, explicit unknown names and prepared-food exclusion.');
 
 for(const id of ['enh-weapon','enh-armor','enh-accessory']){assert(!D.items.some(x=>x.id===id));assert(!materialRows.has(id));assert(!Object.hasOwn(server.data.legacyFallback.itemChecks,id));assert(Object.values(server.data.legacyFallback.monsters).every(m=>m.drops.every(d=>d.itemId!==id)));}
 for(const id of ['enh-gem','enh-dark','crystal-heal','crystal-teleport'])assert(D.items.some(x=>x.id===id));

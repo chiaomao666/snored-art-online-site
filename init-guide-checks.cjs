@@ -23,3 +23,7 @@ const retiredDrops=E.extract({stats:{drops:{'enh-weapon':{'f1-boar':3},'enh-armo
 console.log('Passed retired materials: obsolete crystal definitions, drops, common pools, shops and whole recipes cannot be restored through old imports; active crystals remain.');
 
 const full=E.extractInit({t:"init",state:{player:{...raw,fuseBook:[{in:{ore:2},out:[{id:"gem",n:1}]}]}},future:{keep:true}});assert.equal(full.data.catalogue.recipes.length,1);const def=E.extractMessage({t:"lore",items:[{id:"public-item",kind:"equipment",slot:"armor",name:{zh:"公開裝備"},bonus:{def:5},account:"PRIVATE_ACCOUNT",ax:{PRIVATE_ROLL:1}}],beasts:{"f1-boar":{hp:300,next:999}}});assert.equal(def.data.catalogue.beasts["f1-boar"].next,undefined);assert(!JSON.stringify(def).includes("PRIVATE_ACCOUNT"));assert(!JSON.stringify(def).includes("PRIVATE_ROLL"));assert.equal(E.combine([def,def]).data.catalogue.items.length,1);
+
+const retiredMonsterMaterials=E.extractMessage({t:'lore',items:[{id:'mat-f25-c',kind:'material',name:{zh:'舊怪物的素材'}},{id:'ore-1',kind:'material',name:{zh:'吃銅礦'}}],floorDrops:{25:{items:['mat-f25-c','ore-1']}}});
+assert.deepEqual(retiredMonsterMaterials.data.catalogue.items.map(x=>x.id),['ore-1']);assert.deepEqual(retiredMonsterMaterials.data.catalogue.floorDrops['25'].items,['ore-1']);
+const oldMaterialObservation=E.extract({stats:{drops:{'mat-f1-boar':{'f1-boar':1},'ore-1':{'f1-boar':1}}}});assert.deepEqual(oldMaterialObservation.data.observedDrops,[{itemId:'ore-1',monsterId:'f1-boar'}]);
