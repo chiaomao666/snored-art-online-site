@@ -1,8 +1,8 @@
 {
-  "version": "2026-11-17",
-  "sha256": "21d3aa6deedbe5e6d4ef0c2717f3f73b8754fcbd3c4c0903c84a1752e984a2b7",
+  "version": "2026-11-27",
+  "sha256": "539146d3771653d1fb512b254da5e3049cf19a230efdb8b2eeccb768294d5bde",
   "counts": {
-    "items": 10320,
+    "items": 10341,
     "monsters": 990,
     "areas": 593,
     "floors": 75,
@@ -13,17 +13,17 @@
     "skillPaths": 96,
     "buffs": 24,
     "talentNodes": 408,
-    "achievementTitles": 35,
-    "achievements": 472,
-    "hiddenAchievements": 7,
+    "achievementTitles": 45,
+    "achievements": 479,
+    "hiddenAchievements": 9,
     "serverMonsterRecords": 87,
     "serverMonsterHp": 35,
     "bossGuides": 11,
     "floorDropPools": 15,
-    "observedMonsterHp": 201,
-    "observedDropSources": 4476,
-    "monstersWithObservedSkills": 344,
-    "additionalWorldBosses": 6,
+    "observedMonsterHp": 203,
+    "observedDropSources": 6348,
+    "monstersWithObservedSkills": 415,
+    "additionalWorldBosses": 7,
     "additionalEquipment": 49,
     "legacyMonsterReferences": 446,
     "legacyDropReferences": 9282,
@@ -40,5 +40,5 @@
     "hidden achievement conditions"
   ],
   "achievementPrecision": "server-json",
-  "serverAsset": "main-Cw7MDD3W.js"
+  "serverAsset": "main-DiT5cq2I.js"
 }

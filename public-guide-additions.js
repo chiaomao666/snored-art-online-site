@@ -14,7 +14,7 @@
    const results=document.getElementById('floor-reward-results');
    if(results&&!document.querySelector('[data-miasma-exp-note]')&&D.serverGuide?.mechanics?.miasmaExperience){
     const note=document.createElement('p');note.className='muted';note.dataset.miasmaExpNote='';
-    note.innerHTML='秘境瘴氣經驗倍率＝1＋5% × 層數，摳不變。0～2 層已實測，3 層以上沿用推估；實得紀錄已含當下加成，請勿重複計算。<a href="#systems">查看規則與範例 →</a>';
+    note.innerHTML='秘境瘴氣經驗倍率＝1＋5% × 自行累積的經驗層數，最高 4 倍，摳不變。隊友傳染不增加經驗層數；實得紀錄已含加成，請勿重複計算。<a href="#systems">查看規則與範例 →</a>';
     results.before(note);
    }
    return;

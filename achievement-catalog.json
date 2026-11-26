@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "updated": "2026-11-24",
+  "updated": "2026-11-27",
   "source": "websocket-ach-list",
-  "asset": "main-Cw7MDD3W.js",
+  "asset": "main-DiT5cq2I.js",
   "precision": "server-json",
   "counts": {
     "collect": 146,
     "hunt": 228,
-    "boss": 77,
-    "fun": 21
+    "boss": 81,
+    "fun": 24
   },
-  "total": 472,
-  "hidden": 7,
+  "total": 479,
+  "hidden": 9,
   "entries": [
     {
       "id": "fine-t1",
@@ -6453,12 +6453,16 @@
           ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "阿嬤的裁縫針",
+          "bases": [
+            "named-needle"
+          ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "阿嬤的割稻鐮",
+          "bases": [
+            "named-ricesickle"
+          ]
         },
         {
           "label": "???",
@@ -6466,12 +6470,12 @@
         }
       ],
       "title": "series-granny",
-      "titleName": null,
+      "titleName": "阿嬤的金孫",
       "stat": "hpPct",
       "value": 0.03,
       "displayBonus": "HP +3%",
       "displayValue": 0.03,
-      "rewardText": "HP +3% · 稱號（名稱未公開）"
+      "rewardText": "HP +3% · 稱號「阿嬤的金孫」"
     },
     {
       "id": "series-ai",
@@ -6490,8 +6494,10 @@
           ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "吉皮提鎧甲",
+          "bases": [
+            "ai-gpt"
+          ]
         },
         {
           "label": "傑米奈短刀",
@@ -6500,24 +6506,34 @@
           ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "柯派洛之盾",
+          "bases": [
+            "ai-copilot"
+          ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "格羅克頭盔",
+          "bases": [
+            "ai-grok"
+          ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "豆寶項鍊",
+          "bases": [
+            "ai-doubao"
+          ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "柯瑟手套",
+          "bases": [
+            "ai-cursor"
+          ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "迪普希克之靴",
+          "bases": [
+            "ai-deepseek"
+          ]
         },
         {
           "label": "拉瑪巨斧",
@@ -6526,8 +6542,10 @@
           ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "米斯卓細劍",
+          "bases": [
+            "ai-mistral"
+          ]
         },
         {
           "label": "米德炯尼戒指",
@@ -6536,25 +6554,31 @@
           ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "普萊希提鐮刀",
+          "bases": [
+            "ai-perplexity"
+          ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "索拉太刀",
+          "bases": [
+            "ai-sora"
+          ]
         },
         {
-          "label": "???",
-          "bases": []
+          "label": "通益千問錘",
+          "bases": [
+            "ai-qwen"
+          ]
         }
       ],
       "title": "series-ai",
-      "titleName": null,
+      "titleName": "欸哎訓練師",
       "stat": "critDmg",
       "value": 0.05,
       "displayBonus": "暴擊傷害 +5%",
       "displayValue": 0.05,
-      "rewardText": "暴擊傷害 +5% · 稱號（名稱未公開）"
+      "rewardText": "暴擊傷害 +5% · 稱號「欸哎訓練師」"
     },
     {
       "id": "ach-armory",
@@ -11245,9 +11269,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11285,9 +11309,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11325,9 +11349,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11365,9 +11389,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11405,9 +11429,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11445,9 +11469,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11485,9 +11509,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11525,9 +11549,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11565,9 +11589,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11605,9 +11629,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11645,9 +11669,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11685,9 +11709,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11725,9 +11749,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11765,9 +11789,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11805,9 +11829,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11845,9 +11869,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11885,9 +11909,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11925,9 +11949,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11965,9 +11989,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12005,9 +12029,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12045,9 +12069,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12085,9 +12109,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12125,9 +12149,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12165,9 +12189,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12205,9 +12229,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12223,12 +12247,12 @@
       "target": 1,
       "parts": [],
       "title": "boss-f50",
-      "titleName": "...",
+      "titleName": "千手千眼的見證者",
       "stat": "atkPct",
       "value": 0.00898,
       "displayBonus": "攻擊 +0.898%",
       "displayValue": 0.00898,
-      "rewardText": "攻擊 +0.898% · 稱號「...」"
+      "rewardText": "攻擊 +0.898% · 稱號「千手千眼的見證者」"
     },
     {
       "id": "boss-f51",
@@ -12245,9 +12269,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12285,9 +12309,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12325,9 +12349,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12365,9 +12389,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12405,9 +12429,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12445,9 +12469,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12485,9 +12509,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12525,9 +12549,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12565,9 +12589,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12605,9 +12629,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12645,9 +12669,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12685,9 +12709,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12731,6 +12755,78 @@
       "rewardText": "暴擊傷害 +1.808% · 稱號「...」"
     },
     {
+      "id": "fc-f25",
+      "aliases": [],
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "boss",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "title": null,
+      "titleName": null,
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "fc-f50",
+      "aliases": [],
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "boss",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "title": null,
+      "titleName": null,
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "fc-f60",
+      "aliases": [],
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "boss",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "title": null,
+      "titleName": null,
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
+      "id": "fc-f75",
+      "aliases": [],
+      "name": "未公開成就",
+      "desc": "",
+      "cat": "boss",
+      "floor": null,
+      "hidden": true,
+      "target": null,
+      "parts": [],
+      "title": null,
+      "titleName": null,
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": null
+    },
+    {
       "id": "ach-bosskill40",
       "aliases": [
         "guide-49a27cf32f2f1bfb"
@@ -12771,6 +12867,25 @@
       "rewardText": "稱號「頭目常客」"
     },
     {
+      "id": "fun-bc-run8",
+      "aliases": [],
+      "name": "一路長紅",
+      "desc": "比嘉樂連續贏了八局。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": 8,
+      "parts": [],
+      "title": "fun-bc-run8",
+      "titleName": "一路長紅",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「一路長紅」",
+      "definitionPrecision": "game-display"
+    },
+    {
       "id": "fun-kills",
       "aliases": [],
       "name": "十萬斬",
@@ -12807,25 +12922,26 @@
       "rewardText": "稱號「五張的奇蹟」"
     },
     {
-      "id": "fun-death200",
+      "id": "fun-split4",
       "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
+      "name": "分身之術",
+      "desc": "分牌分成四手，四手全贏。",
       "cat": "fun",
       "floor": null,
-      "hidden": true,
+      "hidden": false,
       "target": null,
       "parts": [],
-      "title": null,
-      "titleName": null,
+      "title": "fun-split4",
+      "titleName": "分身之術",
       "stat": null,
       "value": null,
       "displayBonus": null,
       "displayValue": null,
-      "rewardText": null
+      "rewardText": "稱號「分身之術」",
+      "definitionPrecision": "game-display"
     },
     {
-      "id": "fun-rich",
+      "id": "fun-death200",
       "aliases": [],
       "name": "未公開成就",
       "desc": "",
@@ -12861,25 +12977,6 @@
       "rewardText": null
     },
     {
-      "id": "fun-split4",
-      "aliases": [],
-      "name": "分身之術",
-      "desc": "分牌分成四手，四手全贏。",
-      "cat": "fun",
-      "floor": null,
-      "hidden": false,
-      "target": null,
-      "parts": [],
-      "title": "fun-split4",
-      "titleName": "分身之術",
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": "稱號「分身之術」",
-      "definitionPrecision": "game-display"
-    },
-    {
       "id": "fun-hands1000",
       "aliases": [],
       "name": "未公開成就",
@@ -12899,24 +12996,6 @@
     },
     {
       "id": "fun-seize",
-      "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
-      "cat": "fun",
-      "floor": null,
-      "hidden": true,
-      "target": null,
-      "parts": [],
-      "title": null,
-      "titleName": null,
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": null
-    },
-    {
-      "id": "fun-miasma20",
       "aliases": [],
       "name": "未公開成就",
       "desc": "",
@@ -12971,6 +13050,24 @@
       "definitionPrecision": "game-display"
     },
     {
+      "id": "fun-rich",
+      "aliases": [],
+      "name": "守財奴",
+      "desc": "身上同時帶著一千萬摳。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-rich",
+      "titleName": "守財奴",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「守財奴」"
+    },
+    {
       "id": "ach-meta150",
       "aliases": [
         "guide-302700586f3b24e8"
@@ -13009,6 +13106,62 @@
       "displayBonus": null,
       "displayValue": null,
       "rewardText": "稱號「成就獵人」"
+    },
+    {
+      "id": "fun-bc-pairs",
+      "aliases": [],
+      "name": "成雙成對",
+      "desc": "同一局押中了閒對和莊對。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-bc-pairs",
+      "titleName": "成雙成對",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「成雙成對」",
+      "precision": "game-display"
+    },
+    {
+      "id": "fun-bc-tie10",
+      "aliases": [],
+      "name": "和氣生財",
+      "desc": "押「和」中了十次。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": 10,
+      "parts": [],
+      "title": "fun-bc-tie10",
+      "titleName": "和氣生財",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「和氣生財」",
+      "precision": "game-display"
+    },
+    {
+      "id": "fun-miasma20",
+      "aliases": [],
+      "name": "肺活量怪物",
+      "desc": "在秘境裡撐到瘴氣 20 層。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-miasma20",
+      "titleName": "肺活量怪物",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「肺活量怪物」"
     },
     {
       "id": "fun-death50",
@@ -13124,6 +13277,24 @@
       "rewardText": "稱號「瘴氣品鑑師」"
     },
     {
+      "id": "fun-bc-both",
+      "aliases": [],
+      "name": "牆頭草",
+      "desc": "同一局同時押了閒和莊。",
+      "cat": "fun",
+      "floor": null,
+      "hidden": false,
+      "target": null,
+      "parts": [],
+      "title": "fun-bc-both",
+      "titleName": "牆頭草",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「牆頭草」"
+    },
+    {
       "id": "fun-chars20",
       "aliases": [],
       "name": "轉生專業戶",
@@ -13140,25 +13311,6 @@
       "displayBonus": null,
       "displayValue": null,
       "rewardText": "稱號「轉生專業戶」",
-      "definitionPrecision": "game-display"
-    },
-    {
-      "id": "fun-bc-run8",
-      "aliases": [],
-      "name": "一路長紅",
-      "desc": "比嘉樂連續贏了八局。",
-      "cat": "fun",
-      "floor": null,
-      "hidden": false,
-      "target": 8,
-      "parts": [],
-      "title": "fun-bc-run8",
-      "titleName": "一路長紅",
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": "稱號「一路長紅」",
       "definitionPrecision": "game-display"
     }
   ]
