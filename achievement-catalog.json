@@ -11,7 +11,7 @@
     "fun": 24
   },
   "total": 479,
-  "hidden": 9,
+  "hidden": 8,
   "entries": [
     {
       "id": "fine-t1",
@@ -11269,9 +11269,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11309,9 +11309,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11349,9 +11349,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11389,9 +11389,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11429,9 +11429,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11469,9 +11469,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11509,9 +11509,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11549,9 +11549,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11589,9 +11589,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11629,9 +11629,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11669,9 +11669,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11709,9 +11709,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11749,9 +11749,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11789,9 +11789,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11829,9 +11829,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11869,9 +11869,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11909,9 +11909,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11949,9 +11949,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11989,9 +11989,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12029,9 +12029,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12069,9 +12069,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12109,9 +12109,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12149,9 +12149,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12189,9 +12189,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12229,9 +12229,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12269,9 +12269,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12309,9 +12309,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12349,9 +12349,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12389,9 +12389,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12429,9 +12429,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12469,9 +12469,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12509,9 +12509,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12549,9 +12549,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12589,9 +12589,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12629,9 +12629,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12669,9 +12669,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12709,9 +12709,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 0.00008,
+      "value": 8e-05,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 0.00008,
+      "displayValue": 8e-05,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12757,20 +12757,20 @@
     {
       "id": "fc-f25",
       "aliases": [],
-      "name": "未公開成就",
-      "desc": "",
+      "name": "踩過巨仁的攻略組",
+      "desc": "第 25 層頭目第一次倒下的時候，活著。",
       "cat": "boss",
-      "floor": null,
-      "hidden": true,
-      "target": null,
+      "floor": 25,
+      "hidden": false,
+      "target": 1,
       "parts": [],
       "title": null,
-      "titleName": null,
+      "titleName": "踩過巨仁的攻略組",
       "stat": null,
       "value": null,
       "displayBonus": null,
       "displayValue": null,
-      "rewardText": null
+      "rewardText": "稱號「踩過巨仁的攻略組」"
     },
     {
       "id": "fc-f50",
