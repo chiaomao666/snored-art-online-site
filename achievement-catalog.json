@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "updated": "2026-11-27",
+  "updated": "2026-11-29",
   "source": "websocket-ach-list",
-  "asset": "main-DiT5cq2I.js",
+  "asset": "main-CW2JVFOq.js",
   "precision": "server-json",
   "counts": {
     "collect": 146,
@@ -11269,9 +11269,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11309,9 +11309,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11349,9 +11349,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11389,9 +11389,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11429,9 +11429,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11469,9 +11469,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11509,9 +11509,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11549,9 +11549,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11589,9 +11589,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11629,9 +11629,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11669,9 +11669,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11709,9 +11709,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11749,10 +11749,28 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
+    },
+    {
+      "id": "fc-f25",
+      "aliases": [],
+      "name": "踩過巨仁的攻略組",
+      "desc": "第 25 層頭目第一次倒下的時候，活著。",
+      "cat": "boss",
+      "floor": 25,
+      "hidden": false,
+      "target": 1,
+      "parts": [],
+      "title": null,
+      "titleName": "踩過巨仁的攻略組",
+      "stat": null,
+      "value": null,
+      "displayBonus": null,
+      "displayValue": null,
+      "rewardText": "稱號「踩過巨仁的攻略組」"
     },
     {
       "id": "boss-f26",
@@ -11789,9 +11807,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11829,9 +11847,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11869,9 +11887,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11909,9 +11927,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11949,9 +11967,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -11989,9 +12007,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12029,9 +12047,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12069,9 +12087,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12109,9 +12127,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12149,9 +12167,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12189,9 +12207,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12229,9 +12247,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12269,9 +12287,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12309,9 +12327,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12349,9 +12367,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12389,9 +12407,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12429,9 +12447,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12469,9 +12487,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12509,9 +12527,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12549,9 +12567,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12589,9 +12607,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12629,9 +12647,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12669,9 +12687,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12709,9 +12727,9 @@
       "title": null,
       "titleName": null,
       "stat": "regenPct",
-      "value": 8e-05,
+      "value": 0.00008,
       "displayBonus": "自然回復 +0.008%",
-      "displayValue": 8e-05,
+      "displayValue": 0.00008,
       "rewardText": "自然回復 +0.008%"
     },
     {
@@ -12753,24 +12771,6 @@
       "displayBonus": "暴擊傷害 +1.808%",
       "displayValue": 0.01808,
       "rewardText": "暴擊傷害 +1.808% · 稱號「...」"
-    },
-    {
-      "id": "fc-f25",
-      "aliases": [],
-      "name": "踩過巨仁的攻略組",
-      "desc": "第 25 層頭目第一次倒下的時候，活著。",
-      "cat": "boss",
-      "floor": 25,
-      "hidden": false,
-      "target": 1,
-      "parts": [],
-      "title": null,
-      "titleName": "踩過巨仁的攻略組",
-      "stat": null,
-      "value": null,
-      "displayBonus": null,
-      "displayValue": null,
-      "rewardText": "稱號「踩過巨仁的攻略組」"
     },
     {
       "id": "fc-f50",

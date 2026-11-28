@@ -54,7 +54,7 @@ function apply(G,payload){
  for(const [ref,fields]of Object.entries(s.hi.e||{})){const colon=ref.indexOf(':'),type=ref.slice(0,colon),id=ref.slice(colon+1);if(type==='t'){D.serverTitles[id]={name:s.hi.t[fields.n],desc:s.hi.t[fields.d]};continue;}const target=({i:items,m:mobs,a:areas})[type]?.get(id);if(!target)continue;for(const [path,hash]of Object.entries(fields))if(setText(target,path,s.hi.t[hash]))names++;}
  for(const [id,fields]of Object.entries(s.storyTexts||{})){
   if(id==='#series'){D.seriesNames=fields;continue;}
-  const target=id.startsWith('q:')?D.sideQuests.find(x=>x.id===id.slice(2)):D.chapters.find(x=>x.id===id);
+  const target=id.startsWith('q:')?D.sideQuests.find(x=>x.id===id.slice(2)):D.chapters.find(x=>x.id===id)||Object.values(D.uniqueQuests||{}).find(x=>x.id===id);
   if(target)for(const [path,value]of Object.entries(fields))if(setText(target,path,value))stories++;
  }
  for(const [id,row]of Object.entries(s.beasts||{})){const m=mobs.get(id);if(!m)continue;let changed=false;

@@ -1,0 +1,40 @@
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict');
+const root=__dirname,box={module:{exports:{}}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'current-runtime.js'),'utf8'),box,{timeout:15000});
+const G=box.module.exports;
+assert.equal(Object.keys(G.getUniqueData().params).length,0,'Do not present fallback constants as received values');
+const guide=JSON.parse(fs.readFileSync(path.join(root,'server-guide-data.json'),'utf8'));
+require('./server-guide-overlay.js').apply(G,guide);
+const actual=G.getUniqueData();
+assert.equal(actual.params.UNIQUE_KILLS,3000);assert.equal(actual.params.UNIQUE_SKILL_REQ,45);
+assert.equal(actual.params.SMITH_ATK_MIN,undefined,'Absent passive amounts must remain unknown');
+assert.equal(actual.perks.length,0,'Ordinary talents are not unique perks');
+for(const style of Object.keys(G.catalog.uniqueNames)){
+ const required=G.catalog.skills.filter(x=>x.style===style&&!x.signature&&x.reqLevel<=actual.params.UNIQUE_SKILL_REQ);
+ assert.equal(required.length,6,style);assert(required.every(x=>x.reqLevel<=45));
+ assert.equal(G.catalog.uniqueQuests[style].needFloor,50);
+}
+assert.equal(G.catalog.uniqueQuests.mace.steps[0].text.zh,'莉茲倍特：「武器是有心的。」');
+assert.equal(G.catalog.uniqueQuests.mace.steps[1].goal.qty,8);
+assert.equal(G.catalog.uniqueQuests.mace.steps[1].goal.areaId,'f50-field');
+const normal={level:70,style:'mace',slots:{weapon:{id:'mace-t1'},offhand:{id:'shield-t1'}}};
+const baseline=G.calculate(normal).stats;
+// Synthetic supplied amounts check the new defense/attack conversion, not live balance.
+G.applyGuideLore({unique:{nums:{SMITH_DEF:.1,SMITH_DEF_REF:2,SMITH_ATK_MIN:.1,SMITH_ATK_MID:.2,SMITH_ATK_MAX:.5,SMITH_ATK_POW:1}}});
+const unique=G.calculate({...normal,unique:true}).stats,expectedDefense=Math.round(baseline.def*1.1);
+const expectedRate=Math.min(.5,Math.max(.1,.2*(expectedDefense/baseline.atk/2)));
+assert.equal(unique.def,expectedDefense);assert.equal(unique.atk,Math.round(baseline.atk*(1+expectedRate)));
+const skill={id:'fixture-unique',style:'mace',signature:true,name:{zh:'測試獨特'},desc:{zh:'測試效果'},hits:1,multiplier:2,cooldownMs:10000};
+const payload={unique:{skills:[skill],perks:[{id:'fixture-perk',style:'mace',name:{zh:'測試被動'},desc:{zh:'測試條件'}}],branches:[{skill:skill.id,path:'a',name:{zh:'測試分支'},desc:{zh:'測試說明'},ranks:[{hits:2},{hits:3},{hits:4}]}]}};
+G.applyGuideLore(payload);G.applyGuideLore(payload);
+const supplied=G.getUniqueData();
+assert.equal(supplied.skills.length,1);assert.equal(supplied.perks.length,1);assert.equal(supplied.branches.length,1);
+assert.equal(supplied.branches[0].mod({},2).hits,3);
+const noShield={level:70,style:'sword',slots:{weapon:{id:'weapon-t1'},offhand:{id:'weapon-t1'}},dualWield:true};
+const without=G.calculate(noShield).stats,withTalent=G.calculate({...noShield,talents:{'pk:swordLoner':1}}).stats;
+assert(Math.abs(withTalent.crit-without.crit-.015)<1e-10);assert(Math.abs(withTalent.critDmg-without.critDmg-.05)<1e-10);
+assert.equal(G.catalog.skills.find(x=>x.id==='sange').hits,5);
+assert.equal(G.catalog.skills.find(x=>x.id==='sange').targets,1);
+assert.equal(G.catalog.skills.find(x=>x.id==='sange').cooldownMs,22000);
+assert.equal(G.catalog.talents.find(x=>x.id==='katanaIai').desc.zh.includes('20%'),true);
+console.log('Passed unique guide: explicit server amounts only, eight training paths, translated quest, defense conversion, no duplicate unique definitions, skill branches, no-shield talent and new skill balance.');
